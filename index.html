@@ -6,67 +6,86 @@
   <title>泰文學習系統｜曼谷生活實戰日誌</title>
   <style>
     :root {
-      --primary: #0f172a;
-      --secondary: #334155;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --accent: #f97316;
-      --accent-soft: #ffedd5;
-      --green: #16a34a;
-      --green-soft: #dcfce7;
-      --blue: #2563eb;
-      --blue-soft: #dbeafe;
-      --purple: #7c3aed;
-      --purple-soft: #ede9fe;
-      --muted: #64748b;
-      --line: rgba(148, 163, 184, 0.18);
-      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-      --shadow-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.07), 0 10px 10px -6px rgba(15, 23, 42, 0.05);
-      --radius: 16px;
+      --bg: #fffaf4;
+      --text: #302820;
+      --muted: #7a6f63;
+      --line: rgba(88,63,35,.16);
+      --card: rgba(255,255,255,.9);
+      --orange: #f2a35d;
+      --orange-soft: #fff1df;
+      --green: #78b887;
+      --green-soft: #eef9f1;
+      --blue: #6ea8d6;
+      --blue-soft: #eef7ff;
+      --red: #dc776f;
+      --red-soft: #fff0ef;
+      --purple: #8873c9;
+      --purple-soft: #f6f1ff;
+      --shadow: 0 12px 28px rgba(74,45,18,.08);
+      --shadow-hover: 0 20px 40px rgba(74,45,18,.13);
+      --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      transition: all 0.22s ease;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Noto Sans Thai", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(249, 115, 22, 0.08), transparent 34%),
-        radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.07), transparent 30%),
-        linear-gradient(135deg, #f8fafc 0%, #ffffff 52%, #fff7ed 100%);
-      color: var(--primary);
-      padding: 50px 20px;
-      margin: 0;
-      line-height: 1.65;
+        radial-gradient(circle at top left, rgba(242,163,93,.16), transparent 36%),
+        radial-gradient(circle at top right, rgba(110,168,214,.14), transparent 38%),
+        linear-gradient(135deg,#fffaf4 0%,#fbfffb 55%,#f7fbff 100%);
+      color: var(--text);
+      padding: 52px 20px 72px;
+      line-height: 1.68;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
+    /* ── Header ── */
     .header {
-      margin-bottom: 34px;
-      padding-bottom: 26px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      font-size: 11.5px;
+      font-weight: 720;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #9a3412;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 22px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
     }
 
     h1 {
-      color: var(--primary);
-      font-size: 2.35rem;
-      font-weight: 850;
-      margin: 0 0 10px 0;
-      letter-spacing: -0.035em;
-      line-height: 1.18;
+      font-size: 2.45rem;
+      font-weight: 860;
+      letter-spacing: -.03em;
+      line-height: 1.16;
+      color: var(--text);
+      margin-bottom: 14px;
     }
 
     .subtitle {
+      font-size: 1rem;
       color: var(--muted);
-      font-size: 1.04rem;
-      max-width: 760px;
-      margin-bottom: 20px;
+      max-width: 680px;
+      line-height: 1.72;
+      margin-bottom: 22px;
     }
 
     .header-tags {
@@ -76,273 +95,239 @@
     }
 
     .header-tag {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 650;
       border-radius: 999px;
-      padding: 4px 10px;
-      background: var(--accent-soft);
+      padding: 4px 11px;
+      background: var(--orange-soft);
       color: #9a3412;
       border: 1px solid #fed7aa;
     }
 
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 42px;
-    }
-
-    .stat-card {
-      background: rgba(255, 255, 255, 0.82);
-      padding: 16px 18px;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
+    /* ── Progress bar ── */
+    .progress-bar {
+      background: rgba(255,255,255,.88);
       border: 1px solid var(--line);
-      backdrop-filter: blur(8px);
-    }
-
-    .stat-num {
-      font-size: 1.38rem;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1.25;
-    }
-
-    .stat-label {
-      font-size: 0.84rem;
-      color: var(--muted);
-      font-weight: 550;
-      margin-top: 4px;
-    }
-
-    .section-title {
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--secondary);
-      margin: 0 0 18px 0;
-      letter-spacing: 0.02em;
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 42px;
+      box-shadow: var(--shadow);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
-    .section-title::before {
+    .progress-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+      min-width: 100px;
+    }
+
+    .progress-item + .progress-item {
+      border-left: 1px solid var(--line);
+      padding-left: 20px;
+    }
+
+    .progress-num {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #9a3412;
+      line-height: 1.2;
+    }
+
+    .progress-label {
+      font-size: 0.81rem;
+      color: var(--muted);
+      font-weight: 550;
+    }
+
+    /* ── Section heading ── */
+    .section-title {
+      font-size: 0.82rem;
+      font-weight: 760;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::after {
       content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.16);
+      flex: 1;
+      height: 1px;
+      background: var(--line);
     }
 
+    /* ── Timeline ── */
     .timeline {
       position: relative;
-      margin-left: 10px;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 16px;
+      bottom: 16px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--orange) 0%, rgba(88,63,35,.12) 100%);
     }
 
     .timeline-item {
       position: relative;
-      padding-left: 30px;
-      padding-bottom: 34px;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 30px;
-      bottom: 0;
-      width: 1px;
-      background-color: rgba(148, 163, 184, 0.35);
-    }
-
-    .timeline-item:last-child::before {
-      display: none;
+      padding-bottom: 22px;
     }
 
     .timeline-dot {
       position: absolute;
-      left: 0;
-      top: 12px;
-      width: 9px;
-      height: 9px;
-      background-color: var(--primary);
+      left: -24px;
+      top: 18px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
+      background: rgba(88,63,35,.28);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px rgba(88,63,35,.18);
       z-index: 2;
+      transition: all .2s ease;
     }
 
     .timeline-item:first-child .timeline-dot {
-      background-color: var(--accent);
-      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
+      background: var(--orange);
+      box-shadow: 0 0 0 3px var(--orange-soft);
     }
 
     .log-card {
       display: block;
-      background: rgba(255, 255, 255, 0.88);
-      padding: 23px 24px;
+      background: var(--card);
+      padding: 20px 22px;
       border-radius: var(--radius);
       text-decoration: none;
       color: inherit;
       box-shadow: var(--shadow);
       border: 1px solid var(--line);
-      backdrop-filter: blur(8px);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
 
     .log-card:hover {
-      transform: translateX(4px);
+      transform: translateX(5px) translateY(-2px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(249, 115, 22, 0.32);
+      border-color: rgba(240,125,40,.3);
+    }
+
+    .log-card:hover + .timeline-item .timeline-dot,
+    .timeline-item:hover .timeline-dot {
+      background: var(--orange);
     }
 
     .log-date {
-      font-size: 0.84rem;
-      font-weight: 780;
+      font-size: 0.8rem;
+      font-weight: 720;
       color: var(--muted);
-      letter-spacing: 0.05em;
+      letter-spacing: .05em;
       margin-bottom: 5px;
       display: flex;
       align-items: center;
       gap: 8px;
-      flex-wrap: wrap;
     }
 
-    .badge-today {
-      background: var(--accent-soft);
+    .badge-new {
+      background: var(--orange-soft);
       color: #c2410c;
       padding: 2px 8px;
       border-radius: 6px;
       font-size: 0.72rem;
       font-weight: 760;
-      letter-spacing: 0;
     }
 
     .log-title {
-      font-size: 1.24rem;
+      font-size: 1.16rem;
       font-weight: 820;
-      margin-bottom: 8px;
-      color: var(--primary);
-      letter-spacing: -0.01em;
+      color: var(--text);
+      letter-spacing: -.01em;
+      margin-bottom: 6px;
     }
 
     .log-desc {
-      font-size: 0.93rem;
+      font-size: 0.9rem;
       color: var(--muted);
-      margin-bottom: 13px;
+      margin-bottom: 12px;
+      line-height: 1.58;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .log-tags {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
-    .tag {
-      font-size: 0.79rem;
-      background: #f1f5f9;
-      color: var(--secondary);
-      padding: 3px 10px;
-      border-radius: 7px;
-      font-weight: 580;
-      border: 1px solid rgba(148, 163, 184, 0.18);
-    }
+    .tag { font-size: 0.76rem; background: #f3f4f6; color: #374151; padding: 3px 9px; border-radius: 7px; font-weight: 580; border: 1px solid #e5e7eb; }
+    .tag.orange { background: var(--orange-soft); color: #9a3412; border-color: #fed7aa; }
+    .tag.green  { background: var(--green-soft);  color: #166534; border-color: #bbf7d0; }
+    .tag.blue   { background: var(--blue-soft);   color: #1d4ed8; border-color: #bfdbfe; }
+    .tag.purple { background: var(--purple-soft); color: #5b21b6; border-color: #ddd6fe; }
 
-    .tag.orange {
-      background: var(--accent-soft);
-      color: #9a3412;
-      border-color: #fed7aa;
-    }
-
-    .tag.green {
-      background: var(--green-soft);
-      color: #166534;
-      border-color: #bbf7d0;
-    }
-
-    .tag.blue {
-      background: var(--blue-soft);
-      color: #1d4ed8;
-      border-color: #bfdbfe;
-    }
-
-    .tag.purple {
-      background: var(--purple-soft);
-      color: #5b21b6;
-      border-color: #ddd6fe;
-    }
-
-    .tools {
+    /* ── Footer ── */
+    .footer {
       margin-top: 56px;
-      text-align: center;
-      padding: 24px;
-      background: rgba(241, 245, 249, 0.86);
-      border-radius: 16px;
-      font-size: 0.92rem;
-      color: var(--muted);
-      border: 1px dashed #cbd5e1;
-    }
-
-    .tools strong {
-      color: var(--primary);
-      margin-right: 10px;
-    }
-
-    .tools a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 9px;
-      font-weight: 680;
-    }
-
-    .tools a:hover {
-      text-underline-offset: 4px;
-      text-decoration: underline;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .footer-note {
-      margin-top: 20px;
-      font-size: 0.82rem;
+      font-size: 0.83rem;
       color: var(--muted);
-      text-align: center;
+      max-width: 480px;
+      line-height: 1.6;
     }
 
-    @media (max-width: 720px) {
-      body {
-        padding: 32px 14px;
-      }
+    .footer-links {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
 
-      h1 {
-        font-size: 1.9rem;
-      }
+    .footer-link {
+      font-size: 0.81rem;
+      font-weight: 660;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      transition: all .18s ease;
+    }
 
-      .subtitle {
-        font-size: 0.96rem;
-      }
+    .footer-link:hover {
+      color: var(--orange);
+      border-color: rgba(240,125,40,.3);
+      background: var(--orange-soft);
+    }
 
-      .dashboard {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .timeline {
-        margin-left: 4px;
-      }
-
-      .timeline-item {
-        padding-left: 24px;
-      }
-
-      .log-card {
-        padding: 20px 18px;
-      }
-
-      .log-title {
-        font-size: 1.12rem;
-      }
-
-      .tools a {
-        display: inline-block;
-        margin: 5px 8px;
-      }
+    @media (max-width: 680px) {
+      body { padding: 34px 14px 56px; }
+      h1 { font-size: 1.9rem; }
+      .progress-item + .progress-item { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 12px; }
+      .progress-bar { flex-direction: column; gap: 12px; }
+      .timeline { padding-left: 22px; }
+      .footer { flex-direction: column; }
     }
   </style>
 </head>
@@ -351,6 +336,7 @@
   <div class="container">
 
     <header class="header">
+      <div class="eyebrow">Bangkok Life Notes</div>
       <h1>曼谷生活學習日誌</h1>
       <div class="subtitle">
         紀錄每天遇到的泰文生詞、語氣、小詞和真實生活句。把聊天、點餐、等人、交通、情緒表達，整理成可以複習、可以 shadowing、可以直接拿去曼谷生活使用的泰語筆記。
@@ -363,43 +349,54 @@
       </div>
     </header>
 
-    <section class="dashboard">
-      <div class="stat-card">
-        <div class="stat-num">3 Days</div>
-        <div class="stat-label">已持續累積天數</div>
+    <div class="progress-bar">
+      <div class="progress-item">
+        <div class="progress-num">5 Days</div>
+        <div class="progress-label">已持續累積天數</div>
       </div>
-
-      <div class="stat-card">
-        <div class="stat-num">曼谷生活</div>
-        <div class="stat-label">主要學習情境</div>
+      <div class="progress-item">
+        <div class="progress-num">曼谷生活</div>
+        <div class="progress-label">主要學習情境</div>
       </div>
-
-      <div class="stat-card">
-        <div class="stat-num">Audio Notes</div>
-        <div class="stat-label">支援泰文 TTS 複習</div>
+      <div class="progress-item">
+        <div class="progress-num">TTS 音頻</div>
+        <div class="progress-label">支援泰文發音複習</div>
       </div>
-    </section>
+    </div>
 
-    <h2 class="section-title">Daily Notes Timeline</h2>
+    <div class="section-title">Daily Notes Timeline</div>
 
     <section class="timeline">
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <a href="Thai Daily Notes｜2026-05-22.html" class="log-card">
+        <a href="Thai Daily Notes｜2026-05-25.html" class="log-card">
           <div class="log-date">
-            2026-05-22
-            <span class="badge-today">最新紀錄</span>
+            2026-05-25
+            <span class="badge-new">最新紀錄</span>
           </div>
+          <div class="log-title">高頻口語小詞與生活語感</div>
+          <div class="log-desc">整理 โดย / ผ่าน、เดี๋ยวก่อน、เพิ่ง、บาง / บ้าง、เกรงใจ、ถูกใจ、เยอะ、ก็แล้วกัน 等高頻小詞，練習曼谷日常聊天、點餐、轉車、請人幫忙與自然收尾說法。</div>
+          <div class="log-tags">
+            <span class="tag orange">#生活小詞</span>
+            <span class="tag green">#曼谷口語</span>
+            <span class="tag blue">#比較詞組</span>
+            <span class="tag purple">#禮貌語感</span>
+            <span class="tag">#Shadowing</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <a href="Thai Daily Notes｜2026-05-22.html" class="log-card">
+          <div class="log-date">2026-05-22</div>
           <div class="log-title">親密稱呼、等待時間與生活回覆</div>
-          <div class="log-desc">
-            整理 <span lang="th">ตัวเอง</span> 作為「自己」與親密稱呼的差異，練習吃飯回覆、等待時間、<span lang="th">ด้วย / เดี๋ยว / รอ / ค่อย</span> 等生活小詞，並補充情緒句與曼谷口語語感。
-          </div>
+          <div class="log-desc">整理 ตัวเอง 作為「自己」與親密稱呼的差異，練習吃飯回覆、等待時間、ด้วย / เดี๋ยว / รอ / ค่อย 等生活小詞，補充情緒句與曼谷口語語感。</div>
           <div class="log-tags">
             <span class="tag orange">#親密稱呼</span>
             <span class="tag green">#生活小詞</span>
             <span class="tag blue">#等待時間</span>
-            <span class="tag">#吃飯回覆</span>
             <span class="tag purple">#情緒語感</span>
           </div>
         </a>
@@ -410,15 +407,12 @@
         <a href="Thai Daily Notes｜2026-05-21.html" class="log-card">
           <div class="log-date">2026-05-21</div>
           <div class="log-title">只、語氣、點餐與 ใจ 情緒詞</div>
-          <div class="log-desc">
-            比較 <span lang="th">แค่</span> 與 <span lang="th">เท่านั้น</span> 的「只是／只有」語感，整理服務業點餐與結帳句型，並練習 <span lang="th">ใจ</span> 情緒詞、<span lang="th">ความ</span> 抽象名詞、<span lang="th">ไว้</span> 保留語感與 <span lang="th">เห็น</span> 延伸用法。
-          </div>
+          <div class="log-desc">比較 แค่ 與 เท่านั้น 的「只是／只有」語感，整理服務業點餐與結帳句型，練習 ใจ 情緒詞、ความ 抽象名詞、ไว้ 保留語感與 เห็น 延伸用法。</div>
           <div class="log-tags">
             <span class="tag orange">#只與而已</span>
             <span class="tag green">#服務業泰文</span>
             <span class="tag blue">#點餐結帳</span>
             <span class="tag purple">#ใจ情緒詞</span>
-            <span class="tag">#抽象名詞</span>
           </div>
         </a>
       </div>
@@ -428,13 +422,10 @@
         <a href="Thai Daily Notes｜2026-05-20.html" class="log-card">
           <div class="log-date">2026-05-20</div>
           <div class="log-title">曼谷碰面、地點與時間順序</div>
-          <div class="log-desc">
-            學習 <span lang="th">ก่อน</span>、<span lang="th">แล้ว</span> 的時間順序語感，整理 <span lang="th">ปากซอย</span>、<span lang="th">หน้าร้าน</span> 等曼谷地點詞，並練習 <span lang="th">ประมาณ</span>、<span lang="th">ใช้เวลา</span>、<span lang="th">ไกล / ใกล้</span>、<span lang="th">ด้วย</span> 在等人、問路與點餐加料中的實用說法。
-          </div>
+          <div class="log-desc">學習 ก่อน、แล้ว 的時間順序語感，整理 ปากซอย、หน้าร้าน 等曼谷地點詞，練習 ประมาณ、ใช้เวลา、ไกล / ใกล้ 在等人、問路與點餐加料中的實用說法。</div>
           <div class="log-tags">
             <span class="tag green">#曼谷地點</span>
             <span class="tag blue">#時間順序</span>
-            <span class="tag">#等人碰面</span>
             <span class="tag orange">#點餐加料</span>
             <span class="tag">#生活實戰</span>
           </div>
@@ -443,17 +434,16 @@
 
     </section>
 
-    <section class="tools">
-      <strong>🔗 跨系統快捷導覽</strong>
-      <a href="https://abbyyyli.github.io/thai-index/">← 學習入口</a> |
-      <a href="https://abbyyyli.github.io/thai-frequency-vocab/" target="_blank">📊 高頻詞彙庫</a> |
-      <a href="https://github.com/abbyyyli/thai-notes_daily.git" target="_blank">🗂️ GitHub 專案倉庫</a>
-     
-    </section>
-
-    <div class="footer-note">
-      每日筆記以真實生活泰文為主：Thai script / Romanization / English，搭配繁體中文語感說明與 TTS 複習。
-    </div>
+    <footer class="footer">
+      <div class="footer-note">
+        每日筆記以真實生活泰文為主：Thai script / Romanization / English，搭配繁體中文語感說明與 TTS 複習。
+      </div>
+      <div class="footer-links">
+        <a href="https://abbyyyli.github.io/thai-index/" class="footer-link">← 學習入口</a>
+        <a href="https://abbyyyli.github.io/thai-frequency-vocab/" target="_blank" class="footer-link">📊 高頻詞彙庫</a>
+        <a href="https://github.com/abbyyyli/thai-notes_daily.git" target="_blank" class="footer-link">🗂️ GitHub</a>
+      </div>
+    </footer>
 
   </div>
 </body>

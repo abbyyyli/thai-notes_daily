@@ -4,292 +4,197 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Thai Daily Notes｜2026-05-21｜只、語氣、點餐、ใจ 情緒與生活口語</title>
+<title>Thai Daily Notes｜2026-05-21｜只、語氣、點餐、ใจ 情緒與生活口語｜加強版</title>
 <style>
-  :root{
-    --bg:#fffaf4;
-    --text:#302820;
-    --muted:#7a6f63;
-    --line:rgba(88,63,35,.16);
-    --card:rgba(255,255,255,.9);
-    --orange:#f2a35d;
-    --orange-soft:#fff1df;
-    --green:#78b887;
-    --green-soft:#eef9f1;
-    --blue:#6ea8d6;
-    --blue-soft:#eef7ff;
-    --red:#dc776f;
-    --red-soft:#fff0ef;
-    --purple:#8873c9;
-    --purple-soft:#f6f1ff;
-    --shadow:0 12px 28px rgba(74,45,18,.08);
-    --radius:18px;
-    --thai-font:"Noto Sans Thai","Tahoma","Leelawadee UI",sans-serif;
-    --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    padding:24px;
-    color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-    background:
-      radial-gradient(circle at top left, rgba(242,163,93,.16), transparent 36%),
-      radial-gradient(circle at top right, rgba(110,168,214,.14), transparent 38%),
-      linear-gradient(135deg,#fffaf4 0%,#fbfffb 55%,#f7fbff 100%);
-    line-height:1.68;
-  }
-  .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-  .hero{
-    padding:26px;
-    border:1px solid var(--line);
-    border-radius:24px;
-    background:rgba(255,255,255,.72);
-    box-shadow:var(--shadow);
-    backdrop-filter:blur(8px);
-  }
-  h1{font-size:28px;margin:0 0 8px;line-height:1.3}
-  h2{font-size:22px;margin:28px 0 14px}
-  h3{font-size:18px;margin:22px 0 10px}
-  h4{font-size:15px;margin:18px 0 8px}
-  .subtitle{font-size:14px;color:var(--muted);margin-bottom:14px}
-  .badges{display:flex;gap:8px;flex-wrap:wrap}
-  .badge,.label{
-    display:inline-flex;align-items:center;gap:4px;
-    font-size:12px;padding:3px 9px;border-radius:999px;
-    font-weight:600;border:1px solid transparent;white-space:nowrap;
-  }
-  .badge.orange,.label.textbook{background:var(--orange-soft);color:#9a3412;border-color:#fed7aa}
-  .badge.green,.label.local{background:var(--green-soft);color:#166534;border-color:#bbf7d0}
-  .badge.blue,.label.practice{background:var(--blue-soft);color:#1d4ed8;border-color:#bfdbfe}
-  .badge.red,.label.mistake{background:var(--red-soft);color:#991b1b;border-color:#fecaca}
-  .badge.purple,.label.emotion{background:var(--purple-soft);color:#5b21b6;border-color:#ddd6fe}
-  .label.review{background:#f3f4f6;color:#374151;border-color:#e5e7eb}
-  .tabs{
-    margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;
-    border-bottom:1px solid var(--line);padding-bottom:10px;
-  }
-  .tab-btn{
-    border:1px solid var(--line);background:rgba(255,255,255,.72);
-    color:var(--text);padding:8px 12px;border-radius:999px;
-    cursor:pointer;font-weight:700;font-size:13px;
-  }
-  .tab-btn.active{background:#1f2937;color:#fff;border-color:#1f2937}
-  .tab{display:none}
-  .tab.active{display:block}
-  .card{
-    background:var(--card);border:1px solid var(--line);
-    border-radius:var(--radius);padding:18px;margin:14px 0;
-    box-shadow:var(--shadow);
-  }
-  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-  @media(max-width:780px){.grid,.grid3{grid-template-columns:1fr}.wrap{padding:18px 12px 40px}}
-  table{
-    width:100%;border-collapse:collapse;background:rgba(255,255,255,.72);
-    border-radius:14px;overflow:hidden;font-size:14px;
-  }
-  th,td{border:1px solid rgba(107,114,128,.26);padding:10px;vertical-align:top}
-  th{background:rgba(255,237,213,.78);text-align:left}
-  tr:nth-child(even) td{background:rgba(249,250,251,.72)}
-  .thai{font-size:15px;font-weight:500;color:#111827}
-  .thai.big{font-size:18px;font-weight:700}
-  .roman{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-    color:#6b7280;font-size:12.5px;
-  }
-  .eng{color:#374151;font-size:13px}
-  .tts{
-    border:1px solid rgba(249,115,22,.32);background:rgba(255,237,213,.82);
-    color:#9a3412;border-radius:999px;padding:2px 7px;margin-left:5px;
-    cursor:pointer;font-size:12px;vertical-align:middle;
-  }
+    :root{
+      --text: var(--color-text-primary, #1f2937);
+      --muted:#6b7280;
+      --line:rgba(107,114,128,.28);
+      --card:rgba(255,255,255,.78);
+      --orange:#f97316;
+      --orange-soft:#ffedd5;
+      --green:#16a34a;
+      --green-soft:#dcfce7;
+      --blue:#2563eb;
+      --blue-soft:#dbeafe;
+      --red:#dc2626;
+      --red-soft:#fee2e2;
+      --shadow:0 8px 20px rgba(15,23,42,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Noto Sans Thai",sans-serif;
+      background:linear-gradient(135deg,rgba(255,247,237,.78),rgba(239,246,255,.62),rgba(240,253,244,.58));
+      line-height:1.75;
+    }
+    .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+    .hero{
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.72);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
+    }
+    h1{font-size:28px;margin:0 0 8px;line-height:1.3}
+    h2{font-size:22px;margin:28px 0 14px}
+    h3{font-size:18px;margin:22px 0 10px}
+    h4{font-size:15px;margin:18px 0 8px}
+    .subtitle{font-size:14px;color:var(--muted);margin-bottom:14px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .badge,.label{
+      display:inline-flex;align-items:center;gap:4px;
+      font-size:12px;padding:3px 9px;border-radius:999px;
+      font-weight:600;border:1px solid transparent;white-space:nowrap;
+    }
+    .badge.orange,.label.textbook{background:var(--orange-soft);color:#9a3412;border-color:#fed7aa}
+    .badge.green,.label.local{background:var(--green-soft);color:#166534;border-color:#bbf7d0}
+    .badge.blue,.label.practice{background:var(--blue-soft);color:#1d4ed8;border-color:#bfdbfe}
+    .badge.red,.label.mistake{background:var(--red-soft);color:#991b1b;border-color:#fecaca}
+    .label.review{background:#f3f4f6;color:#374151;border-color:#e5e7eb}
+    .tabs{
+      margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;
+      border-bottom:1px solid var(--line);padding-bottom:10px;
+    }
+    .tab-btn{
+      border:1px solid var(--line);background:rgba(255,255,255,.72);
+      color:var(--text);padding:8px 12px;border-radius:999px;
+      cursor:pointer;font-weight:700;font-size:13px;
+    }
+    .tab-btn.active{background:#1f2937;color:#fff;border-color:#1f2937}
+    .tab{display:none}
+    .tab.active{display:block}
+    .card{
+      background:var(--card);border:1px solid var(--line);
+      border-radius:var(--radius);padding:18px;margin:14px 0;
+      box-shadow:var(--shadow);
+    }
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    @media(max-width:780px){.grid{grid-template-columns:1fr}.wrap{padding:18px 12px 40px}}
+    table{
+      width:100%;border-collapse:collapse;background:rgba(255,255,255,.72);
+      border-radius:14px;overflow:hidden;font-size:14px;
+    }
+    th,td{border:1px solid rgba(107,114,128,.26);padding:10px;vertical-align:top}
+    th{background:rgba(255,237,213,.78);text-align:left}
+    tr:nth-child(even) td{background:rgba(249,250,251,.72)}
+    .thai{font-size:15px;font-weight:500;color:#111827}
+    .roman{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+      color:#6b7280;font-size:12.5px;
+    }
+    .eng{color:#374151;font-size:13px}
+    .tts{
+      border:1px solid rgba(249,115,22,.32);background:rgba(255,237,213,.82);
+      color:#9a3412;border-radius:999px;padding:2px 7px;margin-left:5px;
+      cursor:pointer;font-size:12px;vertical-align:middle;
+    }
 
-  .pill{
-    display:inline-flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:1px;
-    border:1px solid rgba(80,120,80,.2);
-    background:#f7fff8;
-    color:#2d6d3d;
-    border-radius:13px;
-    padding:5px 8px;
-    margin:3px 3px 3px 0;
-    font-size:12px;
-    cursor:pointer;
-    max-width:260px;
-    box-shadow:none;
-  }
-  .pill:hover{background:#eef9f1;border-color:#b2dfbd}
-  .pill .thai{font-size:13px;line-height:1.2}
-  .pill .eng{font-size:11px;line-height:1.15;color:#52645a}
-  .pill .roman{display:none}
-  .audio-pill{
-    display:inline-flex;align-items:center;gap:4px;
-    margin:2px 4px 2px 0;padding:3px 8px;
-    border-radius:999px;border:1px solid rgba(22,163,74,.28);
-    background:rgba(220,252,231,.72);color:#166534;
-    font-size:12px;cursor:pointer;font-weight:600;line-height:1.45;
-  }
-  .audio-pill:hover{background:rgba(187,247,208,.92);border-color:rgba(22,163,74,.42)}
-  .sentence-bank{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
-  @media(max-width:780px){.sentence-bank{grid-template-columns:1fr}}
-  .sentence-card{
-    border:1px solid var(--line);background:rgba(255,255,255,.78);
-    border-radius:16px;padding:12px 14px;box-shadow:0 4px 12px rgba(15,23,42,.05);
-  }
-  .sentence-card .head{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
-  .tip{border-left:5px solid var(--green);background:rgba(240,253,244,.8);padding:12px 14px;border-radius:12px;margin:12px 0}
-  .structure{border-left:5px solid var(--blue);background:rgba(239,246,255,.82);padding:14px;border-radius:14px;margin:14px 0}
-  .emotion-box{border-left:5px solid var(--purple);background:rgba(245,243,255,.86);padding:14px;border-radius:14px;margin:14px 0}
-  .mistake-box{border-left:5px solid var(--red);background:rgba(254,242,242,.86);padding:14px;border-radius:14px;margin:14px 0}
-  .bubble{
-    max-width:92%;padding:12px 14px;border-radius:18px;margin:10px 0;
-    border:1px solid var(--line);background:#fff;
-  }
-  .bubble.a{background:rgba(219,234,254,.78)}
-  .bubble.b{background:rgba(220,252,231,.78);margin-left:auto}
-  .bubble.c{background:rgba(255,237,213,.78)}
-  .speaker{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;margin-bottom:4px}
-  .speaker.a{background:#bfdbfe;color:#1d4ed8}
-  .speaker.b{background:#bbf7d0;color:#166534}
-  .speaker.c{background:#fed7aa;color:#9a3412}
-  details{
-    background:rgba(255,255,255,.76);border:1px solid var(--line);
-    border-radius:14px;padding:10px 14px;margin:10px 0;
-  }
-  summary{cursor:pointer;font-weight:800}
-  .note-small{font-size:13px;color:var(--muted)}
-  .tts-warning{
-    display:none;margin-top:10px;color:#991b1b;background:#fee2e2;
-    border:1px solid #fecaca;border-radius:12px;padding:10px;font-size:13px;
-  }
-
-  .hero{background:rgba(255,255,255,.78);border-radius:28px;box-shadow:var(--shadow);border-color:var(--line)}
-  h1{color:#302820;letter-spacing:.2px}
-  h2{color:#392f26}
-  h3,h4{color:#3c332a}
-  .tab-btn{background:rgba(255,255,255,.86);font-weight:800;transition:.18s ease}
-  .tab-btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(60,40,20,.08)}
-  .tab-btn.active{background:#2f2a24;color:#fff;border-color:#2f2a24}
-  table{border-collapse:separate;border-spacing:0;border:1px solid var(--line);background:#fff;font-size:13px}
-  th,td{border-bottom:1px solid rgba(80,60,40,.12);border-right:1px solid rgba(80,60,40,.10);border-top:0;border-left:0}
-  th{background:#fff1df;color:#6d3b0e;font-size:12px;letter-spacing:.2px}
-  tr:nth-child(even) td{background:#fffdf9}
-  tr:last-child td{border-bottom:none}
-  td:last-child,th:last-child{border-right:none}
-  .thai{font-family:var(--thai-font);color:#1e2d22}
-  .thai.big{color:#18301f}
-  .roman{font-family:var(--mono);color:#756f68}
-  .eng{color:#5f6c73}
-  .tts{border:1px solid rgba(130,90,45,.2);background:linear-gradient(180deg,#fff 0%,#fff5eb 100%);color:#965315}
-  .tts:hover{background:#fff0df}
-  .badge.orange,.label.textbook{background:var(--orange-soft);color:#9f5216;border-color:#f2c18f}
-  .badge.green,.label.local{background:var(--green-soft);color:#2f7948;border-color:#b2dfbd}
-  .badge.blue,.label.practice{background:var(--blue-soft);color:#276f9f;border-color:#acd4ef}
-  .badge.red,.label.mistake{background:var(--red-soft);color:#a84038;border-color:#efb2ad}
-  .badge.purple,.label.emotion{background:var(--purple-soft);color:#6a55a5;border-color:#d8ccff}
-  .label.review{background:#f4f1ed;color:#6a5f55;border-color:#ddd3c8}
-  .card,.sentence-card,details{background:var(--card);border-color:var(--line);box-shadow:var(--shadow)}
-  .tip{background:var(--green-soft);border-left-color:var(--green)}
-  .structure{background:var(--blue-soft);border-left-color:var(--blue)}
-  .emotion-box{background:var(--purple-soft);border-left-color:var(--purple)}
-  .mistake-box{background:var(--red-soft);border-left-color:var(--red)}
-  .bubble{background:#fff;border-color:var(--line)}
-  .bubble.a{background:var(--blue-soft)}
-  .bubble.b{background:var(--green-soft)}
-  .bubble.c{background:var(--orange-soft)}
-  .fav-btn{
-    border:1px solid rgba(130,90,45,.2);
-    background:linear-gradient(180deg,#fff 0%,#fff5eb 100%);
-    color:#965315;
-    border-radius:999px;
-    padding:5px 10px;
-    cursor:pointer;
-    font-size:12px;
-    font-weight:800;
-    white-space:nowrap;
-  }
-  .fav-btn.active{background:var(--orange-soft);border-color:#f2c18f;color:#9f5216}
-  .favorites-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
-  .favorite-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 8px 18px rgba(74,45,18,.06)}
-  .favorite-card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:8px}
-  .remove-fav{border:1px solid #efb2ad;background:var(--red-soft);color:#a84038;border-radius:999px;padding:3px 8px;cursor:pointer;font-size:12px;font-weight:800}
-  .empty-favs{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f}
+    .audio-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+      margin:2px 4px 2px 0;
+      padding:3px 8px;
+      border-radius:999px;
+      border:1px solid rgba(22,163,74,.28);
+      background:rgba(220,252,231,.72);
+      color:#166534;
+      font-size:12px;
+      cursor:pointer;
+      font-weight:600;
+      font-family:inherit;
+      line-height:1.45;
+    }
+    .audio-pill:hover{
+      background:rgba(187,247,208,.92);
+      border-color:rgba(22,163,74,.42);
+    }
 
 
+    .sentence-bank{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    @media(max-width:780px){.sentence-bank{grid-template-columns:1fr}}
+    .sentence-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.78);
+      border-radius:16px;
+      padding:12px 14px;
+      box-shadow:0 4px 12px rgba(15,23,42,.05);
+    }
+    .sentence-card .head{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      align-items:center;
+      margin-bottom:6px;
+    }
+    .concept-card{
+      border-left:5px solid var(--orange);
+      background:rgba(255,247,237,.82);
+      padding:14px;
+      border-radius:14px;
+      margin:14px 0;
+    }
+    .usage-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+    @media(max-width:780px){.usage-grid{grid-template-columns:1fr}}
+    .mini-list{
+      margin:8px 0 0 18px;
+      padding:0;
+    }
 
-  .vocab-search-card{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:12px;
-    padding:12px 14px;
-    border:1px solid var(--line);
-    border-radius:16px;
-    background:rgba(255,255,255,.72);
-    box-shadow:0 4px 12px rgba(15,23,42,.04);
-  }
-  .vocab-search-card label{
-    font-weight:800;
-    font-size:13px;
-    color:#3b3128;
-  }
-  .vocab-search-input{
-    flex:1 1 280px;
-    min-width:220px;
-    border:1px solid rgba(80,60,40,.18);
-    border-radius:999px;
-    padding:10px 14px;
-    background:rgba(255,255,255,.92);
-    color:var(--text);
-    font-size:14px;
-    outline:none;
-  }
-  .vocab-search-input:focus{
-    border-color:rgba(242,163,93,.65);
-    box-shadow:0 0 0 4px rgba(242,163,93,.14);
-  }
-  .vocab-search-count{
-    font-size:12px;
-    color:var(--muted);
-    white-space:nowrap;
-  }
-  .vocab-no-results{
-    display:none;
-    margin:12px 0 0;
-    padding:12px 14px;
-    border-radius:14px;
-    background:var(--orange-soft);
-    color:#9f5216;
-    border:1px solid #f2c18f;
-    font-size:13px;
-  }
-
-  .concept-card{
-    border-left:5px solid var(--orange);
-    background:var(--orange-soft);
-    padding:14px;
-    border-radius:14px;
-    margin:14px 0;
-  }
-  .usage-grid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
-  }
-  @media(max-width:780px){.usage-grid{grid-template-columns:1fr}}
-  .mini-list{margin:8px 0 0 18px;padding:0;}
-</style>
+    .tip{
+      border-left:5px solid var(--green);background:rgba(240,253,244,.8);
+      padding:12px 14px;border-radius:12px;margin:12px 0;
+    }
+    .structure{
+      border-left:5px solid var(--blue);background:rgba(239,246,255,.82);
+      padding:14px;border-radius:14px;margin:14px 0;
+    }
+    .mistake-box{
+      border-left:5px solid var(--red);background:rgba(254,242,242,.86);
+      padding:14px;border-radius:14px;margin:14px 0;
+    }
+    .bubble{
+      max-width:92%;padding:12px 14px;border-radius:18px;margin:10px 0;
+      border:1px solid var(--line);background:#fff;
+    }
+    .bubble.a{background:rgba(219,234,254,.78)}
+    .bubble.b{background:rgba(220,252,231,.78);margin-left:auto}
+    .speaker{
+      display:inline-block;font-size:11px;font-weight:800;
+      padding:2px 8px;border-radius:999px;margin-bottom:4px;
+    }
+    .speaker.a{background:#bfdbfe;color:#1d4ed8}
+    .speaker.b{background:#bbf7d0;color:#166534}
+    details{
+      background:rgba(255,255,255,.76);border:1px solid var(--line);
+      border-radius:14px;padding:10px 14px;margin:10px 0;
+    }
+    summary{cursor:pointer;font-weight:800}
+    .note-small{font-size:13px;color:var(--muted)}
+    .tts-warning{
+      display:none;margin-top:10px;color:#991b1b;background:#fee2e2;
+      border:1px solid #fecaca;border-radius:12px;padding:10px;font-size:13px;
+    }
+  </style>
 </head>
 <body>
 <div class="wrap">
 <section class="hero">
-<h1>Thai Daily Notes｜2026-05-21｜只、語氣、點餐、ใจ 情緒與生活口語</h1>
-<div class="subtitle">今日重點：แค่ vs เท่านั้น、服務業點餐句、ยิ่ง...ก็ยิ่ง...、ก็ดีนะ / สบาย ๆ、ใจ 系列、คิดตังค์、ข้างใน、เหมือนกัน、เรื่อง / ความ / ไว้ / เห็น。</div>
+<h1>Thai Daily Notes｜2026-05-21｜只、語氣、點餐、ใจ 情緒與生活口語｜加強版</h1>
+<div class="subtitle">今日重點：แค่ vs เท่านั้น、服務業點餐句、ยิ่ง...ก็ยิ่ง...、ก็ดีนะ / สบาย ๆ、ใจ 系列、คิดตังค์、ข้างใน、เหมือนกัน、เรื่อง / ความ / ไว้ / เห็น。加強版新增 Sentence Bank，讓每個重要單字至少有一句可播放例句。</div>
 <div class="badges">
 <span class="badge orange">Textbook-based</span>
 <span class="badge green">Local usage</span>
@@ -307,7 +212,7 @@
 <button class="tab-btn" data-tab="dialogues">Dialogues</button>
 <button class="tab-btn" data-tab="mistakes">Mistakes</button>
 <button class="tab-btn" data-tab="practice">Practice</button>
-<button class="tab-btn" data-tab="favorites">Favorites</button></nav>
+</nav>
 </section>
 <main>
 <section class="tab active" id="overview">
@@ -372,12 +277,7 @@
 <section class="tab" id="vocab">
 <h2>Vocabulary｜今日生詞表</h2>
 <div class="card">
-<div class="vocab-search-card">
-<label for="vocabSearch">搜尋 Vocabulary</label>
-<input autocomplete="off" class="vocab-search-input" id="vocabSearch" placeholder="輸入 Thai / Romanization / English / 中文，例如 แค่、khae、only、只是..." type="search"/>
-<span class="vocab-search-count" id="vocabSearchCount">顯示全部單字</span>
-</div>
-<div class="vocab-no-results" id="vocabNoResults">沒有找到相關單字。可以試試泰文、拼音、英文或中文關鍵字。</div><table>
+<table>
 <thead>
 <tr>
 <th>Thai</th>
@@ -387,7 +287,7 @@
 <th>Grammar / Usage Notes</th>
 <th>Collocations</th>
 <th>Example Sentence</th>
-<th>Favorite</th></tr>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -396,198 +296,198 @@
 <td>just / only</td>
 <td><span class="label local">Local usage</span></td>
 <td>口語自然的「只是、只有、而已」。</td>
-<td><button class="pill" data-thai="แค่นี้"><span class="thai">แค่นี้</span><span class="eng">that’s all; just this</span></button> <button class="pill" data-thai="ก็แค่"><span class="thai">ก็แค่</span><span class="eng">it’s just...</span></button> <button class="pill" data-thai="แค่อยาก"><span class="thai">แค่อยาก...</span><span class="eng">just want to...</span></button> </td>
+<td><button class="audio-pill" data-say="แค่นี้">🔊 แค่นี้</button> <button class="audio-pill" data-say="ก็แค่">🔊 ก็แค่</button> <button class="audio-pill" data-say="แค่อยาก">🔊 แค่อยาก...</button> </td>
 <td><span class="thai">ฉันมีเวลาแค่สิบนาที <button class="tts" data-say="ฉันมีเวลาแค่สิบนาที">🔊</button></span><br/><span class="roman">chǎn mii wee-laa khâe sìp naa-thii</span><br/><span class="eng">I only have ten minutes.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="just / only" data-example-eng="I only have ten minutes." data-example-rom="chǎn mii wee-laa khâe sìp naa-thii" data-example-thai="ฉันมีเวลาแค่สิบนาที" data-romanization="khâe" data-thai="แค่" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">เท่านั้น <button class="tts" data-say="เท่านั้น">🔊</button></span></td>
 <td><span class="roman">thâo-nán</span></td>
 <td>only / merely</td>
 <td><span class="label textbook">Textbook-based</span></td>
 <td>正式或強調限制，像「僅此而已」。</td>
-<td><button class="pill" data-thai="เพียง เท่านั้น"><span class="thai">เพียง...เท่านั้น</span><span class="eng">only; merely</span></button> <button class="pill" data-thai="ถึง เท่านั้น"><span class="thai">ถึง...เท่านั้น</span><span class="eng">only until...</span></button> </td>
+<td><button class="audio-pill" data-say="เพียง เท่านั้น">🔊 เพียง...เท่านั้น</button> <button class="audio-pill" data-say="ถึง เท่านั้น">🔊 ถึง...เท่านั้น</button> </td>
 <td><span class="thai">วันนี้เปิดถึงห้าโมงเท่านั้น <button class="tts" data-say="วันนี้เปิดถึงห้าโมงเท่านั้น">🔊</button></span><br/><span class="roman">wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán</span><br/><span class="eng">Open only until 5 today.</span></td>
-<td><button class="fav-btn" data-category="Textbook-based" data-english="only / merely" data-example-eng="Open only until 5 today." data-example-rom="wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán" data-example-thai="วันนี้เปิดถึงห้าโมงเท่านั้น" data-romanization="thâo-nán" data-thai="เท่านั้น" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ต้องการ <button class="tts" data-say="ต้องการ">🔊</button></span></td>
 <td><span class="roman">dtɔ̂ng-gaan</span></td>
 <td>need / want</td>
 <td><span class="label textbook">Textbook-based</span></td>
 <td>比 อยาก 正式，較理性或書面。</td>
-<td><button class="pill" data-thai="ต้องการความช่วยเหลือ"><span class="thai">ต้องการความช่วยเหลือ</span><span class="eng">need help</span></button> <button class="pill" data-thai="ต้องการพูดคุย"><span class="thai">ต้องการพูดคุย</span><span class="eng">need/want to talk</span></button> </td>
+<td><button class="audio-pill" data-say="ต้องการความช่วยเหลือ">🔊 ต้องการความช่วยเหลือ</button> <button class="audio-pill" data-say="ต้องการพูดคุย">🔊 ต้องการพูดคุย</button> </td>
 <td><span class="thai">ฉันแค่ต้องการพูดคุยกับเขา <button class="tts" data-say="ฉันแค่ต้องการพูดคุยกับเขา">🔊</button></span><br/><span class="roman">chǎn khâe dtɔ̂ng-gaan phûut-khui gàp khǎo</span><br/><span class="eng">I just want to talk with him.</span></td>
-<td><button class="fav-btn" data-category="Textbook-based" data-english="need / want" data-example-eng="I just want to talk with him." data-example-rom="chǎn khâe dtɔ̂ng-gaan phûut-khui gàp khǎo" data-example-thai="ฉันแค่ต้องการพูดคุยกับเขา" data-romanization="dtɔ̂ng-gaan" data-thai="ต้องการ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">พูดคุย / คุย <button class="tts" data-say="พูดคุย คุย">🔊</button></span></td>
 <td><span class="roman">phûut-khui / khui</span></td>
 <td>talk / chat</td>
 <td><span class="label local">Local usage</span></td>
 <td>พูดคุย 較完整正式；คุย 更日常。</td>
-<td><button class="pill" data-thai="คุยกับ"><span class="thai">คุยกับ...</span><span class="eng">talk with...</span></button> <button class="pill" data-thai="คุยกัน"><span class="thai">คุยกัน</span><span class="eng">talk together</span></button> <button class="pill" data-thai="มีเรื่องจะคุย"><span class="thai">มีเรื่องจะคุย</span><span class="eng">have something to discuss</span></button> </td>
+<td><button class="audio-pill" data-say="คุยกับ">🔊 คุยกับ...</button> <button class="audio-pill" data-say="คุยกัน">🔊 คุยกัน</button> <button class="audio-pill" data-say="มีเรื่องจะคุย">🔊 มีเรื่องจะคุย</button> </td>
 <td><span class="thai">ฉันแค่อยากคุยกับเขา <button class="tts" data-say="ฉันแค่อยากคุยกับเขา">🔊</button></span><br/><span class="roman">chǎn khâe yàak khui gàp khǎo</span><br/><span class="eng">I just want to chat with him.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="talk / chat" data-example-eng="I just want to chat with him." data-example-rom="chǎn khâe yàak khui gàp khǎo" data-example-thai="ฉันแค่อยากคุยกับเขา" data-romanization="phûut-khui / khui" data-thai="พูดคุย / คุย" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">หัวเราะ <button class="tts" data-say="หัวเราะ">🔊</button></span></td>
 <td><span class="roman">hǔa-ró</span></td>
 <td>laugh</td>
 <td><span class="label practice">Daily</span></td>
 <td>笑出聲；和 ยิ้ม「微笑」不同。</td>
-<td><button class="pill" data-thai="หัวเราะเฉยๆ"><span class="thai">หัวเราะเฉยๆ</span><span class="eng">just laugh it off</span></button> <button class="pill" data-thai="หัวเราะดัง"><span class="thai">หัวเราะดัง</span><span class="eng">laugh loudly</span></button> </td>
+<td><button class="audio-pill" data-say="หัวเราะเฉยๆ">🔊 หัวเราะเฉยๆ</button> <button class="audio-pill" data-say="หัวเราะดัง">🔊 หัวเราะดัง</button> </td>
 <td><span class="thai">เขาแค่หัวเราะเฉยๆ <button class="tts" data-say="เขาแค่หัวเราะเฉยๆ">🔊</button></span><br/><span class="roman">khǎo khâe hǔa-ró chə̌i-chə̌i</span><br/><span class="eng">He just laughed it off.</span></td>
-<td><button class="fav-btn" data-category="Daily" data-english="laugh" data-example-eng="He just laughed it off." data-example-rom="khǎo khâe hǔa-ró chə̌i-chə̌i" data-example-thai="เขาแค่หัวเราะเฉยๆ" data-romanization="hǔa-ró" data-thai="หัวเราะ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">เฉยๆ <button class="tts" data-say="เฉยๆ">🔊</button></span></td>
 <td><span class="roman">chə̌i-chə̌i</span></td>
 <td>just / neutral / nothing special</td>
 <td><span class="label local">Local usage</span></td>
 <td>不是 boring，而是「就那樣、沒特別」。</td>
-<td><button class="pill" data-thai="รู้สึกเฉยๆ"><span class="thai">รู้สึกเฉยๆ</span><span class="eng">feel neutral</span></button> <button class="pill" data-thai="ยิ้มเฉยๆ"><span class="thai">ยิ้มเฉยๆ</span><span class="eng">just smile</span></button> </td>
+<td><button class="audio-pill" data-say="รู้สึกเฉยๆ">🔊 รู้สึกเฉยๆ</button> <button class="audio-pill" data-say="ยิ้มเฉยๆ">🔊 ยิ้มเฉยๆ</button> </td>
 <td><span class="thai">ฉันรู้สึกเฉยๆ <button class="tts" data-say="ฉันรู้สึกเฉยๆ">🔊</button></span><br/><span class="roman">chǎn rúu-sʉ̀k chə̌i-chə̌i</span><br/><span class="eng">I feel neutral / meh.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="just / neutral / nothing special" data-example-eng="I feel neutral / meh." data-example-rom="chǎn rúu-sʉ̀k chə̌i-chə̌i" data-example-thai="ฉันรู้สึกเฉยๆ" data-romanization="chə̌i-chə̌i" data-thai="เฉยๆ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">รับ <button class="tts" data-say="รับ">🔊</button></span></td>
 <td><span class="roman">ráp</span></td>
 <td>receive / take / order</td>
 <td><span class="label local">Service Thai</span></td>
 <td>服務業中常表示「點、要、拿」。</td>
-<td><button class="pill" data-thai="รับอะไรดี"><span class="thai">รับอะไรดี</span><span class="eng">what would you like?</span></button> <button class="pill" data-thai="รับเพิ่มไหม"><span class="thai">รับเพิ่มไหม</span><span class="eng">would you like more?</span></button> <button class="pill" data-thai="รับกลับบ้านไหม"><span class="thai">รับกลับบ้านไหม</span><span class="eng">take away?</span></button> </td>
+<td><button class="audio-pill" data-say="รับอะไรดี">🔊 รับอะไรดี</button> <button class="audio-pill" data-say="รับเพิ่มไหม">🔊 รับเพิ่มไหม</button> <button class="audio-pill" data-say="รับกลับบ้านไหม">🔊 รับกลับบ้านไหม</button> </td>
 <td><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/><span class="roman">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></td>
-<td><button class="fav-btn" data-category="Service Thai" data-english="receive / take / order" data-example-eng="What would you like?" data-example-rom="ráp à-rai dii khá" data-example-thai="รับอะไรดีคะ" data-romanization="ráp" data-thai="รับ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">อย่างอื่น <button class="tts" data-say="อย่างอื่น">🔊</button></span></td>
 <td><span class="roman">yàang ʉ̀ʉn</span></td>
 <td>something else</td>
 <td><span class="label practice">Practical</span></td>
 <td>อย่าง = kind/thing；อื่น = other。</td>
-<td><button class="pill" data-thai="เอาอย่างอื่นไหม"><span class="thai">เอาอย่างอื่นไหม</span><span class="eng">anything else?</span></button> <button class="pill" data-thai="มีอย่างอื่นไหม"><span class="thai">มีอย่างอื่นไหม</span><span class="eng">is there anything else?</span></button> </td>
+<td><button class="audio-pill" data-say="เอาอย่างอื่นไหม">🔊 เอาอย่างอื่นไหม</button> <button class="audio-pill" data-say="มีอย่างอื่นไหม">🔊 มีอย่างอื่นไหม</button> </td>
 <td><span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/><span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/><span class="eng">Would you like anything else?</span></td>
-<td><button class="fav-btn" data-category="Practical" data-english="something else" data-example-eng="Would you like anything else?" data-example-rom="ao yàang ʉ̀ʉn mái khá" data-example-thai="เอาอย่างอื่นไหมคะ" data-romanization="yàang ʉ̀ʉn" data-thai="อย่างอื่น" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ยิ่ง...ก็ยิ่ง... <button class="tts" data-say="ยิ่ง ก็ยิ่ง">🔊</button></span></td>
 <td><span class="roman">yîng... gɔ̂ɔ yîng...</span></td>
 <td>the more..., the more...</td>
 <td><span class="label practice">Structure</span></td>
 <td>越……越……；歌詞與日常都常見。</td>
-<td><button class="pill" data-thai="ยิ่งคิดก็ยิ่งเครียด"><span class="thai">ยิ่งคิดก็ยิ่งเครียด</span><span class="eng">the more I think, the more stressed</span></button> </td>
+<td><button class="audio-pill" data-say="ยิ่งคิดก็ยิ่งเครียด">🔊 ยิ่งคิดก็ยิ่งเครียด</button> </td>
 <td><span class="thai">ยิ่งคิดก็ยิ่งเครียด <button class="tts" data-say="ยิ่งคิดก็ยิ่งเครียด">🔊</button></span><br/><span class="roman">yîng khít gɔ̂ɔ yîng khrîat</span><br/><span class="eng">The more I think, the more stressed I get.</span></td>
-<td><button class="fav-btn" data-category="Structure" data-english="the more..., the more..." data-example-eng="The more I think, the more stressed I get." data-example-rom="yîng khít gɔ̂ɔ yîng khrîat" data-example-thai="ยิ่งคิดก็ยิ่งเครียด" data-romanization="yîng... gɔ̂ɔ yîng..." data-thai="ยิ่ง...ก็ยิ่ง..." type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">คิด / คิดถึง <button class="tts" data-say="คิด คิดถึง">🔊</button></span></td>
 <td><span class="roman">khít / khít-thʉ̌ng</span></td>
 <td>think / miss</td>
 <td><span class="label mistake">Common mistake</span></td>
 <td>คิดถึง 幾乎是「想念」，不是單純 think about。</td>
-<td><button class="pill" data-thai="คิดว่า"><span class="thai">คิดว่า</span><span class="eng">think that</span></button> <button class="pill" data-thai="คิดถึงเธอ"><span class="thai">คิดถึงเธอ</span><span class="eng">miss you</span></button> </td>
+<td><button class="audio-pill" data-say="คิดว่า">🔊 คิดว่า</button> <button class="audio-pill" data-say="คิดถึงเธอ">🔊 คิดถึงเธอ</button> </td>
 <td><span class="thai">ฉันคิดถึงเธอ <button class="tts" data-say="ฉันคิดถึงเธอ">🔊</button></span><br/><span class="roman">chǎn khít-thʉ̌ng thəə</span><br/><span class="eng">I miss you.</span></td>
-<td><button class="fav-btn" data-category="Common mistake" data-english="think / miss" data-example-eng="I miss you." data-example-rom="chǎn khít-thʉ̌ng thəə" data-example-thai="ฉันคิดถึงเธอ" data-romanization="khít / khít-thʉ̌ng" data-thai="คิด / คิดถึง" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ยิ้ม <button class="tts" data-say="ยิ้ม">🔊</button></span></td>
 <td><span class="roman">yím</span></td>
 <td>smile</td>
 <td><span class="label practice">Emotion</span></td>
 <td>微笑；和 หัวเราะ「笑出聲」不同。</td>
-<td><button class="pill" data-thai="เธอยิ้ม"><span class="thai">เธอยิ้ม</span><span class="eng">you smile</span></button> <button class="pill" data-thai="ยิ้มให้"><span class="thai">ยิ้มให้</span><span class="eng">smile at/for</span></button> <button class="pill" data-thai="ยิ้มตาม"><span class="thai">ยิ้มตาม</span><span class="eng">smile along</span></button> </td>
+<td><button class="audio-pill" data-say="เธอยิ้ม">🔊 เธอยิ้ม</button> <button class="audio-pill" data-say="ยิ้มให้">🔊 ยิ้มให้</button> <button class="audio-pill" data-say="ยิ้มตาม">🔊 ยิ้มตาม</button> </td>
 <td><span class="thai">แค่เธอยิ้ม ฉันก็ยิ้ม <button class="tts" data-say="แค่เธอยิ้ม ฉันก็ยิ้ม">🔊</button></span><br/><span class="roman">khâe thəə yím, chǎn gɔ̂ɔ yím</span><br/><span class="eng">Just seeing you smile makes me smile too.</span></td>
-<td><button class="fav-btn" data-category="Emotion" data-english="smile" data-example-eng="Just seeing you smile makes me smile too." data-example-rom="khâe thəə yím, chǎn gɔ̂ɔ yím" data-example-thai="แค่เธอยิ้ม ฉันก็ยิ้ม" data-romanization="yím" data-thai="ยิ้ม" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ก็ดีนะ <button class="tts" data-say="ก็ดีนะ">🔊</button></span></td>
 <td><span class="roman">gɔ̂ɔ dii ná</span></td>
 <td>sounds good / pretty good</td>
 <td><span class="label local">Local usage</span></td>
 <td>柔和的「也不錯啊」，有時略帶保留。</td>
-<td><button class="pill" data-thai="ก็ดีนะ ไปกัน"><span class="thai">ก็ดีนะ ไปกัน</span><span class="eng">sounds good, let’s go</span></button> <button class="pill" data-thai="ได้เลย ก็ดีนะ"><span class="thai">ได้เลย ก็ดีนะ</span><span class="eng">sure, sounds good</span></button> </td>
+<td><button class="audio-pill" data-say="ก็ดีนะ ไปกัน">🔊 ก็ดีนะ ไปกัน</button> <button class="audio-pill" data-say="ได้เลย ก็ดีนะ">🔊 ได้เลย ก็ดีนะ</button> </td>
 <td><span class="thai">ไปกินชาบูกันไหม — ก็ดีนะ <button class="tts" data-say="ไปกินชาบูกันไหม ก็ดีนะ">🔊</button></span><br/><span class="roman">bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná</span><br/><span class="eng">Want shabu? — Sounds good.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="sounds good / pretty good" data-example-eng="Want shabu? — Sounds good." data-example-rom="bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná" data-example-thai="ไปกินชาบูกันไหม — ก็ดีนะ" data-romanization="gɔ̂ɔ dii ná" data-thai="ก็ดีนะ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">สบาย ๆ <button class="tts" data-say="สบาย ๆ">🔊</button></span></td>
 <td><span class="roman">sà-baai sà-baai</span></td>
 <td>relaxed / chill / casual</td>
 <td><span class="label local">Thai culture</span></td>
 <td>輕鬆、隨性、no pressure，不是 lazy。</td>
-<td><button class="pill" data-thai="ทำสบาย ๆ"><span class="thai">ทำสบาย ๆ</span><span class="eng">do it casually</span></button> <button class="pill" data-thai="คุยกันสบาย ๆ"><span class="thai">คุยกันสบาย ๆ</span><span class="eng">talk casually</span></button> </td>
+<td><button class="audio-pill" data-say="ทำสบาย ๆ">🔊 ทำสบาย ๆ</button> <button class="audio-pill" data-say="คุยกันสบาย ๆ">🔊 คุยกันสบาย ๆ</button> </td>
 <td><span class="thai">ไม่ต้องเครียด ทำสบาย ๆ <button class="tts" data-say="ไม่ต้องเครียด ทำสบาย ๆ">🔊</button></span><br/><span class="roman">mâi dtɔ̂ng khrîat, tham sà-baai sà-baai</span><br/><span class="eng">Don’t stress. Take it easy.</span></td>
-<td><button class="fav-btn" data-category="Thai culture" data-english="relaxed / chill / casual" data-example-eng="Don’t stress. Take it easy." data-example-rom="mâi dtɔ̂ng khrîat, tham sà-baai sà-baai" data-example-thai="ไม่ต้องเครียด ทำสบาย ๆ" data-romanization="sà-baai sà-baai" data-thai="สบาย ๆ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ใจ <button class="tts" data-say="ใจ">🔊</button></span></td>
 <td><span class="roman">jai</span></td>
 <td>heart / mind / feelings</td>
 <td><span class="label local">Emotion</span></td>
 <td>泰文情緒詞核心，表示內心狀態。</td>
-<td><button class="pill" data-thai="เข้าใจ"><span class="thai">เข้าใจ</span><span class="eng">understand</span></button> <button class="pill" data-thai="เสียใจ"><span class="thai">เสียใจ</span><span class="eng">be sad; sorry</span></button> <button class="pill" data-thai="น้อยใจ"><span class="thai">น้อยใจ</span><span class="eng">feel hurt; neglected</span></button> <button class="pill" data-thai="สบายใจ"><span class="thai">สบายใจ</span><span class="eng">feel at ease</span></button> </td>
+<td><button class="audio-pill" data-say="เข้าใจ">🔊 เข้าใจ</button> <button class="audio-pill" data-say="เสียใจ">🔊 เสียใจ</button> <button class="audio-pill" data-say="น้อยใจ">🔊 น้อยใจ</button> <button class="audio-pill" data-say="สบายใจ">🔊 สบายใจ</button> </td>
 <td><span class="thai">ฉันเข้าใจเธอ <button class="tts" data-say="ฉันเข้าใจเธอ">🔊</button></span><br/><span class="roman">chǎn khâo jai thəə</span><br/><span class="eng">I understand you.</span></td>
-<td><button class="fav-btn" data-category="Emotion" data-english="heart / mind / feelings" data-example-eng="I understand you." data-example-rom="chǎn khâo jai thəə" data-example-thai="ฉันเข้าใจเธอ" data-romanization="jai" data-thai="ใจ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">คิดตังค์ <button class="tts" data-say="คิดตังค์">🔊</button></span></td>
 <td><span class="roman">khít dtang</span></td>
 <td>calculate the bill</td>
 <td><span class="label local">Restaurant</span></td>
 <td>คิด = calculate；ตังค์ = 口語「錢」。</td>
-<td><button class="pill" data-thai="คิดตังค์ด้วย"><span class="thai">คิดตังค์ด้วย</span><span class="eng">bill, please</span></button> <button class="pill" data-thai="คิดเงินด้วย"><span class="thai">คิดเงินด้วย</span><span class="eng">bill, please</span></button> </td>
+<td><button class="audio-pill" data-say="คิดตังค์ด้วย">🔊 คิดตังค์ด้วย</button> <button class="audio-pill" data-say="คิดเงินด้วย">🔊 คิดเงินด้วย</button> </td>
 <td><span class="thai">พี่ คิดตังค์ด้วยค่ะ <button class="tts" data-say="พี่ คิดตังค์ด้วยค่ะ">🔊</button></span><br/><span class="roman">phîi khít dtang dûai khâ</span><br/><span class="eng">Excuse me, bill please.</span></td>
-<td><button class="fav-btn" data-category="Restaurant" data-english="calculate the bill" data-example-eng="Excuse me, bill please." data-example-rom="phîi khít dtang dûai khâ" data-example-thai="พี่ คิดตังค์ด้วยค่ะ" data-romanization="khít dtang" data-thai="คิดตังค์" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ข้างใน <button class="tts" data-say="ข้างใน">🔊</button></span></td>
 <td><span class="roman">khâang nai</span></td>
 <td>inside</td>
 <td><span class="label practice">Place</span></td>
 <td>比 ใน 更有「裡面那邊」的空間感。</td>
-<td><button class="pill" data-thai="นั่งข้างใน"><span class="thai">นั่งข้างใน</span><span class="eng">sit inside</span></button> <button class="pill" data-thai="ข้างในเต็ม"><span class="thai">ข้างในเต็ม</span><span class="eng">inside is full</span></button> <button class="pill" data-thai="เข้าไปข้างใน"><span class="thai">เข้าไปข้างใน</span><span class="eng">go inside</span></button> </td>
+<td><button class="audio-pill" data-say="นั่งข้างใน">🔊 นั่งข้างใน</button> <button class="audio-pill" data-say="ข้างในเต็ม">🔊 ข้างในเต็ม</button> <button class="audio-pill" data-say="เข้าไปข้างใน">🔊 เข้าไปข้างใน</button> </td>
 <td><span class="thai">ฉันรออยู่ข้างใน <button class="tts" data-say="ฉันรออยู่ข้างใน">🔊</button></span><br/><span class="roman">chǎn rɔɔ yùu khâang nai</span><br/><span class="eng">I’m waiting inside.</span></td>
-<td><button class="fav-btn" data-category="Place" data-english="inside" data-example-eng="I’m waiting inside." data-example-rom="chǎn rɔɔ yùu khâang nai" data-example-thai="ฉันรออยู่ข้างใน" data-romanization="khâang nai" data-thai="ข้างใน" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ทั้ง <button class="tts" data-say="ทั้ง">🔊</button></span></td>
 <td><span class="roman">tháng</span></td>
 <td>both / all / entire</td>
 <td><span class="label practice">Classifier</span></td>
 <td>表示全部包含進去。</td>
-<td><button class="pill" data-thai="ทั้งสอง"><span class="thai">ทั้งสอง</span><span class="eng">both</span></button> <button class="pill" data-thai="ทั้งหมด"><span class="thai">ทั้งหมด</span><span class="eng">all</span></button> <button class="pill" data-thai="ทั้งวัน"><span class="thai">ทั้งวัน</span><span class="eng">all day</span></button> </td>
+<td><button class="audio-pill" data-say="ทั้งสอง">🔊 ทั้งสอง</button> <button class="audio-pill" data-say="ทั้งหมด">🔊 ทั้งหมด</button> <button class="audio-pill" data-say="ทั้งวัน">🔊 ทั้งวัน</button> </td>
 <td><span class="thai">เอาทั้งสองอันค่ะ <button class="tts" data-say="เอาทั้งสองอันค่ะ">🔊</button></span><br/><span class="roman">ao tháng sɔ̌ɔng an khâ</span><br/><span class="eng">I’ll take both.</span></td>
-<td><button class="fav-btn" data-category="Classifier" data-english="both / all / entire" data-example-eng="I’ll take both." data-example-rom="ao tháng sɔ̌ɔng an khâ" data-example-thai="เอาทั้งสองอันค่ะ" data-romanization="tháng" data-thai="ทั้ง" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">เหมือนกัน <button class="tts" data-say="เหมือนกัน">🔊</button></span></td>
 <td><span class="roman">mʉ̌an gan</span></td>
 <td>same / too / likewise</td>
 <td><span class="label local">Chat</span></td>
 <td>聊天裡表共感，像「我也是耶」。</td>
-<td><button class="pill" data-thai="ชอบเหมือนกัน"><span class="thai">ชอบเหมือนกัน</span><span class="eng">like it too</span></button> <button class="pill" data-thai="คิดเหมือนกัน"><span class="thai">คิดเหมือนกัน</span><span class="eng">think the same</span></button> </td>
+<td><button class="audio-pill" data-say="ชอบเหมือนกัน">🔊 ชอบเหมือนกัน</button> <button class="audio-pill" data-say="คิดเหมือนกัน">🔊 คิดเหมือนกัน</button> </td>
 <td><span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/><span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/><span class="eng">I like it too.</span></td>
-<td><button class="fav-btn" data-category="Chat" data-english="same / too / likewise" data-example-eng="I like it too." data-example-rom="chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan" data-example-thai="ฉันก็ชอบเหมือนกัน" data-romanization="mʉ̌an gan" data-thai="เหมือนกัน" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">เรื่อง <button class="tts" data-say="เรื่อง">🔊</button></span></td>
 <td><span class="roman">rʉ̂ang</span></td>
 <td>matter / story / topic</td>
 <td><span class="label practice">Core noun</span></td>
 <td>不只 story，也可指事情、話題、狀況。</td>
-<td><button class="pill" data-thai="เรื่องนี้"><span class="thai">เรื่องนี้</span><span class="eng">this matter</span></button> <button class="pill" data-thai="มีเรื่อง"><span class="thai">มีเรื่อง</span><span class="eng">have something; have an issue</span></button> <button class="pill" data-thai="เรื่องงาน"><span class="thai">เรื่องงาน</span><span class="eng">work matter</span></button> </td>
+<td><button class="audio-pill" data-say="เรื่องนี้">🔊 เรื่องนี้</button> <button class="audio-pill" data-say="มีเรื่อง">🔊 มีเรื่อง</button> <button class="audio-pill" data-say="เรื่องงาน">🔊 เรื่องงาน</button> </td>
 <td><span class="thai">เรื่องนี้สำคัญมาก <button class="tts" data-say="เรื่องนี้สำคัญมาก">🔊</button></span><br/><span class="roman">rʉ̂ang níi sǎm-khan mâak</span><br/><span class="eng">This matter is very important.</span></td>
-<td><button class="fav-btn" data-category="Core noun" data-english="matter / story / topic" data-example-eng="This matter is very important." data-example-rom="rʉ̂ang níi sǎm-khan mâak" data-example-thai="เรื่องนี้สำคัญมาก" data-romanization="rʉ̂ang" data-thai="เรื่อง" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ความ <button class="tts" data-say="ความ">🔊</button></span></td>
 <td><span class="roman">khwaam</span></td>
 <td>abstract noun marker</td>
 <td><span class="label textbook">Grammar</span></td>
 <td>把後面的詞變成抽象概念。</td>
-<td><button class="pill" data-thai="ความรัก"><span class="thai">ความรัก</span><span class="eng">love</span></button> <button class="pill" data-thai="ความสุข"><span class="thai">ความสุข</span><span class="eng">happiness</span></button> <button class="pill" data-thai="ความรู้สึก"><span class="thai">ความรู้สึก</span><span class="eng">feeling</span></button> </td>
+<td><button class="audio-pill" data-say="ความรัก">🔊 ความรัก</button> <button class="audio-pill" data-say="ความสุข">🔊 ความสุข</button> <button class="audio-pill" data-say="ความรู้สึก">🔊 ความรู้สึก</button> </td>
 <td><span class="thai">ความรักไม่ง่ายเลย <button class="tts" data-say="ความรักไม่ง่ายเลย">🔊</button></span><br/><span class="roman">khwaam-rák mâi ngâai loei</span><br/><span class="eng">Love is not easy at all.</span></td>
-<td><button class="fav-btn" data-category="Grammar" data-english="abstract noun marker" data-example-eng="Love is not easy at all." data-example-rom="khwaam-rák mâi ngâai loei" data-example-thai="ความรักไม่ง่ายเลย" data-romanization="khwaam" data-thai="ความ" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">ไว้ <button class="tts" data-say="ไว้">🔊</button></span></td>
 <td><span class="roman">wái</span></td>
 <td>keep / save / leave for later</td>
 <td><span class="label local">Local usage</span></td>
 <td>保留某動作結果到之後。</td>
-<td><button class="pill" data-thai="เก็บไว้"><span class="thai">เก็บไว้</span><span class="eng">keep it</span></button> <button class="pill" data-thai="ซื้อไว้"><span class="thai">ซื้อไว้</span><span class="eng">buy in advance</span></button> <button class="pill" data-thai="ไว้ก่อน"><span class="thai">ไว้ก่อน</span><span class="eng">leave it for now</span></button> <button class="pill" data-thai="ไว้เจอกัน"><span class="thai">ไว้เจอกัน</span><span class="eng">see you later</span></button> </td>
+<td><button class="audio-pill" data-say="เก็บไว้">🔊 เก็บไว้</button> <button class="audio-pill" data-say="ซื้อไว้">🔊 ซื้อไว้</button> <button class="audio-pill" data-say="ไว้ก่อน">🔊 ไว้ก่อน</button> <button class="audio-pill" data-say="ไว้เจอกัน">🔊 ไว้เจอกัน</button> </td>
 <td><span class="thai">เก็บไว้ก่อนค่ะ <button class="tts" data-say="เก็บไว้ก่อนค่ะ">🔊</button></span><br/><span class="roman">gèp wái gɔ̀ɔn khâ</span><br/><span class="eng">Keep it for now.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="keep / save / leave for later" data-example-eng="Keep it for now." data-example-rom="gèp wái gɔ̀ɔn khâ" data-example-thai="เก็บไว้ก่อนค่ะ" data-romanization="wái" data-thai="ไว้" type="button">♡ 收藏</button></td></tr>
+</tr>
 <tr>
 <td><span class="thai">เห็น <button class="tts" data-say="เห็น">🔊</button></span></td>
 <td><span class="roman">hěn</span></td>
 <td>see / notice / realize</td>
 <td><span class="label practice">Core verb</span></td>
 <td>不只看到，也可表示察覺、認同、同理。</td>
-<td><button class="pill" data-thai="เห็นด้วย"><span class="thai">เห็นด้วย</span><span class="eng">agree</span></button> <button class="pill" data-thai="เห็นใจ"><span class="thai">เห็นใจ</span><span class="eng">sympathize</span></button> <button class="pill" data-thai="เห็นแล้ว"><span class="thai">เห็นแล้ว</span><span class="eng">saw it already</span></button> <button class="pill" data-thai="ไม่เห็น"><span class="thai">ไม่เห็น...</span><span class="eng">not at all...</span></button> </td>
+<td><button class="audio-pill" data-say="เห็นด้วย">🔊 เห็นด้วย</button> <button class="audio-pill" data-say="เห็นใจ">🔊 เห็นใจ</button> <button class="audio-pill" data-say="เห็นแล้ว">🔊 เห็นแล้ว</button> <button class="audio-pill" data-say="ไม่เห็น">🔊 ไม่เห็น...</button> </td>
 <td><span class="thai">ฉันเห็นด้วย <button class="tts" data-say="ฉันเห็นด้วย">🔊</button></span><br/><span class="roman">chǎn hěn dûai</span><br/><span class="eng">I agree.</span></td>
-<td><button class="fav-btn" data-category="Core verb" data-english="see / notice / realize" data-example-eng="I agree." data-example-rom="chǎn hěn dûai" data-example-thai="ฉันเห็นด้วย" data-romanization="hěn" data-thai="เห็น" type="button">♡ 收藏</button></td></tr>
+</tr>
 </tbody>
 </table>
 </div>
@@ -688,6 +588,7 @@
 <tr><td><span class="thai">เห็นใจ <button class="tts" data-say="เห็นใจ">🔊</button></span></td><td><span class="roman">hěn jai</span></td><td>sympathize</td><td>看到對方的心</td></tr>
 </table>
 </div>
+
 <div class="card">
 <h3>補充觀念｜笑、想、共感：不要只靠中文直翻</h3>
 <div class="usage-grid">
@@ -785,6 +686,7 @@
 </table>
 </div>
 </section>
+
 <section class="tab" id="sentences">
 <h2>Sentence Bank｜所有重點單字例句庫</h2>
 <div class="card">
@@ -1260,6 +1162,7 @@
 </p>
 </details>
 </div>
+
 <div class="card">
 <h3>D. 易混淆詞判斷</h3>
 <p>1. 「我想你」要用 คิด 還是 คิดถึง？</p>
@@ -1275,34 +1178,30 @@
 </details>
 </div>
 </section>
-<section class="tab" id="favorites"><h2>Favorites｜收藏字卡</h2><div class="card"><p class="note-small">這裡會顯示你從 Vocabulary 收藏的單字卡。收藏資料會存在這個瀏覽器的 localStorage，不需要登入。</p><div class="favorites-grid" id="favoritesList"></div></div></section></main>
+</main>
 </div>
 <script>
   const buttons = document.querySelectorAll('.tab-btn');
   const tabs = document.querySelectorAll('.tab');
-  const warning = document.getElementById('ttsWarning');
-  const FAVORITES_KEY = 'thaiDailyNotes_2026_05_21_favorites';
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
       tabs.forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
-      const target = document.getElementById(btn.dataset.tab);
-      if (target) target.classList.add('active');
-      if (btn.dataset.tab === 'favorites') renderFavorites();
+      document.getElementById(btn.dataset.tab).classList.add('active');
       window.scrollTo({top:0, behavior:'smooth'});
     });
   });
 
-  if (!('speechSynthesis' in window) && warning) {
+  const warning = document.getElementById('ttsWarning');
+  if (!('speechSynthesis' in window)) {
     warning.style.display = 'block';
   }
 
   function speakThai(text){
-    if (!text) return;
     if (!('speechSynthesis' in window)) {
-      if (warning) warning.style.display = 'block';
+      warning.style.display = 'block';
       return;
     }
     window.speechSynthesis.cancel();
@@ -1319,170 +1218,12 @@
     window.speechSynthesis.speak(utterance);
   }
 
-  function bindAudioButtons(){
-    document.querySelectorAll('.tts, .pill, .audio-pill').forEach(btn => {
-      if (btn.dataset.bound === '1') return;
-      btn.dataset.bound = '1';
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        speakThai(btn.dataset.say || btn.dataset.thai || btn.textContent.trim().replace('🔊','').trim());
-      });
-    });
-  }
-
-  function getFavorites(){
-    try { return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || []; }
-    catch { return []; }
-  }
-
-  function saveFavorites(items){
-    localStorage.setItem(FAVORITES_KEY, JSON.stringify(items));
-  }
-
-  function favoriteId(item){
-    return (item.thai || '').trim() + '|' + (item.romanization || '').trim();
-  }
-
-  function isFavorite(item){
-    const id = favoriteId(item);
-    return getFavorites().some(f => favoriteId(f) === id);
-  }
-
-  function updateFavoriteButtons(){
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-      const item = buttonToItem(btn);
-      const active = isFavorite(item);
-      btn.classList.toggle('active', active);
-      btn.textContent = active ? '★ 已收藏' : '♡ 收藏';
-    });
-  }
-
-  function buttonToItem(btn){
-    return {
-      thai: btn.dataset.thai || '',
-      romanization: btn.dataset.romanization || '',
-      english: btn.dataset.english || '',
-      category: btn.dataset.category || '',
-      exampleThai: btn.dataset.exampleThai || '',
-      exampleRom: btn.dataset.exampleRom || '',
-      exampleEng: btn.dataset.exampleEng || ''
-    };
-  }
-
-  function toggleFavorite(btn){
-    const item = buttonToItem(btn);
-    const id = favoriteId(item);
-    let favorites = getFavorites();
-    const exists = favorites.some(f => favoriteId(f) === id);
-    if (exists) {
-      favorites = favorites.filter(f => favoriteId(f) !== id);
-    } else {
-      favorites.push(item);
-    }
-    saveFavorites(favorites);
-    updateFavoriteButtons();
-    renderFavorites();
-  }
-
-  function renderFavorites(){
-    const container = document.getElementById('favoritesList');
-    if (!container) return;
-    const favorites = getFavorites();
-    if (!favorites.length) {
-      container.innerHTML = '<div class="empty-favs">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>';
-      return;
-    }
-    container.innerHTML = favorites.map((item, index) => `
-      <div class="favorite-card">
-        <div class="top">
-          <div>
-            <div><span class="thai big">${escapeHtml(item.thai)}</span><button class="tts" data-say="${escapeAttr(item.thai)}">🔊</button></div>
-            <div class="roman">${escapeHtml(item.romanization)}</div>
-            <div class="eng">${escapeHtml(item.english)}</div>
-          </div>
-          <button class="remove-fav" type="button" data-index="${index}">移除</button>
-        </div>
-        <div><span class="label local">${escapeHtml(item.category || 'Favorite')}</span></div>
-        <p>
-          <span class="thai">${escapeHtml(item.exampleThai)}</span>${item.exampleThai ? `<button class="tts" data-say="${escapeAttr(item.exampleThai)}">🔊</button>` : ''}<br/>
-          <span class="roman">${escapeHtml(item.exampleRom)}</span><br/>
-          <span class="eng">${escapeHtml(item.exampleEng)}</span>
-        </p>
-      </div>
-    `).join('');
-
-    container.querySelectorAll('.remove-fav').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const i = Number(btn.dataset.index);
-        const next = getFavorites();
-        next.splice(i, 1);
-        saveFavorites(next);
-        updateFavoriteButtons();
-        renderFavorites();
-      });
-    });
-    bindAudioButtons();
-  }
-
-  function escapeHtml(str){
-    return String(str || '').replace(/[&<>"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
-  }
-
-  function escapeAttr(str){
-    return escapeHtml(str).replace(/'/g, '&#39;');
-  }
-
-  document.querySelectorAll('.fav-btn').forEach(btn => {
+  document.querySelectorAll('.tts, .audio-pill').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      toggleFavorite(btn);
+      speakThai(btn.dataset.say);
     });
   });
-
-
-  function normalizeSearchText(text){
-    return String(text || '')
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
-      .replace(/ʉ/g, 'ue')
-      .replace(/ɔ/g, 'o')
-      .replace(/ɛ/g, 'ae')
-      .replace(/ə/g, 'oe')
-      .replace(/̌|̂|̀|́|̄/g, '')
-      .trim();
-  }
-
-  function initVocabSearch(){
-    const input = document.getElementById('vocabSearch');
-    const count = document.getElementById('vocabSearchCount');
-    const noResults = document.getElementById('vocabNoResults');
-    const rows = Array.from(document.querySelectorAll('#vocab tbody tr'));
-    if (!input || !rows.length) return;
-
-    function update(){
-      const raw = input.value.trim();
-      const query = normalizeSearchText(raw);
-      let visible = 0;
-      rows.forEach(row => {
-        const text = normalizeSearchText(row.textContent);
-        const match = !query || text.includes(query);
-        row.style.display = match ? '' : 'none';
-        if (match) visible += 1;
-      });
-      if (count) count.textContent = raw ? `找到 ${visible} / ${rows.length} 個相關單字` : `顯示全部 ${rows.length} 個單字`;
-      if (noResults) noResults.style.display = raw && visible === 0 ? 'block' : 'none';
-    }
-
-    input.addEventListener('input', update);
-    update();
-  }
-
-  initVocabSearch();
-
-  bindAudioButtons();
-  updateFavoriteButtons();
-  renderFavorites();
 
   if ('speechSynthesis' in window) {
     window.speechSynthesis.onvoiceschanged = () => {};
