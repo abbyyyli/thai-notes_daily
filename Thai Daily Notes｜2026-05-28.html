@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Thai Daily Notes｜2026-05-28｜生活功能句、補語句型與曼谷日常任務</title>
+<style>
+:root{
+  --bg:#fffaf4;--card:rgba(255,255,255,.9);--text:#302820;--muted:#7a6f63;--line:rgba(88,63,35,.16);
+  --orange:#f2a35d;--orange-soft:#fff1df;--green:#78b887;--green-soft:#eef9f1;--blue:#6ea8d6;--blue-soft:#eef7ff;
+  --red:#dc776f;--red-soft:#fff0ef;--purple:#8873c9;--purple-soft:#f6f1ff;
+  --shadow:0 12px 28px rgba(74,45,18,.08);--radius:18px;
+  --thai-font:"Noto Sans Thai","Tahoma","Leelawadee UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;padding:56px 24px 24px;color:var(--text);
+  background:radial-gradient(circle at top left,rgba(242,163,93,.16),transparent 36%),
+             radial-gradient(circle at top right,rgba(110,168,214,.14),transparent 38%),
+             linear-gradient(135deg,#fffaf4 0%,#fbfffb 55%,#f7fbff 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  line-height:1.68;
+}
+.page{max-width:1240px;margin:0 auto}
+header{
+  background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:28px;
+  padding:28px;box-shadow:var(--shadow);backdrop-filter:blur(10px);margin-bottom:18px;
+}
+h1{margin:0 0 8px;font-size:28px;line-height:1.3;letter-spacing:.2px}
+h2{margin:0 0 12px;font-size:22px;line-height:1.35;color:#392f26}
+h3{margin:18px 0 8px;font-size:18px;color:#3c332a}
+h4{margin:14px 0 8px;font-size:15px;color:#3c332a}
+p{margin:8px 0}.subtitle{color:var(--muted);margin:0 0 18px;font-size:14px}
+.badges,.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.badge,.tag{
+  display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;
+  font-size:12px;font-weight:800;border:1px solid transparent;white-space:nowrap;
+}
+.b-textbook,.tag-textbook{background:var(--orange-soft);color:#9f5216;border-color:#f2c18f}
+.b-local,.tag-local{background:var(--green-soft);color:#2f7948;border-color:#b2dfbd}
+.b-practice,.tag-practice{background:var(--blue-soft);color:#276f9f;border-color:#acd4ef}
+.b-review,.tag-review{background:#f4f1ed;color:#6a5f55;border-color:#ddd3c8}
+.b-mistake,.tag-mistake{background:var(--red-soft);color:#a84038;border-color:#efb2ad}
+.b-supp,.tag-supp{background:var(--purple-soft);color:#6a55a5;border-color:#d8ccff}
+.tabs{
+  margin:18px 0;position:sticky;top:0;z-index:10;padding:10px 0;
+  background:rgba(255,250,244,.92);backdrop-filter:blur(10px);
+}
+.tab-btn{
+  border:1px solid var(--line);background:rgba(255,255,255,.86);color:var(--text);
+  padding:9px 13px;border-radius:999px;cursor:pointer;font-weight:800;font-size:13px;transition:.18s ease;
+}
+.tab-btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(60,40,20,.08)}
+.tab-btn.active{background:#2f2a24;color:#fff;border-color:#2f2a24}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-12{grid-column:span 12}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);margin-bottom:14px;
+}
+.section-title{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.section-title:before{
+  content:"";width:9px;height:26px;border-radius:999px;
+  background:linear-gradient(180deg,var(--orange),var(--green));flex:0 0 auto;
+}
+.section-title.blue:before{background:linear-gradient(180deg,var(--blue),#9fc9e9)}
+.section-title.green:before{background:linear-gradient(180deg,var(--green),#b2dfbd)}
+.section-title.red:before{background:linear-gradient(180deg,var(--red),#efb2ad)}
+.thai{font-family:var(--thai-font);font-size:15px;font-weight:500;color:#1e2d22}
+.thai-lg{font-family:var(--thai-font);font-size:18px;font-weight:800;color:#18301f}
+.rom{font-family:var(--mono);font-size:12.5px;color:#756f68}
+.eng{font-size:13px;color:#5f6c73}
+.tts{
+  border:1px solid rgba(130,90,45,.2);background:linear-gradient(180deg,#fff 0%,#fff5eb 100%);
+  border-radius:999px;padding:2px 7px;margin-left:5px;cursor:pointer;font-size:12px;color:#965315;
+  vertical-align:middle;white-space:nowrap;
+}
+.tts:hover{background:#fff0df}
+.pill{
+  display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;
+  border:1px solid rgba(80,120,80,.2);background:#f7fff8;color:#2d6d3d;
+  border-radius:13px;padding:5px 8px;margin:3px 3px 3px 0;font-size:12px;cursor:pointer;max-width:260px;
+}
+.pill .thai{font-size:13px;line-height:1.2}.pill .eng{font-size:11px;line-height:1.15;color:#52645a}
+table{
+  width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;
+  border:1px solid var(--line);border-radius:14px;background:#fff;font-size:14px;
+}
+th,td{border-bottom:1px solid rgba(80,60,40,.12);border-right:1px solid rgba(80,60,40,.10);padding:10px;vertical-align:top}
+th{background:#fff1df;color:#6d3b0e;text-align:left;font-size:12px;letter-spacing:.2px}
+tr:nth-child(even) td{background:#fffdf9}tr:last-child td{border-bottom:none}td:last-child,th:last-child{border-right:none}
+.tip{border-left:5px solid var(--blue);background:var(--blue-soft);padding:12px 14px;border-radius:14px;margin:10px 0}
+.tip.green{border-left-color:var(--green);background:var(--green-soft)}
+.tip.orange{border-left-color:var(--orange);background:var(--orange-soft)}
+.tip.red{border-left-color:var(--red);background:var(--red-soft)}
+.tip.purple{border-left-color:var(--purple);background:var(--purple-soft)}
+.pattern,.compare-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;
+}
+.scene-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0 18px}
+.sentence-group{border:1px solid var(--line);background:rgba(255,255,255,.78);border-radius:18px;padding:16px}
+.scene-label{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;
+  font-size:12px;font-weight:900;background:var(--orange-soft);color:#9f5216;border:1px solid #f2c18f;margin-bottom:8px;
+}
+.sentence{padding:10px 0;border-bottom:1px dashed rgba(80,60,40,.14)}
+.sentence:last-child{border-bottom:none}
+
+/* Dialogue update：左右聊天泡泡 */
+.chat-thread{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.chat-row{display:flex;width:100%}
+.chat-row.left{justify-content:flex-start}
+.chat-row.right{justify-content:flex-end}
+.chat-bubble{
+  max-width:72%;border:1px solid var(--line);border-radius:20px;padding:12px 14px;
+  background:#fff;box-shadow:0 6px 16px rgba(74,45,18,.05);
+}
+.chat-row.left .chat-bubble{border-top-left-radius:8px;background:#f8fcff;border-left:5px solid var(--blue)}
+.chat-row.right .chat-bubble{border-top-right-radius:8px;background:#f7fff8;border-right:5px solid var(--green)}
+.speaker{
+  display:inline-flex;font-size:11px;font-weight:900;border-radius:999px;padding:2px 8px;margin-bottom:6px;
+}
+.chat-row.left .speaker{background:var(--blue-soft);color:#276d9f}
+.chat-row.right .speaker{background:var(--green-soft);color:#2f7a45}
+
+/* Mistake update：Wrong / Better cards */
+.mistake-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;margin:14px 0}
+.wrong-box,.better-box,.why-box{border-radius:14px;padding:12px;margin:10px 0}
+.wrong-box{background:var(--red-soft);border:1px solid #efb2ad}
+.better-box{background:var(--green-soft);border:1px solid #b2dfbd}
+.why-box{background:#f8f5f1;border:1px solid #e3d8cd}
+.box-title{font-size:12px;font-weight:900;letter-spacing:.3px;text-transform:uppercase;margin-bottom:5px}
+
+/* Favorites update：flashcard look */
+.favorites-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin-top:12px}
+.favorite-card{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;
+  box-shadow:0 10px 22px rgba(74,45,18,.07);
+}
+.favorite-card .thai-lg{font-size:26px;margin-right:48px}
+.favorite-card .top-audio{position:absolute;right:14px;top:14px}
+.example-box{background:#fffaf4;border:1px dashed rgba(80,60,40,.18);border-radius:14px;padding:10px;margin-top:12px}
+.remove-fav{
+  border:1px solid #efb2ad;background:var(--red-soft);color:#a84038;border-radius:999px;
+  padding:3px 8px;cursor:pointer;font-size:12px;font-weight:900;white-space:nowrap;margin-top:10px;
+}
+.empty-favs{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f}
+.fav-btn{
+  border:1px solid rgba(130,90,45,.2);background:linear-gradient(180deg,#fff 0%,#fff5eb 100%);
+  color:#965315;border-radius:999px;padding:5px 10px;cursor:pointer;font-size:12px;font-weight:900;white-space:nowrap;
+}
+.fav-btn.active{background:var(--orange-soft);border-color:#f2c18f;color:#9f5216}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:10px 0}
+summary{cursor:pointer;font-weight:900;color:#4b3828}
+.vocab-search-card{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+  margin:0 0 12px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.72);
+}
+.vocab-search-card label{
+  font-size:12px;
+  font-weight:900;
+  color:#3b3128;
+}
+.vocab-search-input{
+  flex:1 1 300px;min-width:220px;border:1px solid rgba(80,60,40,.18);border-radius:999px;
+  padding:10px 14px;background:rgba(255,255,255,.92);font-size:14px;outline:none;
+}
+.vocab-search-count{font-size:12px;color:var(--muted);white-space:nowrap}
+.vocab-no-results{display:none;margin:12px 0 0;padding:12px 14px;border-radius:14px;background:var(--orange-soft);color:#9f5216;border:1px solid #f2c18f;font-size:13px}
+.warn{display:none;background:var(--red-soft);color:#8d332c;border:1px solid #efb2ad;padding:10px 12px;border-radius:14px;margin-top:12px;font-size:13px}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:920px){
+  body{padding:24px 14px 14px}.span-4,.span-6,.span-12{grid-column:span 12}h1{font-size:24px}.tabs{position:static}
+  .scene-grid{grid-template-columns:1fr}.chat-bubble{max-width:92%}
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+<header>
+<h1>Thai Daily Notes｜2026-05-28｜生活功能句、補語句型與曼谷日常任務</h1>
+<p class="subtitle">
+今天的內容以「真實生活會立刻用到」為主：問假日去哪、吃不完、東西忘在哪、資料缺漏、續簽與有效期、改時間、轉車、健身房，以及 <span class="thai">ไม่ถูก</span> / <span class="rom">mâi thùuk</span> / <span class="eng">not in the right way</span>、<span class="thai">ไม่ออก</span> / <span class="rom">mâi ɔ̀ɔk</span> / <span class="eng">can’t get it out</span>、<span class="thai">ไม่...นัก</span> / <span class="rom">mâi ... nák</span> / <span class="eng">not very...</span> 等句型。
+</p>
+<div class="badges">
+<span class="badge b-local">Local usage</span>
+<span class="badge b-practice">Practical Usage</span>
+<span class="badge b-textbook">Textbook-based</span>
+<span class="badge b-supp">Supplement</span>
+<span class="badge b-review">Review</span>
+<span class="badge b-mistake">Common mistake</span>
+</div>
+<div class="warn" id="ttsWarning">此瀏覽器可能不支援泰文 TTS，建議使用 Chrome / Edge，並確認系統有 Thai voice。</div>
+</header>
+
+<nav class="tabs">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+<button class="tab-btn" data-tab="vocabulary">Vocabulary</button>
+<button class="tab-btn" data-tab="usage">Usage Notes</button>
+<button class="tab-btn" data-tab="sentence">Sentence Bank</button>
+<button class="tab-btn" data-tab="structures">Structures</button>
+<button class="tab-btn" data-tab="bangkok">Bangkok Expansion</button>
+<button class="tab-btn" data-tab="dialogues">Dialogues</button>
+<button class="tab-btn" data-tab="mistakes">Mistakes</button>
+<button class="tab-btn" data-tab="practice">Practice</button>
+<button class="tab-btn" data-tab="favorites">Favorites</button>
+</nav>
+
+<main>
+<section class="tab-panel active" id="overview">
+<div class="grid">
+<div class="card span-12">
+<div class="section-title"><h2>Overview｜今日學習地圖</h2></div>
+<p>今天內容不是單純單字，而是一組「曼谷生活任務包」：問近況、點餐吃不完、東西忘在某地、文件缺漏、簽證續期、改時間、換線、健身房與聊天收尾。</p>
+<div class="tip orange">
+<b>Content Type：</b>生活功能句 + 補語句型 + 比較組。Sentence Bank 以真實任務排列；Dialogues 用左右泡泡呈現對話感。
+</div>
+</div>
+
+<div class="card span-4">
+<h2>1. 生活任務</h2>
+<p><span class="thai">วันหยุดไปไหนมามั่ง</span><button class="tts" data-thai="วันหยุดไปไหนมามั่ง">🔊</button><br><span class="rom">wan-yùt bpai nǎi maa mâang</span><br><span class="eng">Where did you go during the holiday?</span></p>
+<p><span class="thai">กินไม่หมด</span><button class="tts" data-thai="กินไม่หมด">🔊</button><br><span class="rom">gin mâi mòt</span><br><span class="eng">can’t finish eating it</span></p>
+<p><span class="thai">ลืมที่ชาร์จไว้ที่ยิม</span><button class="tts" data-thai="ลืมที่ชาร์จไว้ที่ยิม">🔊</button><br><span class="rom">lʉʉm thîi châat wái thîi yim</span><br><span class="eng">left the charger at the gym</span></p>
+</div>
+
+<div class="card span-4">
+<h2>2. 今日句型</h2>
+<p><span class="thai">เลือกไม่ถูก</span><button class="tts" data-thai="เลือกไม่ถูก">🔊</button><br><span class="rom">lʉ̂ak mâi thùuk</span><br><span class="eng">can’t choose; don’t know which is right</span></p>
+<p><span class="thai">คิดไม่ออก</span><button class="tts" data-thai="คิดไม่ออก">🔊</button><br><span class="rom">khít mâi ɔ̀ɔk</span><br><span class="eng">can’t think of it</span></p>
+<p><span class="thai">ไม่เหมาะนัก</span><button class="tts" data-thai="ไม่เหมาะนัก">🔊</button><br><span class="rom">mâi mɔ̀ nák</span><br><span class="eng">not very suitable</span></p>
+</div>
+
+<div class="card span-4">
+<h2>3. 文件 / 簽證</h2>
+<p><span class="thai">ยังไม่ครบ</span><button class="tts" data-thai="ยังไม่ครบ">🔊</button><br><span class="rom">yang mâi khróp</span><br><span class="eng">still not complete</span></p>
+<p><span class="thai">ขาดบางส่วน</span><button class="tts" data-thai="ขาดบางส่วน">🔊</button><br><span class="rom">khàat baang sùan</span><br><span class="eng">some parts are missing</span></p>
+<p><span class="thai">วีซ่าใกล้หมดอายุแล้ว ต้องต่อวีซ่า</span><button class="tts" data-thai="วีซ่าใกล้หมดอายุแล้ว ต้องต่อวีซ่า">🔊</button><br><span class="rom">wii-sâa glâi mòt aa-yú lɛ́ɛo, dtɔ̂ng dtɔ̀ɔ wii-sâa</span><br><span class="eng">The visa is about to expire, so I need to extend it.</span></p>
+</div>
+</div>
+</section>
+
+<section class="tab-panel" id="vocabulary">
+<div class="card">
+<div class="section-title green"><h2>Vocabulary｜核心生詞與可播放 Collocation Pills</h2></div>
+<div class="vocab-search-card">
+<label for="vocabSearch">搜尋 Vocabulary</label>
+<input id="vocabSearch" class="vocab-search-input" type="search" placeholder="輸入 Thai / Romanization / English / 中文，例如 ต่อวีซ่า、mâi ɔ̀ɔk、charger、吃不完..."/>
+<span id="vocabSearchCount" class="vocab-search-count">顯示全部單字</span>
+</div>
+<div id="vocabNoResults" class="vocab-no-results">沒有找到相關單字。</div>
+
+<table id="vocabTable">
+<thead>
+<tr>
+<th>Thai</th><th>Romanization</th><th>English</th><th>Category</th><th>Grammar / Usage Notes</th><th>Collocations</th><th>Example Sentence</th><th>Favorite</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><span class="thai">ไม่ทัน</span><button class="tts" data-thai="ไม่ทัน">🔊</button></td>
+<td><span class="rom">mâi than</span></td>
+<td>not in time; can’t make it</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>時間上來不及；常接 <span class="thai">ไป</span> / <span class="rom">bpai</span> / <span class="eng">go</span>、<span class="thai">ตอบ</span> / <span class="rom">dtɔ̀ɔp</span> / <span class="eng">reply</span>。</td>
+<td>
+<button class="pill" data-thai="ไปไม่ทัน"><span class="thai">ไปไม่ทัน</span><span class="eng">can’t make it there</span></button>
+<button class="pill" data-thai="ตอบไม่ทัน"><span class="thai">ตอบไม่ทัน</span><span class="eng">can’t reply in time</span></button>
+<button class="pill" data-thai="กินข้าวไม่ทัน"><span class="thai">กินข้าวไม่ทัน</span><span class="eng">no time to eat</span></button>
+</td>
+<td><span class="thai">ถ้าแวะหลายที่ อาจจะไปไม่ทัน</span><button class="tts" data-thai="ถ้าแวะหลายที่ อาจจะไปไม่ทัน">🔊</button><br><span class="rom">thâa wɛ́ lǎai thîi, àat jà bpai mâi than</span><br><span class="eng">If we stop by many places, we might not make it in time.</span></td>
+<td><button class="fav-btn" data-fav-thai="ไม่ทัน" data-fav-romanization="mâi than" data-fav-english="not in time; can’t make it" data-fav-category="Practical Usage" data-fav-example-thai="ถ้าแวะหลายที่ อาจจะไปไม่ทัน" data-fav-example-rom="thâa wɛ́ lǎai thîi, àat jà bpai mâi than" data-fav-example-eng="If we stop by many places, we might not make it in time.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">แวะ</span><button class="tts" data-thai="แวะ">🔊</button></td>
+<td><span class="rom">wɛ́</span></td>
+<td>stop by; drop by</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td>順路停一下，不是正式拜訪。曼谷生活超常用。</td>
+<td>
+<button class="pill" data-thai="แวะคาเฟ่"><span class="thai">แวะคาเฟ่</span><span class="eng">stop by a café</span></button>
+<button class="pill" data-thai="แวะยิม"><span class="thai">แวะยิม</span><span class="eng">stop by the gym</span></button>
+<button class="pill" data-thai="แวะกลับไปเอา"><span class="thai">แวะกลับไปเอา</span><span class="eng">stop back to get it</span></button>
+</td>
+<td><span class="thai">เดี๋ยวแวะยิมก่อนนะ</span><button class="tts" data-thai="เดี๋ยวแวะยิมก่อนนะ">🔊</button><br><span class="rom">dǐiao wɛ́ yim gɔ̀ɔn ná</span><br><span class="eng">I’ll stop by the gym first.</span></td>
+<td><button class="fav-btn" data-fav-thai="แวะ" data-fav-romanization="wɛ́" data-fav-english="stop by; drop by" data-fav-category="Local usage" data-fav-example-thai="เดี๋ยวแวะยิมก่อนนะ" data-fav-example-rom="dǐiao wɛ́ yim gɔ̀ɔn ná" data-fav-example-eng="I’ll stop by the gym first.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">เลือกไม่ถูก</span><button class="tts" data-thai="เลือกไม่ถูก">🔊</button></td>
+<td><span class="rom">lʉ̂ak mâi thùuk</span></td>
+<td>can’t choose; don’t know which is right</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td><span class="thai">V + ไม่ถูก</span> 表示不知道怎麼做才對、哪個方式合適。</td>
+<td>
+<button class="pill" data-thai="พูดไม่ถูก"><span class="thai">พูดไม่ถูก</span><span class="eng">don’t know how to say it</span></button>
+<button class="pill" data-thai="ตอบไม่ถูก"><span class="thai">ตอบไม่ถูก</span><span class="eng">don’t know how to answer</span></button>
+<button class="pill" data-thai="ทำไม่ถูก"><span class="thai">ทำไม่ถูก</span><span class="eng">don’t know how to do it right</span></button>
+</td>
+<td><span class="thai">เมนูเยอะจนเลือกไม่ถูก</span><button class="tts" data-thai="เมนูเยอะจนเลือกไม่ถูก">🔊</button><br><span class="rom">mee-nuu yə́ jon lʉ̂ak mâi thùuk</span><br><span class="eng">There are so many menu items that I can’t choose.</span></td>
+<td><button class="fav-btn" data-fav-thai="เลือกไม่ถูก" data-fav-romanization="lʉ̂ak mâi thùuk" data-fav-english="can’t choose; don’t know which one is right" data-fav-category="Practical Usage" data-fav-example-thai="เมนูเยอะจนเลือกไม่ถูก" data-fav-example-rom="mee-nuu yə́ jon lʉ̂ak mâi thùuk" data-fav-example-eng="There are so many menu items that I can’t choose.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ไม่ออก</span><button class="tts" data-thai="ไม่ออก">🔊</button></td>
+<td><span class="rom">mâi ɔ̀ɔk</span></td>
+<td>can’t get it out; can’t figure it out</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td><span class="thai">V + ไม่ออก</span> 表示想法、話、記憶、差異「出不來」。</td>
+<td>
+<button class="pill" data-thai="คิดไม่ออก"><span class="thai">คิดไม่ออก</span><span class="eng">can’t think of it</span></button>
+<button class="pill" data-thai="พูดไม่ออก"><span class="thai">พูดไม่ออก</span><span class="eng">speechless</span></button>
+<button class="pill" data-thai="แยกไม่ออก"><span class="thai">แยกไม่ออก</span><span class="eng">can’t distinguish</span></button>
+</td>
+<td><span class="thai">คิดไม่ออกว่าจะกินอะไร</span><button class="tts" data-thai="คิดไม่ออกว่าจะกินอะไร">🔊</button><br><span class="rom">khít mâi ɔ̀ɔk wâa jà gin à-rai</span><br><span class="eng">I can’t think of what to eat.</span></td>
+<td><button class="fav-btn" data-fav-thai="ไม่ออก" data-fav-romanization="mâi ɔ̀ɔk" data-fav-english="can’t get it out; can’t figure it out" data-fav-category="Practical Usage" data-fav-example-thai="คิดไม่ออกว่าจะกินอะไร" data-fav-example-rom="khít mâi ɔ̀ɔk wâa jà gin à-rai" data-fav-example-eng="I can’t think of what to eat.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">จน</span><button class="tts" data-thai="จน">🔊</button></td>
+<td><span class="rom">jon</span></td>
+<td>until; so...that; to the point that</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>把前面的狀態推到後面的結果。可表示時間「直到」或程度「到……」。</td>
+<td>
+<button class="pill" data-thai="เยอะจนเลือกไม่ถูก"><span class="thai">เยอะจนเลือกไม่ถูก</span><span class="eng">so many that can’t choose</span></button>
+<button class="pill" data-thai="ดีใจจนพูดไม่ออก"><span class="thai">ดีใจจนพูดไม่ออก</span><span class="eng">so happy speechless</span></button>
+<button class="pill" data-thai="รอจนเหนื่อย"><span class="thai">รอจนเหนื่อย</span><span class="eng">waited until tired</span></button>
+</td>
+<td><span class="thai">ยุ่งจนกินข้าวไม่ทัน</span><button class="tts" data-thai="ยุ่งจนกินข้าวไม่ทัน">🔊</button><br><span class="rom">yûng jon gin khâao mâi than</span><br><span class="eng">I was so busy that I didn’t have time to eat.</span></td>
+<td><button class="fav-btn" data-fav-thai="จน" data-fav-romanization="jon" data-fav-english="until; so...that" data-fav-category="Practical Usage" data-fav-example-thai="ยุ่งจนกินข้าวไม่ทัน" data-fav-example-rom="yûng jon gin khâao mâi than" data-fav-example-eng="I was so busy that I didn’t have time to eat.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">งั้น</span><button class="tts" data-thai="งั้น">🔊</button></td>
+<td><span class="rom">ngán</span></td>
+<td>then; in that case</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td>口語「那、那就、既然這樣」。常放句首，引出下一步決定。</td>
+<td>
+<button class="pill" data-thai="งั้นก็"><span class="thai">งั้นก็</span><span class="eng">then...</span></button>
+<button class="pill" data-thai="ถ้างั้น"><span class="thai">ถ้างั้น</span><span class="eng">if so</span></button>
+<button class="pill" data-thai="งั้นเอาอันนี้"><span class="thai">งั้นเอาอันนี้</span><span class="eng">then I’ll take this</span></button>
+</td>
+<td><span class="thai">งั้นเอาอันนี้ก็แล้วกัน</span><button class="tts" data-thai="งั้นเอาอันนี้ก็แล้วกัน">🔊</button><br><span class="rom">ngán ao an níi gɔ̂ɔ lɛ́ɛo gan</span><br><span class="eng">Then I’ll take this one.</span></td>
+<td><button class="fav-btn" data-fav-thai="งั้น" data-fav-romanization="ngán" data-fav-english="then; in that case" data-fav-category="Local usage" data-fav-example-thai="งั้นเอาอันนี้ก็แล้วกัน" data-fav-example-rom="ngán ao an níi gɔ̂ɔ lɛ́ɛo gan" data-fav-example-eng="Then I’ll take this one.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">เหมาะ</span><button class="tts" data-thai="เหมาะ">🔊</button></td>
+<td><span class="rom">mɔ̀</span></td>
+<td>suitable; fit; appropriate</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>某選擇跟人、場合、條件、目的很搭。常接 <span class="thai">กับ</span> / <span class="rom">gàp</span> / <span class="eng">with; for</span>。</td>
+<td>
+<button class="pill" data-thai="เหมาะกับ"><span class="thai">เหมาะกับ</span><span class="eng">suitable for</span></button>
+<button class="pill" data-thai="ไม่เหมาะ"><span class="thai">ไม่เหมาะ</span><span class="eng">not suitable</span></button>
+<button class="pill" data-thai="เหมาะสม"><span class="thai">เหมาะสม</span><span class="eng">appropriate</span></button>
+</td>
+<td><span class="thai">คำนี้ใช้กับเพื่อนได้ แต่ไม่เหมาะกับลูกค้า</span><button class="tts" data-thai="คำนี้ใช้กับเพื่อนได้ แต่ไม่เหมาะกับลูกค้า">🔊</button><br><span class="rom">kham níi chái gàp phʉ̂uean dâai, dtɛ̀ɛ mâi mɔ̀ gàp lûuk-kháa</span><br><span class="eng">This word can be used with friends, but it’s not suitable for customers.</span></td>
+<td><button class="fav-btn" data-fav-thai="เหมาะ" data-fav-romanization="mɔ̀" data-fav-english="suitable; fit; appropriate" data-fav-category="Practical Usage" data-fav-example-thai="คำนี้ใช้กับเพื่อนได้ แต่ไม่เหมาะกับลูกค้า" data-fav-example-rom="kham níi chái gàp phʉ̂uean dâai, dtɛ̀ɛ mâi mɔ̀ gàp lûuk-kháa" data-fav-example-eng="This word can be used with friends, but it’s not suitable for customers.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">แรง</span><button class="tts" data-thai="แรง">🔊</button></td>
+<td><span class="rom">rɛɛng</span></td>
+<td>strong; intense; harsh</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td>可形容風雨、味道、藥效、語氣、反應很強。<span class="thai">พูดแรง</span> 不是大聲，而是話很重。</td>
+<td>
+<button class="pill" data-thai="พูดแรง"><span class="thai">พูดแรง</span><span class="eng">speak harshly</span></button>
+<button class="pill" data-thai="ลมแรง"><span class="thai">ลมแรง</span><span class="eng">strong wind</span></button>
+<button class="pill" data-thai="ยาแรง"><span class="thai">ยาแรง</span><span class="eng">strong medicine</span></button>
+</td>
+<td><span class="thai">คำนี้แรงไป ใช้กับลูกค้าไม่เหมาะ</span><button class="tts" data-thai="คำนี้แรงไป ใช้กับลูกค้าไม่เหมาะ">🔊</button><br><span class="rom">kham níi rɛɛng bpai, chái gàp lûuk-kháa mâi mɔ̀</span><br><span class="eng">This word is too strong. It’s not suitable to use with customers.</span></td>
+<td><button class="fav-btn" data-fav-thai="แรง" data-fav-romanization="rɛɛng" data-fav-english="strong; intense; harsh" data-fav-category="Local usage" data-fav-example-thai="คำนี้แรงไป ใช้กับลูกค้าไม่เหมาะ" data-fav-example-rom="kham níi rɛɛng bpai, chái gàp lûuk-kháa mâi mɔ̀" data-fav-example-eng="This word is too strong. It’s not suitable to use with customers.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">วันหยุดไปไหนมามั่ง</span><button class="tts" data-thai="วันหยุดไปไหนมามั่ง">🔊</button></td>
+<td><span class="rom">wan-yùt bpai nǎi maa mâang</span></td>
+<td>Where did you go during the holiday?</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td><span class="thai">มา</span> 表示去過回來；<span class="thai">มั่ง</span> 是 <span class="thai">บ้าง</span> 的口語版。</td>
+<td>
+<button class="pill" data-thai="ไปไหนมา"><span class="thai">ไปไหนมา</span><span class="eng">where did you go?</span></button>
+<button class="pill" data-thai="ไปไหนมาบ้าง"><span class="thai">ไปไหนมาบ้าง</span><span class="eng">what places did you go?</span></button>
+<button class="pill" data-thai="วันหยุดยาว"><span class="thai">วันหยุดยาว</span><span class="eng">long holiday</span></button>
+</td>
+<td><span class="thai">แล้วเธอล่ะ วันหยุดไปไหนมามั่ง</span><button class="tts" data-thai="แล้วเธอล่ะ วันหยุดไปไหนมามั่ง">🔊</button><br><span class="rom">lɛ́ɛo thəə lâ, wan-yùt bpai nǎi maa mâang</span><br><span class="eng">What about you? Where did you go during the holiday?</span></td>
+<td><button class="fav-btn" data-fav-thai="วันหยุดไปไหนมามั่ง" data-fav-romanization="wan-yùt bpai nǎi maa mâang" data-fav-english="Where did you go during the holiday?" data-fav-category="Local usage" data-fav-example-thai="แล้วเธอล่ะ วันหยุดไปไหนมามั่ง" data-fav-example-rom="lɛ́ɛo thəə lâ, wan-yùt bpai nǎi maa mâang" data-fav-example-eng="What about you? Where did you go during the holiday?">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ลืม...ไว้ที่...</span><button class="tts" data-thai="ลืมของไว้ที่บ้าน">🔊</button></td>
+<td><span class="rom">lʉʉm ... wái thîi ...</span></td>
+<td>left ... at ...; forgot ... at ...</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td><span class="thai">ไว้</span> 表示東西被留在那裡的結果感。交通工具上常用 <span class="thai">บน</span>。</td>
+<td>
+<button class="pill" data-thai="ลืมมือถือไว้ที่บ้าน"><span class="thai">ลืมมือถือไว้ที่บ้าน</span><span class="eng">left phone at home</span></button>
+<button class="pill" data-thai="ลืมที่ชาร์จไว้ที่ยิม"><span class="thai">ลืมที่ชาร์จไว้ที่ยิม</span><span class="eng">left charger at gym</span></button>
+<button class="pill" data-thai="ลืมของไว้บนแท็กซี่"><span class="thai">ลืมของไว้บนแท็กซี่</span><span class="eng">left things in taxi</span></button>
+</td>
+<td><span class="thai">ลืมกระเป๋าไว้ที่คาเฟ่ ต้องแวะกลับไปเอา</span><button class="tts" data-thai="ลืมกระเป๋าไว้ที่คาเฟ่ ต้องแวะกลับไปเอา">🔊</button><br><span class="rom">lʉʉm grà-bpǎo wái thîi khaa-fêe, dtɔ̂ng wɛ́ glàp bpai ao</span><br><span class="eng">I left my bag at the café. I have to stop by and get it.</span></td>
+<td><button class="fav-btn" data-fav-thai="ลืม...ไว้ที่..." data-fav-romanization="lʉʉm ... wái thîi ..." data-fav-english="left ... at ..." data-fav-category="Practical Usage" data-fav-example-thai="ลืมกระเป๋าไว้ที่คาเฟ่ ต้องแวะกลับไปเอา" data-fav-example-rom="lʉʉm grà-bpǎo wái thîi khaa-fêe, dtɔ̂ng wɛ́ glàp bpai ao" data-fav-example-eng="I left my bag at the café. I have to stop by and get it.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ยังไม่ครบ</span><button class="tts" data-thai="ยังไม่ครบ">🔊</button></td>
+<td><span class="rom">yang mâi khróp</span></td>
+<td>still not complete</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>該有的東西、人、資料、餐點還沒有全部齊全。</td>
+<td>
+<button class="pill" data-thai="เอกสารยังไม่ครบ"><span class="thai">เอกสารยังไม่ครบ</span><span class="eng">documents incomplete</span></button>
+<button class="pill" data-thai="อาหารยังไม่ครบ"><span class="thai">อาหารยังไม่ครบ</span><span class="eng">food not all served</span></button>
+<button class="pill" data-thai="คนยังไม่ครบ"><span class="thai">คนยังไม่ครบ</span><span class="eng">not everyone here</span></button>
+</td>
+<td><span class="thai">วันนี้คำศัพท์ยังไม่ครบ เดี๋ยวค่อยเก็บต่อ</span><button class="tts" data-thai="วันนี้คำศัพท์ยังไม่ครบ เดี๋ยวค่อยเก็บต่อ">🔊</button><br><span class="rom">wan-níi kham-sàp yang mâi khróp, dǐiao khɔ̂i gèp dtɔ̀ɔ</span><br><span class="eng">Today’s vocabulary isn’t complete yet. We’ll continue collecting it later.</span></td>
+<td><button class="fav-btn" data-fav-thai="ยังไม่ครบ" data-fav-romanization="yang mâi khróp" data-fav-english="still not complete" data-fav-category="Practical Usage" data-fav-example-thai="วันนี้คำศัพท์ยังไม่ครบ เดี๋ยวค่อยเก็บต่อ" data-fav-example-rom="wan-níi kham-sàp yang mâi khróp, dǐiao khɔ̂i gèp dtɔ̀ɔ" data-fav-example-eng="Today’s vocabulary isn’t complete yet. We’ll continue collecting it later.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ขาด</span><button class="tts" data-thai="ขาด">🔊</button></td>
+<td><span class="rom">khàat</span></td>
+<td>missing; lack; be short of</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>本來應該有，但少了某一部分。常和 <span class="thai">ครบ</span> 搭配。</td>
+<td>
+<button class="pill" data-thai="ขาดอะไร"><span class="thai">ขาดอะไร</span><span class="eng">what is missing?</span></button>
+<button class="pill" data-thai="ขาดอีกหนึ่งหน้า"><span class="thai">ขาดอีกหนึ่งหน้า</span><span class="eng">one page missing</span></button>
+<button class="pill" data-thai="ขาดข้อมูลบางส่วน"><span class="thai">ขาดข้อมูลบางส่วน</span><span class="eng">some info missing</span></button>
+</td>
+<td><span class="thai">ยังไม่ครบค่ะ ขาดอีกหนึ่งหน้า</span><button class="tts" data-thai="ยังไม่ครบค่ะ ขาดอีกหนึ่งหน้า">🔊</button><br><span class="rom">yang mâi khróp khâ, khàat ìik nʉ̀ng nâa</span><br><span class="eng">It’s still not complete. One more page is missing.</span></td>
+<td><button class="fav-btn" data-fav-thai="ขาด" data-fav-romanization="khàat" data-fav-english="missing; lack; be short of" data-fav-category="Practical Usage" data-fav-example-thai="ยังไม่ครบค่ะ ขาดอีกหนึ่งหน้า" data-fav-example-rom="yang mâi khróp khâ, khàat ìik nʉ̀ng nâa" data-fav-example-eng="It’s still not complete. One more page is missing.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">กินไม่หมด</span><button class="tts" data-thai="กินไม่หมด">🔊</button></td>
+<td><span class="rom">gin mâi mòt</span></td>
+<td>can’t finish eating it</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td>食物太多或已經飽了，所以沒辦法全部吃完。不是 <span class="thai">กินไม่ได้</span>。</td>
+<td>
+<button class="pill" data-thai="กินหมด"><span class="thai">กินหมด</span><span class="eng">finish eating</span></button>
+<button class="pill" data-thai="แบ่งกันกิน"><span class="thai">แบ่งกันกิน</span><span class="eng">share and eat</span></button>
+<button class="pill" data-thai="ขอห่อกลับบ้าน"><span class="thai">ขอห่อกลับบ้าน</span><span class="eng">pack to go</span></button>
+</td>
+<td><span class="thai">กินไม่หมดค่ะ ขอห่อกลับบ้านได้ไหมคะ</span><button class="tts" data-thai="กินไม่หมดค่ะ ขอห่อกลับบ้านได้ไหมคะ">🔊</button><br><span class="rom">gin mâi mòt khâ, khɔ̌ɔ hɔ̀ɔ glàp bâan dâai mái khá</span><br><span class="eng">I can’t finish it. Can I have it packed to go?</span></td>
+<td><button class="fav-btn" data-fav-thai="กินไม่หมด" data-fav-romanization="gin mâi mòt" data-fav-english="can’t finish eating it" data-fav-category="Local usage" data-fav-example-thai="กินไม่หมดค่ะ ขอห่อกลับบ้านได้ไหมคะ" data-fav-example-rom="gin mâi mòt khâ, khɔ̌ɔ hɔ̀ɔ glàp bâan dâai mái khá" data-fav-example-eng="I can’t finish it. Can I have it packed to go?">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ที่ชาร์จ</span><button class="tts" data-thai="ที่ชาร์จ">🔊</button></td>
+<td><span class="rom">thîi châat</span></td>
+<td>charger</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td>英文 charge 的借詞。可泛指充電器；更精準可分充電線與充電頭。</td>
+<td>
+<button class="pill" data-thai="สายชาร์จ"><span class="thai">สายชาร์จ</span><span class="eng">charging cable</span></button>
+<button class="pill" data-thai="หัวชาร์จ"><span class="thai">หัวชาร์จ</span><span class="eng">charger head</span></button>
+<button class="pill" data-thai="แบตจะหมด"><span class="thai">แบตจะหมด</span><span class="eng">battery about to die</span></button>
+</td>
+<td><span class="thai">แบตจะหมดแล้ว ขอยืมที่ชาร์จหน่อยได้ไหมคะ</span><button class="tts" data-thai="แบตจะหมดแล้ว ขอยืมที่ชาร์จหน่อยได้ไหมคะ">🔊</button><br><span class="rom">bɛ̀ɛt jà mòt lɛ́ɛo, khɔ̌ɔ yʉʉm thîi châat nɔ̀i dâai mái khá</span><br><span class="eng">My battery is about to die. Can I borrow a charger?</span></td>
+<td><button class="fav-btn" data-fav-thai="ที่ชาร์จ" data-fav-romanization="thîi châat" data-fav-english="charger" data-fav-category="Local usage" data-fav-example-thai="แบตจะหมดแล้ว ขอยืมที่ชาร์จหน่อยได้ไหมคะ" data-fav-example-rom="bɛ̀ɛt jà mòt lɛ́ɛo, khɔ̌ɔ yʉʉm thîi châat nɔ̀i dâai mái khá" data-fav-example-eng="My battery is about to die. Can I borrow a charger?">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ยิม</span><button class="tts" data-thai="ยิม">🔊</button></td>
+<td><span class="rom">yim</span></td>
+<td>gym</td>
+<td><span class="tag tag-local">Local usage</span></td>
+<td>英文 gym 的泰文音譯。Condo 設施也常說 <span class="thai">ฟิตเนส</span> / <span class="rom">fít-nêt</span> / <span class="eng">fitness center</span>。</td>
+<td>
+<button class="pill" data-thai="ไปยิม"><span class="thai">ไปยิม</span><span class="eng">go to the gym</span></button>
+<button class="pill" data-thai="เข้ายิม"><span class="thai">เข้ายิม</span><span class="eng">work out at gym</span></button>
+<button class="pill" data-thai="เล่นเวท"><span class="thai">เล่นเวท</span><span class="eng">do weight training</span></button>
+</td>
+<td><span class="thai">เพิ่งกลับจากยิมค่ะ</span><button class="tts" data-thai="เพิ่งกลับจากยิมค่ะ">🔊</button><br><span class="rom">phə̂ng glàp jàak yim khâ</span><br><span class="eng">I just came back from the gym.</span></td>
+<td><button class="fav-btn" data-fav-thai="ยิม" data-fav-romanization="yim" data-fav-english="gym" data-fav-category="Local usage" data-fav-example-thai="เพิ่งกลับจากยิมค่ะ" data-fav-example-rom="phə̂ng glàp jàak yim khâ" data-fav-example-eng="I just came back from the gym.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ต่อ</span><button class="tts" data-thai="ต่อ">🔊</button></td>
+<td><span class="rom">dtɔ̀ɔ</span></td>
+<td>continue; connect; transfer; extend</td>
+<td><span class="tag tag-review">Review</span></td>
+<td>核心是「接下去、接上」。今天延伸到 <span class="thai">ต่อวีซ่า</span> / <span class="rom">dtɔ̀ɔ wii-sâa</span> / <span class="eng">extend a visa</span>。</td>
+<td>
+<button class="pill" data-thai="เรียนต่อ"><span class="thai">เรียนต่อ</span><span class="eng">continue studying</span></button>
+<button class="pill" data-thai="ต่อรถ"><span class="thai">ต่อรถ</span><span class="eng">transfer vehicles</span></button>
+<button class="pill" data-thai="ต่อวีซ่า"><span class="thai">ต่อวีซ่า</span><span class="eng">extend visa</span></button>
+</td>
+<td><span class="thai">วีซ่าใกล้หมดอายุแล้ว ต้องต่อวีซ่า</span><button class="tts" data-thai="วีซ่าใกล้หมดอายุแล้ว ต้องต่อวีซ่า">🔊</button><br><span class="rom">wii-sâa glâi mòt aa-yú lɛ́ɛo, dtɔ̂ng dtɔ̀ɔ wii-sâa</span><br><span class="eng">My visa is about to expire, so I need to extend it.</span></td>
+<td><button class="fav-btn" data-fav-thai="ต่อ" data-fav-romanization="dtɔ̀ɔ" data-fav-english="continue; connect; transfer; extend" data-fav-category="Review" data-fav-example-thai="วีซ่าใกล้หมดอายุแล้ว ต้องต่อวีซ่า" data-fav-example-rom="wii-sâa glâi mòt aa-yú lɛ́ɛo, dtɔ̂ng dtɔ̀ɔ wii-sâa" data-fav-example-eng="My visa is about to expire, so I need to extend it.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">มีอายุ</span><button class="tts" data-thai="มีอายุ">🔊</button></td>
+<td><span class="rom">mii aa-yú</span></td>
+<td>be valid; have an age / duration</td>
+<td><span class="tag tag-supp">Supplement</span></td>
+<td>可表示人的年齡，也可表示簽證、護照、文件、優惠券的有效期。</td>
+<td>
+<button class="pill" data-thai="หมดอายุ"><span class="thai">หมดอายุ</span><span class="eng">expire</span></button>
+<button class="pill" data-thai="ใกล้หมดอายุ"><span class="thai">ใกล้หมดอายุ</span><span class="eng">about to expire</span></button>
+<button class="pill" data-thai="ต่ออายุ"><span class="thai">ต่ออายุ</span><span class="eng">renew validity</span></button>
+</td>
+<td><span class="thai">วีซ่านี้มีอายุ 90 วันค่ะ</span><button class="tts" data-thai="วีซ่านี้มีอายุ 90 วันค่ะ">🔊</button><br><span class="rom">wii-sâa níi mii aa-yú gâo-sìp wan khâ</span><br><span class="eng">This visa is valid for 90 days.</span></td>
+<td><button class="fav-btn" data-fav-thai="มีอายุ" data-fav-romanization="mii aa-yú" data-fav-english="be valid; have an age / duration" data-fav-category="Supplement" data-fav-example-thai="วีซ่านี้มีอายุ 90 วันค่ะ" data-fav-example-rom="wii-sâa níi mii aa-yú gâo-sìp wan khâ" data-fav-example-eng="This visa is valid for 90 days.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ส่วน</span><button class="tts" data-thai="ส่วน">🔊</button></td>
+<td><span class="rom">sùan</span></td>
+<td>part; portion; section; as for</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>表示整體中的某一部分，也可句首表示「至於……」。</td>
+<td>
+<button class="pill" data-thai="บางส่วน"><span class="thai">บางส่วน</span><span class="eng">some parts</span></button>
+<button class="pill" data-thai="ส่วนใหญ่"><span class="thai">ส่วนใหญ่</span><span class="eng">most</span></button>
+<button class="pill" data-thai="ส่วนตัว"><span class="thai">ส่วนตัว</span><span class="eng">personally; private</span></button>
+</td>
+<td><span class="thai">ข้อมูลขาดบางส่วนค่ะ</span><button class="tts" data-thai="ข้อมูลขาดบางส่วนค่ะ">🔊</button><br><span class="rom">khɔ̂ɔ-muun khàat baang sùan khâ</span><br><span class="eng">Some information is missing.</span></td>
+<td><button class="fav-btn" data-fav-thai="ส่วน" data-fav-romanization="sùan" data-fav-english="part; portion; section; as for" data-fav-category="Practical Usage" data-fav-example-thai="ข้อมูลขาดบางส่วนค่ะ" data-fav-example-rom="khɔ̂ɔ-muun khàat baang sùan khâ" data-fav-example-eng="Some information is missing.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ตั้ง</span><button class="tts" data-thai="ตั้ง">🔊</button></td>
+<td><span class="rom">dtâng</span></td>
+<td>set up; establish; set; place</td>
+<td><span class="tag tag-supp">Supplement</span></td>
+<td>核心畫面是「把某物立起來、放定、設定好」。延伸成 <span class="thai">ตั้งใจ</span>、<span class="thai">ตั้งคำถาม</span>、<span class="thai">ตั้งอยู่</span>。</td>
+<td>
+<button class="pill" data-thai="ตั้งใจ"><span class="thai">ตั้งใจ</span><span class="eng">intend; concentrate</span></button>
+<button class="pill" data-thai="ตั้งคำถาม"><span class="thai">ตั้งคำถาม</span><span class="eng">raise a question</span></button>
+<button class="pill" data-thai="ตั้งอยู่"><span class="thai">ตั้งอยู่</span><span class="eng">be located</span></button>
+</td>
+<td><span class="thai">ขอโทษนะคะ ไม่ได้ตั้งใจ</span><button class="tts" data-thai="ขอโทษนะคะ ไม่ได้ตั้งใจ">🔊</button><br><span class="rom">khɔ̌ɔ-thôot ná khá, mâi dâai dtâng-jai</span><br><span class="eng">Sorry, I didn’t mean to.</span></td>
+<td><button class="fav-btn" data-fav-thai="ตั้ง" data-fav-romanization="dtâng" data-fav-english="set up; establish; set; place" data-fav-category="Supplement" data-fav-example-thai="ขอโทษนะคะ ไม่ได้ตั้งใจ" data-fav-example-rom="khɔ̌ɔ-thôot ná khá, mâi dâai dtâng-jai" data-fav-example-eng="Sorry, I didn’t mean to.">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">เปลี่ยน</span><button class="tts" data-thai="เปลี่ยน">🔊</button></td>
+<td><span class="rom">bplìian</span></td>
+<td>change; switch; exchange</td>
+<td><span class="tag tag-practice">Practical Usage</span></td>
+<td>把原本的人、事、物、時間、地點、選項、狀態改成另一個。</td>
+<td>
+<button class="pill" data-thai="เปลี่ยนใจ"><span class="thai">เปลี่ยนใจ</span><span class="eng">change one’s mind</span></button>
+<button class="pill" data-thai="เปลี่ยนเวลา"><span class="thai">เปลี่ยนเวลา</span><span class="eng">change time</span></button>
+<button class="pill" data-thai="เปลี่ยนสาย"><span class="thai">เปลี่ยนสาย</span><span class="eng">change lines</span></button>
+</td>
+<td><span class="thai">ขอเปลี่ยนเวลาเป็นบ่ายสองได้ไหมคะ</span><button class="tts" data-thai="ขอเปลี่ยนเวลาเป็นบ่ายสองได้ไหมคะ">🔊</button><br><span class="rom">khɔ̌ɔ bplìian wee-laa bpen bàai sɔ̌ɔng dâai mái khá</span><br><span class="eng">Can I change the time to 2 p.m.?</span></td>
+<td><button class="fav-btn" data-fav-thai="เปลี่ยน" data-fav-romanization="bplìian" data-fav-english="change; switch; exchange" data-fav-category="Practical Usage" data-fav-example-thai="ขอเปลี่ยนเวลาเป็นบ่ายสองได้ไหมคะ" data-fav-example-rom="khɔ̌ɔ bplìian wee-laa bpen bàai sɔ̌ɔng dâai mái khá" data-fav-example-eng="Can I change the time to 2 p.m.?">♡ 收藏</button></td>
+</tr>
+
+<tr>
+<td><span class="thai">ไม่...นัก</span><button class="tts" data-thai="ไม่แพงนัก">🔊</button></td>
+<td><span class="rom">mâi ... nák</span></td>
+<td>not very...; not that...</td>
+<td><span class="tag tag-supp">Supplement</span></td>
+<td>降低程度的句型，比 <span class="thai">ไม่ค่อย...</span> 稍正式、理性。</td>
+<td>
+<button class="pill" data-thai="ไม่แพงนัก"><span class="thai">ไม่แพงนัก</span><span class="eng">not very expensive</span></button>
+<button class="pill" data-thai="ไม่เหมาะนัก"><span class="thai">ไม่เหมาะนัก</span><span class="eng">not very suitable</span></button>
+<button class="pill" data-thai="ไม่แรงนัก"><span class="thai">ไม่แรงนัก</span><span class="eng">not too strong</span></button>
+</td>
+<td><span class="thai">คำนี้ไม่เหมาะนักถ้าใช้กับลูกค้า</span><button class="tts" data-thai="คำนี้ไม่เหมาะนักถ้าใช้กับลูกค้า">🔊</button><br><span class="rom">kham níi mâi mɔ̀ nák thâa chái gàp lûuk-kháa</span><br><span class="eng">This word isn’t very suitable if used with customers.</span></td>
+<td><button class="fav-btn" data-fav-thai="ไม่...นัก" data-fav-romanization="mâi ... nák" data-fav-english="not very...; not that..." data-fav-category="Supplement" data-fav-example-thai="คำนี้ไม่เหมาะนักถ้าใช้กับลูกค้า" data-fav-example-rom="kham níi mâi mɔ̀ nák thâa chái gàp lûuk-kháa" data-fav-example-eng="This word isn’t very suitable if used with customers.">♡ 收藏</button></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="tab-panel" id="usage">
+<div class="compare-card">
+<h2>1. <span class="thai">ไม่ถูก</span> vs <span class="thai">ไม่ออก</span> vs <span class="thai">ไม่ได้</span> vs <span class="thai">ไม่เป็น</span></h2>
+<div class="tip orange">
+<b>核心差異：</b><span class="thai">ไม่ถูก</span> / <span class="rom">mâi thùuk</span> / <span class="eng">not in the right way</span> 是「不知道怎麼做才對」；<span class="thai">ไม่ออก</span> / <span class="rom">mâi ɔ̀ɔk</span> / <span class="eng">can’t get it out</span> 是「東西出不來」。
+</div>
+<table>
+<thead><tr><th>Pattern</th><th>English</th><th>中文語感</th><th>例句</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="thai">พูดไม่ถูก</span><br><span class="rom">phûut mâi thùuk</span></td>
+<td>don’t know how to say it properly</td>
+<td>不知道怎麼說才合適</td>
+<td><span class="thai">เรื่องนี้ซับซ้อนมาก พูดไม่ถูก</span><button class="tts" data-thai="เรื่องนี้ซับซ้อนมาก พูดไม่ถูก">🔊</button><br><span class="rom">rʉ̂ang níi sáp-sɔ́ɔn mâak, phûut mâi thùuk</span><br><span class="eng">This matter is complicated. I don’t know how to explain it properly.</span></td>
+</tr>
+<tr>
+<td><span class="thai">พูดไม่ออก</span><br><span class="rom">phûut mâi ɔ̀ɔk</span></td>
+<td>speechless</td>
+<td>情緒太強，話出不來</td>
+<td><span class="thai">ตกใจจนพูดไม่ออก</span><button class="tts" data-thai="ตกใจจนพูดไม่ออก">🔊</button><br><span class="rom">dtòk-jai jon phûut mâi ɔ̀ɔk</span><br><span class="eng">I was so shocked that I couldn’t speak.</span></td>
+</tr>
+<tr>
+<td><span class="thai">พูดไม่ได้</span><br><span class="rom">phûut mâi dâai</span></td>
+<td>can’t speak</td>
+<td>能力、規則、情況上不能說</td>
+<td><span class="thai">ฉันพูดภาษาไทยไม่ได้</span><button class="tts" data-thai="ฉันพูดภาษาไทยไม่ได้">🔊</button><br><span class="rom">chǎn phûut phaa-sǎa Thai mâi dâai</span><br><span class="eng">I can’t speak Thai.</span></td>
+</tr>
+<tr>
+<td><span class="thai">พูดไทยไม่เป็น</span><br><span class="rom">phûut Thai mâi bpen</span></td>
+<td>don’t know how to speak Thai</td>
+<td>不會這項技能</td>
+<td><span class="thai">เมื่อก่อนฉันพูดไทยไม่เป็น</span><button class="tts" data-thai="เมื่อก่อนฉันพูดไทยไม่เป็น">🔊</button><br><span class="rom">mʉ̂a-gɔ̀ɔn chǎn phûut Thai mâi bpen</span><br><span class="eng">Before, I didn’t know how to speak Thai.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="compare-card">
+<h2>2. <span class="thai">ต่อ</span> vs <span class="thai">เปลี่ยน</span>｜接續 / 延長 vs 換掉</h2>
+<div class="tip green">
+<b>核心差異：</b><span class="thai">ต่อ</span> / <span class="rom">dtɔ̀ɔ</span> / <span class="eng">continue; extend</span> 是把原本的東西接下去；<span class="thai">เปลี่ยน</span> / <span class="rom">bplìian</span> / <span class="eng">change; switch</span> 是把 A 改成 B。
+</div>
+<table>
+<thead><tr><th>Thai</th><th>English</th><th>中文</th><th>自然例句</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="thai">ต่อวีซ่า</span><br><span class="rom">dtɔ̀ɔ wii-sâa</span></td>
+<td>extend / renew a visa</td><td>續簽、延長已有簽證</td>
+<td><span class="thai">ต้องไปต่อวีซ่าค่ะ</span><button class="tts" data-thai="ต้องไปต่อวีซ่าค่ะ">🔊</button><br><span class="rom">dtɔ̂ng bpai dtɔ̀ɔ wii-sâa khâ</span><br><span class="eng">I have to go extend my visa.</span></td>
+</tr>
+<tr>
+<td><span class="thai">เปลี่ยนวีซ่า</span><br><span class="rom">bplìian wii-sâa</span></td>
+<td>change visa type</td><td>換簽證類型</td>
+<td><span class="thai">อยากเปลี่ยนวีซ่าจากท่องเที่ยวเป็นวีซ่านักเรียน</span><button class="tts" data-thai="อยากเปลี่ยนวีซ่าจากท่องเที่ยวเป็นวีซ่านักเรียน">🔊</button><br><span class="rom">yàak bplìian wii-sâa jàak thɔ̂ɔng-thîiao bpen wii-sâa nák-rian</span><br><span class="eng">I want to change my visa from a tourist visa to a student visa.</span></td>
+</tr>
+<tr>
+<td><span class="thai">ต่อเวลา</span><br><span class="rom">dtɔ̀ɔ wee-laa</span></td>
+<td>extend time</td><td>延長時間</td>
+<td><span class="thai">ขอต่อเวลาอีกสิบนาทีได้ไหมคะ</span><button class="tts" data-thai="ขอต่อเวลาอีกสิบนาทีได้ไหมคะ">🔊</button><br><span class="rom">khɔ̌ɔ dtɔ̀ɔ wee-laa ìik sìp naa-thii dâai mái khá</span><br><span class="eng">Can I extend the time by ten more minutes?</span></td>
+</tr>
+<tr>
+<td><span class="thai">เปลี่ยนเวลา</span><br><span class="rom">bplìian wee-laa</span></td>
+<td>change the time</td><td>改時間</td>
+<td><span class="thai">ขอเปลี่ยนเวลาเป็นพรุ่งนี้ได้ไหมคะ</span><button class="tts" data-thai="ขอเปลี่ยนเวลาเป็นพรุ่งนี้ได้ไหมคะ">🔊</button><br><span class="rom">khɔ̌ɔ bplìian wee-laa bpen phrûng-níi dâai mái khá</span><br><span class="eng">Can I change the time to tomorrow?</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="compare-card">
+<h2>3. <span class="thai">ครบ</span> / <span class="thai">ขาด</span> / <span class="thai">พอ</span> / <span class="thai">เสร็จ</span></h2>
+<table>
+<thead><tr><th>Thai</th><th>Romanization</th><th>English</th><th>核心差異</th><th>例句</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="thai">ครบ</span></td><td><span class="rom">khróp</span></td><td>complete; all present</td><td>該有的都有</td>
+<td><span class="thai">เอกสารครบแล้วค่ะ</span><button class="tts" data-thai="เอกสารครบแล้วค่ะ">🔊</button><br><span class="rom">èek-gà-sǎan khróp lɛ́ɛo khâ</span><br><span class="eng">The documents are complete now.</span></td>
+</tr>
+<tr>
+<td><span class="thai">ขาด</span></td><td><span class="rom">khàat</span></td><td>missing; lacking</td><td>具體缺某一部分</td>
+<td><span class="thai">เอกสารขาดสำเนาพาสปอร์ตค่ะ</span><button class="tts" data-thai="เอกสารขาดสำเนาพาสปอร์ตค่ะ">🔊</button><br><span class="rom">èek-gà-sǎan khàat sǎm-nao pháat-bpɔ̀ɔt khâ</span><br><span class="eng">A passport copy is missing from the documents.</span></td>
+</tr>
+<tr>
+<td><span class="thai">พอ</span></td><td><span class="rom">phɔɔ</span></td><td>enough</td><td>數量 / 程度足夠</td>
+<td><span class="thai">น้ำไม่พอค่ะ</span><button class="tts" data-thai="น้ำไม่พอค่ะ">🔊</button><br><span class="rom">náam mâi phɔɔ khâ</span><br><span class="eng">There isn’t enough water.</span></td>
+</tr>
+<tr>
+<td><span class="thai">เสร็จ</span></td><td><span class="rom">sèt</span></td><td>finished</td><td>事情做完</td>
+<td><span class="thai">โน้ตยังไม่เสร็จค่ะ</span><button class="tts" data-thai="โน้ตยังไม่เสร็จค่ะ">🔊</button><br><span class="rom">nóot yang mâi sèt khâ</span><br><span class="eng">The notes are not finished yet.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="compare-card">
+<h2>4. <span class="thai">ไม่...นัก</span> / <span class="thai">ไม่ค่อย...</span> / <span class="thai">ไม่...เท่าไหร่</span></h2>
+<div class="tip purple">
+<b>曼谷口語提醒：</b>朋友聊天更常用 <span class="thai">ไม่ค่อย...</span> / <span class="rom">mâi khɔ̂i...</span> / <span class="eng">not really...</span> 或 <span class="thai">ไม่...เท่าไหร่</span> / <span class="rom">mâi ... thâo-rài</span> / <span class="eng">not really that...</span>；<span class="thai">ไม่...นัก</span> 比較沉穩、文章感。
+</div>
+<table>
+<thead><tr><th>Pattern</th><th>使用感</th><th>例句</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="thai">ไม่แพงนัก</span><br><span class="rom">mâi phɛɛng nák</span><br><span class="eng">not very expensive</span></td>
+<td>稍正式、理性</td>
+<td><span class="thai">ร้านนี้ไม่แพงนัก</span><button class="tts" data-thai="ร้านนี้ไม่แพงนัก">🔊</button><br><span class="rom">ráan níi mâi phɛɛng nák</span><br><span class="eng">This restaurant isn’t very expensive.</span></td>
+</tr>
+<tr>
+<td><span class="thai">ไม่ค่อยแพง</span><br><span class="rom">mâi khɔ̂i phɛɛng</span><br><span class="eng">not really expensive</span></td>
+<td>最日常口語</td>
+<td><span class="thai">ร้านนี้ไม่ค่อยแพง</span><button class="tts" data-thai="ร้านนี้ไม่ค่อยแพง">🔊</button><br><span class="rom">ráan níi mâi khɔ̂i phɛɛng</span><br><span class="eng">This restaurant isn’t really expensive.</span></td>
+</tr>
+<tr>
+<td><span class="thai">ไม่แพงเท่าไหร่</span><br><span class="rom">mâi phɛɛng thâo-rài</span><br><span class="eng">not that expensive</span></td>
+<td>口語柔和</td>
+<td><span class="thai">คาเฟ่นี้ไม่แพงเท่าไหร่</span><button class="tts" data-thai="คาเฟ่นี้ไม่แพงเท่าไหร่">🔊</button><br><span class="rom">khaa-fêe níi mâi phɛɛng thâo-rài</span><br><span class="eng">This café isn’t that expensive.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="tab-panel" id="sentence">
+<div class="scene-grid">
+<div class="sentence-group">
+<div class="scene-label">Restaurant｜吃不完 / 分食 / 打包</div>
+<div class="sentence"><span class="thai">จานนี้ใหญ่กว่าที่คิด กินไม่หมดแน่ ๆ</span><button class="tts" data-thai="จานนี้ใหญ่กว่าที่คิด กินไม่หมดแน่ ๆ">🔊</button><br><span class="rom">jaan níi yài gwàa thîi khít, gin mâi mòt nɛ̂ɛ-nɛ̂ɛ</span><br><span class="eng">This dish is bigger than I thought. I definitely can’t finish it.</span></div>
+<div class="sentence"><span class="thai">ถ้ากินไม่หมด เดี๋ยวแบ่งให้เพื่อนก็ได้</span><button class="tts" data-thai="ถ้ากินไม่หมด เดี๋ยวแบ่งให้เพื่อนก็ได้">🔊</button><br><span class="rom">thâa gin mâi mòt, dǐiao bɛ̀ng hâi phʉ̂uean gɔ̂ɔ dâai</span><br><span class="eng">If I can’t finish it, I can share it with my friend.</span></div>
+<div class="sentence"><span class="thai">รสนี้ไม่แรงนัก กินง่ายดี</span><button class="tts" data-thai="รสนี้ไม่แรงนัก กินง่ายดี">🔊</button><br><span class="rom">rót níi mâi rɛɛng nák, gin ngâai dii</span><br><span class="eng">This flavor isn’t too strong. It’s easy to eat.</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">Errands｜忘東西 / 回去拿 / 來不及</div>
+<div class="sentence"><span class="thai">เมื่อกี้ฉันลืมมือถือไว้ที่ร้าน</span><button class="tts" data-thai="เมื่อกี้ฉันลืมมือถือไว้ที่ร้าน">🔊</button><br><span class="rom">mʉ̂a-gîi chǎn lʉʉm mʉʉ-thʉ̌ʉ wái thîi ráan</span><br><span class="eng">I just left my phone at the shop.</span></div>
+<div class="sentence"><span class="thai">งั้นเดี๋ยวแวะกลับไปเอาก่อนนะ</span><button class="tts" data-thai="งั้นเดี๋ยวแวะกลับไปเอาก่อนนะ">🔊</button><br><span class="rom">ngán dǐiao wɛ́ glàp bpai ao gɔ̀ɔn ná</span><br><span class="eng">Then I’ll stop by and go back to get it first.</span></div>
+<div class="sentence"><span class="thai">ถ้ากลับไปเอาตอนนี้ อาจจะไปไม่ทัน</span><button class="tts" data-thai="ถ้ากลับไปเอาตอนนี้ อาจจะไปไม่ทัน">🔊</button><br><span class="rom">thâa glàp bpai ao dtaawn-níi, àat jà bpai mâi than</span><br><span class="eng">If I go back to get it now, I might not make it in time.</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">Visa Office｜文件 / 缺漏 / 有效期</div>
+<div class="sentence"><span class="thai">เอกสารยังไม่ครบ ขาดข้อมูลบางส่วน</span><button class="tts" data-thai="เอกสารยังไม่ครบ ขาดข้อมูลบางส่วน">🔊</button><br><span class="rom">èek-gà-sǎan yang mâi khróp, khàat khɔ̂ɔ-muun baang sùan</span><br><span class="eng">The documents are still incomplete; some information is missing.</span></div>
+<div class="sentence"><span class="thai">กรุณากรอกส่วนนี้ให้ครบค่ะ</span><button class="tts" data-thai="กรุณากรอกส่วนนี้ให้ครบค่ะ">🔊</button><br><span class="rom">gà-rú-naa grɔ̀ɔk sùan níi hâi khróp khâ</span><br><span class="eng">Please fill in this section completely.</span></div>
+<div class="sentence"><span class="thai">พาสปอร์ตต้องมีอายุเหลืออย่างน้อยหกเดือน</span><button class="tts" data-thai="พาสปอร์ตต้องมีอายุเหลืออย่างน้อยหกเดือน">🔊</button><br><span class="rom">pháat-bpɔ̀ɔt dtɔ̂ng mii aa-yú lʉ̌ea yàang nɔ́ɔi hòk dʉan</span><br><span class="eng">The passport must have at least six months of validity remaining.</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">BTS / Gym｜轉線 / 健身房 / 改時間</div>
+<div class="sentence"><span class="thai">ต้องเปลี่ยนสายที่สยาม แล้วต่อรถไปอารีย์</span><button class="tts" data-thai="ต้องเปลี่ยนสายที่สยาม แล้วต่อรถไปอารีย์">🔊</button><br><span class="rom">dtɔ̂ng bplìian sǎai thîi Sà-yǎam, lɛ́ɛo dtɔ̀ɔ rót bpai Aa-rîi</span><br><span class="eng">I have to change lines at Siam, then transfer to Ari.</span></div>
+<div class="sentence"><span class="thai">ขอเปลี่ยนเป็นพรุ่งนี้ได้ไหมคะ วันนี้ไปไม่ทัน</span><button class="tts" data-thai="ขอเปลี่ยนเป็นพรุ่งนี้ได้ไหมคะ วันนี้ไปไม่ทัน">🔊</button><br><span class="rom">khɔ̌ɔ bplìian bpen phrûng-níi dâai mái khá, wan-níi bpai mâi than</span><br><span class="eng">Can we change it to tomorrow? I can’t make it today.</span></div>
+<div class="sentence"><span class="thai">วันนี้คนที่ยิมเยอะจนไม่อยากเล่นเวท</span><button class="tts" data-thai="วันนี้คนที่ยิมเยอะจนไม่อยากเล่นเวท">🔊</button><br><span class="rom">wan-níi khon thîi yim yə́ jon mâi yàak lên wêt</span><br><span class="eng">There are so many people at the gym today that I don’t want to do weight training.</span></div>
+</div>
+</div>
+</section>
+
+<section class="tab-panel" id="structures">
+<div class="card">
+<div class="section-title"><h2>Structures｜今日句型整理</h2></div>
+
+<div class="pattern">
+<h3>1. <span class="thai">V + ไม่ถูก</span>｜不知道怎麼 V 才對</h3>
+<p><b>Pattern：</b><span class="thai">Verb + ไม่ถูก</span> / <span class="rom">V + mâi thùuk</span> / <span class="eng">don’t know how to V properly</span></p>
+<p><span class="thai">คำถามนี้ตอบไม่ถูกเลย</span><button class="tts" data-thai="คำถามนี้ตอบไม่ถูกเลย">🔊</button><br><span class="rom">kham-thǎam níi dtɔ̀ɔp mâi thùuk ləəi</span><br><span class="eng">I really don’t know how to answer this question.</span></p>
+</div>
+
+<div class="pattern">
+<h3>2. <span class="thai">V + ไม่ออก</span>｜V 不出來</h3>
+<p><b>Pattern：</b><span class="thai">Verb + ไม่ออก</span> / <span class="rom">V + mâi ɔ̀ɔk</span> / <span class="eng">can’t get V out; can’t figure out</span></p>
+<p><span class="thai">สองคำนี้คล้ายกันมาก แยกไม่ออก</span><button class="tts" data-thai="สองคำนี้คล้ายกันมาก แยกไม่ออก">🔊</button><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk</span><br><span class="eng">These two words are very similar. I can’t distinguish them.</span></p>
+</div>
+
+<div class="pattern">
+<h3>3. <span class="thai">Adj / State + จน + Result</span>｜……到造成某結果</h3>
+<p><b>Pattern：</b><span class="thai">Adj / State + จน + Result</span> / <span class="rom">... jon ...</span> / <span class="eng">so...that...</span></p>
+<p><span class="thai">เหนื่อยจนพูดไม่ออก</span><button class="tts" data-thai="เหนื่อยจนพูดไม่ออก">🔊</button><br><span class="rom">nʉ̀ueai jon phûut mâi ɔ̀ɔk</span><br><span class="eng">I’m so tired I can’t speak.</span></p>
+</div>
+
+<div class="pattern">
+<h3>4. <span class="thai">ลืม + Object + ไว้ที่ + Place</span>｜把……忘在……</h3>
+<p><span class="thai">ลืมกุญแจไว้บนโต๊ะ</span><button class="tts" data-thai="ลืมกุญแจไว้บนโต๊ะ">🔊</button><br><span class="rom">lʉʉm gun-jaae wái bon dtó</span><br><span class="eng">I left the keys on the table.</span></p>
+</div>
+
+<div class="pattern">
+<h3>5. <span class="thai">เปลี่ยนจาก A เป็น B</span>｜從 A 改成 B</h3>
+<p><span class="thai">ขอเปลี่ยนจากวันจันทร์เป็นวันอังคารได้ไหมคะ</span><button class="tts" data-thai="ขอเปลี่ยนจากวันจันทร์เป็นวันอังคารได้ไหมคะ">🔊</button><br><span class="rom">khɔ̌ɔ bplìian jàak wan jan bpen wan ang-khaan dâai mái khá</span><br><span class="eng">Can we change it from Monday to Tuesday?</span></p>
+</div>
+
+<div class="pattern">
+<h3>6. <span class="thai">ไม่ + Adj + นัก</span>｜不算太……</h3>
+<p><span class="thai">คอนโดนี้ไม่ไกลนักจาก BTS</span><button class="tts" data-thai="คอนโดนี้ไม่ไกลนักจาก BTS">🔊</button><br><span class="rom">khaawn-doo níi mâi glai nák jàak BTS</span><br><span class="eng">This condo isn’t very far from the BTS.</span></p>
+</div>
+</div>
+</section>
+
+<section class="tab-panel" id="bangkok">
+<div class="scene-grid">
+
+<div class="sentence-group">
+<div class="scene-label">Visa Office｜簽證與文件</div>
+<div class="sentence"><span class="thai">ต้องเตรียมเอกสารอะไรบ้างคะ ถ้าจะต่อวีซ่า</span><button class="tts" data-thai="ต้องเตรียมเอกสารอะไรบ้างคะ ถ้าจะต่อวีซ่า">🔊</button><br><span class="rom">dtɔ̂ng dtriiam èek-gà-sǎan à-rai bâang khá, thâa jà dtɔ̀ɔ wii-sâa</span><br><span class="eng">What documents do I need to prepare if I’m going to extend my visa?</span></div>
+<div class="sentence"><span class="thai">เอกสารส่วนนี้ยังไม่ครบค่ะ</span><button class="tts" data-thai="เอกสารส่วนนี้ยังไม่ครบค่ะ">🔊</button><br><span class="rom">èek-gà-sǎan sùan níi yang mâi khróp khâ</span><br><span class="eng">This section of the documents is still incomplete.</span></div>
+<div class="sentence"><span class="thai">วีซ่าของฉันใกล้หมดอายุแล้วค่ะ</span><button class="tts" data-thai="วีซ่าของฉันใกล้หมดอายุแล้วค่ะ">🔊</button><br><span class="rom">wii-sâa khɔ̌ɔng chǎn glâi mòt aa-yú lɛ́ɛo khâ</span><br><span class="eng">My visa is about to expire.</span></div>
+<div class="sentence"><span class="thai">พาสปอร์ตต้องมีอายุเหลืออย่างน้อยหกเดือน</span><button class="tts" data-thai="พาสปอร์ตต้องมีอายุเหลืออย่างน้อยหกเดือน">🔊</button><br><span class="rom">pháat-bpɔ̀ɔt dtɔ̂ng mii aa-yú lʉ̌ea yàang nɔ́ɔi hòk dʉan</span><br><span class="eng">The passport must have at least six months of validity remaining.</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">BTS / MRT｜轉線、來不及、改行程</div>
+<div class="sentence"><span class="thai">ถ้าออกช้ากว่านี้ ก็น่าจะไปไม่ทัน</span><button class="tts" data-thai="ถ้าออกช้ากว่านี้ ก็น่าจะไปไม่ทัน">🔊</button><br><span class="rom">thâa ɔ̀ɔk cháa gwàa níi, gɔ̂ɔ nâa-jà bpai mâi than</span><br><span class="eng">If we leave later than this, we probably won’t make it in time.</span></div>
+<div class="sentence"><span class="thai">ต้องเปลี่ยนสายที่อโศกหรือสยามคะ</span><button class="tts" data-thai="ต้องเปลี่ยนสายที่อโศกหรือสยามคะ">🔊</button><br><span class="rom">dtɔ̂ng bplìian sǎai thîi À-sòok rʉ̌ʉ Sà-yǎam khá</span><br><span class="eng">Do I need to change lines at Asok or Siam?</span></div>
+<div class="sentence"><span class="thai">ถ้างั้นไม่แวะซื้อกาแฟแล้วกัน</span><button class="tts" data-thai="ถ้างั้นไม่แวะซื้อกาแฟแล้วกัน">🔊</button><br><span class="rom">thâa ngán mâi wɛ́ sʉ́ʉ gaa-fɛɛ lɛ́ɛo gan</span><br><span class="eng">In that case, let’s not stop by to buy coffee.</span></div>
+<div class="sentence"><span class="thai">จากตรงนี้ต้องต่อรถอีกไหมคะ</span><button class="tts" data-thai="จากตรงนี้ต้องต่อรถอีกไหมคะ">🔊</button><br><span class="rom">jàak dtrong níi dtɔ̂ng dtɔ̀ɔ rót ìik mái khá</span><br><span class="eng">From here, do I need to transfer again?</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">Café / Restaurant｜點餐、吃不完、打包</div>
+<div class="sentence"><span class="thai">เมนูเยอะจนเลือกไม่ถูกเลยค่ะ</span><button class="tts" data-thai="เมนูเยอะจนเลือกไม่ถูกเลยค่ะ">🔊</button><br><span class="rom">mee-nuu yə́ jon lʉ̂ak mâi thùuk ləəy khâ</span><br><span class="eng">There are so many menu items that I really can’t choose.</span></div>
+<div class="sentence"><span class="thai">จานนี้ใหญ่กว่าที่คิด กินไม่หมดแน่ ๆ</span><button class="tts" data-thai="จานนี้ใหญ่กว่าที่คิด กินไม่หมดแน่ ๆ">🔊</button><br><span class="rom">jaan níi yài gwàa thîi khít, gin mâi mòt nɛ̂ɛ-nɛ̂ɛ</span><br><span class="eng">This dish is bigger than I thought. I definitely can’t finish it.</span></div>
+<div class="sentence"><span class="thai">ถ้ากินไม่หมด เดี๋ยวแบ่งให้เพื่อนก็ได้</span><button class="tts" data-thai="ถ้ากินไม่หมด เดี๋ยวแบ่งให้เพื่อนก็ได้">🔊</button><br><span class="rom">thâa gin mâi mòt, dǐiao bɛ̀ng hâi phʉ̂uean gɔ̂ɔ dâai</span><br><span class="eng">If I can’t finish it, I can share it with my friend.</span></div>
+<div class="sentence"><span class="thai">ขอห่อกลับบ้านได้ไหมคะ</span><button class="tts" data-thai="ขอห่อกลับบ้านได้ไหมคะ">🔊</button><br><span class="rom">khɔ̌ɔ hɔ̀ɔ glàp bâan dâai mái khá</span><br><span class="eng">Can I have this packed to go?</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">Condo / Gym｜住處、健身房、忘東西</div>
+<div class="sentence"><span class="thai">คอนโดนี้เหมาะกับคนที่ใช้ BTS บ่อย</span><button class="tts" data-thai="คอนโดนี้เหมาะกับคนที่ใช้ BTS บ่อย">🔊</button><br><span class="rom">khaawn-doo níi mɔ̀ gàp khon thîi chái BTS bɔ̀i</span><br><span class="eng">This condo is suitable for people who use the BTS often.</span></div>
+<div class="sentence"><span class="thai">ห้องฟิตเนสที่คอนโดไม่ใหญ่ แต่คนไม่เยอะนัก</span><button class="tts" data-thai="ห้องฟิตเนสที่คอนโดไม่ใหญ่ แต่คนไม่เยอะนัก">🔊</button><br><span class="rom">hɔ̂ɔng fít-nêt thîi khaawn-doo mâi yài, dtɛ̀ɛ khon mâi yə́ nák</span><br><span class="eng">The condo fitness room isn’t big, but it’s not very crowded.</span></div>
+<div class="sentence"><span class="thai">เมื่อกี้ลืมที่ชาร์จไว้ที่ยิม</span><button class="tts" data-thai="เมื่อกี้ลืมที่ชาร์จไว้ที่ยิม">🔊</button><br><span class="rom">mʉ̂a-gîi lʉʉm thîi châat wái thîi yim</span><br><span class="eng">I just left my charger at the gym.</span></div>
+<div class="sentence"><span class="thai">เดี๋ยวแวะกลับไปเอาก่อนนะ</span><button class="tts" data-thai="เดี๋ยวแวะกลับไปเอาก่อนนะ">🔊</button><br><span class="rom">dǐiao wɛ́ glàp bpai ao gɔ̀ɔn ná</span><br><span class="eng">I’ll stop by and go back to get it first.</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">Shopping / Mall｜選不出來、適不適合、語氣太強</div>
+<div class="sentence"><span class="thai">สองสีนี้สวยทั้งคู่ เลือกไม่ถูกเลย</span><button class="tts" data-thai="สองสีนี้สวยทั้งคู่ เลือกไม่ถูกเลย">🔊</button><br><span class="rom">sɔ̌ɔng sǐi níi sǔai tháng khûu, lʉ̂ak mâi thùuk ləəy</span><br><span class="eng">Both colors are pretty. I really can’t choose.</span></div>
+<div class="sentence"><span class="thai">อันนี้ก็น่าจะเหมาะกับเธอนะ</span><button class="tts" data-thai="อันนี้ก็น่าจะเหมาะกับเธอนะ">🔊</button><br><span class="rom">an níi gɔ̂ɔ nâa-jà mɔ̀ gàp thəə ná</span><br><span class="eng">This one should probably suit you.</span></div>
+<div class="sentence"><span class="thai">คำนี้แรงไป ใช้กับพนักงานไม่เหมาะ</span><button class="tts" data-thai="คำนี้แรงไป ใช้กับพนักงานไม่เหมาะ">🔊</button><br><span class="rom">kham níi rɛɛng bpai, chái gàp phá-nák-ngaan mâi mɔ̀</span><br><span class="eng">This wording is too strong. It’s not suitable to use with staff.</span></div>
+<div class="sentence"><span class="thai">ถ้างั้นเอาอันนี้ก็แล้วกันค่ะ</span><button class="tts" data-thai="ถ้างั้นเอาอันนี้ก็แล้วกันค่ะ">🔊</button><br><span class="rom">thâa ngán ao an níi gɔ̂ɔ lɛ́ɛo gan khâ</span><br><span class="eng">In that case, I’ll take this one.</span></div>
+</div>
+
+<div class="sentence-group">
+<div class="scene-label">Chat / Study｜聊天收尾、筆記還沒完整</div>
+<div class="sentence"><span class="thai">วันนี้พอแค่นี้ก่อนนะ พรุ่งนี้ค่อยต่อ</span><button class="tts" data-thai="วันนี้พอแค่นี้ก่อนนะ พรุ่งนี้ค่อยต่อ">🔊</button><br><span class="rom">wan-níi phɔɔ khâe níi gɔ̀ɔn ná, phrûng-níi khɔ̂i dtɔ̀ɔ</span><br><span class="eng">Let’s stop here for today. We’ll continue tomorrow.</span></div>
+<div class="sentence"><span class="thai">ยังไม่ครบค่ะ เดี๋ยวค่อยเก็บต่ออีกนิด</span><button class="tts" data-thai="ยังไม่ครบค่ะ เดี๋ยวค่อยเก็บต่ออีกนิด">🔊</button><br><span class="rom">yang mâi khróp khâ, dǐiao khɔ̂i gèp dtɔ̀ɔ ìik nít</span><br><span class="eng">It’s not complete yet. I’ll continue collecting a bit more later.</span></div>
+<div class="sentence"><span class="thai">พูดไม่ถูกเหมือนกัน แต่รู้สึกว่าอันนี้ไม่เหมาะนัก</span><button class="tts" data-thai="พูดไม่ถูกเหมือนกัน แต่รู้สึกว่าอันนี้ไม่เหมาะนัก">🔊</button><br><span class="rom">phûut mâi thùuk mʉ̌ean gan, dtɛ̀ɛ rúu-sʉ̀k wâa an níi mâi mɔ̀ nák</span><br><span class="eng">I don’t know how to say it either, but I feel this isn’t very suitable.</span></div>
+<div class="sentence"><span class="thai">คิดไม่ออกว่าจะตอบยังไงดี</span><button class="tts" data-thai="คิดไม่ออกว่าจะตอบยังไงดี">🔊</button><br><span class="rom">khít mâi ɔ̀ɔk wâa jà dtɔ̀ɔp yang-ngai dii</span><br><span class="eng">I can’t think of how to reply.</span></div>
+</div>
+
+</div>
+</section>
+
+<section class="tab-panel" id="dialogues">
+<div class="card">
+<h3>Dialogue 1｜Restaurant：吃不完、分給朋友、打包</h3>
+<div class="chat-thread">
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">A</span><br>
+      <span class="thai">จานนี้ใหญ่จัง กินไม่หมดแน่ ๆ</span><button class="tts" data-thai="จานนี้ใหญ่จัง กินไม่หมดแน่ ๆ">🔊</button><br>
+      <span class="rom">jaan níi yài jang, gin mâi mòt nɛ̂ɛ-nɛ̂ɛ</span><br>
+      <span class="eng">This dish is so big. I definitely can’t finish it.</span>
+    </div>
+  </div>
+  <div class="chat-row right">
+    <div class="chat-bubble">
+      <span class="speaker">B</span><br>
+      <span class="thai">งั้นแบ่งให้เพื่อนก็ได้ หรือขอห่อกลับบ้านไหม</span><button class="tts" data-thai="งั้นแบ่งให้เพื่อนก็ได้ หรือขอห่อกลับบ้านไหม">🔊</button><br>
+      <span class="rom">ngán bɛ̀ng hâi phʉ̂uean gɔ̂ɔ dâai, rʉ̌ʉ khɔ̌ɔ hɔ̀ɔ glàp bâan mái</span><br>
+      <span class="eng">Then you can share it with your friend, or ask to pack it to go.</span>
+    </div>
+  </div>
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">A</span><br>
+      <span class="thai">เดี๋ยวแบ่งให้เพื่อนก่อน ถ้ายังเหลือค่อยห่อกลับบ้าน</span><button class="tts" data-thai="เดี๋ยวแบ่งให้เพื่อนก่อน ถ้ายังเหลือค่อยห่อกลับบ้าน">🔊</button><br>
+      <span class="rom">dǐiao bɛ̀ng hâi phʉ̂uean gɔ̀ɔn, thâa yang lʉ̌ea khɔ̂i hɔ̀ɔ glàp bâan</span><br>
+      <span class="eng">I’ll share it with my friend first. If there’s still some left, I’ll pack it to go.</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="card">
+<h3>Dialogue 2｜Visa Office：文件缺漏、簽證快到期</h3>
+<div class="chat-thread">
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">Officer</span><br>
+      <span class="thai">เอกสารยังไม่ครบค่ะ ขาดสำเนาพาสปอร์ต</span><button class="tts" data-thai="เอกสารยังไม่ครบค่ะ ขาดสำเนาพาสปอร์ต">🔊</button><br>
+      <span class="rom">èek-gà-sǎan yang mâi khróp khâ, khàat sǎm-nao pháat-bpɔ̀ɔt</span><br>
+      <span class="eng">The documents are still incomplete. A passport copy is missing.</span>
+    </div>
+  </div>
+  <div class="chat-row right">
+    <div class="chat-bubble">
+      <span class="speaker">Student</span><br>
+      <span class="thai">ต้องส่งเพิ่มวันนี้เลยไหมคะ</span><button class="tts" data-thai="ต้องส่งเพิ่มวันนี้เลยไหมคะ">🔊</button><br>
+      <span class="rom">dtɔ̂ng sòng phə̂əm wan-níi ləəy mái khá</span><br>
+      <span class="eng">Do I need to submit the additional document today?</span>
+    </div>
+  </div>
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">Officer</span><br>
+      <span class="thai">ใช่ค่ะ แล้ววีซ่าของคุณใกล้หมดอายุหรือยังคะ</span><button class="tts" data-thai="ใช่ค่ะ แล้ววีซ่าของคุณใกล้หมดอายุหรือยังคะ">🔊</button><br>
+      <span class="rom">châi khâ, lɛ́ɛo wii-sâa khɔ̌ɔng khun glâi mòt aa-yú rʉ̌ʉ yang khá</span><br>
+      <span class="eng">Yes. And is your visa about to expire yet?</span>
+    </div>
+  </div>
+  <div class="chat-row right">
+    <div class="chat-bubble">
+      <span class="speaker">Student</span><br>
+      <span class="thai">ใกล้หมดอายุแล้วค่ะ เลยต้องมาต่อวีซ่า</span><button class="tts" data-thai="ใกล้หมดอายุแล้วค่ะ เลยต้องมาต่อวีซ่า">🔊</button><br>
+      <span class="rom">glâi mòt aa-yú lɛ́ɛo khâ, ləəy dtɔ̂ng maa dtɔ̀ɔ wii-sâa</span><br>
+      <span class="eng">It’s about to expire, so I need to come extend my visa.</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="card">
+<h3>Dialogue 3｜BTS / Time：換線、改時間、來不及</h3>
+<div class="chat-thread">
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">A</span><br>
+      <span class="thai">ถ้าแวะคาเฟ่ก่อน น่าจะไปไม่ทัน</span><button class="tts" data-thai="ถ้าแวะคาเฟ่ก่อน น่าจะไปไม่ทัน">🔊</button><br>
+      <span class="rom">thâa wɛ́ khaa-fêe gɔ̀ɔn, nâa-jà bpai mâi than</span><br>
+      <span class="eng">If we stop by a café first, we probably won’t make it in time.</span>
+    </div>
+  </div>
+  <div class="chat-row right">
+    <div class="chat-bubble">
+      <span class="speaker">B</span><br>
+      <span class="thai">งั้นไม่แวะแล้วกัน ต้องเปลี่ยนสายที่สยามด้วย</span><button class="tts" data-thai="งั้นไม่แวะแล้วกัน ต้องเปลี่ยนสายที่สยามด้วย">🔊</button><br>
+      <span class="rom">ngán mâi wɛ́ lɛ́ɛo gan, dtɔ̂ng bplìian sǎai thîi Sà-yǎam dûai</span><br>
+      <span class="eng">Then let’s not stop by. We also need to change lines at Siam.</span>
+    </div>
+  </div>
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">A</span><br>
+      <span class="thai">ถ้าอย่างนั้น เปลี่ยนเป็นพรุ่งนี้ดีไหม</span><button class="tts" data-thai="ถ้าอย่างนั้น เปลี่ยนเป็นพรุ่งนี้ดีไหม">🔊</button><br>
+      <span class="rom">thâa yàang nán, bplìian bpen phrûng-níi dii mái</span><br>
+      <span class="eng">In that case, should we change it to tomorrow?</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="card">
+<h3>Dialogue 4｜Chat：假日去哪、想不出來</h3>
+<div class="chat-thread">
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">A</span><br>
+      <span class="thai">วันหยุดไปไหนมามั่ง</span><button class="tts" data-thai="วันหยุดไปไหนมามั่ง">🔊</button><br>
+      <span class="rom">wan-yùt bpai nǎi maa mâang</span><br>
+      <span class="eng">Where did you go during the holiday?</span>
+    </div>
+  </div>
+  <div class="chat-row right">
+    <div class="chat-bubble">
+      <span class="speaker">B</span><br>
+      <span class="thai">ไม่ได้ไปไหนเลย อยู่บ้านทั้งวัน</span><button class="tts" data-thai="ไม่ได้ไปไหนเลย อยู่บ้านทั้งวัน">🔊</button><br>
+      <span class="rom">mâi dâai bpai nǎi ləəy, yùu bâan tháng wan</span><br>
+      <span class="eng">I didn’t go anywhere. I stayed home all day.</span>
+    </div>
+  </div>
+  <div class="chat-row left">
+    <div class="chat-bubble">
+      <span class="speaker">A</span><br>
+      <span class="thai">ดีเหมือนกันนะ ฉันคิดไม่ออกว่าจะไปไหน</span><button class="tts" data-thai="ดีเหมือนกันนะ ฉันคิดไม่ออกว่าจะไปไหน">🔊</button><br>
+      <span class="rom">dii mʉ̌ean gan ná, chǎn khít mâi ɔ̀ɔk wâa jà bpai nǎi</span><br>
+      <span class="eng">That’s nice too. I couldn’t think of where to go.</span>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="tab-panel" id="mistakes">
+<div class="mistake-card">
+<h3>1. 把所有「說不出來」都說成 <span class="thai">พูดไม่ได้</span></h3>
+<div class="wrong-box">
+<div class="box-title">Wrong</div>
+<span class="thai">ฉันพูดไม่ได้ว่ารู้สึกยังไง</span><button class="tts" data-thai="ฉันพูดไม่ได้ว่ารู้สึกยังไง">🔊</button><br>
+<span class="rom">chǎn phûut mâi dâai wâa rúu-sʉ̀k yang-ngai</span><br>
+<span class="eng">I can’t speak how I feel.</span>
+</div>
+<div class="better-box">
+<div class="box-title">Better</div>
+<span class="thai">ฉันพูดไม่ถูกว่ารู้สึกยังไง</span><button class="tts" data-thai="ฉันพูดไม่ถูกว่ารู้สึกยังไง">🔊</button><br>
+<span class="rom">chǎn phûut mâi thùuk wâa rúu-sʉ̀k yang-ngai</span><br>
+<span class="eng">I don’t know how to say how I feel.</span>
+</div>
+<div class="why-box">
+<div class="box-title">Why</div>
+<span class="thai">พูดไม่ได้</span> / <span class="rom">phûut mâi dâai</span> / <span class="eng">can’t speak</span> 是能力或情況上不能說；<span class="thai">พูดไม่ถูก</span> / <span class="rom">phûut mâi thùuk</span> / <span class="eng">don’t know how to say it properly</span> 是不知道怎麼說才合適。
+</div>
+</div>
+
+<div class="mistake-card">
+<h3>2. 把「忘在某地」說成只用 <span class="thai">ลืม</span></h3>
+<div class="wrong-box">
+<div class="box-title">Wrong</div>
+<span class="thai">ลืมมือถือที่บ้าน</span><button class="tts" data-thai="ลืมมือถือที่บ้าน">🔊</button><br>
+<span class="rom">lʉʉm mʉʉ-thʉ̌ʉ thîi bâan</span><br>
+<span class="eng">forgot phone at home</span>
+</div>
+<div class="better-box">
+<div class="box-title">Better</div>
+<span class="thai">ลืมมือถือไว้ที่บ้าน</span><button class="tts" data-thai="ลืมมือถือไว้ที่บ้าน">🔊</button><br>
+<span class="rom">lʉʉm mʉʉ-thʉ̌ʉ wái thîi bâan</span><br>
+<span class="eng">I left my phone at home.</span>
+</div>
+<div class="why-box">
+<div class="box-title">Why</div>
+<span class="thai">ไว้</span> / <span class="rom">wái</span> / <span class="eng">leave; keep</span> 讓「東西被留在那裡」很清楚。
+</div>
+</div>
+
+<div class="mistake-card">
+<h3>3. 把「改時間」說成 <span class="thai">ต่อเวลา</span></h3>
+<div class="wrong-box">
+<div class="box-title">Wrong</div>
+<span class="thai">ขอต่อเวลาเป็นพรุ่งนี้ได้ไหมคะ</span><button class="tts" data-thai="ขอต่อเวลาเป็นพรุ่งนี้ได้ไหมคะ">🔊</button><br>
+<span class="rom">khɔ̌ɔ dtɔ̀ɔ wee-laa bpen phrûng-níi dâai mái khá</span><br>
+<span class="eng">Can I extend the time to tomorrow?</span>
+</div>
+<div class="better-box">
+<div class="box-title">Better</div>
+<span class="thai">ขอเปลี่ยนเวลาเป็นพรุ่งนี้ได้ไหมคะ</span><button class="tts" data-thai="ขอเปลี่ยนเวลาเป็นพรุ่งนี้ได้ไหมคะ">🔊</button><br>
+<span class="rom">khɔ̌ɔ bplìian wee-laa bpen phrûng-níi dâai mái khá</span><br>
+<span class="eng">Can I change the time to tomorrow?</span>
+</div>
+<div class="why-box">
+<div class="box-title">Why</div>
+<span class="thai">ต่อเวลา</span> / <span class="rom">dtɔ̀ɔ wee-laa</span> / <span class="eng">extend time</span> 是延長時間；<span class="thai">เปลี่ยนเวลา</span> / <span class="rom">bplìian wee-laa</span> / <span class="eng">change the time</span> 才是改時間。
+</div>
+</div>
+
+<div class="mistake-card">
+<h3>4. 把 <span class="thai">พูดแรง</span> 理解成「說話大聲」</h3>
+<div class="wrong-box">
+<div class="box-title">Wrong idea</div>
+<span class="thai">เขาพูดแรง</span><button class="tts" data-thai="เขาพูดแรง">🔊</button><br>
+<span class="rom">khǎo phûut rɛɛng</span><br>
+<span class="eng">He speaks harshly.</span>
+</div>
+<div class="better-box">
+<div class="box-title">Better for “speak loudly”</div>
+<span class="thai">เขาพูดเสียงดัง</span><button class="tts" data-thai="เขาพูดเสียงดัง">🔊</button><br>
+<span class="rom">khǎo phûut sǐang dang</span><br>
+<span class="eng">He speaks loudly.</span>
+</div>
+<div class="why-box">
+<div class="box-title">Why</div>
+<span class="thai">พูดแรง</span> / <span class="rom">phûut rɛɛng</span> / <span class="eng">speak harshly</span> 是內容或語氣很重、很衝；不是單純音量大。
+</div>
+</div>
+</section>
+
+<section class="tab-panel" id="practice">
+<div class="card">
+<div class="section-title"><h2>Practice｜今日練習</h2></div>
+
+<h3>A. Vocabulary Recall｜看中文想泰文</h3>
+<ol>
+<li>吃不完</li>
+<li>把手機忘在家</li>
+<li>續簽 / 延長簽證</li>
+<li>資料缺了一部分</li>
+<li>想不出來要吃什麼</li>
+<li>可以改成明天嗎？</li>
+</ol>
+<details><summary>Answer</summary>
+<ol>
+<li><span class="thai">กินไม่หมด</span><button class="tts" data-thai="กินไม่หมด">🔊</button> / <span class="rom">gin mâi mòt</span> / <span class="eng">can’t finish eating it</span></li>
+<li><span class="thai">ลืมมือถือไว้ที่บ้าน</span><button class="tts" data-thai="ลืมมือถือไว้ที่บ้าน">🔊</button> / <span class="rom">lʉʉm mʉʉ-thʉ̌ʉ wái thîi bâan</span> / <span class="eng">left my phone at home</span></li>
+<li><span class="thai">ต่อวีซ่า</span><button class="tts" data-thai="ต่อวีซ่า">🔊</button> / <span class="rom">dtɔ̀ɔ wii-sâa</span> / <span class="eng">extend / renew a visa</span></li>
+<li><span class="thai">ข้อมูลขาดบางส่วน</span><button class="tts" data-thai="ข้อมูลขาดบางส่วน">🔊</button> / <span class="rom">khɔ̂ɔ-muun khàat baang sùan</span> / <span class="eng">some information is missing</span></li>
+<li><span class="thai">คิดไม่ออกว่าจะกินอะไร</span><button class="tts" data-thai="คิดไม่ออกว่าจะกินอะไร">🔊</button> / <span class="rom">khít mâi ɔ̀ɔk wâa jà gin à-rai</span> / <span class="eng">can’t think of what to eat</span></li>
+<li><span class="thai">เปลี่ยนเป็นพรุ่งนี้ได้ไหมคะ</span><button class="tts" data-thai="เปลี่ยนเป็นพรุ่งนี้ได้ไหมคะ">🔊</button> / <span class="rom">bplìian bpen phrûng-níi dâai mái khá</span> / <span class="eng">Can we change it to tomorrow?</span></li>
+</ol>
+</details>
+
+<h3>B. Choose the right word｜選詞</h3>
+<ol>
+<li>我不知道怎麼回答才好：<span class="thai">ตอบไม่___</span>（ถูก / ออก）</li>
+<li>我想不出來：<span class="thai">คิดไม่___</span>（ถูก / ออก）</li>
+<li>簽證快到期：<span class="thai">วีซ่าใกล้___</span>（ครบ / หมดอายุ）</li>
+<li>改時間：<span class="thai">___เวลา</span>（ต่อ / เปลี่ยน）</li>
+</ol>
+<details><summary>Answer</summary>
+<ol>
+<li><span class="thai">ตอบไม่ถูก</span><button class="tts" data-thai="ตอบไม่ถูก">🔊</button> / <span class="rom">dtɔ̀ɔp mâi thùuk</span> / <span class="eng">don’t know how to answer properly</span></li>
+<li><span class="thai">คิดไม่ออก</span><button class="tts" data-thai="คิดไม่ออก">🔊</button> / <span class="rom">khít mâi ɔ̀ɔk</span> / <span class="eng">can’t think of it</span></li>
+<li><span class="thai">วีซ่าใกล้หมดอายุ</span><button class="tts" data-thai="วีซ่าใกล้หมดอายุ">🔊</button> / <span class="rom">wii-sâa glâi mòt aa-yú</span> / <span class="eng">visa is about to expire</span></li>
+<li><span class="thai">เปลี่ยนเวลา</span><button class="tts" data-thai="เปลี่ยนเวลา">🔊</button> / <span class="rom">bplìian wee-laa</span> / <span class="eng">change the time</span></li>
+</ol>
+</details>
+</div>
+</section>
+
+<section class="tab-panel" id="favorites">
+<div class="card">
+<div class="section-title green"><h2>Favorites｜收藏字卡</h2></div>
+<div id="favoritesGrid" class="favorites-grid"></div>
+<div id="emptyFavs" class="empty-favs">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>
+</div>
+</section>
+</main>
+</div>
+
+<script>
+const TTS_RATE = 0.86;
+function speakThai(text){
+  if(!text) return;
+  try{
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "th-TH";
+    u.rate = TTS_RATE;
+    const voices = window.speechSynthesis.getVoices();
+    const th = voices.find(v => (v.lang || "").toLowerCase().startsWith("th"));
+    if(th) u.voice = th;
+    window.speechSynthesis.speak(u);
+  }catch(e){
+    const warn = document.getElementById("ttsWarning");
+    if(warn) warn.style.display = "block";
+  }
+}
+document.addEventListener("click", e=>{
+  const node = e.target.closest("[data-thai]");
+  if(node && (node.classList.contains("tts") || node.classList.contains("pill"))){
+    speakThai(node.dataset.thai);
+  }
+});
+
+document.querySelectorAll(".tab-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+    if(btn.dataset.tab==="favorites") renderFavorites();
+  });
+});
+
+const vocabSearch = document.getElementById("vocabSearch");
+const vocabRows = Array.from(document.querySelectorAll("#vocabTable tbody tr"));
+const countEl = document.getElementById("vocabSearchCount");
+const noResults = document.getElementById("vocabNoResults");
+if(vocabSearch){
+  vocabSearch.addEventListener("input",()=>{
+    const q = vocabSearch.value.trim().toLowerCase();
+    let shown = 0;
+    vocabRows.forEach(row=>{
+      const text = row.innerText.toLowerCase();
+      const hit = !q || text.includes(q);
+      row.style.display = hit ? "" : "none";
+      if(hit) shown++;
+    });
+    countEl.textContent = q ? `顯示 ${shown} / ${vocabRows.length} 筆` : "顯示全部單字";
+    noResults.style.display = shown ? "none" : "block";
+  });
+}
+
+const FAV_KEY = "thai_daily_notes_2026_05_28_update_favorites";
+function getFavs(){try{return JSON.parse(localStorage.getItem(FAV_KEY)||"[]")}catch(e){return[]}}
+function setFavs(favs){localStorage.setItem(FAV_KEY,JSON.stringify(favs))}
+function favId(item){return item.thai+"::"+item.romanization}
+function syncFavButtons(){
+  const favs=getFavs();
+  const ids=new Set(favs.map(favId));
+  document.querySelectorAll(".fav-btn").forEach(btn=>{
+    const id=(btn.dataset.favThai||"")+"::"+(btn.dataset.favRomanization||"");
+    if(ids.has(id)){btn.classList.add("active");btn.textContent="★ 已收藏"}
+    else{btn.classList.remove("active");btn.textContent="♡ 收藏"}
+  });
+}
+document.querySelectorAll(".fav-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const item={
+      thai:btn.dataset.favThai,
+      romanization:btn.dataset.favRomanization,
+      english:btn.dataset.favEnglish,
+      category:btn.dataset.favCategory,
+      exampleThai:btn.dataset.favExampleThai,
+      exampleRom:btn.dataset.favExampleRom,
+      exampleEng:btn.dataset.favExampleEng
+    };
+    let favs=getFavs();
+    const id=favId(item);
+    if(favs.some(x=>favId(x)===id)){favs=favs.filter(x=>favId(x)!==id)}
+    else{favs.push(item)}
+    setFavs(favs);
+    syncFavButtons();
+    renderFavorites();
+  });
+});
+function renderFavorites(){
+  const grid=document.getElementById("favoritesGrid");
+  const empty=document.getElementById("emptyFavs");
+  if(!grid||!empty) return;
+  const favs=getFavs();
+  grid.innerHTML="";
+  empty.style.display=favs.length?"none":"block";
+  favs.forEach(item=>{
+    const card=document.createElement("div");
+    card.className="favorite-card";
+    card.innerHTML=`
+      <button class="tts top-audio" data-thai="${item.thai}">🔊</button>
+      <div class="thai-lg">${item.thai}</div>
+      <div class="rom">${item.romanization}</div>
+      <div class="eng">${item.english}</div>
+      <div style="margin-top:8px;"><span class="tag tag-practice">${item.category}</span></div>
+      <div class="example-box">
+        <div class="thai">${item.exampleThai}<button class="tts" data-thai="${item.exampleThai}">🔊</button></div>
+        <div class="rom">${item.exampleRom}</div>
+        <div class="eng">${item.exampleEng}</div>
+      </div>
+      <button class="remove-fav">移除收藏</button>
+    `;
+    card.querySelector(".remove-fav").addEventListener("click",()=>{
+      const next=getFavs().filter(x=>favId(x)!==favId(item));
+      setFavs(next);
+      syncFavButtons();
+      renderFavorites();
+    });
+    grid.appendChild(card);
+  });
+}
+if("speechSynthesis" in window){window.speechSynthesis.onvoiceschanged=()=>{}}
+else{document.getElementById("ttsWarning").style.display="block"}
+syncFavButtons();
+renderFavorites();
+</script>
+</body>
+</html>
