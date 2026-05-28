@@ -283,6 +283,64 @@
   }
   @media(max-width:780px){.usage-grid{grid-template-columns:1fr}}
   .mini-list{margin:8px 0 0 18px;padding:0;}
+
+
+/* ===== 0528 final style alignment patch ===== */
+body{padding:56px 24px 24px;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 0 56px;}
+.hero{background:rgba(255,255,255,.78);border-radius:28px;box-shadow:var(--shadow);border-color:var(--line);padding:28px;margin-bottom:18px;}
+h1{font-size:28px;line-height:1.3;}
+h2{font-size:22px;}
+h3{font-size:18px;}
+h4{font-size:15px;}
+.subtitle{font-size:14px;}
+table{font-size:14px;}
+th{font-size:12px;}
+.thai{font-size:15px;font-family:var(--thai-font);}
+.thai.big,.thai-lg{font-size:18px;font-weight:800;}
+.roman,.rom{font-size:12.5px;font-family:var(--mono);color:#756f68;}
+.eng{font-size:13px;}
+.speaker{font-size:11px;}
+.badge,.label,.tag{font-size:12px;}
+.tab-btn{font-size:13px;}
+.tts{font-size:12px;border-radius:999px;padding:2px 7px;}
+.pill{font-size:12px;border-radius:13px;}
+.vocab-search-card label{font-size:12px!important;font-weight:900!important;color:#3b3128;}
+.vocab-search-input{font-size:14px;}
+.tabs{position:sticky;top:0;z-index:10;padding:10px 0;background:rgba(255,250,244,.92);backdrop-filter:blur(10px);border-bottom:0;}
+
+.scene-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0 18px;}
+.sentence-group{border:1px solid var(--line);background:rgba(255,255,255,.78);border-radius:18px;padding:16px;box-shadow:var(--shadow);}
+.scene-label{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:900;background:var(--orange-soft);color:#9f5216;border:1px solid #f2c18f;margin-bottom:8px;}
+.sentence{padding:10px 0;border-bottom:1px dashed rgba(80,60,40,.14);}
+.sentence:last-child{border-bottom:none;}
+
+.chat-thread{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.chat-row{display:flex;width:100%;}
+.chat-row.left{justify-content:flex-start;}
+.chat-row.right{justify-content:flex-end;}
+.chat-bubble{max-width:72%;border:1px solid var(--line);border-radius:20px;padding:12px 14px;background:#fff;box-shadow:0 6px 16px rgba(74,45,18,.05);}
+.chat-row.left .chat-bubble{border-top-left-radius:8px;background:var(--blue-soft);border-left:5px solid var(--blue);}
+.chat-row.right .chat-bubble{border-top-right-radius:8px;background:var(--green-soft);border-right:5px solid var(--green);}
+.chat-row.left .speaker{background:#bfdbfe;color:#1d4ed8;}
+.chat-row.right .speaker{background:#bbf7d0;color:#166534;}
+
+.mistake-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;margin:14px 0;box-shadow:var(--shadow);}
+.wrong-box,.better-box,.why-box{border-radius:14px;padding:12px;margin:10px 0;}
+.wrong-box{background:var(--red-soft);border:1px solid #efb2ad;}
+.better-box{background:var(--green-soft);border:1px solid #b2dfbd;}
+.why-box{background:#f8f5f1;border:1px solid #e3d8cd;}
+.box-title{font-size:12px;font-weight:900;letter-spacing:.3px;text-transform:uppercase;margin-bottom:5px;}
+
+.favorites-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin-top:12px;}
+.favorite-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 10px 22px rgba(74,45,18,.07);}
+.favorite-card .thai.big{font-size:26px;margin-right:48px;}
+.favorite-card .top{display:block;margin-bottom:8px;}
+.favorite-card .top .tts{position:absolute;right:14px;top:14px;}
+.example-box{background:#fffaf4;border:1px dashed rgba(80,60,40,.18);border-radius:14px;padding:10px;margin-top:12px;}
+.remove-fav{border:1px solid #efb2ad;background:var(--red-soft);color:#a84038;border-radius:999px;padding:3px 8px;cursor:pointer;font-size:12px;font-weight:900;white-space:nowrap;margin-top:10px;}
+.empty-favs{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f;}
+@media(max-width:920px){body{padding:24px 14px 14px}.wrap{padding:0 0 40px}.scene-grid{grid-template-columns:1fr}.chat-bubble{max-width:92%}.tabs{position:static}}
 </style>
 </head>
 <body>
@@ -785,130 +843,53 @@
 </table>
 </div>
 </section>
-<section class="tab" id="sentences">
-<h2>Sentence Bank｜所有重點單字例句庫</h2>
-<div class="card">
-<p class="note-small">這區把今日所有提過的重要單字、搭配詞、易混淆詞集中成可複習例句。每一句都可以直接播放泰文。</p>
-<div class="sentence-bank">
-<div class="sentence-card">
-<div class="head"><span class="label local">แค่</span><span class="thai">ฉันมีเวลาแค่สิบนาที <button class="tts" data-say="ฉันมีเวลาแค่สิบนาที">🔊</button></span></div>
-<span class="roman">chǎn mii wee-laa khâe sìp naa-thii</span><br/><span class="eng">I only have ten minutes.</span>
+<section class="tab" id="sentences"><h2>Sentence Bank｜所有重點單字例句庫</h2>
+<div class="scene-grid">
+<div class="sentence-group">
+<div class="scene-label">Only / Tone｜แค่ / เท่านั้น / เฉย ๆ</div>
+<div class="sentence"><span class="label local">แค่</span> <span class="thai">ฉันมีเวลาแค่สิบนาที <button class="tts" data-say="ฉันมีเวลาแค่สิบนาที">🔊</button></span><br/><span class="roman">chǎn mii wee-laa khâe sìp naa-thii</span><br/><span class="eng">I only have ten minutes.</span></div>
+<div class="sentence"><span class="label local">เท่านั้น</span> <span class="thai">วันนี้เปิดถึงห้าโมงเท่านั้น <button class="tts" data-say="วันนี้เปิดถึงห้าโมงเท่านั้น">🔊</button></span><br/><span class="roman">wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán</span><br/><span class="eng">Open only until 5 today.</span></div>
+<div class="sentence"><span class="label local">เฉย ๆ</span> <span class="thai">เขาแค่ยิ้มเฉย ๆ <button class="tts" data-say="เขาแค่ยิ้มเฉย ๆ">🔊</button></span><br/><span class="roman">khǎo khâe yím chə̌i-chə̌i</span><br/><span class="eng">He just smiled, nothing more.</span></div>
 </div>
-<div class="sentence-card">
-<div class="head"><span class="label textbook">เท่านั้น</span><span class="thai">วันนี้เปิดถึงห้าโมงเท่านั้น <button class="tts" data-say="วันนี้เปิดถึงห้าโมงเท่านั้น">🔊</button></span></div>
-<span class="roman">wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán</span><br/><span class="eng">Open only until 5 today.</span>
+<div class="sentence-group">
+<div class="scene-label">Talk / Need｜อยาก / ต้องการ / คุย</div>
+<div class="sentence"><span class="label local">อยาก</span> <span class="thai">ฉันแค่อยากคุยกับเขา <button class="tts" data-say="ฉันแค่อยากคุยกับเขา">🔊</button></span><br/><span class="roman">chǎn khâe yàak khui gàp khǎo</span><br/><span class="eng">I just want to chat with him.</span></div>
+<div class="sentence"><span class="label local">ต้องการ</span> <span class="thai">ต้องการความช่วยเหลือไหมคะ <button class="tts" data-say="ต้องการความช่วยเหลือไหมคะ">🔊</button></span><br/><span class="roman">dtɔ̂ng-gaan khwaam chûai-lʉ̌a mái khá</span><br/><span class="eng">Do you need help?</span></div>
+<div class="sentence"><span class="label local">คุย</span> <span class="thai">คุยกันสบาย ๆ ได้ <button class="tts" data-say="คุยกันสบาย ๆ ได้">🔊</button></span><br/><span class="roman">khui gan sà-baai sà-baai dâai</span><br/><span class="eng">We can talk casually.</span></div>
+<div class="sentence"><span class="label local">พูดคุย</span> <span class="thai">เราต้องพูดคุยกันเรื่องนี้ <button class="tts" data-say="เราต้องพูดคุยกันเรื่องนี้">🔊</button></span><br/><span class="roman">rao dtɔ̂ng phûut-khui gan rʉ̂ang níi</span><br/><span class="eng">We need to discuss this matter.</span></div>
 </div>
-<div class="sentence-card">
-<div class="head"><span class="label local">อยาก</span><span class="thai">ฉันแค่อยากคุยกับเขา <button class="tts" data-say="ฉันแค่อยากคุยกับเขา">🔊</button></span></div>
-<span class="roman">chǎn khâe yàak khui gàp khǎo</span><br/><span class="eng">I just want to chat with him.</span>
+<div class="sentence-group">
+<div class="scene-label">Service Thai｜點餐 / 結帳 / 座位</div>
+<div class="sentence"><span class="label local">รับ</span> <span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/><span class="roman">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></div>
+<div class="sentence"><span class="label local">อย่างอื่น</span> <span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/><span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/><span class="eng">Would you like anything else?</span></div>
+<div class="sentence"><span class="label local">คิดตังค์</span> <span class="thai">พี่ คิดตังค์ด้วยค่ะ <button class="tts" data-say="พี่ คิดตังค์ด้วยค่ะ">🔊</button></span><br/><span class="roman">phîi khít dtang dûai khâ</span><br/><span class="eng">Excuse me, bill please.</span></div>
+<div class="sentence"><span class="label local">ข้างใน</span> <span class="thai">ข้างในมีที่นั่งไหมคะ <button class="tts" data-say="ข้างในมีที่นั่งไหมคะ">🔊</button></span><br/><span class="roman">khâang nai mii thîi nâng mái khá</span><br/><span class="eng">Are there seats inside?</span></div>
+<div class="sentence"><span class="label local">ทั้ง</span> <span class="thai">เอาทั้งสองอันค่ะ <button class="tts" data-say="เอาทั้งสองอันค่ะ">🔊</button></span><br/><span class="roman">ao tháng sɔ̌ɔng an khâ</span><br/><span class="eng">I’ll take both.</span></div>
 </div>
-<div class="sentence-card">
-<div class="head"><span class="label textbook">ต้องการ</span><span class="thai">ต้องการความช่วยเหลือไหมคะ <button class="tts" data-say="ต้องการความช่วยเหลือไหมคะ">🔊</button></span></div>
-<span class="roman">dtɔ̂ng-gaan khwaam chûai-lʉ̌a mái khá</span><br/><span class="eng">Do you need help?</span>
+<div class="sentence-group">
+<div class="scene-label">Emotion｜笑 / 共感 / ใจ</div>
+<div class="sentence"><span class="label local">หัวเราะ</span> <span class="thai">เขาหัวเราะดังมาก <button class="tts" data-say="เขาหัวเราะดังมาก">🔊</button></span><br/><span class="roman">khǎo hǔa-ró dang mâak</span><br/><span class="eng">He laughed very loudly.</span></div>
+<div class="sentence"><span class="label local">ยิ้ม</span> <span class="thai">เห็นเธอยิ้มแล้วฉันก็ยิ้มตาม <button class="tts" data-say="เห็นเธอยิ้มแล้วฉันก็ยิ้มตาม">🔊</button></span><br/><span class="roman">hěn thəə yím láew chǎn gɔ̂ɔ yím dtaam</span><br/><span class="eng">When I see you smile, I smile along.</span></div>
+<div class="sentence"><span class="label local">ก็ดีนะ</span> <span class="thai">ไปกินชาบูกันไหม — ก็ดีนะ <button class="tts" data-say="ไปกินชาบูกันไหม ก็ดีนะ">🔊</button></span><br/><span class="roman">bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná</span><br/><span class="eng">Want shabu? — Sounds good.</span></div>
+<div class="sentence"><span class="label local">สบาย ๆ</span> <span class="thai">ไม่ต้องเครียด ทำสบาย ๆ <button class="tts" data-say="ไม่ต้องเครียด ทำสบาย ๆ">🔊</button></span><br/><span class="roman">mâi dtɔ̂ng khrîat, tham sà-baai sà-baai</span><br/><span class="eng">Don’t stress. Take it easy.</span></div>
+<div class="sentence"><span class="label local">เข้าใจ</span> <span class="thai">ฉันเข้าใจเธอ <button class="tts" data-say="ฉันเข้าใจเธอ">🔊</button></span><br/><span class="roman">chǎn khâo jai thəə</span><br/><span class="eng">I understand you.</span></div>
+<div class="sentence"><span class="label local">น้อยใจ</span> <span class="thai">ฉันน้อยใจนะ <button class="tts" data-say="ฉันน้อยใจนะ">🔊</button></span><br/><span class="roman">chǎn nói jai ná</span><br/><span class="eng">I feel hurt / neglected.</span></div>
+<div class="sentence"><span class="label local">สบายใจ</span> <span class="thai">อยู่กับเธอแล้วสบายใจ <button class="tts" data-say="อยู่กับเธอแล้วสบายใจ">🔊</button></span><br/><span class="roman">yùu gàp thəə láew sà-baai jai</span><br/><span class="eng">Being with you makes me feel at ease.</span></div>
+<div class="sentence"><span class="label local">ทำใจ</span> <span class="thai">ฉันยังทำใจไม่ได้ <button class="tts" data-say="ฉันยังทำใจไม่ได้">🔊</button></span><br/><span class="roman">chǎn yang tham jai mâi dâai</span><br/><span class="eng">I still can’t emotionally accept it.</span></div>
 </div>
-<div class="sentence-card">
-<div class="head"><span class="label local">คุย</span><span class="thai">คุยกันสบาย ๆ ได้ <button class="tts" data-say="คุยกันสบาย ๆ ได้">🔊</button></span></div>
-<span class="roman">khui gan sà-baai sà-baai dâai</span><br/><span class="eng">We can talk casually.</span>
+<div class="sentence-group">
+<div class="scene-label">Comparison / Core words｜คิดถึง / เรื่อง / ความ / ไว้ / เห็น</div>
+<div class="sentence"><span class="label local">ยิ่ง...ก็ยิ่ง...</span> <span class="thai">ยิ่งคิดก็ยิ่งเครียด <button class="tts" data-say="ยิ่งคิดก็ยิ่งเครียด">🔊</button></span><br/><span class="roman">yîng khít gɔ̂ɔ yîng khrîat</span><br/><span class="eng">The more I think, the more stressed I get.</span></div>
+<div class="sentence"><span class="label local">คิด</span> <span class="thai">ฉันคิดว่าเรื่องนี้สำคัญ <button class="tts" data-say="ฉันคิดว่าเรื่องนี้สำคัญ">🔊</button></span><br/><span class="roman">chǎn khít wâa rʉ̂ang níi sǎm-khan</span><br/><span class="eng">I think this matter is important.</span></div>
+<div class="sentence"><span class="label local">คิดถึง</span> <span class="thai">ฉันคิดถึงเธอมาก <button class="tts" data-say="ฉันคิดถึงเธอมาก">🔊</button></span><br/><span class="roman">chǎn khít-thʉ̌ng thəə mâak</span><br/><span class="eng">I miss you a lot.</span></div>
+<div class="sentence"><span class="label local">เหมือนกัน</span> <span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/><span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/><span class="eng">I like it too.</span></div>
+<div class="sentence"><span class="label local">เรื่อง</span> <span class="thai">เรื่องนี้สำคัญมาก <button class="tts" data-say="เรื่องนี้สำคัญมาก">🔊</button></span><br/><span class="roman">rʉ̂ang níi sǎm-khan mâak</span><br/><span class="eng">This matter is very important.</span></div>
+<div class="sentence"><span class="label local">ความ</span> <span class="thai">ความจริงคือฉันคิดถึงเธอ <button class="tts" data-say="ความจริงคือฉันคิดถึงเธอ">🔊</button></span><br/><span class="roman">khwaam-jing khʉʉ chǎn khít-thʉ̌ng thəə</span><br/><span class="eng">The truth is I miss you.</span></div>
+<div class="sentence"><span class="label local">ไว้</span> <span class="thai">เก็บไว้ก่อนค่ะ <button class="tts" data-say="เก็บไว้ก่อนค่ะ">🔊</button></span><br/><span class="roman">gèp wái gɔ̀ɔn khâ</span><br/><span class="eng">Keep it for now.</span></div>
+<div class="sentence"><span class="label local">เห็น</span> <span class="thai">ฉันเห็นเธอที่ร้านกาแฟ <button class="tts" data-say="ฉันเห็นเธอที่ร้านกาแฟ">🔊</button></span><br/><span class="roman">chǎn hěn thəə thîi ráan gaa-fɛɛ</span><br/><span class="eng">I saw you at the café.</span></div>
+<div class="sentence"><span class="label local">เห็นด้วย</span> <span class="thai">ฉันเห็นด้วยมากเลย <button class="tts" data-say="ฉันเห็นด้วยมากเลย">🔊</button></span><br/><span class="roman">chǎn hěn dûai mâak loei</span><br/><span class="eng">I totally agree.</span></div>
 </div>
-<div class="sentence-card">
-<div class="head"><span class="label textbook">พูดคุย</span><span class="thai">เราต้องพูดคุยกันเรื่องนี้ <button class="tts" data-say="เราต้องพูดคุยกันเรื่องนี้">🔊</button></span></div>
-<span class="roman">rao dtɔ̂ng phûut-khui gan rʉ̂ang níi</span><br/><span class="eng">We need to discuss this matter.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">หัวเราะ</span><span class="thai">เขาหัวเราะดังมาก <button class="tts" data-say="เขาหัวเราะดังมาก">🔊</button></span></div>
-<span class="roman">khǎo hǔa-ró dang mâak</span><br/><span class="eng">He laughed very loudly.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">เฉย ๆ</span><span class="thai">เขาแค่ยิ้มเฉย ๆ <button class="tts" data-say="เขาแค่ยิ้มเฉย ๆ">🔊</button></span></div>
-<span class="roman">khǎo khâe yím chə̌i-chə̌i</span><br/><span class="eng">He just smiled, nothing more.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">รับ</span><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span></div>
-<span class="roman">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">อย่างอื่น</span><span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span></div>
-<span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/><span class="eng">Would you like anything else?</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">ยิ่ง...ก็ยิ่ง...</span><span class="thai">ยิ่งคิดก็ยิ่งเครียด <button class="tts" data-say="ยิ่งคิดก็ยิ่งเครียด">🔊</button></span></div>
-<span class="roman">yîng khít gɔ̂ɔ yîng khrîat</span><br/><span class="eng">The more I think, the more stressed I get.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label mistake">คิด</span><span class="thai">ฉันคิดว่าเรื่องนี้สำคัญ <button class="tts" data-say="ฉันคิดว่าเรื่องนี้สำคัญ">🔊</button></span></div>
-<span class="roman">chǎn khít wâa rʉ̂ang níi sǎm-khan</span><br/><span class="eng">I think this matter is important.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label mistake">คิดถึง</span><span class="thai">ฉันคิดถึงเธอมาก <button class="tts" data-say="ฉันคิดถึงเธอมาก">🔊</button></span></div>
-<span class="roman">chǎn khít-thʉ̌ng thəə mâak</span><br/><span class="eng">I miss you a lot.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">ยิ้ม</span><span class="thai">เห็นเธอยิ้มแล้วฉันก็ยิ้มตาม <button class="tts" data-say="เห็นเธอยิ้มแล้วฉันก็ยิ้มตาม">🔊</button></span></div>
-<span class="roman">hěn thəə yím láew chǎn gɔ̂ɔ yím dtaam</span><br/><span class="eng">When I see you smile, I smile along.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">ก็ดีนะ</span><span class="thai">ไปกินชาบูกันไหม — ก็ดีนะ <button class="tts" data-say="ไปกินชาบูกันไหม ก็ดีนะ">🔊</button></span></div>
-<span class="roman">bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná</span><br/><span class="eng">Want shabu? — Sounds good.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">สบาย ๆ</span><span class="thai">ไม่ต้องเครียด ทำสบาย ๆ <button class="tts" data-say="ไม่ต้องเครียด ทำสบาย ๆ">🔊</button></span></div>
-<span class="roman">mâi dtɔ̂ng khrîat, tham sà-baai sà-baai</span><br/><span class="eng">Don’t stress. Take it easy.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">เข้าใจ</span><span class="thai">ฉันเข้าใจเธอ <button class="tts" data-say="ฉันเข้าใจเธอ">🔊</button></span></div>
-<span class="roman">chǎn khâo jai thəə</span><br/><span class="eng">I understand you.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">น้อยใจ</span><span class="thai">ฉันน้อยใจนะ <button class="tts" data-say="ฉันน้อยใจนะ">🔊</button></span></div>
-<span class="roman">chǎn nói jai ná</span><br/><span class="eng">I feel hurt / neglected.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">สบายใจ</span><span class="thai">อยู่กับเธอแล้วสบายใจ <button class="tts" data-say="อยู่กับเธอแล้วสบายใจ">🔊</button></span></div>
-<span class="roman">yùu gàp thəə láew sà-baai jai</span><br/><span class="eng">Being with you makes me feel at ease.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">ทำใจ</span><span class="thai">ฉันยังทำใจไม่ได้ <button class="tts" data-say="ฉันยังทำใจไม่ได้">🔊</button></span></div>
-<span class="roman">chǎn yang tham jai mâi dâai</span><br/><span class="eng">I still can’t emotionally accept it.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">คิดตังค์</span><span class="thai">พี่ คิดตังค์ด้วยค่ะ <button class="tts" data-say="พี่ คิดตังค์ด้วยค่ะ">🔊</button></span></div>
-<span class="roman">phîi khít dtang dûai khâ</span><br/><span class="eng">Excuse me, bill please.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">ข้างใน</span><span class="thai">ข้างในมีที่นั่งไหมคะ <button class="tts" data-say="ข้างในมีที่นั่งไหมคะ">🔊</button></span></div>
-<span class="roman">khâang nai mii thîi nâng mái khá</span><br/><span class="eng">Are there seats inside?</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">ทั้ง</span><span class="thai">เอาทั้งสองอันค่ะ <button class="tts" data-say="เอาทั้งสองอันค่ะ">🔊</button></span></div>
-<span class="roman">ao tháng sɔ̌ɔng an khâ</span><br/><span class="eng">I’ll take both.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">เหมือนกัน</span><span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span></div>
-<span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/><span class="eng">I like it too.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">เรื่อง</span><span class="thai">เรื่องนี้สำคัญมาก <button class="tts" data-say="เรื่องนี้สำคัญมาก">🔊</button></span></div>
-<span class="roman">rʉ̂ang níi sǎm-khan mâak</span><br/><span class="eng">This matter is very important.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label textbook">ความ</span><span class="thai">ความจริงคือฉันคิดถึงเธอ <button class="tts" data-say="ความจริงคือฉันคิดถึงเธอ">🔊</button></span></div>
-<span class="roman">khwaam-jing khʉʉ chǎn khít-thʉ̌ng thəə</span><br/><span class="eng">The truth is I miss you.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">ไว้</span><span class="thai">เก็บไว้ก่อนค่ะ <button class="tts" data-say="เก็บไว้ก่อนค่ะ">🔊</button></span></div>
-<span class="roman">gèp wái gɔ̀ɔn khâ</span><br/><span class="eng">Keep it for now.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label practice">เห็น</span><span class="thai">ฉันเห็นเธอที่ร้านกาแฟ <button class="tts" data-say="ฉันเห็นเธอที่ร้านกาแฟ">🔊</button></span></div>
-<span class="roman">chǎn hěn thəə thîi ráan gaa-fɛɛ</span><br/><span class="eng">I saw you at the café.</span>
-</div>
-<div class="sentence-card">
-<div class="head"><span class="label local">เห็นด้วย</span><span class="thai">ฉันเห็นด้วยมากเลย <button class="tts" data-say="ฉันเห็นด้วยมากเลย">🔊</button></span></div>
-<span class="roman">chǎn hěn dûai mâak loei</span><br/><span class="eng">I totally agree.</span>
-</div>
-</div>
-</div>
-</section>
+</div></section>
 <section class="tab" id="structures">
 <h2>Structures｜今日句型</h2>
 <div class="structure">
@@ -984,202 +965,59 @@
 </p>
 </div>
 </section>
-<section class="tab" id="bangkok">
-<h2>Bangkok Expansion｜曼谷生活情境</h2>
-<div class="card">
-<h3>1. Café 點餐</h3>
-<p>
-<span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/>
-<span class="roman">ráp à-rai dii khá</span><br/>
-<span class="eng">What would you like?</span>
-</p>
-<p>
-<span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/>
-<span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/>
-<span class="eng">Would you like anything else?</span>
-</p>
-<p>
-<span class="thai">แค่นี้ค่ะ <button class="tts" data-say="แค่นี้ค่ะ">🔊</button></span><br/>
-<span class="roman">khâe níi khâ</span><br/>
-<span class="eng">That’s all.</span>
-</p>
+<section class="tab" id="bangkok"><h2>Bangkok Expansion｜曼谷生活情境</h2>
+<div class="scene-grid">
+<div class="sentence-group"><div class="scene-label">Café｜Café 點餐</div>
+<div class="sentence"><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/><span class="roman">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></div>
+<div class="sentence"><span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/><span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/><span class="eng">Would you like anything else?</span></div>
+<div class="sentence"><span class="thai">แค่นี้ค่ะ <button class="tts" data-say="แค่นี้ค่ะ">🔊</button></span><br/><span class="roman">khâe níi khâ</span><br/><span class="eng">That’s all.</span></div>
 </div>
-<div class="card">
-<h3>2. Restaurant 結帳</h3>
-<p>
-<span class="thai">พี่ คิดตังค์ด้วยค่ะ <button class="tts" data-say="พี่ คิดตังค์ด้วยค่ะ">🔊</button></span><br/>
-<span class="roman">phîi khít dtang dûai khâ</span><br/>
-<span class="eng">Excuse me, bill please.</span>
-</p>
-<p>
-<span class="thai">ขอเช็คบิลค่ะ <button class="tts" data-say="ขอเช็คบิลค่ะ">🔊</button></span><br/>
-<span class="roman">khɔ̌ɔ chék bin khâ</span><br/>
-<span class="eng">Can I get the bill please?</span>
-</p>
-<p>
-<span class="thai">เก็บเงินค่ะ <button class="tts" data-say="เก็บเงินค่ะ">🔊</button></span><br/>
-<span class="roman">gèp ngən khâ</span><br/>
-<span class="eng">Bill please.</span>
-</p>
+<div class="sentence-group"><div class="scene-label">Restaurant｜Restaurant 結帳</div>
+<div class="sentence"><span class="thai">พี่ คิดตังค์ด้วยค่ะ <button class="tts" data-say="พี่ คิดตังค์ด้วยค่ะ">🔊</button></span><br/><span class="roman">phîi khít dtang dûai khâ</span><br/><span class="eng">Excuse me, bill please.</span></div>
+<div class="sentence"><span class="thai">ขอเช็คบิลค่ะ <button class="tts" data-say="ขอเช็คบิลค่ะ">🔊</button></span><br/><span class="roman">khɔ̌ɔ chék bin khâ</span><br/><span class="eng">Can I get the bill please?</span></div>
+<div class="sentence"><span class="thai">เก็บเงินค่ะ <button class="tts" data-say="เก็บเงินค่ะ">🔊</button></span><br/><span class="roman">gèp ngən khâ</span><br/><span class="eng">Bill please.</span></div>
 </div>
-<div class="card">
-<h3>3. Mall / Café 座位</h3>
-<p>
-<span class="thai">นั่งข้างในไหมคะ <button class="tts" data-say="นั่งข้างในไหมคะ">🔊</button></span><br/>
-<span class="roman">nâng khâang nai mái khá</span><br/>
-<span class="eng">Would you like to sit inside?</span>
-</p>
-<p>
-<span class="thai">ข้างในเต็มแล้วค่ะ <button class="tts" data-say="ข้างในเต็มแล้วค่ะ">🔊</button></span><br/>
-<span class="roman">khâang nai dtem láew khâ</span><br/>
-<span class="eng">Inside is already full.</span>
-</p>
-<p>
-<span class="thai">ข้างนอกร้อนมาก <button class="tts" data-say="ข้างนอกร้อนมาก">🔊</button></span><br/>
-<span class="roman">khâang nɔ̂ɔk rɔ́ɔn mâak</span><br/>
-<span class="eng">It’s very hot outside.</span>
-</p>
+<div class="sentence-group"><div class="scene-label">Mall / Café｜Mall / Café 座位</div>
+<div class="sentence"><span class="thai">นั่งข้างในไหมคะ <button class="tts" data-say="นั่งข้างในไหมคะ">🔊</button></span><br/><span class="roman">nâng khâang nai mái khá</span><br/><span class="eng">Would you like to sit inside?</span></div>
+<div class="sentence"><span class="thai">ข้างในเต็มแล้วค่ะ <button class="tts" data-say="ข้างในเต็มแล้วค่ะ">🔊</button></span><br/><span class="roman">khâang nai dtem láew khâ</span><br/><span class="eng">Inside is already full.</span></div>
+<div class="sentence"><span class="thai">ข้างนอกร้อนมาก <button class="tts" data-say="ข้างนอกร้อนมาก">🔊</button></span><br/><span class="roman">khâang nɔ̂ɔk rɔ́ɔn mâak</span><br/><span class="eng">It’s very hot outside.</span></div>
 </div>
-<div class="card">
-<h3>4. Friends / Partner 共感聊天</h3>
-<p>
-<span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/>
-<span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/>
-<span class="eng">I like it too.</span>
-</p>
-<p>
-<span class="thai">ฉันก็คิดแบบนั้นเหมือนกัน <button class="tts" data-say="ฉันก็คิดแบบนั้นเหมือนกัน">🔊</button></span><br/>
-<span class="roman">chǎn gɔ̂ɔ khít bàep nán mʉ̌an gan</span><br/>
-<span class="eng">I think so too.</span>
-</p>
-<p>
-<span class="thai">ฉันเห็นด้วย <button class="tts" data-say="ฉันเห็นด้วย">🔊</button></span><br/>
-<span class="roman">chǎn hěn dûai</span><br/>
-<span class="eng">I agree.</span>
-</p>
+<div class="sentence-group"><div class="scene-label">Friends / Partner｜Friends / Partner 共感聊天</div>
+<div class="sentence"><span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/><span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/><span class="eng">I like it too.</span></div>
+<div class="sentence"><span class="thai">ฉันก็คิดแบบนั้นเหมือนกัน <button class="tts" data-say="ฉันก็คิดแบบนั้นเหมือนกัน">🔊</button></span><br/><span class="roman">chǎn gɔ̂ɔ khít bàep nán mʉ̌an gan</span><br/><span class="eng">I think so too.</span></div>
+<div class="sentence"><span class="thai">ฉันเห็นด้วย <button class="tts" data-say="ฉันเห็นด้วย">🔊</button></span><br/><span class="roman">chǎn hěn dûai</span><br/><span class="eng">I agree.</span></div>
 </div>
+</div></section>
+<section class="tab" id="dialogues"><h2>Dialogues｜自然對話</h2>
+<div class="card"><h3>Dialogue 1｜Café 點餐</h3><div class="chat-thread">
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">Staff</span><br/><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/><span class="roman">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></div></div>
+<div class="chat-row right"><div class="chat-bubble"><span class="speaker">Customer</span><br/><span class="thai">เอาชาไทยหนึ่งแก้วค่ะ <button class="tts" data-say="เอาชาไทยหนึ่งแก้วค่ะ">🔊</button></span><br/><span class="roman">ao chaa-thai nʉ̀ng gâew khâ</span><br/><span class="eng">I’ll take one Thai tea.</span></div></div>
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">Staff</span><br/><span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/><span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/><span class="eng">Anything else?</span></div></div>
+<div class="chat-row right"><div class="chat-bubble"><span class="speaker">Customer</span><br/><span class="thai">แค่นี้ค่ะ <button class="tts" data-say="แค่นี้ค่ะ">🔊</button></span><br/><span class="roman">khâe níi khâ</span><br/><span class="eng">That’s all.</span></div></div>
+</div></div>
+<div class="card"><h3>Dialogue 2｜選兩個都要</h3><div class="chat-thread">
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">Staff</span><br/><span class="thai">เอาอันไหนคะ <button class="tts" data-say="เอาอันไหนคะ">🔊</button></span><br/><span class="roman">ao an-nǎi khá</span><br/><span class="eng">Which one would you like?</span></div></div>
+<div class="chat-row right"><div class="chat-bubble"><span class="speaker">Customer</span><br/><span class="thai">เลือกไม่ถูก เอาทั้งสองอันค่ะ <button class="tts" data-say="เลือกไม่ถูก เอาทั้งสองอันค่ะ">🔊</button></span><br/><span class="roman">lʉ̂ak mâi thùuk, ao tháng sɔ̌ɔng an khâ</span><br/><span class="eng">I can’t choose. I’ll take both.</span></div></div>
+</div></div>
+<div class="card"><h3>Dialogue 3｜情侶 / 朋友想聊</h3><div class="chat-thread">
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br/><span class="thai">มีเรื่องจะถามค่ะ <button class="tts" data-say="มีเรื่องจะถามค่ะ">🔊</button></span><br/><span class="roman">mii rʉ̂ang jà thǎam khâ</span><br/><span class="eng">I have something to ask.</span></div></div>
+<div class="chat-row right"><div class="chat-bubble"><span class="speaker">B</span><br/><span class="thai">เรื่องอะไรเหรอ <button class="tts" data-say="เรื่องอะไรเหรอ">🔊</button></span><br/><span class="roman">rʉ̂ang à-rai rə̌ə</span><br/><span class="eng">What is it about?</span></div></div>
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br/><span class="thai">เรื่องนี้สำคัญมากนะ <button class="tts" data-say="เรื่องนี้สำคัญมากนะ">🔊</button></span><br/><span class="roman">rʉ̂ang níi sǎm-khan mâak ná</span><br/><span class="eng">This is really important.</span></div></div>
+</div></div>
+<div class="card"><h3>Dialogue 4｜情緒共感</h3><div class="chat-thread">
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br/><span class="thai">ฉันชอบเพลงนี้มาก <button class="tts" data-say="ฉันชอบเพลงนี้มาก">🔊</button></span><br/><span class="roman">chǎn chɔ̂ɔp phleeng níi mâak</span><br/><span class="eng">I really like this song.</span></div></div>
+<div class="chat-row right"><div class="chat-bubble"><span class="speaker">B</span><br/><span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/><span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/><span class="eng">I like it too.</span></div></div>
+<div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br/><span class="thai">คุยกับเธอแล้วสบายใจ <button class="tts" data-say="คุยกับเธอแล้วสบายใจ">🔊</button></span><br/><span class="roman">khui gàp thəə láew sà-baai jai</span><br/><span class="eng">Talking with you makes me feel at ease.</span></div></div>
+</div></div>
 </section>
-<section class="tab" id="dialogues">
-<h2>Dialogues｜自然對話</h2>
-<h3>Dialogue 1｜Café 點餐</h3>
-<div class="bubble a">
-<span class="speaker a">Staff</span><br/>
-<span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/>
-<span class="roman">ráp à-rai dii khá</span><br/>
-<span class="eng">What would you like?</span>
-</div>
-<div class="bubble b">
-<span class="speaker b">Customer</span><br/>
-<span class="thai">เอาชาไทยหนึ่งแก้วค่ะ <button class="tts" data-say="เอาชาไทยหนึ่งแก้วค่ะ">🔊</button></span><br/>
-<span class="roman">ao chaa-thai nʉ̀ng gâew khâ</span><br/>
-<span class="eng">I’ll take one Thai tea.</span>
-</div>
-<div class="bubble a">
-<span class="speaker a">Staff</span><br/>
-<span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/>
-<span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/>
-<span class="eng">Anything else?</span>
-</div>
-<div class="bubble b">
-<span class="speaker b">Customer</span><br/>
-<span class="thai">แค่นี้ค่ะ <button class="tts" data-say="แค่นี้ค่ะ">🔊</button></span><br/>
-<span class="roman">khâe níi khâ</span><br/>
-<span class="eng">That’s all.</span>
-</div>
-<h3>Dialogue 2｜選兩個都要</h3>
-<div class="bubble a">
-<span class="speaker a">Staff</span><br/>
-<span class="thai">เอาอันไหนคะ <button class="tts" data-say="เอาอันไหนคะ">🔊</button></span><br/>
-<span class="roman">ao an-nǎi khá</span><br/>
-<span class="eng">Which one would you like?</span>
-</div>
-<div class="bubble b">
-<span class="speaker b">Customer</span><br/>
-<span class="thai">เลือกไม่ถูก เอาทั้งสองอันค่ะ <button class="tts" data-say="เลือกไม่ถูก เอาทั้งสองอันค่ะ">🔊</button></span><br/>
-<span class="roman">lʉ̂ak mâi thùuk, ao tháng sɔ̌ɔng an khâ</span><br/>
-<span class="eng">I can’t choose. I’ll take both.</span>
-</div>
-<h3>Dialogue 3｜情侶 / 朋友想聊</h3>
-<div class="bubble a">
-<span class="speaker a">A</span><br/>
-<span class="thai">มีเรื่องจะถามค่ะ <button class="tts" data-say="มีเรื่องจะถามค่ะ">🔊</button></span><br/>
-<span class="roman">mii rʉ̂ang jà thǎam khâ</span><br/>
-<span class="eng">I have something to ask.</span>
-</div>
-<div class="bubble b">
-<span class="speaker b">B</span><br/>
-<span class="thai">เรื่องอะไรเหรอ <button class="tts" data-say="เรื่องอะไรเหรอ">🔊</button></span><br/>
-<span class="roman">rʉ̂ang à-rai rə̌ə</span><br/>
-<span class="eng">What is it about?</span>
-</div>
-<div class="bubble a">
-<span class="speaker a">A</span><br/>
-<span class="thai">เรื่องนี้สำคัญมากนะ <button class="tts" data-say="เรื่องนี้สำคัญมากนะ">🔊</button></span><br/>
-<span class="roman">rʉ̂ang níi sǎm-khan mâak ná</span><br/>
-<span class="eng">This is really important.</span>
-</div>
-<h3>Dialogue 4｜情緒共感</h3>
-<div class="bubble a">
-<span class="speaker a">A</span><br/>
-<span class="thai">ฉันชอบเพลงนี้มาก <button class="tts" data-say="ฉันชอบเพลงนี้มาก">🔊</button></span><br/>
-<span class="roman">chǎn chɔ̂ɔp phleeng níi mâak</span><br/>
-<span class="eng">I really like this song.</span>
-</div>
-<div class="bubble b">
-<span class="speaker b">B</span><br/>
-<span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/>
-<span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/>
-<span class="eng">I like it too.</span>
-</div>
-<div class="bubble a">
-<span class="speaker a">A</span><br/>
-<span class="thai">คุยกับเธอแล้วสบายใจ <button class="tts" data-say="คุยกับเธอแล้วสบายใจ">🔊</button></span><br/>
-<span class="roman">khui gàp thəə láew sà-baai jai</span><br/>
-<span class="eng">Talking with you makes me feel at ease.</span>
-</div>
-</section>
-<section class="tab" id="mistakes">
-<h2>Mistakes｜常見錯誤</h2>
-<div class="mistake-box">
-<h3>1. every “only” 都用 เท่านั้น</h3>
-<p><b>Less natural:</b> <span class="thai">ฉันมีเวลาเพียงสิบนาทีเท่านั้น</span> 在聊天裡太正式。</p>
-<p><b>Better:</b> <span class="thai">ฉันมีเวลาแค่สิบนาที <button class="tts" data-say="ฉันมีเวลาแค่สิบนาที">🔊</button></span></p>
-<p><b>Why:</b> <span class="thai">แค่</span> 是口語自然；<span class="thai">เท่านั้น</span> 是正式強調。</p>
-</div>
-<div class="mistake-box">
-<h3>2. คิด vs คิดถึง 混用</h3>
-<p><span class="thai">คิด <button class="tts" data-say="คิด">🔊</button></span> = think / 思考</p>
-<p><span class="thai">คิดถึง <button class="tts" data-say="คิดถึง">🔊</button></span> = miss / 想念</p>
-<p><b>Better:</b> <span class="thai">ฉันคิดถึงเธอ <button class="tts" data-say="ฉันคิดถึงเธอ">🔊</button></span> = I miss you.</p>
-</div>
-<div class="mistake-box">
-<h3>3. เฉยๆ 不是 boring</h3>
-<p><b>Wrong:</b> 把 <span class="thai">เฉยๆ</span> 理解成「無聊」。</p>
-<p><b>Better:</b> 它是 neutral / nothing special / 就那樣。</p>
-<p><span class="thai">ฉันรู้สึกเฉยๆ <button class="tts" data-say="ฉันรู้สึกเฉยๆ">🔊</button></span> = I feel neutral.</p>
-</div>
-<div class="mistake-box">
-<h3>4. รับอะไรดีคะ 不要直翻成「接受什麼好」</h3>
-<p><b>Natural meaning:</b> 店員口語中的「想點什麼呢？」</p>
-<p><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span> = What would you like?</p>
-</div>
-<div class="mistake-box">
-<h3>5. คิดตังค์ 的 คิด 不是 think</h3>
-<p><span class="thai">คิด</span> 在這裡是 calculate。</p>
-<p><span class="thai">คิดตังค์ด้วยค่ะ <button class="tts" data-say="คิดตังค์ด้วยค่ะ">🔊</button></span> = Please calculate the bill / Bill please.</p>
-</div>
-<div class="mistake-box">
-<h3>6. ข้างใน vs ใน</h3>
-<p><span class="thai">ใน</span> = in / inside，較像文法位置。</p>
-<p><span class="thai">ข้างใน</span> = inside area，較有「裡面那邊」空間感。</p>
-<p><span class="thai">ฉันรออยู่ข้างใน <button class="tts" data-say="ฉันรออยู่ข้างใน">🔊</button></span> = I’m waiting inside.</p>
-</div>
-<div class="mistake-box">
-<h3>7. 見到 เห็น 就只翻 see</h3>
-<p><span class="thai">เห็นด้วย</span> = agree，不是「看到也」。</p>
-<p><span class="thai">เห็นใจ</span> = sympathize，不是「看到心」。</p>
-<p><span class="thai">ไม่เห็นแพงเลย <button class="tts" data-say="ไม่เห็นแพงเลย">🔊</button></span> = It’s not expensive at all.</p>
-</div>
+<section class="tab" id="mistakes"><h2>Mistakes｜常見錯誤</h2>
+<div class="mistake-card"><h3>1. every “only” 都用 เท่านั้น</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>Less natural: ฉันมีเวลาเพียงสิบนาทีเท่านั้น 在聊天裡太正式。</div><div class="better-box"><div class="box-title">Better</div><span class="thai">เท่านั้น</span></div><div class="why-box"><div class="box-title">Why</div>Better: ฉันมีเวลาแค่สิบนาที 🔊 Why: แค่ 是口語自然； เท่านั้น 是正式強調。</div></div>
+<div class="mistake-card"><h3>2. คิด vs คิดถึง 混用</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>คิด 🔊 = think / 思考</div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันคิดถึงเธอ <button class="tts" data-say="ฉันคิดถึงเธอ">🔊</button></span></div><div class="why-box"><div class="box-title">Why</div>คิดถึง 🔊 = miss / 想念 Better: ฉันคิดถึงเธอ 🔊 = I miss you.</div></div>
+<div class="mistake-card"><h3>3. เฉยๆ 不是 boring</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>Wrong: 把 เฉยๆ 理解成「無聊」。</div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันรู้สึกเฉยๆ <button class="tts" data-say="ฉันรู้สึกเฉยๆ">🔊</button></span></div><div class="why-box"><div class="box-title">Why</div>Better: 它是 neutral / nothing special / 就那樣。 ฉันรู้สึกเฉยๆ 🔊 = I feel neutral.</div></div>
+<div class="mistake-card"><h3>4. รับอะไรดีคะ 不要直翻成「接受什麼好」</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>Natural meaning: 店員口語中的「想點什麼呢？」</div><div class="better-box"><div class="box-title">Better</div><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span></div><div class="why-box"><div class="box-title">Why</div>Natural meaning: 店員口語中的「想點什麼呢？」 รับอะไรดีคะ 🔊 = What would you like?</div></div>
+<div class="mistake-card"><h3>5. คิดตังค์ 的 คิด 不是 think</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>คิด 在這裡是 calculate。</div><div class="better-box"><div class="box-title">Better</div><span class="thai">คิดตังค์ด้วยค่ะ <button class="tts" data-say="คิดตังค์ด้วยค่ะ">🔊</button></span></div><div class="why-box"><div class="box-title">Why</div>คิด 在這裡是 calculate。 คิดตังค์ด้วยค่ะ 🔊 = Please calculate the bill / Bill please.</div></div>
+<div class="mistake-card"><h3>6. ข้างใน vs ใน</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>ใน = in / inside，較像文法位置。</div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันรออยู่ข้างใน <button class="tts" data-say="ฉันรออยู่ข้างใน">🔊</button></span></div><div class="why-box"><div class="box-title">Why</div>ข้างใน = inside area，較有「裡面那邊」空間感。 ฉันรออยู่ข้างใน 🔊 = I’m waiting inside.</div></div>
+<div class="mistake-card"><h3>7. 見到 เห็น 就只翻 see</h3><div class="wrong-box"><div class="box-title">Wrong / Less natural</div>เห็นด้วย = agree，不是「看到也」。</div><div class="better-box"><div class="box-title">Better</div><span class="thai">ไม่เห็นแพงเลย <button class="tts" data-say="ไม่เห็นแพงเลย">🔊</button></span></div><div class="why-box"><div class="box-title">Why</div>เห็นใจ = sympathize，不是「看到心」。 ไม่เห็นแพงเลย 🔊 = It’s not expensive at all.</div></div>
 </section>
 <section class="tab" id="practice">
 <h2>Practice｜複習練習</h2>
@@ -1275,7 +1113,7 @@
 </details>
 </div>
 </section>
-<section class="tab" id="favorites"><h2>Favorites｜收藏字卡</h2><div class="card"><p class="note-small">這裡會顯示你從 Vocabulary 收藏的單字卡。收藏資料會存在這個瀏覽器的 localStorage，不需要登入。</p><div class="favorites-grid" id="favoritesList"></div></div></section></main>
+<section class="tab" id="favorites"><h2>Favorites｜收藏字卡</h2><div class="favorites-grid" id="favoritesList"></div></section></main>
 </div>
 <script>
   const buttons = document.querySelectorAll('.tab-btn');
@@ -1403,11 +1241,11 @@
           <button class="remove-fav" type="button" data-index="${index}">移除</button>
         </div>
         <div><span class="label local">${escapeHtml(item.category || 'Favorite')}</span></div>
-        <p>
+        <div class="example-box">
           <span class="thai">${escapeHtml(item.exampleThai)}</span>${item.exampleThai ? `<button class="tts" data-say="${escapeAttr(item.exampleThai)}">🔊</button>` : ''}<br/>
           <span class="roman">${escapeHtml(item.exampleRom)}</span><br/>
           <span class="eng">${escapeHtml(item.exampleEng)}</span>
-        </p>
+        </div>
       </div>
     `).join('');
 
@@ -1457,7 +1295,7 @@
     const input = document.getElementById('vocabSearch');
     const count = document.getElementById('vocabSearchCount');
     const noResults = document.getElementById('vocabNoResults');
-    const rows = Array.from(document.querySelectorAll('#vocab tbody tr'));
+    const rows = Array.from(document.querySelectorAll('#vocab table tbody tr'));
     if (!input || !rows.length) return;
 
     function update(){
