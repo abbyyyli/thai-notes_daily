@@ -32,7 +32,7 @@
 
     body {
       margin: 0;
-      padding: 24px;
+      padding: 56px 24px 24px;
       color: var(--text);
       background:
         radial-gradient(circle at top left, rgba(242,163,93,.16), transparent 36%),
@@ -59,7 +59,7 @@
 
     h1 {
       margin: 0 0 8px;
-      font-size: 30px;
+      font-size: 28px;
       line-height: 1.25;
       letter-spacing: .2px;
     }
@@ -73,7 +73,7 @@
 
     h3 {
       margin: 18px 0 8px;
-      font-size: 17px;
+      font-size: 18px;
       color: #3c332a;
     }
 
@@ -175,7 +175,7 @@
     .span-12 { grid-column: span 12; }
 
     @media (max-width: 920px) {
-      body { padding: 14px; }
+      body { padding: 24px 14px 14px; }
       .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-12 { grid-column: span 12; }
       h1 { font-size: 24px; }
       .tabs { position: static; }
@@ -213,7 +213,7 @@
 
     .rom {
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 12.5px;
       color: #756f68;
     }
 
@@ -267,7 +267,7 @@
       border: 1px solid var(--line);
       border-radius: 14px;
       background: #fff;
-      font-size: 13px;
+      font-size: 14px;
     }
 
     th, td {
@@ -457,7 +457,7 @@
 
     .vocab-search-card label {
       font-weight: 900;
-      font-size: 13px;
+      font-size: 12px;
       color: #3b3128;
     }
 
@@ -559,6 +559,46 @@
       padding: 16px;
       color: #276f9f;
     }
+
+
+/* 0528 final visual alignment */
+.scene-label{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;
+  font-size:12px;font-weight:900;background:var(--orange-soft);color:#9f5216;border:1px solid #f2c18f;margin-bottom:8px;
+}
+
+/* Dialogues｜0528 final left-right chat bubbles */
+.chat-thread{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.chat-row{display:flex;width:100%}
+.chat-row.left{justify-content:flex-start}
+.chat-row.right{justify-content:flex-end}
+.chat-bubble{
+  max-width:72%;border:1px solid var(--line);border-radius:20px;padding:12px 14px;
+  background:#fff;box-shadow:0 6px 16px rgba(74,45,18,.05);
+}
+.chat-row.left .chat-bubble{border-top-left-radius:8px;background:#f8fcff;border-left:5px solid var(--blue)}
+.chat-row.right .chat-bubble{border-top-right-radius:8px;background:#f7fff8;border-right:5px solid var(--green)}
+.chat-row.left .speaker{background:var(--blue-soft);color:#276d9f}
+.chat-row.right .speaker{background:var(--green-soft);color:#2f7a45}
+
+/* Mistakes｜0528 final Wrong / Better / Why cards */
+.mistake-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;margin:14px 0;box-shadow:var(--shadow)}
+.wrong-box,.better-box,.why-box{border-radius:14px;padding:12px;margin:10px 0}
+.wrong-box{background:var(--red-soft);border:1px solid #efb2ad}
+.better-box{background:var(--green-soft);border:1px solid #b2dfbd}
+.why-box{background:#f8f5f1;border:1px solid #e3d8cd}
+.box-title{font-size:12px;font-weight:900;letter-spacing:.3px;text-transform:uppercase;margin-bottom:5px}
+
+/* Favorites｜0528 final flashcard look */
+.favorite-card{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;
+  box-shadow:0 10px 22px rgba(74,45,18,.07);
+}
+.favorite-card .thai-lg{font-size:26px;margin-right:48px}
+.favorite-card .top-audio{position:absolute;right:14px;top:14px}
+.example-box{background:#fffaf4;border:1px dashed rgba(80,60,40,.18);border-radius:14px;padding:10px;margin-top:12px}
+.remove-fav{margin-top:10px}
+@media(max-width:920px){.chat-bubble{max-width:92%}}
 </style>
 </head>
 <body>
@@ -952,10 +992,7 @@
 </div>
 </section>
 <section class="tab-panel" id="usage">
-<div class="card">
-<div class="section-title"><h2>Usage Notes｜重點比較與曼谷語感補充</h2></div>
-<p>這一區不是再背單字，而是整理「什麼時候用哪個字」。每個例句都附 Thai / Romanization / English，適合直接複習。</p>
-</div>
+
 <div class="compare-card">
 <h2>1. โดย / ผ่าน / ทาง / ด้วย / ใช้ / จาก｜by / through / via 怎麼自然說？</h2>
 <div class="tip orange">
@@ -1184,48 +1221,45 @@
 </div>
 </section>
 <section class="tab-panel" id="sentence">
-<div class="card">
-<div class="section-title"><h2>Sentence Bank｜依核心詞分組的 Shadowing 句庫</h2></div>
-<p>每組 3–5 句，場景包含 café、restaurant、street stall、work、school、friends、chat、learning、emotion、BTS / MRT、mall、condo 等。每句都可以直接朗讀模仿。</p>
-</div>
+
 <div class="scene-grid">
 <div class="sentence-group">
-<h2>Café / Restaurant</h2>
+<div class="scene-label">Café / Restaurant｜點餐猶豫 / 人很多 / 推薦</div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ráan níi khon yóe mâak, ngán bpai ráan ùuen mái</span><br/><span class="eng">This place is really crowded. Then should we go to another place?</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn ná khá, khɔ̌ɔ khít bpáep nueng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">งั้นเอาชาไทยก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอาชาไทยก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao chaa Thai gâw láaeo gan khâ</span><br/><span class="eng">Then I’ll take Thai tea.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">มีอะไรแนะนำบ้างคะ</span><button class="tts" data-thai="มีอะไรแนะนำบ้างคะ">🔊</button><br/><span class="rom">mii à-rai náe-nam bâang khá</span><br/><span class="eng">What do you recommend?</span></div>
 </div>
 <div class="sentence-group">
-<h2>Street Stall / Mall / Shopping</h2>
+<div class="scene-label">Street Stall / Mall｜款式 / 喜好 / 殺價</div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">แบบนี้มีไซซ์เล็กไหมคะ</span><button class="tts" data-thai="แบบนี้มีไซซ์เล็กไหมคะ">🔊</button><br/><span class="rom">bàep níi mii sái lék mái khá</span><br/><span class="eng">Does this style come in a small size?</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">อันนี้ไม่ค่อยถูกใจฉันเท่าไหร่</span><button class="tts" data-thai="อันนี้ไม่ค่อยถูกใจฉันเท่าไหร่">🔊</button><br/><span class="rom">an níi mâi khɔ̂i thùuk-jai chǎn thâo-rài</span><br/><span class="eng">This one isn’t really to my taste.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">อันนี้สไตล์ฉันเลย</span><button class="tts" data-thai="อันนี้สไตล์ฉันเลย">🔊</button><br/><span class="rom">an níi sà-dtai chǎn ləəy</span><br/><span class="eng">This is totally my style.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ลดให้อีกนิดได้ไหมคะ</span><button class="tts" data-thai="ลดให้อีกนิดได้ไหมคะ">🔊</button><br/><span class="rom">lót hâi ìik nít dâai mái khá</span><br/><span class="eng">Could you lower it a little more?</span></div>
 </div>
 <div class="sentence-group">
-<h2>BTS / MRT / Location</h2>
+<div class="scene-label">BTS / MRT｜轉乘 / 地點 / 路線</div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง</span><button class="tts" data-thai="จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง">🔊</button><br/><span class="rom">jàak thîi-nîi dtɔ̂ng dtɔ̀ɔ bii-thii-ée-s ìik sǎai nùeng</span><br/><span class="eng">From here, you need to transfer to another BTS line.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">เดินตาม Google Maps ไปได้เลย</span><button class="tts" data-thai="เดินตาม Google Maps ไปได้เลย">🔊</button><br/><span class="rom">dəən dtaam Google Maps bpai dâai ləəy</span><br/><span class="eng">Just follow Google Maps.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT</span><button class="tts" data-thai="ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT">🔊</button><br/><span class="rom">ráan yùu dtrong glaang rá-wàang BTS gàp MRT</span><br/><span class="eng">The shop is right in the middle between the BTS and MRT.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">เวลาฝนตก กรุงเทพฯ รถติดมาก</span><button class="tts" data-thai="เวลาฝนตก กรุงเทพฯ รถติดมาก">🔊</button><br/><span class="rom">wee-laa fǒn dtòk, grung-thêep rót-dtìt mâak</span><br/><span class="eng">When it rains, Bangkok traffic is terrible.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Work / School / Learning</h2>
+<div class="scene-label">Work / School｜學習 / 文件 / 繼續</div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ช่วยอธิบายแบบง่าย ๆ ได้ไหมคะ</span><button class="tts" data-thai="ช่วยอธิบายแบบง่าย ๆ ได้ไหมคะ">🔊</button><br/><span class="rom">chûai à-thí-baai bàep ngâai-ngâai dâai mái khá</span><br/><span class="eng">Can you explain it in a simple way?</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">วันนี้พอแค่นี้ก่อน พรุ่งนี้ค่อยต่อ</span><button class="tts" data-thai="วันนี้พอแค่นี้ก่อน พรุ่งนี้ค่อยต่อ">🔊</button><br/><span class="rom">wan-níi phɔɔ khâe níi gɔ̀ɔn, phrûng-níi khɔ̂i dtɔ̀ɔ</span><br/><span class="eng">That’s enough for today. We’ll continue tomorrow.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">บางคำยากมาก แต่ใช้บ่อย</span><button class="tts" data-thai="บางคำยากมาก แต่ใช้บ่อย">🔊</button><br/><span class="rom">baang kham yâak mâak, dtàae chái bɔ̀i</span><br/><span class="eng">Some words are very difficult, but they are used often.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ฉันเพิ่งเริ่มเรียนภาษาไทยเองค่ะ</span><button class="tts" data-thai="ฉันเพิ่งเริ่มเรียนภาษาไทยเองค่ะ">🔊</button><br/><span class="rom">chǎn phə̂ng rə̂əm riian phaa-sǎa Thai eeng khâ</span><br/><span class="eng">I only just started learning Thai.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Friends / Chat / Emotion</h2>
+<div class="scene-label">Friends / Chat｜回覆 / 想太多 / 收尾</div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">เพิ่งเห็นข้อความค่ะ ขอโทษที่ตอบช้า</span><button class="tts" data-thai="เพิ่งเห็นข้อความค่ะ ขอโทษที่ตอบช้า">🔊</button><br/><span class="rom">phə̂ng hěn khɔ̂ɔ-khwaam khâ, khɔ̌ɔ-thôot thîi dtɔ̀ɔp cháa</span><br/><span class="eng">I just saw the message. Sorry for replying late.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yóe ná, phák gɔ̀ɔn gâw dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">บางทีเขาอาจจะเหนื่อย</span><button class="tts" data-thai="บางทีเขาอาจจะเหนื่อย">🔊</button><br/><span class="rom">baang thii khǎo àat-jà nʉ̀ai</span><br/><span class="eng">Maybe he/she is tired.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">งั้นพักก่อนนะ ไว้ค่อยคุยกัน</span><button class="tts" data-thai="งั้นพักก่อนนะ ไว้ค่อยคุยกัน">🔊</button><br/><span class="rom">ngán phák gɔ̀ɔn ná, wái khɔ̂i khui gan</span><br/><span class="eng">Then rest first. We can talk later.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Politeness / Consideration</h2>
+<div class="scene-label">Politeness｜เกรงใจ / 打擾 / 禮貌</div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">ขอบคุณมากนะคะ เกรงใจมากเลย</span><button class="tts" data-thai="ขอบคุณมากนะคะ เกรงใจมากเลย">🔊</button><br/><span class="rom">khɔ̀ɔp-khun mâak ná khá, greeng-jai mâak ləəy</span><br/><span class="eng">Thank you so much. I really feel bad troubling you.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ไม่ต้องเกรงใจนะ เป็นเพื่อนกัน</span><button class="tts" data-thai="ไม่ต้องเกรงใจนะ เป็นเพื่อนกัน">🔊</button><br/><span class="rom">mâi dtɔ̂ng greeng-jai ná, bpen phʉ̂an gan</span><br/><span class="eng">Don’t feel bad. We’re friends.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ขอโทษที่รบกวนนะคะ แต่ขอถามนิดนึงได้ไหมคะ</span><button class="tts" data-thai="ขอโทษที่รบกวนนะคะ แต่ขอถามนิดนึงได้ไหมคะ">🔊</button><br/><span class="rom">khɔ̌ɔ-thôot thîi róp-guan ná khá, dtàae khɔ̌ɔ thǎam nít nueng dâai mái khá</span><br/><span class="eng">Sorry to bother you, but may I ask a quick question?</span></div>
@@ -1233,7 +1267,7 @@
 </div>
 </div>
 <div class="sentence-group">
-<h2>Group 1｜เดี๋ยว / เดี๋ยวก่อน / เดี๋ยวค่อย...：等一下、晚點再</h2>
+<div class="scene-label">Group 1｜เดี๋ยว / เดี๋ยวก่อน / เดี๋ยวค่อย...：等一下、晚點再</div>
 <div class="sentence"><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn ná khá, khɔ̌ɔ khít bpáep nueng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div>
 <div class="sentence"><span class="thai">เดี๋ยวค่อยกินก็ได้ ตอนนี้ยังไม่หิว</span><button class="tts" data-thai="เดี๋ยวค่อยกินก็ได้ ตอนนี้ยังไม่หิว">🔊</button><br/><span class="rom">dǐiao khɔ̂i gin gâw dâai, dtɔɔn-níi yang mâi hǐw</span><br/><span class="eng">We can eat later. I’m not hungry yet.</span></div>
 <div class="sentence"><span class="thai">เดี๋ยวค่อยดูไฟล์นะ ตอนนี้งานเยอะมาก</span><button class="tts" data-thai="เดี๋ยวค่อยดูไฟล์นะ ตอนนี้งานเยอะมาก">🔊</button><br/><span class="rom">dǐiao khɔ̂i duu fai ná, dtɔɔn-níi ngaan yóe mâak</span><br/><span class="eng">I’ll look at the file later. I have a lot of work right now.</span></div>
@@ -1241,7 +1275,7 @@
 <div class="sentence"><span class="thai">อย่าเพิ่งรีบ เดี๋ยวก่อน</span><button class="tts" data-thai="อย่าเพิ่งรีบ เดี๋ยวก่อน">🔊</button><br/><span class="rom">yàa phə̂ng rîip, dǐiao gɔ̀ɔn</span><br/><span class="eng">Don’t rush yet. Hold on.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 2｜เพิ่ง / อย่าเพิ่ง：剛剛才、先不要</h2>
+<div class="scene-label">Group 2｜เพิ่ง / อย่าเพิ่ง：剛剛才、先不要</div>
 <div class="sentence"><span class="thai">เพิ่งเห็นข้อความค่ะ ขอโทษที่ตอบช้า</span><button class="tts" data-thai="เพิ่งเห็นข้อความค่ะ ขอโทษที่ตอบช้า">🔊</button><br/><span class="rom">phə̂ng hěn khɔ̂ɔ-khwaam khâ, khɔ̌ɔ-thôot thîi dtɔ̀ɔp cháa</span><br/><span class="eng">I just saw the message. Sorry for replying late.</span></div>
 <div class="sentence"><span class="thai">ฉันเพิ่งถึงบ้าน ขอพักแป๊บนึงนะ</span><button class="tts" data-thai="ฉันเพิ่งถึงบ้าน ขอพักแป๊บนึงนะ">🔊</button><br/><span class="rom">chǎn phə̂ng thʉ̌eng bâan, khɔ̌ɔ phák bpáep nueng ná</span><br/><span class="eng">I just got home. Let me rest for a bit.</span></div>
 <div class="sentence"><span class="thai">ฉันเพิ่งเริ่มเรียนภาษาไทยเองค่ะ</span><button class="tts" data-thai="ฉันเพิ่งเริ่มเรียนภาษาไทยเองค่ะ">🔊</button><br/><span class="rom">chǎn phə̂ng rə̂əm riian phaa-sǎa Thai eeng khâ</span><br/><span class="eng">I only just started learning Thai.</span></div>
@@ -1249,7 +1283,7 @@
 <div class="sentence"><span class="thai">อย่าเพิ่งกินนะ ยังร้อนอยู่</span><button class="tts" data-thai="อย่าเพิ่งกินนะ ยังร้อนอยู่">🔊</button><br/><span class="rom">yàa phə̂ng gin ná, yang ráawn yùu</span><br/><span class="eng">Don’t eat yet; it’s still hot.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 3｜โดย / ผ่าน / ทาง / ด้วย / ใช้ / จาก：透過、用、從</h2>
+<div class="scene-label">Group 3｜โดย / ผ่าน / ทาง / ด้วย / ใช้ / จาก：透過、用、從</div>
 <div class="sentence"><span class="thai">เราคุยกันผ่านไลน์ได้ค่ะ</span><button class="tts" data-thai="เราคุยกันผ่านไลน์ได้ค่ะ">🔊</button><br/><span class="rom">rao khui gan phàan Lai dâai khâ</span><br/><span class="eng">We can talk via Line.</span></div>
 <div class="sentence"><span class="thai">ส่งเอกสารทางอีเมลได้ไหมคะ</span><button class="tts" data-thai="ส่งเอกสารทางอีเมลได้ไหมคะ">🔊</button><br/><span class="rom">sòng èek-gà-sǎan thaang ii-meeo dâai mái khá</span><br/><span class="eng">Can I send the documents by email?</span></div>
 <div class="sentence"><span class="thai">ฉันใช้ ChatGPT เรียนภาษาไทยทุกวัน</span><button class="tts" data-thai="ฉันใช้ ChatGPT เรียนภาษาไทยทุกวัน">🔊</button><br/><span class="rom">chǎn chái ChatGPT riian phaa-sǎa Thai thúk wan</span><br/><span class="eng">I use ChatGPT to learn Thai every day.</span></div>
@@ -1257,7 +1291,7 @@
 <div class="sentence"><span class="thai">ฉันนั่งเครื่องบินมาค่ะ</span><button class="tts" data-thai="ฉันนั่งเครื่องบินมาค่ะ">🔊</button><br/><span class="rom">chǎn nâng khrʉ̂ang-bin maa khâ</span><br/><span class="eng">I came by plane.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 4｜ต่าง / แบบ / บาง / บ้าง：類型、差異、某些、一點</h2>
+<div class="scene-label">Group 4｜ต่าง / แบบ / บาง / บ้าง：類型、差異、某些、一點</div>
 <div class="sentence"><span class="thai">สองคำนี้ต่างกันยังไงคะ</span><button class="tts" data-thai="สองคำนี้ต่างกันยังไงคะ">🔊</button><br/><span class="rom">sǎawng kham níi dtàang gan yang-ngai khá</span><br/><span class="eng">How are these two words different?</span></div>
 <div class="sentence"><span class="thai">แบบนี้มีไซซ์เล็กไหมคะ</span><button class="tts" data-thai="แบบนี้มีไซซ์เล็กไหมคะ">🔊</button><br/><span class="rom">bàep níi mii sái lék mái khá</span><br/><span class="eng">Does this style come in a small size?</span></div>
 <div class="sentence"><span class="thai">บางอย่างอธิบายยาก แต่รู้สึกได้</span><button class="tts" data-thai="บางอย่างอธิบายยาก แต่รู้สึกได้">🔊</button><br/><span class="rom">baang yàang à-thí-baai yâak, dtàae rúu-sùek dâai</span><br/><span class="eng">Some things are hard to explain, but you can feel them.</span></div>
@@ -1265,7 +1299,7 @@
 <div class="sentence"><span class="thai">ฉันพูดไทยได้บ้าง แต่ยังไม่คล่อง</span><button class="tts" data-thai="ฉันพูดไทยได้บ้าง แต่ยังไม่คล่อง">🔊</button><br/><span class="rom">chǎn phûut Thai dâai bâang, dtàae yang mâi khlâawng</span><br/><span class="eng">I can speak some Thai, but I’m not fluent yet.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 5｜เกรงใจ / ถูกใจ / ใจ 系列：泰式感受與心意</h2>
+<div class="scene-label">Group 5｜เกรงใจ / ถูกใจ / ใจ 系列：泰式感受與心意</div>
 <div class="sentence"><span class="thai">ขอบคุณมากนะคะ เกรงใจมากเลย</span><button class="tts" data-thai="ขอบคุณมากนะคะ เกรงใจมากเลย">🔊</button><br/><span class="rom">khɔ̀ɔp-khun mâak ná khá, greeng-jai mâak ləəy</span><br/><span class="eng">Thank you so much. I really feel bad troubling you.</span></div>
 <div class="sentence"><span class="thai">ไม่ต้องเกรงใจนะ เป็นเพื่อนกัน</span><button class="tts" data-thai="ไม่ต้องเกรงใจนะ เป็นเพื่อนกัน">🔊</button><br/><span class="rom">mâi dtɔ̂ng greeng-jai ná, bpen phʉ̂an gan</span><br/><span class="eng">Don’t feel bad. We’re friends.</span></div>
 <div class="sentence"><span class="thai">ห้องนี้ถูกใจฉันมาก</span><button class="tts" data-thai="ห้องนี้ถูกใจฉันมาก">🔊</button><br/><span class="rom">hâwng níi thùuk-jai chǎn mâak</span><br/><span class="eng">This room is really to my taste.</span></div>
@@ -1273,7 +1307,7 @@
 <div class="sentence"><span class="thai">อันนี้ไม่ค่อยถูกใจฉันเท่าไหร่</span><button class="tts" data-thai="อันนี้ไม่ค่อยถูกใจฉันเท่าไหร่">🔊</button><br/><span class="rom">an níi mâi khɔ̂i thùuk-jai chǎn thâo-rài</span><br/><span class="eng">This one isn’t really to my taste.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 6｜ต่อ / ตาม / ตรงกลาง：接續、依照、位置</h2>
+<div class="scene-label">Group 6｜ต่อ / ตาม / ตรงกลาง：接續、依照、位置</div>
 <div class="sentence"><span class="thai">วันนี้พอแค่นี้ก่อน พรุ่งนี้ค่อยต่อ</span><button class="tts" data-thai="วันนี้พอแค่นี้ก่อน พรุ่งนี้ค่อยต่อ">🔊</button><br/><span class="rom">wan-níi phɔɔ khâe níi gɔ̀ɔn, phrûng-níi khɔ̂i dtɔ̀ɔ</span><br/><span class="eng">That’s enough for today. We’ll continue tomorrow.</span></div>
 <div class="sentence"><span class="thai">ต้องต่อรถไหมคะ</span><button class="tts" data-thai="ต้องต่อรถไหมคะ">🔊</button><br/><span class="rom">dtɔ̂ng dtɔ̀ɔ rót mái khá</span><br/><span class="eng">Do I need to transfer?</span></div>
 <div class="sentence"><span class="thai">ลองทำตามที่ครูบอกก่อน</span><button class="tts" data-thai="ลองทำตามที่ครูบอกก่อน">🔊</button><br/><span class="rom">laawng tham dtaam thîi khruu bɔ̀ɔk gɔ̀ɔn</span><br/><span class="eng">Try doing it as the teacher said first.</span></div>
@@ -1281,7 +1315,7 @@
 <div class="sentence"><span class="thai">วางไว้ตรงกลางโต๊ะได้เลยค่ะ</span><button class="tts" data-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ">🔊</button><br/><span class="rom">waang wái dtrong glaang dtó dâai ləəy khâ</span><br/><span class="eng">You can put it in the middle of the table.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 7｜งั้น / ถ้างั้น / ก็แล้วกัน：那就……、收尾決定</h2>
+<div class="scene-label">Group 7｜งั้น / ถ้างั้น / ก็แล้วกัน：那就……、收尾決定</div>
 <div class="sentence"><span class="thai">งั้นฉันไปก่อนนะ</span><button class="tts" data-thai="งั้นฉันไปก่อนนะ">🔊</button><br/><span class="rom">ngán chǎn bpai gɔ̀ɔn ná</span><br/><span class="eng">Then I’ll go first.</span></div>
 <div class="sentence"><span class="thai">ถ้างั้นพักก่อนนะ</span><button class="tts" data-thai="ถ้างั้นพักก่อนนะ">🔊</button><br/><span class="rom">thâa ngán phák gɔ̀ɔn ná</span><br/><span class="eng">Then rest first, okay?</span></div>
 <div class="sentence"><span class="thai">งั้นเอาอันนี้ก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอาอันนี้ก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao an níi gâw láaeo gan khâ</span><br/><span class="eng">Then I’ll take this one.</span></div>
@@ -1289,7 +1323,7 @@
 <div class="sentence"><span class="thai">งั้นเอาตามนี้นะ</span><button class="tts" data-thai="งั้นเอาตามนี้นะ">🔊</button><br/><span class="rom">ngán ao dtaam níi ná</span><br/><span class="eng">Then let’s go with this.</span></div>
 </div>
 <div class="sentence-group">
-<h2>Group 8｜เยอะ / มาก / หลาย：很多、很、好幾個</h2>
+<div class="scene-label">Group 8｜เยอะ / มาก / หลาย：很多、很、好幾個</div>
 <div class="sentence"><span class="thai">ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ráan níi khon yóe mâak, ngán bpai ráan ùuen mái</span><br/><span class="eng">This restaurant is really crowded. Then should we go to another place?</span></div>
 <div class="sentence"><span class="thai">ช่วงนี้งานเยอะมาก ยังทำไม่เสร็จเลย</span><button class="tts" data-thai="ช่วงนี้งานเยอะมาก ยังทำไม่เสร็จเลย">🔊</button><br/><span class="rom">chûuang níi ngaan yóe mâak, yang tham mâi sèt ləəy</span><br/><span class="eng">I have a lot of work these days; I still haven’t finished.</span></div>
 <div class="sentence"><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yóe ná, phák gɔ̀ɔn gâw dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></div>
@@ -1353,49 +1387,49 @@
 </div>
 </section>
 <section class="tab-panel" id="bangkok">
-<div class="grid">
-<div class="card span-4">
-<h2>Café｜點餐猶豫、做決定</h2>
+<div class="scene-grid">
+<div class="sentence-group">
+<div class="scene-label">Café｜點餐猶豫、做決定</div>
 <p><span class="tag tag-local">Local usage</span></p>
 <p><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn ná khá, khɔ̌ɔ khít bpáep nueng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></p>
 <p><span class="thai">งั้นเอาชาไทยก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอาชาไทยก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao chaa Thai gâw láaeo gan khâ</span><br/><span class="eng">Then I’ll take Thai tea.</span></p>
 <p><span class="small">語氣：自然、禮貌，適合對店員。</span></p>
 </div>
-<div class="card span-4">
-<h2>Restaurant｜人很多、換地方</h2>
+<div class="sentence-group">
+<div class="scene-label">Restaurant｜人很多、換地方</div>
 <p><span class="thai">ร้านนี้คนเยอะมาก</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก">🔊</button><br/><span class="rom">ráan níi khon yóe mâak</span><br/><span class="eng">This place is really crowded.</span></p>
 <p><span class="thai">งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ngán bpai ráan ùuen mái</span><br/><span class="eng">Then should we go to another restaurant?</span></p>
 <p><span class="small">語氣：朋友間自然，比「我們是否應該更換餐廳」自然很多。</span></p>
 </div>
-<div class="card span-4">
-<h2>Street Stall / Market｜款式與殺價</h2>
+<div class="sentence-group">
+<div class="scene-label">Street Stall / Market｜款式與殺價</div>
 <p><span class="thai">แบบนี้มีสีอื่นไหมคะ</span><button class="tts" data-thai="แบบนี้มีสีอื่นไหมคะ">🔊</button><br/><span class="rom">bàep níi mii sǐi ùuen mái khá</span><br/><span class="eng">Does this style come in another color?</span></p>
 <p><span class="thai">ลดให้อีกนิดได้ไหมคะ</span><button class="tts" data-thai="ลดให้อีกนิดได้ไหมคะ">🔊</button><br/><span class="rom">lót hâi ìik nít dâai mái khá</span><br/><span class="eng">Could you lower it a little more?</span></p>
 <p><span class="small">語氣：比直接問 <span class="thai">ต่อราคาได้ไหมคะ</span> 更柔和。</span></p>
 </div>
-<div class="card span-4">
-<h2>BTS / MRT｜轉乘與位置</h2>
+<div class="sentence-group">
+<div class="scene-label">BTS / MRT｜轉乘與位置</div>
 <p><span class="thai">จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง</span><button class="tts" data-thai="จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง">🔊</button><br/><span class="rom">jàak thîi-nîi dtɔ̂ng dtɔ̀ɔ bii-thii-ée-s ìik sǎai nùeng</span><br/><span class="eng">From here, you need to transfer to another BTS line.</span></p>
 <p><span class="thai">ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT</span><button class="tts" data-thai="ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT">🔊</button><br/><span class="rom">ráan yùu dtrong glaang rá-wàang BTS gàp MRT</span><br/><span class="eng">The shop is right in the middle between the BTS and MRT.</span></p>
 </div>
-<div class="card span-4">
-<h2>Condo｜房型與中意</h2>
+<div class="sentence-group">
+<div class="scene-label">Condo｜房型與中意</div>
 <p><span class="thai">ห้องนี้ถูกใจฉันมาก</span><button class="tts" data-thai="ห้องนี้ถูกใจฉันมาก">🔊</button><br/><span class="rom">hâwng níi thùuk-jai chǎn mâak</span><br/><span class="eng">This room is really to my taste.</span></p>
 <p><span class="thai">ถ้าวางโซฟาตรงกลาง ห้องจะดูแคบไหมคะ</span><button class="tts" data-thai="ถ้าวางโซฟาตรงกลาง ห้องจะดูแคบไหมคะ">🔊</button><br/><span class="rom">thâa waang soo-faa dtrong glaang, hâwng jà duu khâep mái khá</span><br/><span class="eng">If we put the sofa in the middle, will the room look narrow?</span></p>
 </div>
-<div class="card span-4">
-<h2>Work / School｜禮貌麻煩與收尾</h2>
+<div class="sentence-group">
+<div class="scene-label">Work / School｜禮貌麻煩與收尾</div>
 <p><span class="thai">ขอโทษที่รบกวนนะคะ แต่ขอถามนิดนึงได้ไหมคะ</span><button class="tts" data-thai="ขอโทษที่รบกวนนะคะ แต่ขอถามนิดนึงได้ไหมคะ">🔊</button><br/><span class="rom">khɔ̌ɔ-thôot thîi róp-guan ná khá, dtàae khɔ̌ɔ thǎam nít nueng dâai mái khá</span><br/><span class="eng">Sorry to bother you, but may I ask a quick question?</span></p>
 <p><span class="thai">วันนี้พอแค่นี้ก็แล้วกัน</span><button class="tts" data-thai="วันนี้พอแค่นี้ก็แล้วกัน">🔊</button><br/><span class="rom">wan-níi phɔɔ khâe níi gâw láaeo gan</span><br/><span class="eng">Let’s stop here for today.</span></p>
 </div>
-<div class="card span-6">
-<h2>Friends / Chat｜安慰與延後</h2>
+<div class="sentence-group">
+<div class="scene-label">Friends / Chat｜安慰與延後</div>
 <p><span class="thai">บางทีเขาอาจจะเหนื่อย</span><button class="tts" data-thai="บางทีเขาอาจจะเหนื่อย">🔊</button><br/><span class="rom">baang thii khǎo àat-jà nʉ̀ai</span><br/><span class="eng">Maybe he/she is tired.</span></p>
 <p><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yóe ná, phák gɔ̀ɔn gâw dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></p>
 <p><span class="thai">งั้นไว้คุยกันทีหลังนะ</span><button class="tts" data-thai="งั้นไว้คุยกันทีหลังนะ">🔊</button><br/><span class="rom">ngán wái khui gan thii-lǎng ná</span><br/><span class="eng">Then let’s talk later, okay?</span></p>
 </div>
-<div class="card span-6">
-<h2>Learning Thai｜請人解釋、慢慢學</h2>
+<div class="sentence-group">
+<div class="scene-label">Learning Thai｜請人解釋、慢慢學</div>
 <p><span class="thai">ช่วยอธิบายแบบง่าย ๆ ได้ไหมคะ</span><button class="tts" data-thai="ช่วยอธิบายแบบง่าย ๆ ได้ไหมคะ">🔊</button><br/><span class="rom">chûai à-thí-baai bàep ngâai-ngâai dâai mái khá</span><br/><span class="eng">Can you explain it in a simple way?</span></p>
 <p><span class="thai">บางคำยากมาก แต่ใช้บ่อย</span><button class="tts" data-thai="บางคำยากมาก แต่ใช้บ่อย">🔊</button><br/><span class="rom">baang kham yâak mâak, dtàae chái bɔ̀i</span><br/><span class="eng">Some words are very difficult, but they are used often.</span></p>
 <p><span class="thai">ค่อย ๆ เรียนไป เดี๋ยวก็เข้าใจมากขึ้น</span><button class="tts" data-thai="ค่อย ๆ เรียนไป เดี๋ยวก็เข้าใจมากขึ้น">🔊</button><br/><span class="rom">khɔ̂i-khɔ̂i riian bpai, dǐiao gâw khâo-jai mâak khʉ̂en</span><br/><span class="eng">Keep learning gradually; you’ll understand more.</span></p>
@@ -1405,93 +1439,34 @@
 <section class="tab-panel" id="dialogues">
 <div class="grid">
 <div class="card span-6">
-<h2>Dialogue 1｜Café / Restaurant</h2>
-<div class="bubble a"><span class="speaker a">Staff</span><br/><span class="thai">รับอะไรดีคะ</span><button class="tts" data-thai="รับอะไรดีคะ">🔊</button><br/><span class="rom">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></div>
-<div class="bubble b"><span class="speaker b">Customer</span><br/><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn ná khá, khɔ̌ɔ khít bpáep nueng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div>
-<div class="bubble b"><span class="speaker b">Customer</span><br/><span class="thai">งั้นเอากาแฟเย็นก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอากาแฟเย็นก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao gaa-fae yen gâw láaeo gan khâ</span><br/><span class="eng">Then I’ll take iced coffee.</span></div>
+<h2>Dialogue 1｜Café / Restaurant</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">Staff</span><br/><span class="thai">รับอะไรดีคะ</span><button class="tts" data-thai="รับอะไรดีคะ">🔊</button><br/><span class="rom">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">Customer</span><br/><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn ná khá, khɔ̌ɔ khít bpáep nueng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">Customer</span><br/><span class="thai">งั้นเอากาแฟเย็นก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอากาแฟเย็นก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao gaa-fae yen gâw láaeo gan khâ</span><br/><span class="eng">Then I’ll take iced coffee.</span></div></div></div>
+
+
+
 </div>
 <div class="card span-6">
-<h2>Dialogue 2｜Street Stall / Shopping</h2>
-<div class="bubble a"><span class="speaker a">Customer</span><br/><span class="thai">แบบนี้มีสีอื่นไหมคะ</span><button class="tts" data-thai="แบบนี้มีสีอื่นไหมคะ">🔊</button><br/><span class="rom">bàep níi mii sǐi ùuen mái khá</span><br/><span class="eng">Does this style come in another color?</span></div>
-<div class="bubble b"><span class="speaker b">Seller</span><br/><span class="thai">มีสีขาวกับสีน้ำตาลค่ะ</span><button class="tts" data-thai="มีสีขาวกับสีน้ำตาลค่ะ">🔊</button><br/><span class="rom">mii sǐi khǎao gàp sǐi náam-dtaan khâ</span><br/><span class="eng">We have white and brown.</span></div>
-<div class="bubble a"><span class="speaker a">Customer</span><br/><span class="thai">งั้นเอาสีน้ำตาลก็แล้วกันค่ะ ถูกใจมาก</span><button class="tts" data-thai="งั้นเอาสีน้ำตาลก็แล้วกันค่ะ ถูกใจมาก">🔊</button><br/><span class="rom">ngán ao sǐi náam-dtaan gâw láaeo gan khâ, thùuk-jai mâak</span><br/><span class="eng">Then I’ll take brown. I really like it.</span></div>
+<h2>Dialogue 2｜Street Stall / Shopping</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">Customer</span><br/><span class="thai">แบบนี้มีสีอื่นไหมคะ</span><button class="tts" data-thai="แบบนี้มีสีอื่นไหมคะ">🔊</button><br/><span class="rom">bàep níi mii sǐi ùuen mái khá</span><br/><span class="eng">Does this style come in another color?</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">Seller</span><br/><span class="thai">มีสีขาวกับสีน้ำตาลค่ะ</span><button class="tts" data-thai="มีสีขาวกับสีน้ำตาลค่ะ">🔊</button><br/><span class="rom">mii sǐi khǎao gàp sǐi náam-dtaan khâ</span><br/><span class="eng">We have white and brown.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">Customer</span><br/><span class="thai">งั้นเอาสีน้ำตาลก็แล้วกันค่ะ ถูกใจมาก</span><button class="tts" data-thai="งั้นเอาสีน้ำตาลก็แล้วกันค่ะ ถูกใจมาก">🔊</button><br/><span class="rom">ngán ao sǐi náam-dtaan gâw láaeo gan khâ, thùuk-jai mâak</span><br/><span class="eng">Then I’ll take brown. I really like it.</span></div></div></div>
+
+
+
 </div>
 <div class="card span-6">
-<h2>Dialogue 3｜BTS / MRT</h2>
-<div class="bubble a"><span class="speaker a">A</span><br/><span class="thai">จากตรงนี้ไปสยามต้องต่อรถไหม</span><button class="tts" data-thai="จากตรงนี้ไปสยามต้องต่อรถไหม">🔊</button><br/><span class="rom">jàak dtrong níi bpai Sà-yǎam dtɔ̂ng dtɔ̀ɔ rót mái</span><br/><span class="eng">From here to Siam, do we need to transfer?</span></div>
-<div class="bubble b"><span class="speaker b">B</span><br/><span class="thai">ไม่ต้อง นั่งบีทีเอสไปตรง ๆ ได้เลย</span><button class="tts" data-thai="ไม่ต้อง นั่งบีทีเอสไปตรง ๆ ได้เลย">🔊</button><br/><span class="rom">mâi dtɔ̂ng, nâng bii-thii-ée-s bpai dtrong-dtrong dâai ləəy</span><br/><span class="eng">No need. You can take the BTS straight there.</span></div>
-<div class="bubble a"><span class="speaker a">A</span><br/><span class="thai">โอเค งั้นเดินตาม Google Maps ไปก่อนนะ</span><button class="tts" data-thai="โอเค งั้นเดินตาม Google Maps ไปก่อนนะ">🔊</button><br/><span class="rom">oo-khee, ngán dəən dtaam Google Maps bpai gɔ̀ɔn ná</span><br/><span class="eng">Okay, then let’s follow Google Maps first.</span></div>
+<h2>Dialogue 3｜BTS / MRT</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">จากตรงนี้ไปสยามต้องต่อรถไหม</span><button class="tts" data-thai="จากตรงนี้ไปสยามต้องต่อรถไหม">🔊</button><br/><span class="rom">jàak dtrong níi bpai Sà-yǎam dtɔ̂ng dtɔ̀ɔ rót mái</span><br/><span class="eng">From here to Siam, do we need to transfer?</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">B</span><br/><span class="thai">ไม่ต้อง นั่งบีทีเอสไปตรง ๆ ได้เลย</span><button class="tts" data-thai="ไม่ต้อง นั่งบีทีเอสไปตรง ๆ ได้เลย">🔊</button><br/><span class="rom">mâi dtɔ̂ng, nâng bii-thii-ée-s bpai dtrong-dtrong dâai ləəy</span><br/><span class="eng">No need. You can take the BTS straight there.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">โอเค งั้นเดินตาม Google Maps ไปก่อนนะ</span><button class="tts" data-thai="โอเค งั้นเดินตาม Google Maps ไปก่อนนะ">🔊</button><br/><span class="rom">oo-khee, ngán dəən dtaam Google Maps bpai gɔ̀ɔn ná</span><br/><span class="eng">Okay, then let’s follow Google Maps first.</span></div></div></div>
+
+
+
 </div>
 <div class="card span-6">
-<h2>Dialogue 4｜Friends / Chat</h2>
-<div class="bubble a"><span class="speaker a">A</span><br/><span class="thai">วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้</span><button class="tts" data-thai="วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้">🔊</button><br/><span class="rom">wan-níi chǎn ngaan yóe mâak, àat-jà bpai mâi dâai</span><br/><span class="eng">I have a lot of work today. I may not be able to go.</span></div>
-<div class="bubble b"><span class="speaker b">B</span><br/><span class="thai">ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ</span><button class="tts" data-thai="ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ">🔊</button><br/><span class="rom">thâa ngán wái wan lǎng gâw dâai, mâi dtɔ̂ng greeng-jai ná</span><br/><span class="eng">Then another day is fine. Don’t feel bad.</span></div>
-<div class="bubble a"><span class="speaker a">A</span><br/><span class="thai">ขอบคุณนะ เกรงใจมากเลย</span><button class="tts" data-thai="ขอบคุณนะ เกรงใจมากเลย">🔊</button><br/><span class="rom">khɔ̀ɔp-khun ná, greeng-jai mâak ləəy</span><br/><span class="eng">Thank you. I really feel bad.</span></div>
+<h2>Dialogue 4｜Friends / Chat</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้</span><button class="tts" data-thai="วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้">🔊</button><br/><span class="rom">wan-níi chǎn ngaan yóe mâak, àat-jà bpai mâi dâai</span><br/><span class="eng">I have a lot of work today. I may not be able to go.</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">B</span><br/><span class="thai">ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ</span><button class="tts" data-thai="ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ">🔊</button><br/><span class="rom">thâa ngán wái wan lǎng gâw dâai, mâi dtɔ̂ng greeng-jai ná</span><br/><span class="eng">Then another day is fine. Don’t feel bad.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">ขอบคุณนะ เกรงใจมากเลย</span><button class="tts" data-thai="ขอบคุณนะ เกรงใจมากเลย">🔊</button><br/><span class="rom">khɔ̀ɔp-khun ná, greeng-jai mâak ləəy</span><br/><span class="eng">Thank you. I really feel bad.</span></div></div></div>
+
+
+
 </div>
 </div>
 </section>
 <section class="tab-panel" id="mistakes">
-<div class="card">
-<div class="section-title"><h2>Mistakes｜外國人常見錯誤</h2></div>
-<table>
-<thead>
-<tr><th>Wrong</th><th>Better</th><th>Why</th></tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="thai">คุยโดยไลน์</span><button class="tts" data-thai="คุยโดยไลน์">🔊</button><br/><span class="rom">khui dooi Lai</span><br/><span class="eng">talk by Line</span></td>
-<td><span class="thai">คุยผ่านไลน์</span><button class="tts" data-thai="คุยผ่านไลน์">🔊</button><br/><span class="rom">khui phàan Lai</span><br/><span class="eng">talk via Line</span></td>
-<td><span class="thai">โดย</span> / <span class="rom">dooi</span> / <span class="eng">by</span> 偏正式；平台、管道日常更自然用 <span class="thai">ผ่าน</span> / <span class="rom">phàan</span> / <span class="eng">through; via</span>。</td>
-</tr>
-<tr>
-<td><span class="thai">ฉันใช้เครื่องบินมา</span><button class="tts" data-thai="ฉันใช้เครื่องบินมา">🔊</button><br/><span class="rom">chǎn chái khrʉ̂ang-bin maa</span><br/><span class="eng">I used an airplane to come.</span></td>
-<td><span class="thai">ฉันนั่งเครื่องบินมา</span><button class="tts" data-thai="ฉันนั่งเครื่องบินมา">🔊</button><br/><span class="rom">chǎn nâng khrʉ̂ang-bin maa</span><br/><span class="eng">I came by plane.</span></td>
-<td>交通工具日常用 <span class="thai">นั่ง + vehicle + มา/ไป</span> / <span class="rom">nâng + vehicle + maa/bpai</span> / <span class="eng">come/go by vehicle</span>。</td>
-</tr>
-<tr>
-<td><span class="thai">เดี๋ยวก่อนกิน</span><button class="tts" data-thai="เดี๋ยวก่อนกิน">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn gin</span><br/><span class="eng">wait first eat</span></td>
-<td><span class="thai">เดี๋ยวค่อยกิน</span><button class="tts" data-thai="เดี๋ยวค่อยกิน">🔊</button><br/><span class="rom">dǐiao khɔ̂i gin</span><br/><span class="eng">I’ll eat later.</span></td>
-<td><span class="thai">เดี๋ยวก่อน</span> 是叫人先等；「等一下再吃」要用 <span class="thai">เดี๋ยวค่อยกิน</span>。</td>
-</tr>
-<tr>
-<td><span class="thai">ฉันกินเพิ่ง</span><button class="tts" data-thai="ฉันกินเพิ่ง">🔊</button><br/><span class="rom">chǎn gin phə̂ng</span><br/><span class="eng">I ate just</span></td>
-<td><span class="thai">ฉันเพิ่งกิน</span><button class="tts" data-thai="ฉันเพิ่งกิน">🔊</button><br/><span class="rom">chǎn phə̂ng gin</span><br/><span class="eng">I just ate.</span></td>
-<td><span class="thai">เพิ่ง</span> / <span class="rom">phə̂ng</span> / <span class="eng">just recently</span> 通常放在動詞前。</td>
-</tr>
-<tr>
-<td><span class="thai">บ้างคน</span><button class="tts" data-thai="บ้างคน">🔊</button><br/><span class="rom">bâang khon</span><br/><span class="eng">some people</span></td>
-<td><span class="thai">บางคน</span><button class="tts" data-thai="บางคน">🔊</button><br/><span class="rom">baang khon</span><br/><span class="eng">some people</span></td>
-<td><span class="thai">บาง</span> 放名詞前；<span class="thai">บ้าง</span> 常放句尾或動詞後。</td>
-</tr>
-<tr>
-<td><span class="thai">พูดไทยได้บาง</span><button class="tts" data-thai="พูดไทยได้บาง">🔊</button><br/><span class="rom">phûut Thai dâai baang</span><br/><span class="eng">can speak some Thai</span></td>
-<td><span class="thai">พูดไทยได้บ้าง</span><button class="tts" data-thai="พูดไทยได้บ้าง">🔊</button><br/><span class="rom">phûut Thai dâai bâang</span><br/><span class="eng">can speak some Thai</span></td>
-<td>「會一些」用句尾 <span class="thai">บ้าง</span> / <span class="rom">bâang</span> / <span class="eng">some; a bit</span>。</td>
-</tr>
-<tr>
-<td><span class="thai">ฉันเหนื่อยเยอะ</span><button class="tts" data-thai="ฉันเหนื่อยเยอะ">🔊</button><br/><span class="rom">chǎn nʉ̀ai yóe</span><br/><span class="eng">I’m tired a lot.</span></td>
-<td><span class="thai">ฉันเหนื่อยมาก</span><button class="tts" data-thai="ฉันเหนื่อยมาก">🔊</button><br/><span class="rom">chǎn nʉ̀ai mâak</span><br/><span class="eng">I’m very tired.</span></td>
-<td><span class="thai">เยอะ</span> 是數量多；情緒或狀態程度用 <span class="thai">มาก</span>。</td>
-</tr>
-<tr>
-<td><span class="thai">ฉันเกรงใจหมา</span><button class="tts" data-thai="ฉันเกรงใจหมา">🔊</button><br/><span class="rom">chǎn greeng-jai mǎa</span><br/><span class="eng">I feel bad imposing on dogs.</span></td>
-<td><span class="thai">ฉันกลัวหมา</span><button class="tts" data-thai="ฉันกลัวหมา">🔊</button><br/><span class="rom">chǎn glua mǎa</span><br/><span class="eng">I’m afraid of dogs.</span></td>
-<td><span class="thai">เกรงใจ</span> 是怕麻煩別人；害怕用 <span class="thai">กลัว</span>。</td>
-</tr>
-<tr>
-<td><span class="thai">งั้นก็แล้วกัน</span><button class="tts" data-thai="งั้นก็แล้วกัน">🔊</button><br/><span class="rom">ngán gâw láaeo gan</span><br/><span class="eng">Then so be it.</span></td>
-<td><span class="thai">งั้นไว้ค่อยคุยกันนะ</span><button class="tts" data-thai="งั้นไว้ค่อยคุยกันนะ">🔊</button><br/><span class="rom">ngán wái khɔ̂i khui gan ná</span><br/><span class="eng">Then let’s talk later, okay?</span></td>
-<td>單獨說 <span class="thai">งั้นก็แล้วกัน</span> 可能偏冷，像「那就這樣吧」。想柔和收尾要補具體動作。</td>
-</tr>
-<tr>
-<td><span class="thai">สมัยที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="สมัยที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">sà-mǎi thîi chǎn gin khâao, thoo-rá-sàp dang</span><br/><span class="eng">Back when I was eating, the phone rang.</span></td>
-<td><span class="thai">ตอนที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="ตอนที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">dtɔɔn thîi chǎn gin khâao, thoo-rá-sàp dang</span><br/><span class="eng">When I was eating, the phone rang.</span></td>
-<td><span class="thai">สมัยที่</span> 用於一段時期，不適合短暫動作。</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
+
+<div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">คุยโดยไลน์</span><button class="tts" data-thai="คุยโดยไลน์">🔊</button><br/><span class="rom">khui dooi Lai</span><br/><span class="eng">talk by Line</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">คุยผ่านไลน์</span><button class="tts" data-thai="คุยผ่านไลน์">🔊</button><br/><span class="rom">khui phàan Lai</span><br/><span class="eng">talk via Line</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">โดย</span> / <span class="rom">dooi</span> / <span class="eng">by</span> 偏正式；平台、管道日常更自然用 <span class="thai">ผ่าน</span> / <span class="rom">phàan</span> / <span class="eng">through; via</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันใช้เครื่องบินมา</span><button class="tts" data-thai="ฉันใช้เครื่องบินมา">🔊</button><br/><span class="rom">chǎn chái khrʉ̂ang-bin maa</span><br/><span class="eng">I used an airplane to come.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันนั่งเครื่องบินมา</span><button class="tts" data-thai="ฉันนั่งเครื่องบินมา">🔊</button><br/><span class="rom">chǎn nâng khrʉ̂ang-bin maa</span><br/><span class="eng">I came by plane.</span></div><div class="why-box"><div class="box-title">Why</div>交通工具日常用 <span class="thai">นั่ง + vehicle + มา/ไป</span> / <span class="rom">nâng + vehicle + maa/bpai</span> / <span class="eng">come/go by vehicle</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">เดี๋ยวก่อนกิน</span><button class="tts" data-thai="เดี๋ยวก่อนกิน">🔊</button><br/><span class="rom">dǐiao gɔ̀ɔn gin</span><br/><span class="eng">wait first eat</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">เดี๋ยวค่อยกิน</span><button class="tts" data-thai="เดี๋ยวค่อยกิน">🔊</button><br/><span class="rom">dǐiao khɔ̂i gin</span><br/><span class="eng">I’ll eat later.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เดี๋ยวก่อน</span> 是叫人先等；「等一下再吃」要用 <span class="thai">เดี๋ยวค่อยกิน</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันกินเพิ่ง</span><button class="tts" data-thai="ฉันกินเพิ่ง">🔊</button><br/><span class="rom">chǎn gin phə̂ng</span><br/><span class="eng">I ate just</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันเพิ่งกิน</span><button class="tts" data-thai="ฉันเพิ่งกิน">🔊</button><br/><span class="rom">chǎn phə̂ng gin</span><br/><span class="eng">I just ate.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เพิ่ง</span> / <span class="rom">phə̂ng</span> / <span class="eng">just recently</span> 通常放在動詞前。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">บ้างคน</span><button class="tts" data-thai="บ้างคน">🔊</button><br/><span class="rom">bâang khon</span><br/><span class="eng">some people</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">บางคน</span><button class="tts" data-thai="บางคน">🔊</button><br/><span class="rom">baang khon</span><br/><span class="eng">some people</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">บาง</span> 放名詞前；<span class="thai">บ้าง</span> 常放句尾或動詞後。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">พูดไทยได้บาง</span><button class="tts" data-thai="พูดไทยได้บาง">🔊</button><br/><span class="rom">phûut Thai dâai baang</span><br/><span class="eng">can speak some Thai</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">พูดไทยได้บ้าง</span><button class="tts" data-thai="พูดไทยได้บ้าง">🔊</button><br/><span class="rom">phûut Thai dâai bâang</span><br/><span class="eng">can speak some Thai</span></div><div class="why-box"><div class="box-title">Why</div>「會一些」用句尾 <span class="thai">บ้าง</span> / <span class="rom">bâang</span> / <span class="eng">some; a bit</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันเหนื่อยเยอะ</span><button class="tts" data-thai="ฉันเหนื่อยเยอะ">🔊</button><br/><span class="rom">chǎn nʉ̀ai yóe</span><br/><span class="eng">I’m tired a lot.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันเหนื่อยมาก</span><button class="tts" data-thai="ฉันเหนื่อยมาก">🔊</button><br/><span class="rom">chǎn nʉ̀ai mâak</span><br/><span class="eng">I’m very tired.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เยอะ</span> 是數量多；情緒或狀態程度用 <span class="thai">มาก</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันเกรงใจหมา</span><button class="tts" data-thai="ฉันเกรงใจหมา">🔊</button><br/><span class="rom">chǎn greeng-jai mǎa</span><br/><span class="eng">I feel bad imposing on dogs.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันกลัวหมา</span><button class="tts" data-thai="ฉันกลัวหมา">🔊</button><br/><span class="rom">chǎn glua mǎa</span><br/><span class="eng">I’m afraid of dogs.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เกรงใจ</span> 是怕麻煩別人；害怕用 <span class="thai">กลัว</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">งั้นก็แล้วกัน</span><button class="tts" data-thai="งั้นก็แล้วกัน">🔊</button><br/><span class="rom">ngán gâw láaeo gan</span><br/><span class="eng">Then so be it.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">งั้นไว้ค่อยคุยกันนะ</span><button class="tts" data-thai="งั้นไว้ค่อยคุยกันนะ">🔊</button><br/><span class="rom">ngán wái khɔ̂i khui gan ná</span><br/><span class="eng">Then let’s talk later, okay?</span></div><div class="why-box"><div class="box-title">Why</div>單獨說 <span class="thai">งั้นก็แล้วกัน</span> 可能偏冷，像「那就這樣吧」。想柔和收尾要補具體動作。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">สมัยที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="สมัยที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">sà-mǎi thîi chǎn gin khâao, thoo-rá-sàp dang</span><br/><span class="eng">Back when I was eating, the phone rang.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ตอนที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="ตอนที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">dtɔɔn thîi chǎn gin khâao, thoo-rá-sàp dang</span><br/><span class="eng">When I was eating, the phone rang.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">สมัยที่</span> 用於一段時期，不適合短暫動作。</div></div></section>
 <section class="tab-panel" id="practice">
 <div class="grid">
 <div class="card span-6">
@@ -1585,7 +1560,7 @@
 <section class="tab-panel" id="favorites">
 <div class="card">
 <div class="section-title"><h2>Favorites｜收藏字卡</h2></div>
-<p class="small">收藏 Vocabulary 裡不熟或想複習的字。資料會存在這個瀏覽器的 localStorage，不需要後端。</p>
+
 <div class="empty-favs" id="favoritesEmpty">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>
 <div class="favorites-grid" id="favoritesGrid"></div>
 </div>
@@ -1791,23 +1766,20 @@
       const card = document.createElement('div');
       card.className = 'favorite-card';
       card.innerHTML = `
-        <div class="top">
-          <div>
-            <div class="thai-lg">${escapeHtml(item.thai)}
-              <button class="tts" data-thai="${escapeHtml(item.thai)}">🔊</button>
-            </div>
-            <div class="rom">${escapeHtml(item.romanization)}</div>
-            <div class="eng">${escapeHtml(item.english)}</div>
-          </div>
-          <button class="remove-fav" type="button" data-remove-fav="${escapeHtml(id)}">移除</button>
-        </div>
+        <button class="tts top-audio" data-thai="${escapeHtml(item.thai)}">🔊</button>
+        <div class="thai-lg">${escapeHtml(item.thai)}</div>
+        <div class="rom">${escapeHtml(item.romanization)}</div>
+        <div class="eng">${escapeHtml(item.english)}</div>
         <div class="category"><span class="tag tag-practice">${escapeHtml(item.category)}</span></div>
-        <div class="small">Example</div>
-        <div class="thai">${escapeHtml(item.exampleThai)}
-          ${item.exampleThai ? `<button class="tts" data-thai="${escapeHtml(item.exampleThai)}">🔊</button>` : ''}
+        <div class="example-box">
+          <div class="small">Example</div>
+          <div class="thai">${escapeHtml(item.exampleThai)}
+            ${item.exampleThai ? `<button class="tts" data-thai="${escapeHtml(item.exampleThai)}">🔊</button>` : ''}
+          </div>
+          <div class="rom">${escapeHtml(item.exampleRom)}</div>
+          <div class="eng">${escapeHtml(item.exampleEng)}</div>
         </div>
-        <div class="rom">${escapeHtml(item.exampleRom)}</div>
-        <div class="eng">${escapeHtml(item.exampleEng)}</div>
+        <button class="remove-fav" type="button" data-remove-fav="${escapeHtml(id)}">移除收藏</button>
       `;
       grid.appendChild(card);
     });
