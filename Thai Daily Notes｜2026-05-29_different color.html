@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thai Daily Notes｜2026-05-29｜目的、推測、借還、記憶與生活功能詞</title>
+<style>
+:root{
+  --bg1:#fff7ed;
+  --bg2:#eff6ff;
+  --bg3:#f0fdf4;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:rgba(107,114,128,.26);
+  --card:rgba(255,255,255,.82);
+  --orange:#f97316;
+  --orange-soft:#ffedd5;
+  --green:#16a34a;
+  --green-soft:#dcfce7;
+  --blue:#2563eb;
+  --blue-soft:#dbeafe;
+  --red:#dc2626;
+  --red-soft:#fee2e2;
+  --purple:#7c3aed;
+  --purple-soft:#ede9fe;
+  --cream:#fffaf0;
+  --shadow:0 8px 20px rgba(15,23,42,.08);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Noto Sans Thai",sans-serif;
+  background:linear-gradient(135deg,rgba(255,247,237,.82),rgba(239,246,255,.66),rgba(240,253,244,.62));
+  line-height:1.75;
+  padding:56px 24px 24px;
+}
+.page{max-width:1240px;margin:0 auto}
+.hero{
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:rgba(255,255,255,.76);
+  box-shadow:var(--shadow);
+}
+h1{font-size:28px;margin:0 0 8px;line-height:1.3}
+h2{font-size:22px;margin:28px 0 14px}
+h3{font-size:18px;margin:22px 0 10px}
+h4{font-size:15px;margin:18px 0 8px}
+.subtitle{font-size:14px;color:var(--muted);margin-bottom:14px}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge,.tag,.label{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  font-size:12px;
+  padding:3px 9px;
+  border-radius:999px;
+  font-weight:800;
+  border:1px solid transparent;
+  white-space:nowrap;
+}
+.orange,.label.textbook{background:var(--orange-soft);color:#9a3412;border-color:#fed7aa}
+.green,.label.local{background:var(--green-soft);color:#166534;border-color:#bbf7d0}
+.blue,.label.practice{background:var(--blue-soft);color:#1d4ed8;border-color:#bfdbfe}
+.red,.label.mistake{background:var(--red-soft);color:#991b1b;border-color:#fecaca}
+.purple,.label.emotion{background:var(--purple-soft);color:#5b21b6;border-color:#ddd6fe}
+.label.review{background:#f3f4f6;color:#374151;border-color:#e5e7eb}
+.tabs{
+  margin-top:18px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--line);
+  padding-bottom:10px;
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:transparent;
+  backdrop-filter:none;
+}
+.tab-btn{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.72);
+  color:var(--text);
+  padding:8px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:13px;
+}
+.tab-btn.active{background:#1f2937;color:#fff;border-color:#1f2937}
+.tab{display:none}
+.tab.active{display:block}
+.card,.compare-card,.sentence-group,.dialogue-card,.mistake-card,.structure-card,.practice-card,.favorite-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+  margin:14px 0;
+  box-shadow:var(--shadow);
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.scene-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:rgba(255,255,255,.72);
+  border-radius:14px;
+  overflow:hidden;
+  font-size:14px;
+}
+th,td{border:1px solid rgba(107,114,128,.24);padding:10px;vertical-align:top}
+th{background:rgba(255,237,213,.78);font-size:12px;text-align:left}
+tr:nth-child(even) td{background:rgba(249,250,251,.72)}
+.thai{font-size:15px;font-weight:700;color:#111827}
+.thai-lg{font-size:18px;font-weight:800;color:#111827}
+.rom{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  color:#6b7280;
+  font-size:12.5px;
+}
+.eng{color:#374151;font-size:13px}
+.tts{
+  border:1px solid rgba(249,115,22,.34);
+  background:rgba(255,237,213,.82);
+  color:#9a3412;
+  border-radius:999px;
+  padding:2px 7px;
+  margin-left:5px;
+  cursor:pointer;
+  font-size:12px;
+  vertical-align:middle;
+}
+.tts:hover{background:#fed7aa}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  margin:2px 4px 2px 0;
+  padding:3px 8px;
+  border-radius:13px;
+  border:1px solid rgba(37,99,235,.22);
+  background:rgba(219,234,254,.48);
+  color:#1d4ed8;
+  font-size:12px;
+  cursor:pointer;
+  font-weight:800;
+  line-height:1.45;
+}
+.pill:hover,.pill.playing{background:rgba(191,219,254,.95);border-color:rgba(37,99,235,.48)}
+.vocab-search-card label{font-size:12px;font-weight:900;color:#3b3128}
+.vocab-search-input{
+  width:100%;
+  margin-top:6px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:10px 12px;
+  font-size:14px;
+  background:rgba(255,255,255,.86);
+}
+.fav-btn,.remove-fav{
+  border:1px solid rgba(249,115,22,.34);
+  background:rgba(255,237,213,.74);
+  color:#9a3412;
+  border-radius:999px;
+  padding:4px 9px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:900;
+}
+.fav-btn.active{background:#f97316;color:#fff}
+.scene-label{
+  display:inline-flex;
+  font-size:12px;
+  font-weight:900;
+  color:#9a3412;
+  background:rgba(255,237,213,.76);
+  border:1px solid #fed7aa;
+  border-radius:999px;
+  padding:3px 9px;
+  margin-bottom:8px;
+}
+.sentence{
+  padding:10px 0;
+  border-bottom:1px dashed rgba(107,114,128,.24);
+}
+.sentence:last-child{border-bottom:none}
+.structure-card{border-left:5px solid var(--blue);background:rgba(239,246,255,.82)}
+.compare-card{border-left:5px solid var(--green);background:rgba(240,253,244,.74)}
+.dialogue-card{background:rgba(255,255,255,.82)}
+.chat-thread{display:flex;flex-direction:column;gap:10px}
+.chat-row{display:flex}
+.chat-row.left{justify-content:flex-start}
+.chat-row.right{justify-content:flex-end}
+.chat-bubble{
+  max-width:86%;
+  padding:12px 14px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  box-shadow:0 4px 12px rgba(15,23,42,.04);
+}
+.chat-row.left .chat-bubble{background:rgba(219,234,254,.78)}
+.chat-row.right .chat-bubble{background:rgba(220,252,231,.78)}
+.speaker{
+  display:inline-block;
+  font-size:11px;
+  font-weight:900;
+  padding:2px 8px;
+  border-radius:999px;
+  margin-bottom:4px;
+}
+.chat-row.left .speaker{background:#bfdbfe;color:#1d4ed8}
+.chat-row.right .speaker{background:#bbf7d0;color:#166534}
+.mistake-card{background:rgba(255,255,255,.82)}
+.wrong-box,.better-box,.why-box{
+  border-radius:14px;
+  padding:12px 14px;
+  margin:10px 0;
+  border:1px solid transparent;
+}
+.wrong-box{background:rgba(254,226,226,.76);border-color:#fecaca}
+.better-box{background:rgba(220,252,231,.76);border-color:#bbf7d0}
+.why-box{background:rgba(255,250,240,.9);border-color:#fde68a}
+details{
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:10px 14px;
+  margin:10px 0;
+}
+summary{cursor:pointer;font-weight:900}
+.favorite-card .thai-lg{font-size:26px}
+.favorite-card .rom{font-size:13px}
+.example-box{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(239,246,255,.7);
+  border:1px solid #bfdbfe;
+}
+.empty-state{
+  text-align:center;
+  color:var(--muted);
+  padding:24px;
+  background:rgba(255,255,255,.72);
+  border:1px dashed var(--line);
+  border-radius:18px;
+}
+.tts-warning{
+  display:none;
+  margin-top:10px;
+  color:#991b1b;
+  background:#fee2e2;
+  border:1px solid #fecaca;
+  border-radius:12px;
+  padding:10px;
+  font-size:13px;
+}
+.note{font-size:13px;color:var(--muted)}
+@media(max-width:780px){
+  body{padding:24px 14px 14px}
+  .grid,.grid3,.scene-grid{grid-template-columns:1fr}
+  .hero{padding:20px}
+  table{font-size:13px}
+  th,td{padding:8px}
+  .chat-bubble{max-width:94%}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="hero">
+    <h1>Thai Daily Notes｜2026-05-29｜目的、推測、借還、記憶與生活功能詞</h1>
+    <div class="subtitle">
+      今日整理：<span class="thai">เพื่อ</span>、<span class="thai">สำหรับ</span>、<span class="thai">ให้</span>、<span class="thai">แบ่ง</span>、<span class="thai">ส่วน</span>、<span class="thai">จน</span>、<span class="thai">ยืม</span>、<span class="thai">คืน</span>、<span class="thai">ลืม</span>、<span class="thai">จำ</span>、<span class="thai">คล้าย</span>、<span class="thai">แยก</span>、<span class="thai">เชื่อ</span>、<span class="thai">ตอบ</span>、<span class="thai">เพิ่ม</span>、<span class="thai">ความมั่นใจ</span>、<span class="thai">ทั้งวัน</span>。重點是中文常混在一起、但泰文要分清楚的生活功能詞。
+    </div>
+    <div class="badges">
+      <span class="badge orange">Textbook-based</span>
+      <span class="badge green">Local usage</span>
+      <span class="badge blue">Practical Usage</span>
+      <span class="badge purple">Emotional usage</span>
+      <span class="badge red">Common mistake</span>
+      <span class="badge blue">Shadowing</span>
+    </div>
+    <div id="ttsWarning" class="tts-warning">此瀏覽器可能不支援泰文 TTS，建議使用 Chrome / Edge。</div>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="vocabulary">Vocabulary</button>
+      <button class="tab-btn" data-tab="usage">Usage Notes</button>
+      <button class="tab-btn" data-tab="sentence-bank">Sentence Bank</button>
+      <button class="tab-btn" data-tab="structures">Structures</button>
+      <button class="tab-btn" data-tab="bangkok">Bangkok Expansion</button>
+      <button class="tab-btn" data-tab="dialogues">Dialogues</button>
+      <button class="tab-btn" data-tab="mistakes">Mistakes</button>
+      <button class="tab-btn" data-tab="practice">Practice</button>
+      <button class="tab-btn" data-tab="favorites">Favorites</button>
+    </nav>
+  </section>
+
+  <main>
+    <section id="overview" class="tab active">
+      <h2>Overview｜今日核心語感</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Purpose / For / Give｜目的、對象、給</h3>
+          <p><span class="thai-lg">เพื่อ <button class="tts" data-say="เพื่อ">🔊</button></span> <span class="rom">phʉ̂a</span> <span class="eng">in order to</span>：目的，「為了做某事」。</p>
+          <p><span class="thai-lg">สำหรับ <button class="tts" data-say="สำหรับ">🔊</button></span> <span class="rom">sǎm-ràp</span> <span class="eng">for; intended for</span>：對象、用途、適用範圍。</p>
+          <p><span class="thai-lg">ให้ <button class="tts" data-say="ให้">🔊</button></span> <span class="rom">hâi</span> <span class="eng">give; let; for someone</span>：真的給、讓、幫某人做。</p>
+        </div>
+        <div class="card">
+          <h3>Probability｜可能性階梯</h3>
+          <p><span class="thai-lg">อาจจะ <button class="tts" data-say="อาจจะ">🔊</button></span> <span class="rom">àat jà</span> <span class="eng">may; might</span>：可能，也不一定。</p>
+          <p><span class="thai-lg">น่าจะ <button class="tts" data-say="น่าจะ">🔊</button></span> <span class="rom">nâa jà</span> <span class="eng">probably; should</span>：應該會、看起來比較可能。</p>
+          <p><span class="thai-lg">แน่นอน <button class="tts" data-say="แน่นอน">🔊</button></span> <span class="rom">nɛ̂ɛ-nɔɔn</span> <span class="eng">certainly; definitely</span>：很確定、當然。</p>
+        </div>
+        <div class="card">
+          <h3>Borrow / Return / Forget / Remember｜借還與記憶</h3>
+          <p><span class="thai-lg">ยืม <button class="tts" data-say="ยืม">🔊</button></span> <span class="rom">yʉʉm</span> <span class="eng">borrow</span>：借來。</p>
+          <p><span class="thai-lg">คืน <button class="tts" data-say="คืน">🔊</button></span> <span class="rom">khʉʉn</span> <span class="eng">return; night</span>：還、退回；也可指夜晚。</p>
+          <p><span class="thai-lg">ลืม <button class="tts" data-say="ลืม">🔊</button></span> <span class="rom">lʉʉm</span> <span class="eng">forget</span>：忘記做、忘記帶、忘在某地。</p>
+          <p><span class="thai-lg">จำ / นึกออก <button class="tts" data-say="จำ นึกออก">🔊</button></span> <span class="rom">jam / nʉ́k ɔ̀ɔk</span> <span class="eng">remember / recall</span>：記得 / 想起來。</p>
+        </div>
+        <div class="card">
+          <h3>Similarity / Distinguish｜很像與分辨</h3>
+          <p><span class="thai-lg">คล้าย <button class="tts" data-say="คล้าย">🔊</button></span> <span class="rom">khláai</span> <span class="eng">similar; resemble</span>：相似但不完全一樣。</p>
+          <p><span class="thai-lg">แยก <button class="tts" data-say="แยก">🔊</button></span> <span class="rom">yɛ̂ɛk</span> <span class="eng">separate; distinguish</span>：分開、區分、辨別。</p>
+          <p><span class="thai">สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ <button class="tts" data-say="สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk loei khâ</span><br><span class="eng">These two words are very similar. I really can’t tell them apart.</span></p>
+        </div>
+        <div class="card">
+          <h3>Trust / Reply / Explain｜相信、回覆、解釋</h3>
+          <p><span class="thai-lg">เชื่อ <button class="tts" data-say="เชื่อ">🔊</button></span> <span class="rom">chʉ̂a</span> <span class="eng">believe; trust</span>：相信某件事是真的。</p>
+          <p><span class="thai-lg">ตอบ <button class="tts" data-say="ตอบ">🔊</button></span> <span class="rom">dtɔ̀ɔp</span> <span class="eng">answer; reply</span>：回答、回訊息、回覆。</p>
+          <p><span class="thai-lg">อธิบาย <button class="tts" data-say="อธิบาย">🔊</button></span> <span class="rom">à-thí-baai</span> <span class="eng">explain</span>：把意思、步驟、原因講清楚。</p>
+        </div>
+        <div class="card">
+          <h3>Add / Confidence / Whole Day｜增加、信心、一整天</h3>
+          <p><span class="thai-lg">เพิ่ม <button class="tts" data-say="เพิ่ม">🔊</button></span> <span class="rom">phə̂əm</span> <span class="eng">add; increase</span>：增加數量、程度、內容。</p>
+          <p><span class="thai-lg">ความมั่นใจ <button class="tts" data-say="ความมั่นใจ">🔊</button></span> <span class="rom">khwaam mân-jai</span> <span class="eng">confidence</span>：信心、自信。</p>
+          <p><span class="thai-lg">ทั้งวัน <button class="tts" data-say="ทั้งวัน">🔊</button></span> <span class="rom">tháng wan</span> <span class="eng">all day</span>：一整天。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vocabulary" class="tab">
+      <h2>Vocabulary｜今日生詞表</h2>
+      <div class="vocab-search-card card">
+        <label for="vocabSearch">搜尋 Vocabulary</label>
+        <input id="vocabSearch" class="vocab-search-input" type="text" placeholder="輸入 Thai / Romanization / English / 中文關鍵字..." />
+      </div>
+      <div class="card">
+        <table id="vocabTable">
+          <thead>
+            <tr>
+              <th>Thai</th>
+              <th>Romanization</th>
+              <th>English</th>
+              <th>Category</th>
+              <th>Grammar-Usage Notes</th>
+              <th>Collocations</th>
+              <th>Example Sentence</th>
+              <th>Favorite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-vocab="เพื่อ phʉ̂a in order to 為了 目的">
+              <td><span class="thai">เพื่อ <button class="tts" data-say="เพื่อ">🔊</button></span></td>
+              <td><span class="rom">phʉ̂a</span></td>
+              <td>for; in order to</td>
+              <td><span class="label textbook">Textbook-based</span></td>
+              <td>表示目的，回答「做這件事是為了什麼」。常用 <span class="thai">เพื่อ + V/N</span>。</td>
+              <td>
+                <button class="pill" data-say="เพื่ออะไร">เพื่ออะไร｜for what?</button>
+                <button class="pill" data-say="เพื่อให้">เพื่อให้｜so that</button>
+                <button class="pill" data-say="เพื่ออนาคต">เพื่ออนาคต｜for the future</button>
+              </td>
+              <td><span class="thai">ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย <button class="tts" data-say="ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย">🔊</button></span><br><span class="rom">chǎn rian phaa-sǎa Thai phʉ̂a khui gàp khon Thai</span><br><span class="eng">I study Thai in order to talk with Thai people.</span></td>
+              <td><button class="fav-btn" data-thai="เพื่อ" data-rom="phʉ̂a" data-eng="for; in order to" data-cat="Textbook-based" data-example="ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย|chǎn rian phaa-sǎa Thai phʉ̂a khui gàp khon Thai|I study Thai in order to talk with Thai people.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="สำหรับ sǎm-ràp for intended for 適合 用於 給">
+              <td><span class="thai">สำหรับ <button class="tts" data-say="สำหรับ">🔊</button></span></td>
+              <td><span class="rom">sǎm-ràp</span></td>
+              <td>for; intended for; suitable for</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>表示對象、用途、適用範圍。不是目的，而是「這是給誰 / 用來做什麼」。</td>
+              <td>
+                <button class="pill" data-say="สำหรับคุณ">สำหรับคุณ｜for you</button>
+                <button class="pill" data-say="เหมาะสำหรับ">เหมาะสำหรับ｜suitable for</button>
+                <button class="pill" data-say="ใช้สำหรับ">ใช้สำหรับ｜used for</button>
+              </td>
+              <td><span class="thai">คอร์สนี้สำหรับผู้เริ่มต้น <button class="tts" data-say="คอร์สนี้สำหรับผู้เริ่มต้น">🔊</button></span><br><span class="rom">khɔ́ɔt níi sǎm-ràp phûu rə̂əm-dtôn</span><br><span class="eng">This course is for beginners.</span></td>
+              <td><button class="fav-btn" data-thai="สำหรับ" data-rom="sǎm-ràp" data-eng="for; intended for; suitable for" data-cat="Practical Usage" data-example="คอร์สนี้สำหรับผู้เริ่มต้น|khɔ́ɔt níi sǎm-ràp phûu rə̂əm-dtôn|This course is for beginners.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ให้ hâi give let for someone 給 讓 幫">
+              <td><span class="thai">ให้ <button class="tts" data-say="ให้">🔊</button></span></td>
+              <td><span class="rom">hâi</span></td>
+              <td>give; let; for someone</td>
+              <td><span class="label local">Local usage</span></td>
+              <td>核心是把東西、動作、機會、結果交給某人。可表示給、讓、幫某人做。</td>
+              <td>
+                <button class="pill" data-say="ให้ฉันลอง">ให้ฉันลอง｜let me try</button>
+                <button class="pill" data-say="ช่วยดูให้">ช่วยดูให้｜check for me</button>
+                <button class="pill" data-say="ซื้อให้">ซื้อให้｜buy for someone</button>
+              </td>
+              <td><span class="thai">ช่วยดูให้หน่อยค่ะ <button class="tts" data-say="ช่วยดูให้หน่อยค่ะ">🔊</button></span><br><span class="rom">chûai duu hâi nòi khâ</span><br><span class="eng">Please help me take a look.</span></td>
+              <td><button class="fav-btn" data-thai="ให้" data-rom="hâi" data-eng="give; let; for someone" data-cat="Local usage" data-example="ช่วยดูให้หน่อยค่ะ|chûai duu hâi nòi khâ|Please help me take a look.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="แบ่ง bɛ̀ɛng divide share split 分 分享 分食">
+              <td><span class="thai">แบ่ง <button class="tts" data-say="แบ่ง">🔊</button></span></td>
+              <td><span class="rom">bɛ̀ɛng</span></td>
+              <td>divide; share; split</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>把一個整體分成幾份，或把一部分拿出來給別人 / 跟別人一起用。</td>
+              <td>
+                <button class="pill" data-say="แบ่งกันกิน">แบ่งกันกิน｜share and eat</button>
+                <button class="pill" data-say="แบ่งให้">แบ่งให้｜share with someone</button>
+                <button class="pill" data-say="แบ่งครึ่ง">แบ่งครึ่ง｜split in half</button>
+              </td>
+              <td><span class="thai">เราแบ่งกันกินไหม <button class="tts" data-say="เราแบ่งกันกินไหม">🔊</button></span><br><span class="rom">rao bɛ̀ɛng gan gin mái</span><br><span class="eng">Shall we share it and eat together?</span></td>
+              <td><button class="fav-btn" data-thai="แบ่ง" data-rom="bɛ̀ɛng" data-eng="divide; share; split" data-cat="Practical Usage" data-example="เราแบ่งกันกินไหม|rao bɛ̀ɛng gan gin mái|Shall we share it and eat together?">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ส่วน sùan part section portion as for 部分 至於">
+              <td><span class="thai">ส่วน <button class="tts" data-say="ส่วน">🔊</button></span></td>
+              <td><span class="rom">sùan</span></td>
+              <td>part; section; portion; as for</td>
+              <td><span class="label review">Review</span></td>
+              <td>一個整體裡面的某一部分，也可引出話題「至於……」。</td>
+              <td>
+                <button class="pill" data-say="ส่วนนี้">ส่วนนี้｜this part</button>
+                <button class="pill" data-say="ส่วนตัว">ส่วนตัว｜personally</button>
+                <button class="pill" data-say="ส่วนใหญ่">ส่วนใหญ่｜mostly</button>
+              </td>
+              <td><span class="thai">ฉันยังไม่เข้าใจส่วนนี้ <button class="tts" data-say="ฉันยังไม่เข้าใจส่วนนี้">🔊</button></span><br><span class="rom">chǎn yang mâi khâo-jai sùan níi</span><br><span class="eng">I still don’t understand this part.</span></td>
+              <td><button class="fav-btn" data-thai="ส่วน" data-rom="sùan" data-eng="part; section; portion; as for" data-cat="Review" data-example="ฉันยังไม่เข้าใจส่วนนี้|chǎn yang mâi khâo-jai sùan níi|I still don’t understand this part.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="จน jon until to the point that poor broke 到程度 窮">
+              <td><span class="thai">จน <button class="tts" data-say="จน">🔊</button></span></td>
+              <td><span class="rom">jon</span></td>
+              <td>until; to the point that; poor; broke</td>
+              <td><span class="label review">Review</span></td>
+              <td>兩張臉：連接詞「……到……的程度」；形容詞「窮、沒錢」。</td>
+              <td>
+                <button class="pill" data-say="จนถึง">จนถึง｜until; up to</button>
+                <button class="pill" data-say="จนกว่า">จนกว่า｜until</button>
+                <button class="pill" data-say="จนมาก">จนมาก｜so broke</button>
+              </td>
+              <td><span class="thai">ช่วงนี้จนจนคิดอะไรไม่ออกเลย <button class="tts" data-say="ช่วงนี้จนจนคิดอะไรไม่ออกเลย">🔊</button></span><br><span class="rom">chûang-níi jon jon khít à-rai mâi ɔ̀ɔk loei</span><br><span class="eng">I’m so broke these days that I can’t think of anything.</span></td>
+              <td><button class="fav-btn" data-thai="จน" data-rom="jon" data-eng="until; to the point that; poor; broke" data-cat="Review" data-example="ช่วงนี้จนจนคิดอะไรไม่ออกเลย|chûang-níi jon jon khít à-rai mâi ɔ̀ɔk loei|I’m so broke these days that I can’t think of anything.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="แน่นอน nɛ̂ɛ-nɔɔn certainly definitely of course 當然 一定">
+              <td><span class="thai">แน่นอน <button class="tts" data-say="แน่นอน">🔊</button></span></td>
+              <td><span class="rom">nɛ̂ɛ-nɔɔn</span></td>
+              <td>certainly; definitely; of course</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>穩定肯定、較正式，可單獨回答，也可放句尾表示一定。</td>
+              <td>
+                <button class="pill" data-say="ได้แน่นอน">ได้แน่นอน｜of course</button>
+                <button class="pill" data-say="ไปแน่นอน">ไปแน่นอน｜definitely go</button>
+                <button class="pill" data-say="แน่นอนว่า">แน่นอนว่า｜of course that</button>
+              </td>
+              <td><span class="thai">ถ้าฝึกทุกวัน พูดดีขึ้นแน่นอน <button class="tts" data-say="ถ้าฝึกทุกวัน พูดดีขึ้นแน่นอน">🔊</button></span><br><span class="rom">thâa fʉ̀k thúk wan, phûut dii khʉ̂n nɛ̂ɛ-nɔɔn</span><br><span class="eng">If you practice every day, your speaking will definitely improve.</span></td>
+              <td><button class="fav-btn" data-thai="แน่นอน" data-rom="nɛ̂ɛ-nɔɔn" data-eng="certainly; definitely; of course" data-cat="Practical Usage" data-example="ถ้าฝึกทุกวัน พูดดีขึ้นแน่นอน|thâa fʉ̀k thúk wan, phûut dii khʉ̂n nɛ̂ɛ-nɔɔn|If you practice every day, your speaking will definitely improve.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="แน่ ๆ เลย nɛ̂ɛ-nɛ̂ɛ loei definitely for sure 肯定啦 一定啦">
+              <td><span class="thai">แน่ ๆ เลย <button class="tts" data-say="แน่ ๆ เลย">🔊</button></span></td>
+              <td><span class="rom">nɛ̂ɛ-nɛ̂ɛ loei</span></td>
+              <td>definitely; for sure</td>
+              <td><span class="label local">Local usage</span></td>
+              <td>口語、情緒感強，常是看到線索後做判斷。</td>
+              <td>
+                <button class="pill" data-say="รถติดแน่ ๆ เลย">รถติดแน่ ๆ เลย｜traffic for sure</button>
+                <button class="pill" data-say="ฝนตกแน่ ๆ เลย">ฝนตกแน่ ๆ เลย｜rain for sure</button>
+              </td>
+              <td><span class="thai">ถ้าไม่รีบ เราจะสายแน่ ๆ เลย <button class="tts" data-say="ถ้าไม่รีบ เราจะสายแน่ ๆ เลย">🔊</button></span><br><span class="rom">thâa mâi rîip, rao jà sǎai nɛ̂ɛ-nɛ̂ɛ loei</span><br><span class="eng">If we don’t hurry, we’ll definitely be late.</span></td>
+              <td><button class="fav-btn" data-thai="แน่ ๆ เลย" data-rom="nɛ̂ɛ-nɛ̂ɛ loei" data-eng="definitely; for sure" data-cat="Local usage" data-example="ถ้าไม่รีบ เราจะสายแน่ ๆ เลย|thâa mâi rîip, rao jà sǎai nɛ̂ɛ-nɛ̂ɛ loei|If we don’t hurry, we’ll definitely be late.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="น่าจะ nâa jà probably should 應該會 可能性高">
+              <td><span class="thai">น่าจะ <button class="tts" data-say="น่าจะ">🔊</button></span></td>
+              <td><span class="rom">nâa jà</span></td>
+              <td>probably; should</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>根據線索做判斷，機率偏高；也可做柔和建議。</td>
+              <td>
+                <button class="pill" data-say="น่าจะมา">น่าจะมา｜probably come</button>
+                <button class="pill" data-say="น่าจะเหมาะ">น่าจะเหมาะ｜should suit</button>
+              </td>
+              <td><span class="thai">วันนี้ฝนน่าจะตก <button class="tts" data-say="วันนี้ฝนน่าจะตก">🔊</button></span><br><span class="rom">wan-níi fǒn nâa jà dtòk</span><br><span class="eng">It will probably rain today.</span></td>
+              <td><button class="fav-btn" data-thai="น่าจะ" data-rom="nâa jà" data-eng="probably; should" data-cat="Practical Usage" data-example="วันนี้ฝนน่าจะตก|wan-níi fǒn nâa jà dtòk|It will probably rain today.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="อาจจะ àat jà may might 也許 可能">
+              <td><span class="thai">อาจจะ <button class="tts" data-say="อาจจะ">🔊</button></span></td>
+              <td><span class="rom">àat jà</span></td>
+              <td>may; might</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>保留說法，表示有可能但不把話說死。常用於委婉提醒。</td>
+              <td>
+                <button class="pill" data-say="อาจจะไปช้า">อาจจะไปช้า｜might be late</button>
+                <button class="pill" data-say="อาจจะเข้าใจผิด">อาจจะเข้าใจผิด｜might misunderstand</button>
+              </td>
+              <td><span class="thai">ฉันอาจจะไปช้านิดหน่อย <button class="tts" data-say="ฉันอาจจะไปช้านิดหน่อย">🔊</button></span><br><span class="rom">chǎn àat jà bpai cháa nít-nòi</span><br><span class="eng">I might be a little late.</span></td>
+              <td><button class="fav-btn" data-thai="อาจจะ" data-rom="àat jà" data-eng="may; might" data-cat="Practical Usage" data-example="ฉันอาจจะไปช้านิดหน่อย|chǎn àat jà bpai cháa nít-nòi|I might be a little late.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="อธิบาย à-thí-baai explain 解釋 說明">
+              <td><span class="thai">อธิบาย <button class="tts" data-say="อธิบาย">🔊</button></span></td>
+              <td><span class="rom">à-thí-baai</span></td>
+              <td>explain</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>把原因、意思、步驟講清楚。比 <span class="thai">บอก</span> 更像拆解說明。</td>
+              <td>
+                <button class="pill" data-say="ช่วยอธิบายหน่อย">ช่วยอธิบายหน่อย｜please explain</button>
+                <button class="pill" data-say="อธิบายให้ฟัง">อธิบายให้ฟัง｜explain to me</button>
+                <button class="pill" data-say="คำอธิบาย">คำอธิบาย｜explanation</button>
+              </td>
+              <td><span class="thai">ช่วยอธิบายคำนี้หน่อยได้ไหมคะ <button class="tts" data-say="ช่วยอธิบายคำนี้หน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">chûai à-thí-baai kham níi nòi dâai mái khá</span><br><span class="eng">Could you explain this word?</span></td>
+              <td><button class="fav-btn" data-thai="อธิบาย" data-rom="à-thí-baai" data-eng="explain" data-cat="Practical Usage" data-example="ช่วยอธิบายคำนี้หน่อยได้ไหมคะ|chûai à-thí-baai kham níi nòi dâai mái khá|Could you explain this word?">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="วันสุดท้าย wan sùt-tháai last day 最後一天">
+              <td><span class="thai">วันสุดท้าย <button class="tts" data-say="วันสุดท้าย">🔊</button></span></td>
+              <td><span class="rom">wan sùt-tháai</span></td>
+              <td>the last day</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>用於旅行、課程、工作、簽證、期限。注意不同於 <span class="thai">ครั้งสุดท้าย</span>。</td>
+              <td>
+                <button class="pill" data-say="วันสุดท้ายแล้ว">วันสุดท้ายแล้ว｜already last day</button>
+                <button class="pill" data-say="วันสุดท้ายของทริป">วันสุดท้ายของทริป｜last day of trip</button>
+              </td>
+              <td><span class="thai">พรุ่งนี้เป็นวันสุดท้ายที่ฉันอยู่กรุงเทพฯ <button class="tts" data-say="พรุ่งนี้เป็นวันสุดท้ายที่ฉันอยู่กรุงเทพฯ">🔊</button></span><br><span class="rom">phrûng-níi bpen wan sùt-tháai thîi chǎn yùu grung-thêep</span><br><span class="eng">Tomorrow is my last day in Bangkok.</span></td>
+              <td><button class="fav-btn" data-thai="วันสุดท้าย" data-rom="wan sùt-tháai" data-eng="the last day" data-cat="Practical Usage" data-example="พรุ่งนี้เป็นวันสุดท้ายที่ฉันอยู่กรุงเทพฯ|phrûng-níi bpen wan sùt-tháai thîi chǎn yùu grung-thêep|Tomorrow is my last day in Bangkok.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ยืม yʉʉm borrow 借來 借用">
+              <td><span class="thai">ยืม <button class="tts" data-say="ยืม">🔊</button></span></td>
+              <td><span class="rom">yʉʉm</span></td>
+              <td>borrow</td>
+              <td><span class="label local">Local usage</span></td>
+              <td>偏向借來。若說借給別人，常用 <span class="thai">ให้ยืม</span>。</td>
+              <td>
+                <button class="pill" data-say="ขอยืม">ขอยืม｜may I borrow</button>
+                <button class="pill" data-say="ให้ยืม">ให้ยืม｜lend</button>
+                <button class="pill" data-say="ยืมแล้วคืน">ยืมแล้วคืน｜borrow and return</button>
+              </td>
+              <td><span class="thai">ขอยืมที่ชาร์จหน่อยได้ไหมคะ <button class="tts" data-say="ขอยืมที่ชาร์จหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ yʉʉm thîi-cháat nòi dâai mái khá</span><br><span class="eng">May I borrow your charger?</span></td>
+              <td><button class="fav-btn" data-thai="ยืม" data-rom="yʉʉm" data-eng="borrow" data-cat="Local usage" data-example="ขอยืมที่ชาร์จหน่อยได้ไหมคะ|khɔ̌ɔ yʉʉm thîi-cháat nòi dâai mái khá|May I borrow your charger?">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="คืน khʉʉn return night 還 退回 夜晚">
+              <td><span class="thai">คืน <button class="tts" data-say="คืน">🔊</button></span></td>
+              <td><span class="rom">khʉʉn</span></td>
+              <td>return; night</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>可指還東西、退錢，也可指夜晚。看搭配判斷。</td>
+              <td>
+                <button class="pill" data-say="คืนเงิน">คืนเงิน｜refund</button>
+                <button class="pill" data-say="คืนนี้">คืนนี้｜tonight</button>
+                <button class="pill" data-say="เมื่อคืน">เมื่อคืน｜last night</button>
+              </td>
+              <td><span class="thai">ยืมแล้วอย่าลืมคืนนะ <button class="tts" data-say="ยืมแล้วอย่าลืมคืนนะ">🔊</button></span><br><span class="rom">yʉʉm lɛ́ɛo yàa lʉʉm khʉʉn ná</span><br><span class="eng">Don’t forget to return it after borrowing it.</span></td>
+              <td><button class="fav-btn" data-thai="คืน" data-rom="khʉʉn" data-eng="return; night" data-cat="Practical Usage" data-example="ยืมแล้วอย่าลืมคืนนะ|yʉʉm lɛ́ɛo yàa lʉʉm khʉʉn ná|Don’t forget to return it after borrowing it.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ลืม lʉʉm forget 忘記 忘帶 忘在">
+              <td><span class="thai">ลืม <button class="tts" data-say="ลืม">🔊</button></span></td>
+              <td><span class="rom">lʉʉm</span></td>
+              <td>forget</td>
+              <td><span class="label review">Review</span></td>
+              <td>可表示忘記做、忘記帶、把東西忘在某地。重點句型：<span class="thai">ลืมเอา...มา</span>、<span class="thai">ลืม...ไว้ที่...</span>。</td>
+              <td>
+                <button class="pill" data-say="ลืมตอบข้อความ">ลืมตอบข้อความ｜forgot to reply</button>
+                <button class="pill" data-say="ลืมเอามา">ลืมเอามา｜forgot to bring</button>
+                <button class="pill" data-say="ขี้ลืม">ขี้ลืม｜forgetful</button>
+              </td>
+              <td><span class="thai">วันนี้ลืมเอาที่ชาร์จมา <button class="tts" data-say="วันนี้ลืมเอาที่ชาร์จมา">🔊</button></span><br><span class="rom">wan-níi lʉʉm ao thîi-cháat maa</span><br><span class="eng">I forgot to bring my charger today.</span></td>
+              <td><button class="fav-btn" data-thai="ลืม" data-rom="lʉʉm" data-eng="forget" data-cat="Review" data-example="วันนี้ลืมเอาที่ชาร์จมา|wan-níi lʉʉm ao thîi-cháat maa|I forgot to bring my charger today.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="จำ jam remember memorize 記得 背">
+              <td><span class="thai">จำ <button class="tts" data-say="จำ">🔊</button></span></td>
+              <td><span class="rom">jam</span></td>
+              <td>remember; memorize</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>記住、背起來。常用 <span class="thai">จำได้</span> 表示「記得起來」。</td>
+              <td>
+                <button class="pill" data-say="จำได้">จำได้｜can remember</button>
+                <button class="pill" data-say="จำไม่ได้">จำไม่ได้｜can’t remember</button>
+                <button class="pill" data-say="จำคำศัพท์">จำคำศัพท์｜memorize vocabulary</button>
+              </td>
+              <td><span class="thai">จำคำนี้ได้ไหม <button class="tts" data-say="จำคำนี้ได้ไหม">🔊</button></span><br><span class="rom">jam kham níi dâai mái</span><br><span class="eng">Do you remember this word?</span></td>
+              <td><button class="fav-btn" data-thai="จำ" data-rom="jam" data-eng="remember; memorize" data-cat="Practical Usage" data-example="จำคำนี้ได้ไหม|jam kham níi dâai mái|Do you remember this word?">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="นึกออก nʉ́k ɔ̀ɔk recall 想起來">
+              <td><span class="thai">นึกออก <button class="tts" data-say="นึกออก">🔊</button></span></td>
+              <td><span class="rom">nʉ́k ɔ̀ɔk</span></td>
+              <td>can recall; come to mind</td>
+              <td><span class="label local">Local usage</span></td>
+              <td>不是背住，而是腦中抓得出來、突然想起來。</td>
+              <td>
+                <button class="pill" data-say="นึกออกแล้ว">นึกออกแล้ว｜I remember now</button>
+                <button class="pill" data-say="นึกไม่ออก">นึกไม่ออก｜can’t recall</button>
+              </td>
+              <td><span class="thai">นึกออกแล้ว คำนี้เคยเรียนเมื่อวาน <button class="tts" data-say="นึกออกแล้ว คำนี้เคยเรียนเมื่อวาน">🔊</button></span><br><span class="rom">nʉ́k ɔ̀ɔk lɛ́ɛo, kham níi khəəi rian mʉ̂a-waan</span><br><span class="eng">I remember now. I studied this word yesterday.</span></td>
+              <td><button class="fav-btn" data-thai="นึกออก" data-rom="nʉ́k ɔ̀ɔk" data-eng="can recall; come to mind" data-cat="Local usage" data-example="นึกออกแล้ว คำนี้เคยเรียนเมื่อวาน|nʉ́k ɔ̀ɔk lɛ́ɛo, kham níi khəəi rian mʉ̂a-waan|I remember now. I studied this word yesterday.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="คล้าย khláai similar resemble 相似 很像">
+              <td><span class="thai">คล้าย <button class="tts" data-say="คล้าย">🔊</button></span></td>
+              <td><span class="rom">khláai</span></td>
+              <td>similar; resemble</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>相似但不完全一樣。常用在字、音、長相、味道、用法。</td>
+              <td>
+                <button class="pill" data-say="คล้ายกัน">คล้ายกัน｜similar to each other</button>
+                <button class="pill" data-say="ฟังคล้ายกัน">ฟังคล้ายกัน｜sound similar</button>
+                <button class="pill" data-say="หน้าคล้ายกัน">หน้าคล้ายกัน｜look alike</button>
+              </td>
+              <td><span class="thai">สองคำนี้คล้ายกันมาก <button class="tts" data-say="สองคำนี้คล้ายกันมาก">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak</span><br><span class="eng">These two words are very similar.</span></td>
+              <td><button class="fav-btn" data-thai="คล้าย" data-rom="khláai" data-eng="similar; resemble" data-cat="Practical Usage" data-example="สองคำนี้คล้ายกันมาก|sɔ̌ɔng kham níi khláai gan mâak|These two words are very similar.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="แยก yɛ̂ɛk separate distinguish 分開 區分">
+              <td><span class="thai">แยก <button class="tts" data-say="แยก">🔊</button></span></td>
+              <td><span class="rom">yɛ̂ɛk</span></td>
+              <td>separate; distinguish</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>把混在一起的東西分開；也可抽象表示分辨概念、聲音、單字。</td>
+              <td>
+                <button class="pill" data-say="แยกไม่ออก">แยกไม่ออก｜can’t tell apart</button>
+                <button class="pill" data-say="แยกออก">แยกออก｜can tell apart</button>
+                <button class="pill" data-say="แยกขยะ">แยกขยะ｜separate trash</button>
+              </td>
+              <td><span class="thai">ตอนนี้เริ่มแยกออกแล้ว <button class="tts" data-say="ตอนนี้เริ่มแยกออกแล้ว">🔊</button></span><br><span class="rom">dtaawn-níi rə̂əm yɛ̂ɛk ɔ̀ɔk lɛ́ɛo</span><br><span class="eng">Now I’m starting to be able to tell them apart.</span></td>
+              <td><button class="fav-btn" data-thai="แยก" data-rom="yɛ̂ɛk" data-eng="separate; distinguish" data-cat="Practical Usage" data-example="ตอนนี้เริ่มแยกออกแล้ว|dtaawn-níi rə̂əm yɛ̂ɛk ɔ̀ɔk lɛ́ɛo|Now I’m starting to be able to tell them apart.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="บน bon on top above 在上面 車上 網站上">
+              <td><span class="thai">บน <button class="tts" data-say="บน">🔊</button></span></td>
+              <td><span class="rom">bon</span></td>
+              <td>on; on top of; above</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>在某個表面、平台、交通工具上。注意泰文常說 <span class="thai">บนรถ</span>。</td>
+              <td>
+                <button class="pill" data-say="บนโต๊ะ">บนโต๊ะ｜on the table</button>
+                <button class="pill" data-say="บนรถ">บนรถ｜in/on the vehicle</button>
+                <button class="pill" data-say="บนเว็บไซต์">บนเว็บไซต์｜on the website</button>
+              </td>
+              <td><span class="thai">ฉันลืมที่ชาร์จไว้บนโต๊ะ <button class="tts" data-say="ฉันลืมที่ชาร์จไว้บนโต๊ะ">🔊</button></span><br><span class="rom">chǎn lʉʉm thîi-cháat wái bon dtó</span><br><span class="eng">I left my charger on the table.</span></td>
+              <td><button class="fav-btn" data-thai="บน" data-rom="bon" data-eng="on; on top of; above" data-cat="Practical Usage" data-example="ฉันลืมที่ชาร์จไว้บนโต๊ะ|chǎn lʉʉm thîi-cháat wái bon dtó|I left my charger on the table.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="วาง waang put place lay down 放 放置">
+              <td><span class="thai">วาง <button class="tts" data-say="วาง">🔊</button></span></td>
+              <td><span class="rom">waang</span></td>
+              <td>put; place; lay down</td>
+              <td><span class="label local">Local usage</span></td>
+              <td>把東西放在某個位置。常搭配 <span class="thai">ไว้</span>、<span class="thai">บน</span>、<span class="thai">ตรงนี้</span>。</td>
+              <td>
+                <button class="pill" data-say="วางไว้">วางไว้｜put and leave</button>
+                <button class="pill" data-say="วางบนโต๊ะ">วางบนโต๊ะ｜put on table</button>
+                <button class="pill" data-say="วางแผน">วางแผน｜plan</button>
+              </td>
+              <td><span class="thai">วางไว้ตรงนี้ได้เลยค่ะ <button class="tts" data-say="วางไว้ตรงนี้ได้เลยค่ะ">🔊</button></span><br><span class="rom">waang wái dtrong níi dâai loei khâ</span><br><span class="eng">You can put it right here.</span></td>
+              <td><button class="fav-btn" data-thai="วาง" data-rom="waang" data-eng="put; place; lay down" data-cat="Local usage" data-example="วางไว้ตรงนี้ได้เลยค่ะ|waang wái dtrong níi dâai loei khâ|You can put it right here.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="เชื่อ chʉ̂a believe trust 相信">
+              <td><span class="thai">เชื่อ <button class="tts" data-say="เชื่อ">🔊</button></span></td>
+              <td><span class="rom">chʉ̂a</span></td>
+              <td>believe; trust</td>
+              <td><span class="label emotion">Emotional usage</span></td>
+              <td>相信某句話或某件事是真的。若是信任一個人，常用 <span class="thai">เชื่อใจ</span>、<span class="thai">ไว้ใจ</span>。</td>
+              <td>
+                <button class="pill" data-say="เชื่อไหม">เชื่อไหม｜can you believe it?</button>
+                <button class="pill" data-say="ไม่เชื่อก็ลองดู">ไม่เชื่อก็ลองดู｜try if you don’t believe</button>
+                <button class="pill" data-say="เชื่อใจ">เชื่อใจ｜trust</button>
+              </td>
+              <td><span class="thai">ฉันเชื่อว่าเธอทำได้ <button class="tts" data-say="ฉันเชื่อว่าเธอทำได้">🔊</button></span><br><span class="rom">chǎn chʉ̂a wâa thəə tham dâai</span><br><span class="eng">I believe you can do it.</span></td>
+              <td><button class="fav-btn" data-thai="เชื่อ" data-rom="chʉ̂a" data-eng="believe; trust" data-cat="Emotional usage" data-example="ฉันเชื่อว่าเธอทำได้|chǎn chʉ̂a wâa thəə tham dâai|I believe you can do it.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ตอบ dtɔ̀ɔp answer reply respond 回答 回訊息">
+              <td><span class="thai">ตอบ <button class="tts" data-say="ตอบ">🔊</button></span></td>
+              <td><span class="rom">dtɔ̀ɔp</span></td>
+              <td>answer; reply; respond</td>
+              <td><span class="label local">Local usage</span></td>
+              <td>回答問題、回訊息、回 email。名詞是 <span class="thai">คำตอบ</span>。</td>
+              <td>
+                <button class="pill" data-say="ตอบข้อความ">ตอบข้อความ｜reply to message</button>
+                <button class="pill" data-say="ตอบกลับ">ตอบกลับ｜reply back</button>
+                <button class="pill" data-say="คำตอบ">คำตอบ｜answer</button>
+              </td>
+              <td><span class="thai">ฉันลืมตอบข้อความ ขอโทษนะ <button class="tts" data-say="ฉันลืมตอบข้อความ ขอโทษนะ">🔊</button></span><br><span class="rom">chǎn lʉʉm dtɔ̀ɔp khɔ̂ɔ-khwaam, khɔ̌ɔ-thôot ná</span><br><span class="eng">I forgot to reply to the message. Sorry.</span></td>
+              <td><button class="fav-btn" data-thai="ตอบ" data-rom="dtɔ̀ɔp" data-eng="answer; reply; respond" data-cat="Local usage" data-example="ฉันลืมตอบข้อความ ขอโทษนะ|chǎn lʉʉm dtɔ̀ɔp khɔ̂ɔ-khwaam, khɔ̌ɔ-thôot ná|I forgot to reply to the message. Sorry.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="เข้าใจผิด khâo-jai phìt misunderstand 誤會 理解錯">
+              <td><span class="thai">เข้าใจผิด <button class="tts" data-say="เข้าใจผิด">🔊</button></span></td>
+              <td><span class="rom">khâo-jai phìt</span></td>
+              <td>misunderstand</td>
+              <td><span class="label emotion">Emotional usage</span></td>
+              <td>理解錯、誤會。常出現在解釋、關係修復、怕語氣被誤解時。</td>
+              <td>
+                <button class="pill" data-say="กลัวเข้าใจผิด">กลัวเข้าใจผิด｜afraid of misunderstanding</button>
+                <button class="pill" data-say="อย่าเข้าใจผิดนะ">อย่าเข้าใจผิดนะ｜don’t misunderstand</button>
+              </td>
+              <td><span class="thai">ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด <button class="tts" data-say="ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn khâe yàak à-thí-baai, mâi yàak hâi thəə khâo-jai phìt</span><br><span class="eng">I just want to explain. I don’t want you to misunderstand.</span></td>
+              <td><button class="fav-btn" data-thai="เข้าใจผิด" data-rom="khâo-jai phìt" data-eng="misunderstand" data-cat="Emotional usage" data-example="ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด|chǎn khâe yàak à-thí-baai, mâi yàak hâi thəə khâo-jai phìt|I just want to explain. I don’t want you to misunderstand.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="เพิ่ม phə̂əm add increase 增加 加">
+              <td><span class="thai">เพิ่ม <button class="tts" data-say="เพิ่ม">🔊</button></span></td>
+              <td><span class="rom">phə̂əm</span></td>
+              <td>add; increase</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>在原本已有的基礎上增加，使數量、程度、內容變多。</td>
+              <td>
+                <button class="pill" data-say="ขอเพิ่ม">ขอเพิ่ม｜ask for more</button>
+                <button class="pill" data-say="เพิ่มขึ้น">เพิ่มขึ้น｜increase</button>
+                <button class="pill" data-say="เพิ่มเติม">เพิ่มเติม｜additional</button>
+              </td>
+              <td><span class="thai">ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ <button class="tts" data-say="ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ phə̂əm dtua-yàang ìik nòi dâai mái khá</span><br><span class="eng">Could you add a few more examples?</span></td>
+              <td><button class="fav-btn" data-thai="เพิ่ม" data-rom="phə̂əm" data-eng="add; increase" data-cat="Practical Usage" data-example="ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ|khɔ̌ɔ phə̂əm dtua-yàang ìik nòi dâai mái khá|Could you add a few more examples?">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ความมั่นใจ khwaam mân-jai confidence 信心 自信">
+              <td><span class="thai">ความมั่นใจ <button class="tts" data-say="ความมั่นใจ">🔊</button></span></td>
+              <td><span class="rom">khwaam mân-jai</span></td>
+              <td>confidence</td>
+              <td><span class="label emotion">Emotional usage</span></td>
+              <td><span class="thai">ความ</span> 把 <span class="thai">มั่นใจ</span> 變成抽象名詞「信心」。</td>
+              <td>
+                <button class="pill" data-say="เพิ่มความมั่นใจ">เพิ่มความมั่นใจ｜increase confidence</button>
+                <button class="pill" data-say="ขาดความมั่นใจ">ขาดความมั่นใจ｜lack confidence</button>
+                <button class="pill" data-say="เสียความมั่นใจ">เสียความมั่นใจ｜lose confidence</button>
+              </td>
+              <td><span class="thai">ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้น <button class="tts" data-say="ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้น">🔊</button></span><br><span class="rom">thâa fʉ̀k thúk wan, khwaam mân-jai jà phə̂əm khʉ̂n</span><br><span class="eng">If you practice every day, your confidence will increase.</span></td>
+              <td><button class="fav-btn" data-thai="ความมั่นใจ" data-rom="khwaam mân-jai" data-eng="confidence" data-cat="Emotional usage" data-example="ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้น|thâa fʉ̀k thúk wan, khwaam mân-jai jà phə̂əm khʉ̂n|If you practice every day, your confidence will increase.">♡ 收藏</button></td>
+            </tr>
+            <tr data-vocab="ทั้งวัน tháng wan all day 一整天 整天">
+              <td><span class="thai">ทั้งวัน <button class="tts" data-say="ทั้งวัน">🔊</button></span></td>
+              <td><span class="rom">tháng wan</span></td>
+              <td>all day; the whole day</td>
+              <td><span class="label practice">Practical Usage</span></td>
+              <td>強調從早到晚，整段時間幾乎都被某件事佔滿。不同於 <span class="thai">ทุกวัน</span>。</td>
+              <td>
+                <button class="pill" data-say="เรียนทั้งวัน">เรียนทั้งวัน｜study all day</button>
+                <button class="pill" data-say="รอทั้งวัน">รอทั้งวัน｜wait all day</button>
+                <button class="pill" data-say="ทั้งวันทั้งคืน">ทั้งวันทั้งคืน｜all day and night</button>
+              </td>
+              <td><span class="thai">วันนี้ฉันเรียนภาษาไทยทั้งวัน <button class="tts" data-say="วันนี้ฉันเรียนภาษาไทยทั้งวัน">🔊</button></span><br><span class="rom">wan-níi chǎn rian phaa-sǎa Thai tháng wan</span><br><span class="eng">Today I studied Thai all day.</span></td>
+              <td><button class="fav-btn" data-thai="ทั้งวัน" data-rom="tháng wan" data-eng="all day; the whole day" data-cat="Practical Usage" data-example="วันนี้ฉันเรียนภาษาไทยทั้งวัน|wan-níi chǎn rian phaa-sǎa Thai tháng wan|Today I studied Thai all day.">♡ 收藏</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="usage" class="tab">
+      <h2>Usage Notes｜重點比較與曼谷語感</h2>
+
+      <div class="compare-card">
+        <h3>เพื่อ vs สำหรับ vs ให้｜中文「for / 給 / 為了」要拆開</h3>
+        <p><span class="thai">เพื่อ <button class="tts" data-say="เพื่อ">🔊</button></span> <span class="rom">phʉ̂a</span> <span class="eng">in order to</span>：目的。</p>
+        <p><span class="thai">สำหรับ <button class="tts" data-say="สำหรับ">🔊</button></span> <span class="rom">sǎm-ràp</span> <span class="eng">for; intended for</span>：對象 / 用途。</p>
+        <p><span class="thai">ให้ <button class="tts" data-say="ให้">🔊</button></span> <span class="rom">hâi</span> <span class="eng">give; let; for someone</span>：真的給 / 讓 / 幫某人做。</p>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文直覺</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">เพื่อ</span></td>
+            <td><span class="rom">phʉ̂a</span></td>
+            <td>in order to</td>
+            <td>為了達成目的</td>
+            <td><span class="thai">ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย <button class="tts" data-say="ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย">🔊</button></span><br><span class="rom">chǎn rian phaa-sǎa Thai phʉ̂a khui gàp khon Thai</span><br><span class="eng">I study Thai in order to talk with Thai people.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">สำหรับ</span></td>
+            <td><span class="rom">sǎm-ràp</span></td>
+            <td>for; intended for</td>
+            <td>給誰 / 適合誰 / 用於什麼</td>
+            <td><span class="thai">หนังสือเล่มนี้สำหรับผู้เริ่มต้น <button class="tts" data-say="หนังสือเล่มนี้สำหรับผู้เริ่มต้น">🔊</button></span><br><span class="rom">nǎng-sʉ̌ʉ lêm níi sǎm-ràp phûu rə̂əm-dtôn</span><br><span class="eng">This book is for beginners.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ให้</span></td>
+            <td><span class="rom">hâi</span></td>
+            <td>give; let; for someone</td>
+            <td>給、讓、幫某人做</td>
+            <td><span class="thai">อันนี้ให้คุณค่ะ <button class="tts" data-say="อันนี้ให้คุณค่ะ">🔊</button></span><br><span class="rom">an níi hâi khun khâ</span><br><span class="eng">This is for you. / I’m giving this to you.</span></td>
+          </tr>
+        </table>
+        <div class="why-box">
+          <b>Bangkok Practical Usage：</b><span class="thai">อันนี้ให้คุณค่ะ</span> 是真的把東西給對方；<span class="thai">อันนี้สำหรับคุณค่ะ</span> 是「這份是你的」；<span class="thai">ฉันทำเพื่อคุณ</span> 則有「我是為了你做的」的情感重量。
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <h3>อาจจะ / น่าจะ / คง / แน่นอน / แน่ ๆ เลย｜可能性階梯</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>確定程度</th><th>自然例句</th></tr>
+          <tr>
+            <td><span class="thai">อาจจะ</span></td>
+            <td><span class="rom">àat jà</span></td>
+            <td>may; might</td>
+            <td>可能，也不一定</td>
+            <td><span class="thai">ฉันอาจจะไปช้านิดหน่อย <button class="tts" data-say="ฉันอาจจะไปช้านิดหน่อย">🔊</button></span><br><span class="rom">chǎn àat jà bpai cháa nít-nòi</span><br><span class="eng">I might be a little late.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">น่าจะ</span></td>
+            <td><span class="rom">nâa jà</span></td>
+            <td>probably; should</td>
+            <td>應該會，較有把握</td>
+            <td><span class="thai">ร้านนี้น่าจะเหมาะกับเรา <button class="tts" data-say="ร้านนี้น่าจะเหมาะกับเรา">🔊</button></span><br><span class="rom">ráan níi nâa jà mɔ̀ gàp rao</span><br><span class="eng">This restaurant should suit us.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">คง</span></td>
+            <td><span class="rom">khong</span></td>
+            <td>probably; likely</td>
+            <td>柔和推測</td>
+            <td><span class="thai">เขาคงเหนื่อย <button class="tts" data-say="เขาคงเหนื่อย">🔊</button></span><br><span class="rom">khǎo khong nʉ̀ai</span><br><span class="eng">He/She is probably tired.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">แน่นอน</span></td>
+            <td><span class="rom">nɛ̂ɛ-nɔɔn</span></td>
+            <td>definitely; certainly</td>
+            <td>很確定、穩定</td>
+            <td><span class="thai">ถ้าฝึกทุกวัน พูดดีขึ้นแน่นอน <button class="tts" data-say="ถ้าฝึกทุกวัน พูดดีขึ้นแน่นอน">🔊</button></span><br><span class="rom">thâa fʉ̀k thúk wan, phûut dii khʉ̂n nɛ̂ɛ-nɔɔn</span><br><span class="eng">If you practice every day, your speaking will definitely improve.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">แน่ ๆ เลย</span></td>
+            <td><span class="rom">nɛ̂ɛ-nɛ̂ɛ loei</span></td>
+            <td>definitely for sure</td>
+            <td>很確定 + 口語情緒</td>
+            <td><span class="thai">รถติดแน่ ๆ เลย <button class="tts" data-say="รถติดแน่ ๆ เลย">🔊</button></span><br><span class="rom">rót dtìt nɛ̂ɛ-nɛ̂ɛ loei</span><br><span class="eng">Traffic will definitely be bad.</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>ถึง vs จน vs จนถึง｜時間終點、結果、完整範圍</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>重點</th></tr>
+          <tr>
+            <td><span class="thai">เรียนถึงห้าโมง <button class="tts" data-say="เรียนถึงห้าโมง">🔊</button></span></td>
+            <td><span class="rom">rian thʉ̌ng hâa moong</span></td>
+            <td>Study until 5 o’clock.</td>
+            <td>學到五點。</td>
+            <td>中性說明時間終點。</td>
+          </tr>
+          <tr>
+            <td><span class="thai">เรียนจนเหนื่อยมาก <button class="tts" data-say="เรียนจนเหนื่อยมาก">🔊</button></span></td>
+            <td><span class="rom">rian jon nʉ̀ai mâak</span></td>
+            <td>Study until very tired.</td>
+            <td>學到很累。</td>
+            <td>強調造成結果。</td>
+          </tr>
+          <tr>
+            <td><span class="thai">เรียนตั้งแต่เช้าจนถึงเย็น <button class="tts" data-say="เรียนตั้งแต่เช้าจนถึงเย็น">🔊</button></span></td>
+            <td><span class="rom">rian dtâng-dtɛ̀ɛ cháao jon thʉ̌ng yen</span></td>
+            <td>Study from morning until evening.</td>
+            <td>從早上學到傍晚。</td>
+            <td>完整範圍。</td>
+          </tr>
+        </table>
+        <div class="why-box">
+          <b>Common mistake：</b><span class="thai">จน</span> 不要每次硬翻「直到」。在 <span class="thai">อร่อยจนหยุดกินไม่ได้</span> 裡，自然中文是「好吃到停不下來」。
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <h3>จน 的兩張臉｜to the point that vs broke</h3>
+        <table>
+          <tr><th>用法</th><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th></tr>
+          <tr>
+            <td>連接詞</td>
+            <td><span class="thai">ยุ่งจนไม่มีเวลากินข้าว <button class="tts" data-say="ยุ่งจนไม่มีเวลากินข้าว">🔊</button></span></td>
+            <td><span class="rom">yûng jon mâi mii wee-laa gin khâao</span></td>
+            <td>So busy that there is no time to eat.</td>
+            <td>忙到沒時間吃飯。</td>
+          </tr>
+          <tr>
+            <td>形容詞</td>
+            <td><span class="thai">ช่วงนี้จนมากเลย <button class="tts" data-say="ช่วงนี้จนมากเลย">🔊</button></span></td>
+            <td><span class="rom">chûang-níi jon mâak loei</span></td>
+            <td>I’m really broke these days.</td>
+            <td>最近真的超窮。</td>
+          </tr>
+          <tr>
+            <td>雙關</td>
+            <td><span class="thai">ช่วงนี้จนจนคิดอะไรไม่ออกเลย <button class="tts" data-say="ช่วงนี้จนจนคิดอะไรไม่ออกเลย">🔊</button></span></td>
+            <td><span class="rom">chûang-níi jon jon khít à-rai mâi ɔ̀ɔk loei</span></td>
+            <td>I’m so broke these days that I can’t think of anything.</td>
+            <td>最近窮到什麼都想不出來。</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>ยืม / ให้ยืม / คืน｜中文「借」方向要講清楚</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">ยืม</span></td>
+            <td><span class="rom">yʉʉm</span></td>
+            <td>borrow</td>
+            <td>借來</td>
+            <td><span class="thai">ฉันยืมเงินเขา <button class="tts" data-say="ฉันยืมเงินเขา">🔊</button></span><br><span class="rom">chǎn yʉʉm ngoen khǎo</span><br><span class="eng">I borrowed money from him/her.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ให้ยืม</span></td>
+            <td><span class="rom">hâi yʉʉm</span></td>
+            <td>lend; let someone borrow</td>
+            <td>借給別人</td>
+            <td><span class="thai">ฉันให้เขายืมเงิน <button class="tts" data-say="ฉันให้เขายืมเงิน">🔊</button></span><br><span class="rom">chǎn hâi khǎo yʉʉm ngoen</span><br><span class="eng">I lent him/her money.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">คืน</span></td>
+            <td><span class="rom">khʉʉn</span></td>
+            <td>return</td>
+            <td>還回去</td>
+            <td><span class="thai">ฉันคืนเงินให้เขาแล้ว <button class="tts" data-say="ฉันคืนเงินให้เขาแล้ว">🔊</button></span><br><span class="rom">chǎn khʉʉn ngoen hâi khǎo lɛ́ɛo</span><br><span class="eng">I already returned the money to him/her.</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>ลืม / จำ / นึกออก｜忘記、記得、想起來</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">ลืม</span></td>
+            <td><span class="rom">lʉʉm</span></td>
+            <td>forget</td>
+            <td>忘記做 / 忘記帶 / 忘在某地</td>
+            <td><span class="thai">ฉันลืมเอาหนังสือมา <button class="tts" data-say="ฉันลืมเอาหนังสือมา">🔊</button></span><br><span class="rom">chǎn lʉʉm ao nǎng-sʉ̌ʉ maa</span><br><span class="eng">I forgot to bring the book.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">จำได้</span></td>
+            <td><span class="rom">jam dâai</span></td>
+            <td>can remember</td>
+            <td>記得起來</td>
+            <td><span class="thai">ฉันยังจำวันนั้นได้ <button class="tts" data-say="ฉันยังจำวันนั้นได้">🔊</button></span><br><span class="rom">chǎn yang jam wan nán dâai</span><br><span class="eng">I still remember that day.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">นึกออก</span></td>
+            <td><span class="rom">nʉ́k ɔ̀ɔk</span></td>
+            <td>can recall</td>
+            <td>突然想起來 / 腦中抓得到</td>
+            <td><span class="thai">นึกออกแล้ว <button class="tts" data-say="นึกออกแล้ว">🔊</button></span><br><span class="rom">nʉ́k ɔ̀ɔk lɛ́ɛo</span><br><span class="eng">I remember now.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">นึกไม่ออก</span></td>
+            <td><span class="rom">nʉ́k mâi ɔ̀ɔk</span></td>
+            <td>can’t recall</td>
+            <td>一時想不起來</td>
+            <td><span class="thai">ฉันนึกชื่อเขาไม่ออก <button class="tts" data-say="ฉันนึกชื่อเขาไม่ออก">🔊</button></span><br><span class="rom">chǎn nʉ́k chʉ̂ʉ khǎo mâi ɔ̀ɔk</span><br><span class="eng">I can’t recall his/her name.</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>คล้าย / เหมือน / แยก｜相似、一樣、分辨</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">คล้าย</span></td>
+            <td><span class="rom">khláai</span></td>
+            <td>similar; resemble</td>
+            <td>相似但不完全一樣</td>
+            <td><span class="thai">สองคำนี้คล้ายกันมาก <button class="tts" data-say="สองคำนี้คล้ายกันมาก">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak</span><br><span class="eng">These two words are very similar.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">เหมือน</span></td>
+            <td><span class="rom">mʉ̌an</span></td>
+            <td>same; like</td>
+            <td>像、一樣，更接近相同</td>
+            <td><span class="thai">สองคำนี้คล้ายกัน แต่ไม่เหมือนกัน <button class="tts" data-say="สองคำนี้คล้ายกัน แต่ไม่เหมือนกัน">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan, dtɛ̀ɛ mâi mʉ̌an gan</span><br><span class="eng">These two words are similar, but not the same.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">แยก</span></td>
+            <td><span class="rom">yɛ̂ɛk</span></td>
+            <td>distinguish; separate</td>
+            <td>區分、分辨</td>
+            <td><span class="thai">ฉันแยกสองคำนี้ไม่ออก <button class="tts" data-say="ฉันแยกสองคำนี้ไม่ออก">🔊</button></span><br><span class="rom">chǎn yɛ̂ɛk sɔ̌ɔng kham níi mâi ɔ̀ɔk</span><br><span class="eng">I can’t tell these two words apart.</span></td>
+          </tr>
+        </table>
+        <div class="why-box">
+          <b>可以直接拿來問老師：</b><br>
+          <span class="thai">สองคำนี้ต่างกันยังไงคะ แยกไม่ออกเลย <button class="tts" data-say="สองคำนี้ต่างกันยังไงคะ แยกไม่ออกเลย">🔊</button></span><br>
+          <span class="rom">sɔ̌ɔng kham níi dtàang gan yang-ngai khá, yɛ̂ɛk mâi ɔ̀ɔk loei</span><br>
+          <span class="eng">How are these two words different? I really can’t tell them apart.</span>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <h3>字、音、長得、看起來、聽起來很像</h3>
+        <table>
+          <tr><th>中文</th><th>Thai</th><th>Romanization</th><th>English</th></tr>
+          <tr>
+            <td>兩個字很像</td>
+            <td><span class="thai">สองคำนี้คล้ายกันมาก <button class="tts" data-say="สองคำนี้คล้ายกันมาก">🔊</button></span></td>
+            <td><span class="rom">sɔ̌ɔng kham níi khláai gan mâak</span></td>
+            <td>These two words are very similar.</td>
+          </tr>
+          <tr>
+            <td>兩個音很像</td>
+            <td><span class="thai">สองเสียงนี้คล้ายกันมาก <button class="tts" data-say="สองเสียงนี้คล้ายกันมาก">🔊</button></span></td>
+            <td><span class="rom">sɔ̌ɔng sǐang níi khláai gan mâak</span></td>
+            <td>These two sounds are very similar.</td>
+          </tr>
+          <tr>
+            <td>聽起來很像</td>
+            <td><span class="thai">สองเสียงนี้ฟังคล้ายกันมาก <button class="tts" data-say="สองเสียงนี้ฟังคล้ายกันมาก">🔊</button></span></td>
+            <td><span class="rom">sɔ̌ɔng sǐang níi fang khláai gan mâak</span></td>
+            <td>These two sounds sound very similar.</td>
+          </tr>
+          <tr>
+            <td>長得很像</td>
+            <td><span class="thai">สองคนนี้หน้าคล้ายกันมาก <button class="tts" data-say="สองคนนี้หน้าคล้ายกันมาก">🔊</button></span></td>
+            <td><span class="rom">sɔ̌ɔng khon níi nâa khláai gan mâak</span></td>
+            <td>These two people look very similar.</td>
+          </tr>
+          <tr>
+            <td>看起來很像</td>
+            <td><span class="thai">สองอันนี้ดูคล้ายกันมาก <button class="tts" data-say="สองอันนี้ดูคล้ายกันมาก">🔊</button></span></td>
+            <td><span class="rom">sɔ̌ɔng an níi duu khláai gan mâak</span></td>
+            <td>These two things look very similar.</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>เชื่อ / เชื่อใจ / ไว้ใจ / วางใจ / น่าเชื่อถือ</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">เชื่อ</span></td>
+            <td><span class="rom">chʉ̂a</span></td>
+            <td>believe</td>
+            <td>相信某句話 / 某事是真的</td>
+            <td><span class="thai">ฉันเชื่อว่าเธอทำได้ <button class="tts" data-say="ฉันเชื่อว่าเธอทำได้">🔊</button></span><br><span class="rom">chǎn chʉ̂a wâa thəə tham dâai</span><br><span class="eng">I believe you can do it.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">เชื่อใจ</span></td>
+            <td><span class="rom">chʉ̂a-jai</span></td>
+            <td>trust emotionally</td>
+            <td>信任一個人的心、動機、承諾</td>
+            <td><span class="thai">ฉันเชื่อใจเธอนะ <button class="tts" data-say="ฉันเชื่อใจเธอนะ">🔊</button></span><br><span class="rom">chǎn chʉ̂a-jai thəə ná</span><br><span class="eng">I trust you.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ไว้ใจ</span></td>
+            <td><span class="rom">wái-jai</span></td>
+            <td>trust; rely on</td>
+            <td>放心交給對方，不怕出問題</td>
+            <td><span class="thai">ฉันไว้ใจให้เขาดูแลเรื่องนี้ <button class="tts" data-say="ฉันไว้ใจให้เขาดูแลเรื่องนี้">🔊</button></span><br><span class="rom">chǎn wái-jai hâi khǎo duu-lɛɛ rʉ̂ang níi</span><br><span class="eng">I trust him/her to take care of this matter.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">วางใจ</span></td>
+            <td><span class="rom">waang-jai</span></td>
+            <td>feel at ease; trust</td>
+            <td>心放得下、可以安心</td>
+            <td><span class="thai">เรื่องนี้วางใจได้ค่ะ <button class="tts" data-say="เรื่องนี้วางใจได้ค่ะ">🔊</button></span><br><span class="rom">rʉ̂ang níi waang-jai dâai khâ</span><br><span class="eng">You can feel at ease about this matter.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">น่าเชื่อถือ</span></td>
+            <td><span class="rom">nâa chʉ̂a-thʉ̌ʉ</span></td>
+            <td>credible; reliable</td>
+            <td>資訊、新聞、網站可信</td>
+            <td><span class="thai">ข่าวนี้น่าเชื่อถือไหม <button class="tts" data-say="ข่าวนี้น่าเชื่อถือไหม">🔊</button></span><br><span class="rom">khàao níi nâa chʉ̂a-thʉ̌ʉ mái</span><br><span class="eng">Is this news credible?</span></td>
+          </tr>
+        </table>
+        <div class="why-box">
+          <span class="thai">ไม่เชื่อก็ลองดู <button class="tts" data-say="ไม่เชื่อก็ลองดู">🔊</button></span><br>
+          <span class="rom">mâi chʉ̂a gɔ̂ɔ lɔɔng duu</span><br>
+          <span class="eng">If you don’t believe it, try and see.</span><br>
+          朋友間自然，有一點「不信你試試看啊」的口語挑戰感。
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <h3>ตอบ / บอก / พูด / อธิบาย｜回、告訴、說、解釋</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">ตอบ</span></td>
+            <td><span class="rom">dtɔ̀ɔp</span></td>
+            <td>answer; reply</td>
+            <td>回答、回覆</td>
+            <td><span class="thai">ว่างแล้วตอบหน่อยนะ <button class="tts" data-say="ว่างแล้วตอบหน่อยนะ">🔊</button></span><br><span class="rom">wâang lɛ́ɛo dtɔ̀ɔp nòi ná</span><br><span class="eng">Reply when you’re free, okay?</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">บอก</span></td>
+            <td><span class="rom">bɔ̀ɔk</span></td>
+            <td>tell</td>
+            <td>告訴、通知</td>
+            <td><span class="thai">ช่วยบอกชื่อร้านหน่อยค่ะ <button class="tts" data-say="ช่วยบอกชื่อร้านหน่อยค่ะ">🔊</button></span><br><span class="rom">chûai bɔ̀ɔk chʉ̂ʉ ráan nòi khâ</span><br><span class="eng">Please tell me the restaurant name.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">พูด</span></td>
+            <td><span class="rom">phûut</span></td>
+            <td>speak; say</td>
+            <td>說話</td>
+            <td><span class="thai">ฉันอยากพูดภาษาไทยให้ธรรมชาติขึ้น <button class="tts" data-say="ฉันอยากพูดภาษาไทยให้ธรรมชาติขึ้น">🔊</button></span><br><span class="rom">chǎn yàak phûut phaa-sǎa Thai hâi tham-má-châat khʉ̂n</span><br><span class="eng">I want to speak Thai more naturally.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">อธิบาย</span></td>
+            <td><span class="rom">à-thí-baai</span></td>
+            <td>explain</td>
+            <td>解釋、說明</td>
+            <td><span class="thai">ช่วยอธิบายแบบง่าย ๆ ได้ไหมคะ <button class="tts" data-say="ช่วยอธิบายแบบง่าย ๆ ได้ไหมคะ">🔊</button></span><br><span class="rom">chûai à-thí-baai bɛ̀ɛp ngâai-ngâai dâai mái khá</span><br><span class="eng">Could you explain it simply?</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>เพิ่ม vs เติม vs เพิ่มเติม｜中文「加」要看情境</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">เพิ่ม</span></td>
+            <td><span class="rom">phə̂əm</span></td>
+            <td>add; increase</td>
+            <td>增加數量、程度、內容</td>
+            <td><span class="thai">ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ <button class="tts" data-say="ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ phə̂əm dtua-yàang ìik nòi dâai mái khá</span><br><span class="eng">Could you add a few more examples?</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">เติม</span></td>
+            <td><span class="rom">dtəəm</span></td>
+            <td>fill; refill; top up</td>
+            <td>補滿、儲值、加油、補水</td>
+            <td><span class="thai">ต้องเติมเงินก่อนถึงจะใช้ได้ <button class="tts" data-say="ต้องเติมเงินก่อนถึงจะใช้ได้">🔊</button></span><br><span class="rom">dtɔ̂ng dtəəm ngoen gɔ̀ɔn thʉ̌ng jà chái dâai</span><br><span class="eng">You have to top up money first before you can use it.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">เพิ่มเติม</span></td>
+            <td><span class="rom">phə̂əm-dtəəm</span></td>
+            <td>additional; further</td>
+            <td>補充、額外資訊</td>
+            <td><span class="thai">ขอคำอธิบายเพิ่มเติมได้ไหมคะ <button class="tts" data-say="ขอคำอธิบายเพิ่มเติมได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ kham à-thí-baai phə̂əm-dtəəm dâai mái khá</span><br><span class="eng">Could I have an additional explanation?</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>บน / ข้างบน / ใน｜上面、樓上、裡面</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">บน</span></td>
+            <td><span class="rom">bon</span></td>
+            <td>on; on top of</td>
+            <td>在某物表面 / 車上 / 網站上</td>
+            <td><span class="thai">หนังสืออยู่บนโต๊ะ <button class="tts" data-say="หนังสืออยู่บนโต๊ะ">🔊</button></span><br><span class="rom">nǎng-sʉ̌ʉ yùu bon dtó</span><br><span class="eng">The book is on the table.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ข้างบน</span></td>
+            <td><span class="rom">khâang bon</span></td>
+            <td>upstairs; above</td>
+            <td>樓上、上面那邊</td>
+            <td><span class="thai">ห้องเรียนอยู่ข้างบน <button class="tts" data-say="ห้องเรียนอยู่ข้างบน">🔊</button></span><br><span class="rom">hɔ̂ng-rian yùu khâang bon</span><br><span class="eng">The classroom is upstairs.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ใน</span></td>
+            <td><span class="rom">nai</span></td>
+            <td>in; inside</td>
+            <td>在裡面</td>
+            <td><span class="thai">กุญแจอยู่ในกระเป๋า <button class="tts" data-say="กุญแจอยู่ในกระเป๋า">🔊</button></span><br><span class="rom">gun-jɛɛ yùu nai grà-bpǎo</span><br><span class="eng">The keys are in the bag.</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>วาง vs ใส่ vs เก็บ｜放、放進去、收起來</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">วาง</span></td>
+            <td><span class="rom">waang</span></td>
+            <td>put; place</td>
+            <td>放在某表面 / 位置</td>
+            <td><span class="thai">วางไว้บนโต๊ะได้เลยค่ะ <button class="tts" data-say="วางไว้บนโต๊ะได้เลยค่ะ">🔊</button></span><br><span class="rom">waang wái bon dtó dâai loei khâ</span><br><span class="eng">You can put it on the table.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ใส่</span></td>
+            <td><span class="rom">sài</span></td>
+            <td>put in; wear; add</td>
+            <td>放進去、穿、加料</td>
+            <td><span class="thai">ใส่ในกระเป๋า <button class="tts" data-say="ใส่ในกระเป๋า">🔊</button></span><br><span class="rom">sài nai grà-bpǎo</span><br><span class="eng">Put it in the bag.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">เก็บ</span></td>
+            <td><span class="rom">gèp</span></td>
+            <td>keep; put away</td>
+            <td>收起來、保存</td>
+            <td><span class="thai">เก็บไว้ในกระเป๋า <button class="tts" data-say="เก็บไว้ในกระเป๋า">🔊</button></span><br><span class="rom">gèp wái nai grà-bpǎo</span><br><span class="eng">Keep it in the bag.</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>มั่นใจ vs ความมั่นใจ｜有信心 vs 信心</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">มั่นใจ</span></td>
+            <td><span class="rom">mân-jai</span></td>
+            <td>confident; sure</td>
+            <td>有信心、確定</td>
+            <td><span class="thai">ฉันไม่ค่อยมั่นใจ <button class="tts" data-say="ฉันไม่ค่อยมั่นใจ">🔊</button></span><br><span class="rom">chǎn mâi khɔ̂i mân-jai</span><br><span class="eng">I’m not very confident.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ความมั่นใจ</span></td>
+            <td><span class="rom">khwaam mân-jai</span></td>
+            <td>confidence</td>
+            <td>信心、自信這個概念</td>
+            <td><span class="thai">ฉันอยากเพิ่มความมั่นใจในการพูดภาษาไทย <button class="tts" data-say="ฉันอยากเพิ่มความมั่นใจในการพูดภาษาไทย">🔊</button></span><br><span class="rom">chǎn yàak phə̂əm khwaam mân-jai nai gaan phûut phaa-sǎa Thai</span><br><span class="eng">I want to increase my confidence in speaking Thai.</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="compare-card">
+        <h3>ทั้งวัน vs ทุกวัน vs วันละ｜一整天、每天、每天……量</h3>
+        <table>
+          <tr><th>Thai</th><th>Romanization</th><th>English</th><th>中文語感</th><th>例句</th></tr>
+          <tr>
+            <td><span class="thai">ทั้งวัน</span></td>
+            <td><span class="rom">tháng wan</span></td>
+            <td>all day</td>
+            <td>一整天</td>
+            <td><span class="thai">วันนี้ฉันเรียนภาษาไทยทั้งวัน <button class="tts" data-say="วันนี้ฉันเรียนภาษาไทยทั้งวัน">🔊</button></span><br><span class="rom">wan-níi chǎn rian phaa-sǎa Thai tháng wan</span><br><span class="eng">Today I studied Thai all day.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">ทุกวัน</span></td>
+            <td><span class="rom">thúk wan</span></td>
+            <td>every day</td>
+            <td>每天</td>
+            <td><span class="thai">ฉันเรียนภาษาไทยทุกวัน <button class="tts" data-say="ฉันเรียนภาษาไทยทุกวัน">🔊</button></span><br><span class="rom">chǎn rian phaa-sǎa Thai thúk wan</span><br><span class="eng">I study Thai every day.</span></td>
+          </tr>
+          <tr>
+            <td><span class="thai">วันละ...</span></td>
+            <td><span class="rom">wan lá...</span></td>
+            <td>per day</td>
+            <td>每天……量</td>
+            <td><span class="thai">ฉันเรียนภาษาไทยวันละสองชั่วโมง <button class="tts" data-say="ฉันเรียนภาษาไทยวันละสองชั่วโมง">🔊</button></span><br><span class="rom">chǎn rian phaa-sǎa Thai wan lá sɔ̌ɔng chûa-moong</span><br><span class="eng">I study Thai two hours per day.</span></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="sentence-bank" class="tab">
+      <h2>Sentence Bank｜Shadowing 例句庫</h2>
+      <div class="scene-grid">
+        <div class="sentence-group">
+          <div class="scene-label">Purpose / For｜เพื่อ / สำหรับ / ให้</div>
+          <div class="sentence"><span class="thai">ฉันมาไทยเพื่อเรียนภาษาไทยและใช้ชีวิตที่นี่ <button class="tts" data-say="ฉันมาไทยเพื่อเรียนภาษาไทยและใช้ชีวิตที่นี่">🔊</button></span><br><span class="rom">chǎn maa Thai phʉ̂a rian phaa-sǎa Thai lɛ́ chái chii-wít thîi nîi</span><br><span class="eng">I came to Thailand to study Thai and live here.</span></div>
+          <div class="sentence"><span class="thai">แอปนี้สำหรับฝึกคำศัพท์ทุกวัน <button class="tts" data-say="แอปนี้สำหรับฝึกคำศัพท์ทุกวัน">🔊</button></span><br><span class="rom">ɛ̀ɛp níi sǎm-ràp fʉ̀k kham-sàp thúk wan</span><br><span class="eng">This app is for practicing vocabulary every day.</span></div>
+          <div class="sentence"><span class="thai">ช่วยเขียนให้ดูหน่อยได้ไหมคะ <button class="tts" data-say="ช่วยเขียนให้ดูหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">chûai khǐian hâi duu nòi dâai mái khá</span><br><span class="eng">Could you write it for me to see?</span></div>
+          <div class="sentence"><span class="thai">ฉันทำแบบนี้เพื่อให้จำได้ง่ายขึ้น <button class="tts" data-say="ฉันทำแบบนี้เพื่อให้จำได้ง่ายขึ้น">🔊</button></span><br><span class="rom">chǎn tham bɛ̀ɛp níi phʉ̂a hâi jam dâai ngâai khʉ̂n</span><br><span class="eng">I do it this way so that I can remember more easily.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Probability｜อาจจะ / น่าจะ / แน่นอน</div>
+          <div class="sentence"><span class="thai">วันนี้ฝนอาจจะตก เอาร่มไปด้วยดีกว่า <button class="tts" data-say="วันนี้ฝนอาจจะตก เอาร่มไปด้วยดีกว่า">🔊</button></span><br><span class="rom">wan-níi fǒn àat jà dtòk, ao rôm bpai dûai dii gwàa</span><br><span class="eng">It might rain today. It’s better to bring an umbrella.</span></div>
+          <div class="sentence"><span class="thai">รถน่าจะติด เพราะฝนตกทั้งวัน <button class="tts" data-say="รถน่าจะติด เพราะฝนตกทั้งวัน">🔊</button></span><br><span class="rom">rót nâa jà dtìt, phrɔ́ fǒn dtòk tháng wan</span><br><span class="eng">Traffic will probably be bad because it rained all day.</span></div>
+          <div class="sentence"><span class="thai">ถ้าไม่รีบ เราจะสายแน่ ๆ เลย <button class="tts" data-say="ถ้าไม่รีบ เราจะสายแน่ ๆ เลย">🔊</button></span><br><span class="rom">thâa mâi rîip, rao jà sǎai nɛ̂ɛ-nɛ̂ɛ loei</span><br><span class="eng">If we don’t hurry, we’ll definitely be late.</span></div>
+          <div class="sentence"><span class="thai">ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน <button class="tts" data-say="ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน">🔊</button></span><br><span class="rom">thâa fʉ̀k thúk wan, khwaam mân-jai jà phə̂əm khʉ̂n nɛ̂ɛ-nɔɔn</span><br><span class="eng">If you practice every day, your confidence will definitely increase.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Borrow / Return｜ยืม / คืน</div>
+          <div class="sentence"><span class="thai">ขอยืมที่ชาร์จหน่อยได้ไหมคะ แบตจะหมดแล้ว <button class="tts" data-say="ขอยืมที่ชาร์จหน่อยได้ไหมคะ แบตจะหมดแล้ว">🔊</button></span><br><span class="rom">khɔ̌ɔ yʉʉm thîi-cháat nòi dâai mái khá, bɛ̀ɛt jà mòt lɛ́ɛo</span><br><span class="eng">May I borrow your charger? My battery is about to die.</span></div>
+          <div class="sentence"><span class="thai">เดี๋ยวคืนให้พรุ่งนี้นะ <button class="tts" data-say="เดี๋ยวคืนให้พรุ่งนี้นะ">🔊</button></span><br><span class="rom">dǐiao khʉʉn hâi phrûng-níi ná</span><br><span class="eng">I’ll return it to you tomorrow.</span></div>
+          <div class="sentence"><span class="thai">ยืมแล้วอย่าลืมคืนนะ <button class="tts" data-say="ยืมแล้วอย่าลืมคืนนะ">🔊</button></span><br><span class="rom">yʉʉm lɛ́ɛo yàa lʉʉm khʉʉn ná</span><br><span class="eng">Don’t forget to return it after borrowing it.</span></div>
+          <div class="sentence"><span class="thai">ถ้าสินค้ามีปัญหา ขอคืนเงินได้ไหมคะ <button class="tts" data-say="ถ้าสินค้ามีปัญหา ขอคืนเงินได้ไหมคะ">🔊</button></span><br><span class="rom">thâa sǐn-kháa mii bpan-hǎa, khɔ̌ɔ khʉʉn ngoen dâai mái khá</span><br><span class="eng">If the product has a problem, can I get a refund?</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Forget / Remember｜ลืม / จำ / นึกออก</div>
+          <div class="sentence"><span class="thai">วันนี้ลืมเอาหูฟังมา <button class="tts" data-say="วันนี้ลืมเอาหูฟังมา">🔊</button></span><br><span class="rom">wan-níi lʉʉm ao hǔu-fang maa</span><br><span class="eng">I forgot to bring my earphones today.</span></div>
+          <div class="sentence"><span class="thai">ฉันลืมกระเป๋าไว้ที่ร้านกาแฟ ต้องกลับไปเอา <button class="tts" data-say="ฉันลืมกระเป๋าไว้ที่ร้านกาแฟ ต้องกลับไปเอา">🔊</button></span><br><span class="rom">chǎn lʉʉm grà-bpǎo wái thîi ráan gaa-fɛɛ, dtɔ̂ng glàp bpai ao</span><br><span class="eng">I left my bag at the café. I have to go back and get it.</span></div>
+          <div class="sentence"><span class="thai">ฉันจำหน้าเขาได้ แต่จำชื่อไม่ได้ <button class="tts" data-say="ฉันจำหน้าเขาได้ แต่จำชื่อไม่ได้">🔊</button></span><br><span class="rom">chǎn jam nâa khǎo dâai, dtɛ̀ɛ jam chʉ̂ʉ mâi dâai</span><br><span class="eng">I remember his/her face, but I can’t remember the name.</span></div>
+          <div class="sentence"><span class="thai">นึกออกแล้ว คำนี้เคยเรียนเมื่อวาน <button class="tts" data-say="นึกออกแล้ว คำนี้เคยเรียนเมื่อวาน">🔊</button></span><br><span class="rom">nʉ́k ɔ̀ɔk lɛ́ɛo, kham níi khəəi rian mʉ̂a-waan</span><br><span class="eng">I remember now. I studied this word yesterday.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Similarity｜คล้าย / แยก</div>
+          <div class="sentence"><span class="thai">สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ <button class="tts" data-say="สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk loei khâ</span><br><span class="eng">These two words are very similar. I really can’t tell them apart.</span></div>
+          <div class="sentence"><span class="thai">สองเสียงนี้ฟังคล้ายกันมาก แยกไม่ออก <button class="tts" data-say="สองเสียงนี้ฟังคล้ายกันมาก แยกไม่ออก">🔊</button></span><br><span class="rom">sɔ̌ɔng sǐang níi fang khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk</span><br><span class="eng">These two sounds sound very similar. I can’t tell them apart.</span></div>
+          <div class="sentence"><span class="thai">สองคำนี้คล้ายกัน แต่ใช้ไม่เหมือนกัน <button class="tts" data-say="สองคำนี้คล้ายกัน แต่ใช้ไม่เหมือนกัน">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan, dtɛ̀ɛ chái mâi mʉ̌an gan</span><br><span class="eng">These two words are similar, but they’re not used the same way.</span></div>
+          <div class="sentence"><span class="thai">ช่วยยกตัวอย่างให้ดูหน่อยได้ไหมคะ จะได้แยกออก <button class="tts" data-say="ช่วยยกตัวอย่างให้ดูหน่อยได้ไหมคะ จะได้แยกออก">🔊</button></span><br><span class="rom">chûai yók dtua-yàang hâi duu nòi dâai mái khá, jà dâai yɛ̂ɛk ɔ̀ɔk</span><br><span class="eng">Could you give me examples so I can tell them apart?</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Put / Place｜บน / วาง</div>
+          <div class="sentence"><span class="thai">วางไว้ตรงนี้ได้เลยค่ะ <button class="tts" data-say="วางไว้ตรงนี้ได้เลยค่ะ">🔊</button></span><br><span class="rom">waang wái dtrong níi dâai loei khâ</span><br><span class="eng">You can put it right here.</span></div>
+          <div class="sentence"><span class="thai">ฉันวางโทรศัพท์ไว้บนเตียง <button class="tts" data-say="ฉันวางโทรศัพท์ไว้บนเตียง">🔊</button></span><br><span class="rom">chǎn waang thoo-rá-sàp wái bon dtiang</span><br><span class="eng">I put my phone on the bed.</span></div>
+          <div class="sentence"><span class="thai">ตอนนี้ฉันอยู่บน BTS <button class="tts" data-say="ตอนนี้ฉันอยู่บน BTS">🔊</button></span><br><span class="rom">dtaawn-níi chǎn yùu bon bii-thii-èt</span><br><span class="eng">I’m on the BTS now.</span></div>
+          <div class="sentence"><span class="thai">ฉันลืมว่าวางไว้ที่ไหน <button class="tts" data-say="ฉันลืมว่าวางไว้ที่ไหน">🔊</button></span><br><span class="rom">chǎn lʉʉm wâa waang wái thîi nǎi</span><br><span class="eng">I forgot where I put it.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Believe / Reply / Explain｜เชื่อ / ตอบ / อธิบาย</div>
+          <div class="sentence"><span class="thai">เชื่อไหม ร้านนี้คนเยอะจนต้องรอหนึ่งชั่วโมง <button class="tts" data-say="เชื่อไหม ร้านนี้คนเยอะจนต้องรอหนึ่งชั่วโมง">🔊</button></span><br><span class="rom">chʉ̂a mái, ráan níi khon yóe jon dtɔ̂ng rɔɔ nʉ̀ng chûa-moong</span><br><span class="eng">Can you believe it? This restaurant was so crowded that we had to wait one hour.</span></div>
+          <div class="sentence"><span class="thai">ไม่เชื่อก็ลองดู ร้านนี้อร่อยจริง <button class="tts" data-say="ไม่เชื่อก็ลองดู ร้านนี้อร่อยจริง">🔊</button></span><br><span class="rom">mâi chʉ̂a gɔ̂ɔ lɔɔng duu, ráan níi à-rɔ̀i jing</span><br><span class="eng">If you don’t believe it, try it. This place is really good.</span></div>
+          <div class="sentence"><span class="thai">ฉันคิดไม่ออกว่าจะตอบยังไง เพราะกลัวเขาเข้าใจผิด <button class="tts" data-say="ฉันคิดไม่ออกว่าจะตอบยังไง เพราะกลัวเขาเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn khít mâi ɔ̀ɔk wâa jà dtɔ̀ɔp yang-ngai, phrɔ́ glua khǎo khâo-jai phìt</span><br><span class="eng">I can’t think of how to reply because I’m afraid he/she will misunderstand.</span></div>
+          <div class="sentence"><span class="thai">ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด <button class="tts" data-say="ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn khâe yàak à-thí-baai, mâi yàak hâi thəə khâo-jai phìt</span><br><span class="eng">I just want to explain. I don’t want you to misunderstand.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Add / Confidence / All Day｜เพิ่ม / ความมั่นใจ / ทั้งวัน</div>
+          <div class="sentence"><span class="thai">วันนี้ขอเพิ่มตัวอย่างเยอะหน่อยนะคะ <button class="tts" data-say="วันนี้ขอเพิ่มตัวอย่างเยอะหน่อยนะคะ">🔊</button></span><br><span class="rom">wan-níi khɔ̌ɔ phə̂əm dtua-yàang yóe nòi ná khá</span><br><span class="eng">Today, please add quite a few examples.</span></div>
+          <div class="sentence"><span class="thai">คำนี้ซับซ้อน ต้องอธิบายเพิ่มเติม <button class="tts" data-say="คำนี้ซับซ้อน ต้องอธิบายเพิ่มเติม">🔊</button></span><br><span class="rom">kham níi sáp-sɔ́ɔn, dtɔ̂ng à-thí-baai phə̂əm-dtəəm</span><br><span class="eng">This word is complicated. It needs additional explanation.</span></div>
+          <div class="sentence"><span class="thai">ฉันยังไม่มีความมั่นใจในการพูดภาษาไทย <button class="tts" data-say="ฉันยังไม่มีความมั่นใจในการพูดภาษาไทย">🔊</button></span><br><span class="rom">chǎn yang mâi mii khwaam mân-jai nai gaan phûut phaa-sǎa Thai</span><br><span class="eng">I still don’t have confidence in speaking Thai.</span></div>
+          <div class="sentence"><span class="thai">วันนี้เรียนทั้งวันจนสมองล้า <button class="tts" data-say="วันนี้เรียนทั้งวันจนสมองล้า">🔊</button></span><br><span class="rom">wan-níi rian tháng wan jon sà-mɔ̌ɔng láa</span><br><span class="eng">Today I studied all day until my brain got tired.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="structures" class="tab">
+      <h2>Structures｜今日句型</h2>
+
+      <div class="structure-card">
+        <h3>Pattern 1｜V + เพื่อ + V/N = 做某事是為了……</h3>
+        <p><span class="thai">ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย <button class="tts" data-say="ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย">🔊</button></span><br><span class="rom">chǎn rian phaa-sǎa Thai phʉ̂a khui gàp khon Thai</span><br><span class="eng">I study Thai in order to talk with Thai people.</span></p>
+        <p><span class="thai">ฉันฝึกพูดทุกวันเพื่อให้พูดได้ธรรมชาติขึ้น <button class="tts" data-say="ฉันฝึกพูดทุกวันเพื่อให้พูดได้ธรรมชาติขึ้น">🔊</button></span><br><span class="rom">chǎn fʉ̀k phûut thúk wan phʉ̂a hâi phûut dâai tham-má-châat khʉ̂n</span><br><span class="eng">I practice speaking every day so that I can speak more naturally.</span></p>
+      </div>
+
+      <div class="structure-card">
+        <h3>Pattern 2｜ให้ + person + V / V + ให้ + person</h3>
+        <p><span class="thai">ให้ฉันลองได้ไหมคะ <button class="tts" data-say="ให้ฉันลองได้ไหมคะ">🔊</button></span><br><span class="rom">hâi chǎn lɔɔng dâai mái khá</span><br><span class="eng">Can you let me try?</span></p>
+        <p><span class="thai">ช่วยดูประโยคนี้ให้หน่อยค่ะ <button class="tts" data-say="ช่วยดูประโยคนี้ให้หน่อยค่ะ">🔊</button></span><br><span class="rom">chûai duu bprà-yòok níi hâi nòi khâ</span><br><span class="eng">Please help me check this sentence.</span></p>
+      </div>
+
+      <div class="structure-card">
+        <h3>Pattern 3｜Adj / Verb + จน + Result = ……到產生某結果</h3>
+        <p><span class="thai">อร่อยจนหยุดกินไม่ได้ <button class="tts" data-say="อร่อยจนหยุดกินไม่ได้">🔊</button></span><br><span class="rom">à-rɔ̀i jon yùt gin mâi dâai</span><br><span class="eng">So delicious that I can’t stop eating.</span></p>
+        <p><span class="thai">รถติดจนไปไม่ทัน <button class="tts" data-say="รถติดจนไปไม่ทัน">🔊</button></span><br><span class="rom">rót dtìt jon bpai mâi than</span><br><span class="eng">The traffic was so bad that I couldn’t make it in time.</span></p>
+      </div>
+
+      <div class="structure-card">
+        <h3>Pattern 4｜ลืมเอา...มา vs ลืม...ไว้ที่/บน...</h3>
+        <p><span class="thai">ฉันลืมเอาพาสปอร์ตมา <button class="tts" data-say="ฉันลืมเอาพาสปอร์ตมา">🔊</button></span><br><span class="rom">chǎn lʉʉm ao pháat-bpɔ̀ɔt maa</span><br><span class="eng">I forgot to bring my passport.</span></p>
+        <p><span class="thai">ฉันลืมกุญแจไว้บนโต๊ะ <button class="tts" data-say="ฉันลืมกุญแจไว้บนโต๊ะ">🔊</button></span><br><span class="rom">chǎn lʉʉm gun-jɛɛ wái bon dtó</span><br><span class="eng">I left my keys on the table.</span></p>
+      </div>
+
+      <div class="structure-card">
+        <h3>Pattern 5｜แยก A กับ B ไม่ออก = 分不出 A 和 B</h3>
+        <p><span class="thai">ฉันแยกเพื่อกับสำหรับไม่ออก <button class="tts" data-say="ฉันแยกเพื่อกับสำหรับไม่ออก">🔊</button></span><br><span class="rom">chǎn yɛ̂ɛk phʉ̂a gàp sǎm-ràp mâi ɔ̀ɔk</span><br><span class="eng">I can’t tell เพื่อ and สำหรับ apart.</span></p>
+        <p><span class="thai">ฉันแยกเสียงนี้กับเสียงนั้นไม่ออก <button class="tts" data-say="ฉันแยกเสียงนี้กับเสียงนั้นไม่ออก">🔊</button></span><br><span class="rom">chǎn yɛ̂ɛk sǐang níi gàp sǐang nán mâi ɔ̀ɔk</span><br><span class="eng">I can’t tell this sound and that sound apart.</span></p>
+      </div>
+
+      <div class="structure-card">
+        <h3>Pattern 6｜กลัวว่า...จะ... = 怕……會……</h3>
+        <p><span class="thai">กลัวว่าเธอจะเข้าใจผิด <button class="tts" data-say="กลัวว่าเธอจะเข้าใจผิด">🔊</button></span><br><span class="rom">glua wâa thəə jà khâo-jai phìt</span><br><span class="eng">I’m afraid that you might misunderstand.</span></p>
+        <p><span class="thai">ฉันอยากอธิบายให้ชัดเจน เพราะกลัวเขาเข้าใจผิด <button class="tts" data-say="ฉันอยากอธิบายให้ชัดเจน เพราะกลัวเขาเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn yàak à-thí-baai hâi chát-jeen, phrɔ́ glua khǎo khâo-jai phìt</span><br><span class="eng">I want to explain it clearly because I’m afraid he/she will misunderstand.</span></p>
+      </div>
+
+      <div class="structure-card">
+        <h3>Pattern 7｜ความ + Adj/Verb = 抽象名詞</h3>
+        <p><span class="thai">ความมั่นใจ <button class="tts" data-say="ความมั่นใจ">🔊</button></span><br><span class="rom">khwaam mân-jai</span><br><span class="eng">confidence</span></p>
+        <p><span class="thai">ความรู้สึก <button class="tts" data-say="ความรู้สึก">🔊</button></span><br><span class="rom">khwaam rúu-sʉ̀k</span><br><span class="eng">feeling</span></p>
+        <p><span class="thai">การฝึกกับประโยคจริงช่วยสร้างความมั่นใจ <button class="tts" data-say="การฝึกกับประโยคจริงช่วยสร้างความมั่นใจ">🔊</button></span><br><span class="rom">gaan fʉ̀k gàp bprà-yòok jing chûai sâang khwaam mân-jai</span><br><span class="eng">Practicing with real sentences helps build confidence.</span></p>
+      </div>
+    </section>
+
+    <section id="bangkok" class="tab">
+      <h2>Bangkok Expansion｜曼谷生活場景</h2>
+      <div class="scene-grid">
+        <div class="sentence-group">
+          <div class="scene-label">Café｜借充電器 / 放東西 / 忘在桌上</div>
+          <div class="sentence"><span class="thai">ขอยืมที่ชาร์จหน่อยได้ไหมคะ แบตจะหมดแล้ว <button class="tts" data-say="ขอยืมที่ชาร์จหน่อยได้ไหมคะ แบตจะหมดแล้ว">🔊</button></span><br><span class="rom">khɔ̌ɔ yʉʉm thîi-cháat nòi dâai mái khá, bɛ̀ɛt jà mòt lɛ́ɛo</span><br><span class="eng">May I borrow your charger? My battery is about to die.</span></div>
+          <div class="sentence"><span class="thai">วางไว้ตรงนี้ได้เลยค่ะ <button class="tts" data-say="วางไว้ตรงนี้ได้เลยค่ะ">🔊</button></span><br><span class="rom">waang wái dtrong níi dâai loei khâ</span><br><span class="eng">You can put it right here.</span></div>
+          <div class="sentence"><span class="thai">ฉันลืมแก้วไว้บนโต๊ะ ต้องกลับไปเอา <button class="tts" data-say="ฉันลืมแก้วไว้บนโต๊ะ ต้องกลับไปเอา">🔊</button></span><br><span class="rom">chǎn lʉʉm gɛ̂ɛo wái bon dtó, dtɔ̂ng glàp bpai ao</span><br><span class="eng">I left my glass on the table. I have to go back and get it.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Restaurant｜分食 / 排隊 / 不信試試</div>
+          <div class="sentence"><span class="thai">อันนี้ใหญ่ไป แบ่งกันกินไหม <button class="tts" data-say="อันนี้ใหญ่ไป แบ่งกันกินไหม">🔊</button></span><br><span class="rom">an níi yài bpai, bɛ̀ɛng gan gin mái</span><br><span class="eng">This is too big. Shall we share it?</span></div>
+          <div class="sentence"><span class="thai">เชื่อไหม ร้านนี้คนเยอะจนต้องรอหนึ่งชั่วโมง <button class="tts" data-say="เชื่อไหม ร้านนี้คนเยอะจนต้องรอหนึ่งชั่วโมง">🔊</button></span><br><span class="rom">chʉ̂a mái, ráan níi khon yóe jon dtɔ̂ng rɔɔ nʉ̀ng chûa-moong</span><br><span class="eng">Can you believe it? This restaurant was so crowded that we had to wait one hour.</span></div>
+          <div class="sentence"><span class="thai">ไม่เชื่อก็ลองดู ร้านนี้อร่อยจริง <button class="tts" data-say="ไม่เชื่อก็ลองดู ร้านนี้อร่อยจริง">🔊</button></span><br><span class="rom">mâi chʉ̂a gɔ̂ɔ lɔɔng duu, ráan níi à-rɔ̀i jing</span><br><span class="eng">If you don’t believe it, try it. This place is really good.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">BTS / MRT｜車上 / 下雨 / 可能遲到</div>
+          <div class="sentence"><span class="thai">ตอนนี้ฉันอยู่บน BTS น่าจะถึงประมาณหกโมง <button class="tts" data-say="ตอนนี้ฉันอยู่บน BTS น่าจะถึงประมาณหกโมง">🔊</button></span><br><span class="rom">dtaawn-níi chǎn yùu bon bii-thii-èt, nâa jà thʉ̌ng bprà-maan hòk moong</span><br><span class="eng">I’m on the BTS now. I’ll probably arrive around six.</span></div>
+          <div class="sentence"><span class="thai">วันนี้ฝนอาจจะตก รถติดแน่ ๆ เลย <button class="tts" data-say="วันนี้ฝนอาจจะตก รถติดแน่ ๆ เลย">🔊</button></span><br><span class="rom">wan-níi fǒn àat jà dtòk, rót dtìt nɛ̂ɛ-nɛ̂ɛ loei</span><br><span class="eng">It might rain today. Traffic will definitely be bad.</span></div>
+          <div class="sentence"><span class="thai">ถ้าไม่รีบ เราจะไปไม่ทัน <button class="tts" data-say="ถ้าไม่รีบ เราจะไปไม่ทัน">🔊</button></span><br><span class="rom">thâa mâi rîip, rao jà bpai mâi than</span><br><span class="eng">If we don’t hurry, we won’t make it in time.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Thai Class｜分不出 / 解釋 / 增加例句</div>
+          <div class="sentence"><span class="thai">สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ <button class="tts" data-say="สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk loei khâ</span><br><span class="eng">These two words are very similar. I really can’t tell them apart.</span></div>
+          <div class="sentence"><span class="thai">ช่วยอธิบายความต่างให้หน่อยได้ไหมคะ <button class="tts" data-say="ช่วยอธิบายความต่างให้หน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">chûai à-thí-baai khwaam dtàang hâi nòi dâai mái khá</span><br><span class="eng">Could you explain the difference for me?</span></div>
+          <div class="sentence"><span class="thai">ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ <button class="tts" data-say="ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ phə̂əm dtua-yàang ìik nòi dâai mái khá</span><br><span class="eng">Could you add a few more examples?</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Chat｜回訊息 / 怕誤會 / 解釋清楚</div>
+          <div class="sentence"><span class="thai">ฉันคิดไม่ออกว่าจะตอบยังไง เพราะกลัวเขาเข้าใจผิด <button class="tts" data-say="ฉันคิดไม่ออกว่าจะตอบยังไง เพราะกลัวเขาเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn khít mâi ɔ̀ɔk wâa jà dtɔ̀ɔp yang-ngai, phrɔ́ glua khǎo khâo-jai phìt</span><br><span class="eng">I can’t think of how to reply because I’m afraid he/she will misunderstand.</span></div>
+          <div class="sentence"><span class="thai">ว่างแล้วตอบหน่อยนะ <button class="tts" data-say="ว่างแล้วตอบหน่อยนะ">🔊</button></span><br><span class="rom">wâang lɛ́ɛo dtɔ̀ɔp nòi ná</span><br><span class="eng">Reply when you’re free, okay?</span></div>
+          <div class="sentence"><span class="thai">ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด <button class="tts" data-say="ฉันแค่อยากอธิบาย ไม่อยากให้เธอเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn khâe yàak à-thí-baai, mâi yàak hâi thəə khâo-jai phìt</span><br><span class="eng">I just want to explain. I don’t want you to misunderstand.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Shopping / Return｜退貨 / 退款 / 可信資訊</div>
+          <div class="sentence"><span class="thai">ถ้าใส่ไม่ได้ คืนของได้ไหมคะ <button class="tts" data-say="ถ้าใส่ไม่ได้ คืนของได้ไหมคะ">🔊</button></span><br><span class="rom">thâa sài mâi dâai, khʉʉn khɔ̌ɔng dâai mái khá</span><br><span class="eng">If it doesn’t fit, can I return it?</span></div>
+          <div class="sentence"><span class="thai">ขอเงินคืนได้ไหมคะ <button class="tts" data-say="ขอเงินคืนได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ ngoen khʉʉn dâai mái khá</span><br><span class="eng">Can I get a refund?</span></div>
+          <div class="sentence"><span class="thai">ข้อมูลนี้น่าเชื่อถือไหมคะ <button class="tts" data-say="ข้อมูลนี้น่าเชื่อถือไหมคะ">🔊</button></span><br><span class="rom">khɔ̂ɔ-muun níi nâa chʉ̂a-thʉ̌ʉ mái khá</span><br><span class="eng">Is this information reliable?</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Learning Mood｜信心 / 整天學習 / 腦袋累</div>
+          <div class="sentence"><span class="thai">วันนี้เรียนทั้งวันจนสมองล้า <button class="tts" data-say="วันนี้เรียนทั้งวันจนสมองล้า">🔊</button></span><br><span class="rom">wan-níi rian tháng wan jon sà-mɔ̌ɔng láa</span><br><span class="eng">Today I studied all day until my brain got tired.</span></div>
+          <div class="sentence"><span class="thai">ฉันไม่ได้จำไม่ได้ แค่ขาดความมั่นใจ <button class="tts" data-say="ฉันไม่ได้จำไม่ได้ แค่ขาดความมั่นใจ">🔊</button></span><br><span class="rom">chǎn mâi dâai jam mâi dâai, khâe khàat khwaam mân-jai</span><br><span class="eng">It’s not that I can’t remember. I just lack confidence.</span></div>
+          <div class="sentence"><span class="thai">ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน <button class="tts" data-say="ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน">🔊</button></span><br><span class="rom">thâa fʉ̀k thúk wan, khwaam mân-jai jà phə̂əm khʉ̂n nɛ̂ɛ-nɔɔn</span><br><span class="eng">If you practice every day, your confidence will definitely increase.</span></div>
+        </div>
+
+        <div class="sentence-group">
+          <div class="scene-label">Travel / Last Day｜旅行最後一天</div>
+          <div class="sentence"><span class="thai">วันนี้เป็นวันสุดท้ายของทริปนี้ <button class="tts" data-say="วันนี้เป็นวันสุดท้ายของทริปนี้">🔊</button></span><br><span class="rom">wan-níi bpen wan sùt-tháai khɔ̌ɔng thríp níi</span><br><span class="eng">Today is the last day of this trip.</span></div>
+          <div class="sentence"><span class="thai">วันสุดท้ายแล้ว อยากกินอะไรดี <button class="tts" data-say="วันสุดท้ายแล้ว อยากกินอะไรดี">🔊</button></span><br><span class="rom">wan sùt-tháai lɛ́ɛo, yàak gin à-rai dii</span><br><span class="eng">It’s already the last day. What should we eat?</span></div>
+          <div class="sentence"><span class="thai">พรุ่งนี้เป็นวันสุดท้ายที่ฉันอยู่กรุงเทพฯ <button class="tts" data-say="พรุ่งนี้เป็นวันสุดท้ายที่ฉันอยู่กรุงเทพฯ">🔊</button></span><br><span class="rom">phrûng-níi bpen wan sùt-tháai thîi chǎn yùu grung-thêep</span><br><span class="eng">Tomorrow is my last day in Bangkok.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dialogues" class="tab">
+      <h2>Dialogues｜曼谷自然短對話</h2>
+
+      <div class="dialogue-card">
+        <h3>Dialogue 1｜Thai Class：兩個詞很像</h3>
+        <div class="chat-thread">
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">Student</span><br><span class="thai">สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ <button class="tts" data-say="สองคำนี้คล้ายกันมาก แยกไม่ออกเลยค่ะ">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk loei khâ</span><br><span class="eng">These two words are very similar. I really can’t tell them apart.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">Teacher</span><br><span class="thai">ได้ค่ะ เดี๋ยวครูอธิบายให้ฟังแบบง่าย ๆ <button class="tts" data-say="ได้ค่ะ เดี๋ยวครูอธิบายให้ฟังแบบง่าย ๆ">🔊</button></span><br><span class="rom">dâai khâ, dǐiao khruu à-thí-baai hâi fang bɛ̀ɛp ngâai-ngâai</span><br><span class="eng">Sure. I’ll explain it simply for you.</span></div></div>
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">Student</span><br><span class="thai">ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ <button class="tts" data-say="ขอเพิ่มตัวอย่างอีกหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ phə̂əm dtua-yàang ìik nòi dâai mái khá</span><br><span class="eng">Could you add a few more examples?</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">Teacher</span><br><span class="thai">ได้แน่นอนค่ะ ถ้าดูตัวอย่างเยอะขึ้น จะเริ่มแยกออก <button class="tts" data-say="ได้แน่นอนค่ะ ถ้าดูตัวอย่างเยอะขึ้น จะเริ่มแยกออก">🔊</button></span><br><span class="rom">dâai nɛ̂ɛ-nɔɔn khâ, thâa duu dtua-yàang yóe khʉ̂n, jà rə̂əm yɛ̂ɛk ɔ̀ɔk</span><br><span class="eng">Of course. If you see more examples, you’ll start to tell them apart.</span></div></div>
+        </div>
+      </div>
+
+      <div class="dialogue-card">
+        <h3>Dialogue 2｜Restaurant：不信你試試看</h3>
+        <div class="chat-thread">
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br><span class="thai">ร้านนี้อร่อยจริงนะ <button class="tts" data-say="ร้านนี้อร่อยจริงนะ">🔊</button></span><br><span class="rom">ráan níi à-rɔ̀i jing ná</span><br><span class="eng">This restaurant is really good.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">B</span><br><span class="thai">จริงเหรอ คนเยอะไหม <button class="tts" data-say="จริงเหรอ คนเยอะไหม">🔊</button></span><br><span class="rom">jing rə̌ə, khon yóe mái</span><br><span class="eng">Really? Is it crowded?</span></div></div>
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br><span class="thai">เชื่อไหม คนเยอะจนต้องรอหนึ่งชั่วโมง <button class="tts" data-say="เชื่อไหม คนเยอะจนต้องรอหนึ่งชั่วโมง">🔊</button></span><br><span class="rom">chʉ̂a mái, khon yóe jon dtɔ̂ng rɔɔ nʉ̀ng chûa-moong</span><br><span class="eng">Can you believe it? It was so crowded we had to wait one hour.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">B</span><br><span class="thai">ไม่เชื่อก็ลองดูใช่ไหม <button class="tts" data-say="ไม่เชื่อก็ลองดูใช่ไหม">🔊</button></span><br><span class="rom">mâi chʉ̂a gɔ̂ɔ lɔɔng duu châi mái</span><br><span class="eng">So, if I don’t believe it, I should try it, right?</span></div></div>
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br><span class="thai">ใช่ ลองดูแล้วจะรู้ <button class="tts" data-say="ใช่ ลองดูแล้วจะรู้">🔊</button></span><br><span class="rom">châi, lɔɔng duu lɛ́ɛo jà rúu</span><br><span class="eng">Yes. Try it and you’ll know.</span></div></div>
+        </div>
+      </div>
+
+      <div class="dialogue-card">
+        <h3>Dialogue 3｜Café：借充電器與還東西</h3>
+        <div class="chat-thread">
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">Friend A</span><br><span class="thai">ขอยืมที่ชาร์จหน่อยได้ไหม แบตจะหมดแล้ว <button class="tts" data-say="ขอยืมที่ชาร์จหน่อยได้ไหม แบตจะหมดแล้ว">🔊</button></span><br><span class="rom">khɔ̌ɔ yʉʉm thîi-cháat nòi dâai mái, bɛ̀ɛt jà mòt lɛ́ɛo</span><br><span class="eng">Can I borrow your charger? My battery is about to die.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">Friend B</span><br><span class="thai">ได้ วางไว้บนโต๊ะได้เลย <button class="tts" data-say="ได้ วางไว้บนโต๊ะได้เลย">🔊</button></span><br><span class="rom">dâai, waang wái bon dtó dâai loei</span><br><span class="eng">Sure. You can put it on the table.</span></div></div>
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">Friend A</span><br><span class="thai">เดี๋ยวคืนให้ก่อนกลับนะ <button class="tts" data-say="เดี๋ยวคืนให้ก่อนกลับนะ">🔊</button></span><br><span class="rom">dǐiao khʉʉn hâi gɔ̀ɔn glàp ná</span><br><span class="eng">I’ll return it to you before I go back.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">Friend B</span><br><span class="thai">โอเค อย่าลืมคืนนะ <button class="tts" data-say="โอเค อย่าลืมคืนนะ">🔊</button></span><br><span class="rom">oo-khee, yàa lʉʉm khʉʉn ná</span><br><span class="eng">Okay, don’t forget to return it.</span></div></div>
+        </div>
+      </div>
+
+      <div class="dialogue-card">
+        <h3>Dialogue 4｜Chat：怕對方誤會</h3>
+        <div class="chat-thread">
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br><span class="thai">ทำไมยังไม่ตอบข้อความ <button class="tts" data-say="ทำไมยังไม่ตอบข้อความ">🔊</button></span><br><span class="rom">tham-mai yang mâi dtɔ̀ɔp khɔ̂ɔ-khwaam</span><br><span class="eng">Why haven’t you replied to the message yet?</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">B</span><br><span class="thai">ขอโทษนะ ฉันคิดไม่ออกว่าจะตอบยังไง <button class="tts" data-say="ขอโทษนะ ฉันคิดไม่ออกว่าจะตอบยังไง">🔊</button></span><br><span class="rom">khɔ̌ɔ-thôot ná, chǎn khít mâi ɔ̀ɔk wâa jà dtɔ̀ɔp yang-ngai</span><br><span class="eng">Sorry, I couldn’t think of how to reply.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">B</span><br><span class="thai">เพราะกลัวเธอเข้าใจผิด <button class="tts" data-say="เพราะกลัวเธอเข้าใจผิด">🔊</button></span><br><span class="rom">phrɔ́ glua thəə khâo-jai phìt</span><br><span class="eng">Because I was afraid you would misunderstand.</span></div></div>
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">A</span><br><span class="thai">เข้าใจแล้ว อธิบายให้ฟังได้เลย <button class="tts" data-say="เข้าใจแล้ว อธิบายให้ฟังได้เลย">🔊</button></span><br><span class="rom">khâo-jai lɛ́ɛo, à-thí-baai hâi fang dâai loei</span><br><span class="eng">I understand. You can explain it to me.</span></div></div>
+        </div>
+      </div>
+
+      <div class="dialogue-card">
+        <h3>Dialogue 5｜Study Mood：今天學一整天</h3>
+        <div class="chat-thread">
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">Friend</span><br><span class="thai">วันนี้เรียนอะไรบ้าง <button class="tts" data-say="วันนี้เรียนอะไรบ้าง">🔊</button></span><br><span class="rom">wan-níi rian à-rai bâang</span><br><span class="eng">What did you study today?</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">Me</span><br><span class="thai">เรียนภาษาไทยทั้งวันจนสมองล้า <button class="tts" data-say="เรียนภาษาไทยทั้งวันจนสมองล้า">🔊</button></span><br><span class="rom">rian phaa-sǎa Thai tháng wan jon sà-mɔ̌ɔng láa</span><br><span class="eng">I studied Thai all day until my brain got tired.</span></div></div>
+          <div class="chat-row left"><div class="chat-bubble"><span class="speaker">Friend</span><br><span class="thai">เหนื่อยแน่ ๆ เลย <button class="tts" data-say="เหนื่อยแน่ ๆ เลย">🔊</button></span><br><span class="rom">nʉ̀ai nɛ̂ɛ-nɛ̂ɛ loei</span><br><span class="eng">You must be tired for sure.</span></div></div>
+          <div class="chat-row right"><div class="chat-bubble"><span class="speaker">Me</span><br><span class="thai">ใช่ แต่ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน <button class="tts" data-say="ใช่ แต่ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน">🔊</button></span><br><span class="rom">châi, dtɛ̀ɛ thâa fʉ̀k thúk wan, khwaam mân-jai jà phə̂əm khʉ̂n nɛ̂ɛ-nɔɔn</span><br><span class="eng">Yes, but if I practice every day, my confidence will definitely increase.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mistakes" class="tab">
+      <h2>Mistakes｜常見錯誤修正</h2>
+
+      <div class="mistake-card">
+        <h3>1. 把「為了 / 給 / 適合」都翻成 เพื่อ</h3>
+        <div class="wrong-box">
+          <b>Wrong</b><br>
+          <span class="thai">หนังสือเล่มนี้เพื่อผู้เริ่มต้น <button class="tts" data-say="หนังสือเล่มนี้เพื่อผู้เริ่มต้น">🔊</button></span><br>
+          <span class="rom">nǎng-sʉ̌ʉ lêm níi phʉ̂a phûu rə̂əm-dtôn</span><br>
+          <span class="eng">This book is in order to beginners.</span>
+        </div>
+        <div class="better-box">
+          <b>Better</b><br>
+          <span class="thai">หนังสือเล่มนี้สำหรับผู้เริ่มต้น <button class="tts" data-say="หนังสือเล่มนี้สำหรับผู้เริ่มต้น">🔊</button></span><br>
+          <span class="rom">nǎng-sʉ̌ʉ lêm níi sǎm-ràp phûu rə̂əm-dtôn</span><br>
+          <span class="eng">This book is for beginners.</span>
+        </div>
+        <div class="why-box">Why：<span class="thai">เพื่อ</span> 是目的；<span class="thai">สำหรับ</span> 是對象 / 用途。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>2. 中文「借」方向不清楚</h3>
+        <div class="wrong-box">
+          <b>Wrong / Ambiguous Chinese mindset</b><br>
+          <span class="thai">ฉันยืมเงินเขา <button class="tts" data-say="ฉันยืมเงินเขา">🔊</button></span><br>
+          <span class="rom">chǎn yʉʉm ngoen khǎo</span><br>
+          <span class="eng">I borrowed money from him/her.</span>
+        </div>
+        <div class="better-box">
+          <b>Different meaning</b><br>
+          <span class="thai">ฉันให้เขายืมเงิน <button class="tts" data-say="ฉันให้เขายืมเงิน">🔊</button></span><br>
+          <span class="rom">chǎn hâi khǎo yʉʉm ngoen</span><br>
+          <span class="eng">I lent him/her money.</span>
+        </div>
+        <div class="why-box">Why：<span class="thai">ยืม</span> 是借來；<span class="thai">ให้ยืม</span> 是借給別人。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>3. 忘記帶 vs 忘在某地沒有講清楚</h3>
+        <div class="wrong-box">
+          <b>Wrong / Too vague</b><br>
+          <span class="thai">ฉันลืมหนังสือ <button class="tts" data-say="ฉันลืมหนังสือ">🔊</button></span><br>
+          <span class="rom">chǎn lʉʉm nǎng-sʉ̌ʉ</span><br>
+          <span class="eng">I forgot the book.</span>
+        </div>
+        <div class="better-box">
+          <b>Better 1｜forgot to bring</b><br>
+          <span class="thai">ฉันลืมเอาหนังสือมา <button class="tts" data-say="ฉันลืมเอาหนังสือมา">🔊</button></span><br>
+          <span class="rom">chǎn lʉʉm ao nǎng-sʉ̌ʉ maa</span><br>
+          <span class="eng">I forgot to bring the book.</span>
+        </div>
+        <div class="better-box">
+          <b>Better 2｜left it somewhere</b><br>
+          <span class="thai">ฉันลืมหนังสือไว้ที่บ้าน <button class="tts" data-say="ฉันลืมหนังสือไว้ที่บ้าน">🔊</button></span><br>
+          <span class="rom">chǎn lʉʉm nǎng-sʉ̌ʉ wái thîi bâan</span><br>
+          <span class="eng">I left the book at home.</span>
+        </div>
+        <div class="why-box">Why：泰文會更明確區分「沒帶來」和「留在某地」。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>4. 把 remember 全部翻成 จำ</h3>
+        <div class="wrong-box">
+          <b>Wrong / Less natural for recall</b><br>
+          <span class="thai">จำออกแล้ว <button class="tts" data-say="จำออกแล้ว">🔊</button></span><br>
+          <span class="rom">jam ɔ̀ɔk lɛ́ɛo</span><br>
+          <span class="eng">Remember out already.</span>
+        </div>
+        <div class="better-box">
+          <b>Better</b><br>
+          <span class="thai">นึกออกแล้ว <button class="tts" data-say="นึกออกแล้ว">🔊</button></span><br>
+          <span class="rom">nʉ́k ɔ̀ɔk lɛ́ɛo</span><br>
+          <span class="eng">I remember now. / It came to me now.</span>
+        </div>
+        <div class="why-box">Why：<span class="thai">จำ</span> 是記住 / 背；<span class="thai">นึกออก</span> 是想起來、腦中抓得到。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>5. 「很像」不一定用 เหมือน</h3>
+        <div class="wrong-box">
+          <b>Too strong</b><br>
+          <span class="thai">สองคำนี้เหมือนกัน <button class="tts" data-say="สองคำนี้เหมือนกัน">🔊</button></span><br>
+          <span class="rom">sɔ̌ɔng kham níi mʉ̌an gan</span><br>
+          <span class="eng">These two words are the same.</span>
+        </div>
+        <div class="better-box">
+          <b>Better</b><br>
+          <span class="thai">สองคำนี้คล้ายกันมาก แต่ไม่เหมือนกัน <button class="tts" data-say="สองคำนี้คล้ายกันมาก แต่ไม่เหมือนกัน">🔊</button></span><br>
+          <span class="rom">sɔ̌ɔng kham níi khláai gan mâak, dtɛ̀ɛ mâi mʉ̌an gan</span><br>
+          <span class="eng">These two words are very similar, but not the same.</span>
+        </div>
+        <div class="why-box">Why：<span class="thai">คล้าย</span> 是相似但不完全一樣；<span class="thai">เหมือน</span> 更接近一樣。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>6. 「回我」太直接，容易像質問</h3>
+        <div class="wrong-box">
+          <b>Too direct</b><br>
+          <span class="thai">ทำไมไม่ตอบฉัน <button class="tts" data-say="ทำไมไม่ตอบฉัน">🔊</button></span><br>
+          <span class="rom">tham-mai mâi dtɔ̀ɔp chǎn</span><br>
+          <span class="eng">Why don’t you reply to me?</span>
+        </div>
+        <div class="better-box">
+          <b>Better</b><br>
+          <span class="thai">ว่างแล้วตอบหน่อยนะ <button class="tts" data-say="ว่างแล้วตอบหน่อยนะ">🔊</button></span><br>
+          <span class="rom">wâang lɛ́ɛo dtɔ̀ɔp nòi ná</span><br>
+          <span class="eng">Reply when you’re free, okay?</span>
+        </div>
+        <div class="why-box">Why：中文「你怎麼不回我」很常見，但泰文直接問會有壓力感。用 <span class="thai">ว่างแล้วตอบหน่อยนะ</span> 更柔和。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>7. 「誤會」不要直翻成 เข้าใจไม่ถูก</h3>
+        <div class="wrong-box">
+          <b>Less natural</b><br>
+          <span class="thai">กลัวเขาเข้าใจไม่ถูก <button class="tts" data-say="กลัวเขาเข้าใจไม่ถูก">🔊</button></span><br>
+          <span class="rom">glua khǎo khâo-jai mâi thùuk</span><br>
+          <span class="eng">I’m afraid he/she won’t understand correctly.</span>
+        </div>
+        <div class="better-box">
+          <b>Better</b><br>
+          <span class="thai">กลัวเขาเข้าใจผิด <button class="tts" data-say="กลัวเขาเข้าใจผิด">🔊</button></span><br>
+          <span class="rom">glua khǎo khâo-jai phìt</span><br>
+          <span class="eng">I’m afraid he/she will misunderstand.</span>
+        </div>
+        <div class="why-box">Why：日常「誤會」最自然是 <span class="thai">เข้าใจผิด</span>。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>8. 中文「加」不是永遠 เพิ่ม</h3>
+        <div class="wrong-box">
+          <b>Wrong for top-up</b><br>
+          <span class="thai">เพิ่มเงินก่อนถึงจะใช้ได้ <button class="tts" data-say="เพิ่มเงินก่อนถึงจะใช้ได้">🔊</button></span><br>
+          <span class="rom">phə̂əm ngoen gɔ̀ɔn thʉ̌ng jà chái dâai</span><br>
+          <span class="eng">Increase money first before using.</span>
+        </div>
+        <div class="better-box">
+          <b>Better</b><br>
+          <span class="thai">ต้องเติมเงินก่อนถึงจะใช้ได้ <button class="tts" data-say="ต้องเติมเงินก่อนถึงจะใช้ได้">🔊</button></span><br>
+          <span class="rom">dtɔ̂ng dtəəm ngoen gɔ̀ɔn thʉ̌ng jà chái dâai</span><br>
+          <span class="eng">You have to top up money first before you can use it.</span>
+        </div>
+        <div class="why-box">Why：儲值、補水、加油用 <span class="thai">เติม</span>；增加例句、時間、冰塊用 <span class="thai">เพิ่ม</span>。</div>
+      </div>
+
+      <div class="mistake-card">
+        <h3>9. ทั้งวัน 不是 ทุกวัน</h3>
+        <div class="wrong-box">
+          <b>Wrong if you mean every day</b><br>
+          <span class="thai">ฉันเรียนภาษาไทยทั้งวัน <button class="tts" data-say="ฉันเรียนภาษาไทยทั้งวัน">🔊</button></span><br>
+          <span class="rom">chǎn rian phaa-sǎa Thai tháng wan</span><br>
+          <span class="eng">I study Thai all day.</span>
+        </div>
+        <div class="better-box">
+          <b>Better for every day</b><br>
+          <span class="thai">ฉันเรียนภาษาไทยทุกวัน <button class="tts" data-say="ฉันเรียนภาษาไทยทุกวัน">🔊</button></span><br>
+          <span class="rom">chǎn rian phaa-sǎa Thai thúk wan</span><br>
+          <span class="eng">I study Thai every day.</span>
+        </div>
+        <div class="why-box">Why：<span class="thai">ทั้งวัน</span> 是一整天；<span class="thai">ทุกวัน</span> 是每天。</div>
+      </div>
+    </section>
+
+    <section id="practice" class="tab">
+      <h2>Practice｜練習題</h2>
+
+      <div class="practice-card">
+        <h3>Vocabulary Recall｜填入 Thai</h3>
+        <p>1. in order to / 為了：________</p>
+        <p>2. for beginners / 給初學者的：________</p>
+        <p>3. borrow / 借來：________</p>
+        <p>4. return / 還：________</p>
+        <p>5. similar / 相似：________</p>
+        <details>
+          <summary>Answer</summary>
+          <p><span class="thai">เพื่อ <button class="tts" data-say="เพื่อ">🔊</button></span> <span class="rom">phʉ̂a</span> <span class="eng">in order to</span></p>
+          <p><span class="thai">สำหรับ <button class="tts" data-say="สำหรับ">🔊</button></span> <span class="rom">sǎm-ràp</span> <span class="eng">for; intended for</span></p>
+          <p><span class="thai">ยืม <button class="tts" data-say="ยืม">🔊</button></span> <span class="rom">yʉʉm</span> <span class="eng">borrow</span></p>
+          <p><span class="thai">คืน <button class="tts" data-say="คืน">🔊</button></span> <span class="rom">khʉʉn</span> <span class="eng">return</span></p>
+          <p><span class="thai">คล้าย <button class="tts" data-say="คล้าย">🔊</button></span> <span class="rom">khláai</span> <span class="eng">similar</span></p>
+        </details>
+      </div>
+
+      <div class="practice-card">
+        <h3>Choose the right word｜選詞</h3>
+        <p>1. 我學泰文是為了跟泰國人聊天。<br>ฉันเรียนภาษาไทย ______ คุยกับคนไทย</p>
+        <p>2. 這本書是給初學者的。<br>หนังสือเล่มนี้ ______ ผู้เริ่มต้น</p>
+        <p>3. 我可以借你的充電器嗎？<br>ขอ ______ ที่ชาร์จหน่อยได้ไหมคะ</p>
+        <p>4. 今天我學泰文學一整天。<br>วันนี้ฉันเรียนภาษาไทย ______</p>
+        <details>
+          <summary>Answer</summary>
+          <p>1. <span class="thai">เพื่อ <button class="tts" data-say="ฉันเรียนภาษาไทยเพื่อคุยกับคนไทย">🔊</button></span><br><span class="rom">chǎn rian phaa-sǎa Thai phʉ̂a khui gàp khon Thai</span><br><span class="eng">I study Thai in order to talk with Thai people.</span></p>
+          <p>2. <span class="thai">สำหรับ <button class="tts" data-say="หนังสือเล่มนี้สำหรับผู้เริ่มต้น">🔊</button></span><br><span class="rom">nǎng-sʉ̌ʉ lêm níi sǎm-ràp phûu rə̂əm-dtôn</span><br><span class="eng">This book is for beginners.</span></p>
+          <p>3. <span class="thai">ยืม <button class="tts" data-say="ขอยืมที่ชาร์จหน่อยได้ไหมคะ">🔊</button></span><br><span class="rom">khɔ̌ɔ yʉʉm thîi-cháat nòi dâai mái khá</span><br><span class="eng">May I borrow your charger?</span></p>
+          <p>4. <span class="thai">ทั้งวัน <button class="tts" data-say="วันนี้ฉันเรียนภาษาไทยทั้งวัน">🔊</button></span><br><span class="rom">wan-níi chǎn rian phaa-sǎa Thai tháng wan</span><br><span class="eng">Today I studied Thai all day.</span></p>
+        </details>
+      </div>
+
+      <div class="practice-card">
+        <h3>Chinese → Thai｜翻成自然泰文</h3>
+        <p>1. 這兩個字很像，我分不出來。</p>
+        <p>2. 我想不出要怎麼回，因為怕他誤會。</p>
+        <p>3. 不信你試試看，這間店真的好吃。</p>
+        <p>4. 如果每天練，信心一定會增加。</p>
+        <details>
+          <summary>Answer</summary>
+          <p><span class="thai">สองคำนี้คล้ายกันมาก แยกไม่ออกเลย <button class="tts" data-say="สองคำนี้คล้ายกันมาก แยกไม่ออกเลย">🔊</button></span><br><span class="rom">sɔ̌ɔng kham níi khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk loei</span><br><span class="eng">These two words are very similar. I really can’t tell them apart.</span></p>
+          <p><span class="thai">ฉันคิดไม่ออกว่าจะตอบยังไง เพราะกลัวเขาเข้าใจผิด <button class="tts" data-say="ฉันคิดไม่ออกว่าจะตอบยังไง เพราะกลัวเขาเข้าใจผิด">🔊</button></span><br><span class="rom">chǎn khít mâi ɔ̀ɔk wâa jà dtɔ̀ɔp yang-ngai, phrɔ́ glua khǎo khâo-jai phìt</span><br><span class="eng">I can’t think of how to reply because I’m afraid he/she will misunderstand.</span></p>
+          <p><span class="thai">ไม่เชื่อก็ลองดู ร้านนี้อร่อยจริง <button class="tts" data-say="ไม่เชื่อก็ลองดู ร้านนี้อร่อยจริง">🔊</button></span><br><span class="rom">mâi chʉ̂a gɔ̂ɔ lɔɔng duu, ráan níi à-rɔ̀i jing</span><br><span class="eng">If you don’t believe it, try it. This place is really good.</span></p>
+          <p><span class="thai">ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน <button class="tts" data-say="ถ้าฝึกทุกวัน ความมั่นใจจะเพิ่มขึ้นแน่นอน">🔊</button></span><br><span class="rom">thâa fʉ̀k thúk wan, khwaam mân-jai jà phə̂əm khʉ̂n nɛ̂ɛ-nɔɔn</span><br><span class="eng">If you practice every day, your confidence will definitely increase.</span></p>
+        </details>
+      </div>
+
+      <div class="practice-card">
+        <h3>Mini dialogue completion｜補完對話</h3>
+        <p>A: 這兩個音聽起來很像，我分不出來。<br>
+        B: 沒問題，我可以再解釋一次。</p>
+        <details>
+          <summary>Answer</summary>
+          <p>A: <span class="thai">สองเสียงนี้ฟังคล้ายกันมาก แยกไม่ออกเลยค่ะ <button class="tts" data-say="สองเสียงนี้ฟังคล้ายกันมาก แยกไม่ออกเลยค่ะ">🔊</button></span><br><span class="rom">sɔ̌ɔng sǐang níi fang khláai gan mâak, yɛ̂ɛk mâi ɔ̀ɔk loei khâ</span><br><span class="eng">These two sounds sound very similar. I really can’t tell them apart.</span></p>
+          <p>B: <span class="thai">ไม่เป็นไรค่ะ เดี๋ยวอธิบายให้อีกครั้ง <button class="tts" data-say="ไม่เป็นไรค่ะ เดี๋ยวอธิบายให้อีกครั้ง">🔊</button></span><br><span class="rom">mâi bpen rai khâ, dǐiao à-thí-baai hâi ìik khráŋ</span><br><span class="eng">No problem. I’ll explain it again.</span></p>
+        </details>
+      </div>
+    </section>
+
+    <section id="favorites" class="tab">
+      <h2>Favorites｜收藏字卡</h2>
+      <div id="favoritesList"></div>
+    </section>
+  </main>
+</div>
+
+<script>
+const THAI_RATE = 0.86;
+const FAVORITE_KEY = "thaiDailyFavorites_2026_05_29";
+
+function showTtsWarning(){
+  const warning = document.getElementById("ttsWarning");
+  if(!("speechSynthesis" in window) && warning){
+    warning.style.display = "block";
+  }
+}
+showTtsWarning();
+
+function speakThai(text){
+  if(!("speechSynthesis" in window)){
+    showTtsWarning();
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "th-TH";
+  utterance.rate = THAI_RATE;
+  window.speechSynthesis.speak(utterance);
+}
+
+document.addEventListener("click", (e)=>{
+  const tts = e.target.closest(".tts");
+  if(tts){
+    e.preventDefault();
+    e.stopPropagation();
+    speakThai(tts.dataset.say || tts.textContent.trim());
+    return;
+  }
+  const pill = e.target.closest(".pill");
+  if(pill){
+    e.preventDefault();
+    e.stopPropagation();
+    document.querySelectorAll(".pill.playing").forEach(p=>p.classList.remove("playing"));
+    pill.classList.add("playing");
+    speakThai(pill.dataset.say || pill.textContent.trim());
+    setTimeout(()=>pill.classList.remove("playing"), 650);
+    return;
+  }
+});
+
+document.querySelectorAll(".tab-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
+
+const searchInput = document.getElementById("vocabSearch");
+if(searchInput){
+  searchInput.addEventListener("input", ()=>{
+    const q = searchInput.value.trim().toLowerCase();
+    document.querySelectorAll("#vocabTable tbody tr").forEach(row=>{
+      const text = row.innerText.toLowerCase() + " " + (row.dataset.vocab || "").toLowerCase();
+      row.style.display = text.includes(q) ? "" : "none";
+    });
+  });
+}
+
+function getFavorites(){
+  try{return JSON.parse(localStorage.getItem(FAVORITE_KEY) || "[]");}
+  catch(e){return [];}
+}
+function saveFavorites(items){
+  localStorage.setItem(FAVORITE_KEY, JSON.stringify(items));
+}
+function favoriteId(item){
+  return item.thai + "|" + item.rom;
+}
+function syncFavoriteButtons(){
+  const ids = new Set(getFavorites().map(favoriteId));
+  document.querySelectorAll(".fav-btn").forEach(btn=>{
+    const id = btn.dataset.thai + "|" + btn.dataset.rom;
+    if(ids.has(id)){
+      btn.classList.add("active");
+      btn.textContent = "★ 已收藏";
+    }else{
+      btn.classList.remove("active");
+      btn.textContent = "♡ 收藏";
+    }
+  });
+}
+function renderFavorites(){
+  const wrap = document.getElementById("favoritesList");
+  if(!wrap) return;
+  const items = getFavorites();
+  if(items.length === 0){
+    wrap.innerHTML = '<div class="empty-state">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>';
+    return;
+  }
+  wrap.innerHTML = items.map((item, idx)=>{
+    const parts = (item.example || "").split("|");
+    const exThai = parts[0] || "";
+    const exRom = parts[1] || "";
+    const exEng = parts[2] || "";
+    return `
+      <div class="favorite-card">
+        <div class="thai-lg">${item.thai} <button class="tts" data-say="${item.thai}">🔊</button></div>
+        <div class="rom">${item.rom}</div>
+        <div class="eng">${item.eng}</div>
+        <div style="margin-top:8px"><span class="tag blue">${item.cat}</span></div>
+        <div class="example-box">
+          <div class="thai">${exThai} ${exThai ? `<button class="tts" data-say="${exThai}">🔊</button>` : ""}</div>
+          <div class="rom">${exRom}</div>
+          <div class="eng">${exEng}</div>
+        </div>
+        <button class="remove-fav" data-index="${idx}" style="margin-top:10px">移除收藏</button>
+      </div>
+    `;
+  }).join("");
+}
+document.addEventListener("click", (e)=>{
+  const fav = e.target.closest(".fav-btn");
+  if(fav){
+    const item = {
+      thai:fav.dataset.thai,
+      rom:fav.dataset.rom,
+      eng:fav.dataset.eng,
+      cat:fav.dataset.cat,
+      example:fav.dataset.example
+    };
+    let items = getFavorites();
+    const id = favoriteId(item);
+    if(items.some(x=>favoriteId(x)===id)){
+      items = items.filter(x=>favoriteId(x)!==id);
+    }else{
+      items.push(item);
+    }
+    saveFavorites(items);
+    syncFavoriteButtons();
+    renderFavorites();
+  }
+  const remove = e.target.closest(".remove-fav");
+  if(remove){
+    let items = getFavorites();
+    items.splice(Number(remove.dataset.index),1);
+    saveFavorites(items);
+    syncFavoriteButtons();
+    renderFavorites();
+  }
+});
+syncFavoriteButtons();
+renderFavorites();
+</script>
+</body>
+</html>
