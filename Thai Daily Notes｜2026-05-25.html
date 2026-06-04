@@ -6,604 +6,528 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Thai Daily Notes｜2026-05-25｜高頻口語小詞、生活語感與句型總整理</title>
 <style>
-    :root {
-      --bg: #fffaf4;
-      --card: rgba(255,255,255,.9);
-      --text: #302820;
-      --muted: #7a6f63;
-      --line: rgba(88, 63, 35, .16);
-      --orange: #f2a35d;
-      --orange-soft: #fff1df;
-      --green: #78b887;
-      --green-soft: #eef9f1;
-      --blue: #6ea8d6;
-      --blue-soft: #eef7ff;
-      --red: #dc776f;
-      --red-soft: #fff0ef;
-      --purple-soft: #f6f1ff;
-      --purple: #8873c9;
-      --shadow: 0 12px 28px rgba(74, 45, 18, .08);
-      --radius: 18px;
-      --thai-font: "Noto Sans Thai", "Tahoma", "Leelawadee UI", sans-serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      padding: 56px 24px 24px;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(242,163,93,.16), transparent 36%),
-        radial-gradient(circle at top right, rgba(110,168,214,.14), transparent 38%),
-        linear-gradient(135deg, #fffaf4 0%, #fbfffb 55%, #f7fbff 100%);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-      line-height: 1.68;
-    }
-
-    .page {
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    header {
-      background: rgba(255,255,255,.78);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1.25;
-      letter-spacing: .2px;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: 22px;
-      line-height: 1.35;
-      color: #392f26;
-    }
-
-    h3 {
-      margin: 18px 0 8px;
-      font-size: 18px;
-      color: #3c332a;
-    }
-
-    h4 {
-      margin: 14px 0 8px;
-      font-size: 15px;
-      color: #3c332a;
-    }
-
-    p { margin: 8px 0; }
-
-    .subtitle {
-      color: var(--muted);
-      margin: 0 0 18px;
-      font-size: 15px;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .badge, .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
-
-    .b-textbook, .tag-textbook { background: var(--orange-soft); color: #9f5216; border-color: #f2c18f; }
-    .b-local, .tag-local { background: var(--green-soft); color: #2f7948; border-color: #b2dfbd; }
-    .b-practice, .tag-practice { background: var(--blue-soft); color: #276f9f; border-color: #acd4ef; }
-    .b-review, .tag-review { background: #f4f1ed; color: #6a5f55; border-color: #ddd3c8; }
-    .b-mistake, .tag-mistake { background: var(--red-soft); color: #a84038; border-color: #efb2ad; }
-    .b-supp, .tag-supp { background: var(--purple-soft); color: #6a55a5; border-color: #d8ccff; }
-
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 18px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      padding: 10px 0;
-      background: transparent;
-      backdrop-filter: none;
-    }
-
-    .tab-btn {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.86);
-      color: var(--text);
-      padding: 9px 13px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 800;
-      font-size: 13px;
-      transition: .18s ease;
-    }
-
-    .tab-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(60,40,20,.08); }
-    .tab-btn.active {
-      background: #2f2a24;
-      color: #fff;
-      border-color: #2f2a24;
-    }
-
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      margin-bottom: 14px;
-    }
-
-    .span-3 { grid-column: span 3; }
-    .span-4 { grid-column: span 4; }
-    .span-5 { grid-column: span 5; }
-    .span-6 { grid-column: span 6; }
-    .span-7 { grid-column: span 7; }
-    .span-8 { grid-column: span 8; }
-    .span-12 { grid-column: span 12; }
-
-    @media (max-width: 920px) {
-      body { padding: 24px 14px 14px; }
-      .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-12 { grid-column: span 12; }
-      h1 { font-size: 24px; }
-      .tabs { position: static; }
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-
-    .section-title:before {
-      content: "";
-      width: 9px;
-      height: 26px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, var(--orange), var(--green));
-      flex: 0 0 auto;
-    }
-
-    .thai {
-      font-family: var(--thai-font);
-      font-size: 15px;
-      font-weight: 500;
-      color: #1e2d22;
-    }
-
-    .thai-lg {
-      font-family: var(--thai-font);
-      font-size: 20px;
-      font-weight: 800;
-      color: #18301f;
-    }
-
-    .rom {
-      font-family: var(--mono);
-      font-size: 12.5px;
-      color: #756f68;
-    }
-
-    .eng {
-      font-size: 13px;
-      color: #5f6c73;
-    }
-
-    .zh { color: #40372f; }
-
-    .tts {
-      border: 1px solid rgba(130,90,45,.2);
-      background: linear-gradient(180deg, #fff 0%, #fff5eb 100%);
-      border-radius: 999px;
-      padding: 2px 7px;
-      margin-left: 5px;
-      cursor: pointer;
-      font-size: 12px;
-      color: #965315;
-      vertical-align: middle;
-      white-space: nowrap;
-    }
-
-    .tts:hover { background: #fff0df; }
-
-    .pill {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1px;
-      border: 1px solid rgba(80,120,80,.2);
-      background: #f7fff8;
-      color: #2d6d3d;
-      border-radius: 13px;
-      padding: 5px 8px;
-      margin: 3px 3px 3px 0;
-      font-size: 12px;
-      cursor: pointer;
-      max-width: 260px;
-    }
-
-    .pill .thai { font-size: 13px; line-height: 1.2; }
-    .pill .rom { display: none; }
-    .pill .eng { font-size: 11px; line-height: 1.15; color: #52645a; }
-
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #fff;
-      font-size: 14px;
-    }
-
-    th, td {
-      border-bottom: 1px solid rgba(80,60,40,.12);
-      border-right: 1px solid rgba(80,60,40,.10);
-      padding: 10px;
-      vertical-align: top;
-    }
-
-    th {
-      background: #fff1df;
-      color: #6d3b0e;
-      text-align: left;
-      font-size: 12px;
-      letter-spacing: .2px;
-    }
-
-    tr:nth-child(even) td { background: #fffdf9; }
-    tr:last-child td { border-bottom: none; }
-    td:last-child, th:last-child { border-right: none; }
-
-    .tip {
-      border-left: 5px solid var(--blue);
-      background: var(--blue-soft);
-      padding: 12px 14px;
-      border-radius: 14px;
-      margin: 10px 0;
-    }
-
-    .tip.green { border-left-color: var(--green); background: var(--green-soft); }
-    .tip.orange { border-left-color: var(--orange); background: var(--orange-soft); }
-    .tip.red { border-left-color: var(--red); background: var(--red-soft); }
-    .tip.purple { border-left-color: var(--purple); background: var(--purple-soft); }
-
-    .pattern {
-      background: #fbfdff;
-      border: 1px dashed rgba(80,120,160,.28);
-      border-radius: 14px;
-      padding: 12px;
-      margin: 10px 0;
-    }
-
-    .bubble {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 12px 14px;
-      margin: 8px 0;
-      background: #fff;
-    }
-
-    .bubble.a { border-left: 5px solid var(--blue); }
-    .bubble.b { border-left: 5px solid var(--green); }
-    .bubble.c { border-left: 5px solid var(--orange); }
-
-    .speaker {
-      display: inline-flex;
-      font-size: 12px;
-      font-weight: 900;
-      border-radius: 999px;
-      padding: 2px 8px;
-      margin-bottom: 6px;
-    }
-
-    .speaker.a { background: var(--blue-soft); color: #276d9f; }
-    .speaker.b { background: var(--green-soft); color: #2f7a45; }
-    .speaker.c { background: var(--orange-soft); color: #9f5216; }
-
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 10px 12px;
-      margin: 10px 0;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 900;
-      color: #4b3828;
-    }
-
-    .small { font-size: 12px; color: var(--muted); }
-    .warn {
-      display: none;
-      background: var(--red-soft);
-      color: #8d332c;
-      border: 1px solid #efb2ad;
-      padding: 10px 12px;
-      border-radius: 14px;
-      margin-top: 12px;
-      font-size: 13px;
-    }
-
-    ul, ol { padding-left: 20px; }
-    li { margin: 5px 0; }
-
-    .mini-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 8px;
-    }
-
-    .mini-item {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 10px;
-    }
-
-    .sentence-group {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.76);
-      border-radius: 18px;
-      padding: 16px;
-      margin: 14px 0;
-    }
-
-    .scene-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      align-items: start;
-      margin: 14px 0 18px;
-    }
-
-    .scene-grid > .sentence-group {
-      margin: 0;
-      height: 100%;
-    }
-
-    @media (max-width: 920px) {
-      .scene-grid { grid-template-columns: 1fr; }
-    }
-
-    .sentence {
-      padding: 10px 0;
-      border-bottom: 1px dashed rgba(80,60,40,.14);
-    }
-
-    .sentence:last-child { border-bottom: none; }
-
-    .kbd {
-      font-family: var(--mono);
-      background: #f4f1ed;
-      border: 1px solid #e0d7cc;
-      padding: 1px 5px;
-      border-radius: 6px;
-      font-size: 12px;
-    }
-
-    .toc-note {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    .toc-note div {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 16px;
-      padding: 12px;
-    }
-
-    .compare-card {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: #fff;
-      padding: 14px;
-      margin: 12px 0;
-    }
-  
-
-    .vocab-search-card {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 0 12px;
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,.72);
-      box-shadow: 0 4px 12px rgba(15,23,42,.04);
-    }
-
-    .vocab-search-card label {
-      font-weight: 900;
-      font-size: 12px;
-      color: #3b3128;
-    }
-
-    .vocab-search-input {
-      flex: 1 1 300px;
-      min-width: 220px;
-      border: 1px solid rgba(80,60,40,.18);
-      border-radius: 999px;
-      padding: 10px 14px;
-      background: rgba(255,255,255,.92);
-      color: var(--text);
-      font-size: 14px;
-      outline: none;
-    }
-
-    .vocab-search-input:focus {
-      border-color: rgba(242,163,93,.65);
-      box-shadow: 0 0 0 4px rgba(242,163,93,.14);
-    }
-
-    .vocab-search-count {
-      font-size: 12px;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    .vocab-no-results {
-      display: none;
-      margin: 12px 0 0;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: var(--orange-soft);
-      color: #9f5216;
-      border: 1px solid #f2c18f;
-      font-size: 13px;
-    }
-
-    .fav-btn {
-      border: 1px solid rgba(130,90,45,.2);
-      background: linear-gradient(180deg,#fff 0%,#fff5eb 100%);
-      color: #965315;
-      border-radius: 999px;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .fav-btn.active {
-      background: var(--orange-soft);
-      border-color: #f2c18f;
-      color: #9f5216;
-    }
-
-    .favorites-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .favorite-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 14px;
-      box-shadow: 0 8px 18px rgba(74,45,18,.06);
-    }
-
-    .favorite-card .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .favorite-card .category {
-      margin: 5px 0 8px;
-    }
-
-    .remove-fav {
-      border: 1px solid #efb2ad;
-      background: var(--red-soft);
-      color: #a84038;
-      border-radius: 999px;
-      padding: 3px 8px;
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .empty-favs {
-      background: var(--blue-soft);
-      border: 1px dashed #acd4ef;
-      border-radius: 16px;
-      padding: 16px;
-      color: #276f9f;
-    }
-
-
-/* 0528 final visual alignment */
-.scene-label{
-  display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;
-  font-size:12px;font-weight:900;background:var(--orange-soft);color:#9f5216;border:1px solid #f2c18f;margin-bottom:8px;
+:root{
+  --bg:#fffaf4;
+  --card:rgba(255,255,255,.9);
+  --text:#1f2937;
+  --muted:#7a6f63;
+  --line:rgba(88,63,35,.16);
+  --orange:#f2a35d;
+  --orange-soft:#fff1df;
+  --green:#78b887;
+  --green-soft:#eef9f1;
+  --blue:#6ea8d6;
+  --blue-soft:#eef7ff;
+  --red:#dc776f;
+  --red-soft:#fff0ef;
+  --purple:#8873c9;
+  --purple-soft:#f6f1ff;
+  --cream:#fffaf4;
+  --shadow:0 12px 28px rgba(74,45,18,.08);
+  --radius:18px;
+  --thai-font:"Noto Sans Thai","Tahoma","Leelawadee UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
 }
-
-/* Dialogues｜0528 final left-right chat bubbles */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:56px 24px 24px;
+  color:var(--text);
+  background:radial-gradient(circle at top left,rgba(242,163,93,.16),transparent 36%),
+             radial-gradient(circle at top right,rgba(110,168,214,.14),transparent 38%),
+             linear-gradient(135deg,#fffaf4 0%,#fbfffb 55%,#f7fbff 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  line-height:1.68;
+}
+.page{max-width:1240px;margin:0 auto}
+.hero{
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);
+  margin-bottom:18px;
+}
+h1{margin:0 0 8px;font-size:28px;line-height:1.3;letter-spacing:.2px}
+h2{margin:0 0 12px;font-size:22px;line-height:1.35;color:#392f26}
+h3{margin:18px 0 8px;font-size:18px;color:#3c332a}
+h4{margin:14px 0 8px;font-size:15px;color:#3c332a}
+p{margin:8px 0}
+.subtitle{color:var(--muted);margin:0 0 18px;font-size:14px}
+.badges,.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.badge,.tag,.label{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:4px 9px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  border:1px solid transparent;
+  white-space:nowrap;
+}
+.orange,.label.textbook{background:var(--orange-soft);color:#9f5216;border-color:#f2c18f}
+.green,.label.local{background:var(--green-soft);color:#2f7948;border-color:#b2dfbd}
+.blue,.label.practice{background:var(--blue-soft);color:#276f9f;border-color:#acd4ef}
+.red,.label.mistake{background:var(--red-soft);color:#a84038;border-color:#efb2ad}
+.purple,.label.emotion{background:var(--purple-soft);color:#6a55a5;border-color:#d8ccff}
+.label.review{background:#f4f1ed;color:#6a5f55;border-color:#ddd3c8}
+.tabs{
+  margin:18px 0;
+  position:sticky;
+  top:0;
+  z-index:20;
+  padding:10px 0;
+  background:transparent;
+  backdrop-filter:none;
+  border-bottom:none;
+}
+.tab-btn{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.86);
+  color:var(--text);
+  padding:9px 13px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:13px;
+  transition:.18s ease;
+}
+.tab-btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(60,40,20,.08)}
+.tab-btn.active{background:#2f2a24;color:#fff;border-color:#2f2a24}
+.tab{display:none}
+.tab.active{display:block}
+.card,.compare-card,.sentence-group,.dialogue-card,.mistake-card,.structure-card,.practice-card,.favorite-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+  margin:14px 0;
+  box-shadow:var(--shadow);
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.scene-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0 18px}
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  font-size:14px;
+}
+th,td{border-bottom:1px solid rgba(80,60,40,.12);border-right:1px solid rgba(80,60,40,.10);padding:10px;vertical-align:top}
+th{background:#fff1df;color:#6d3b0e;text-align:left;font-size:12px;letter-spacing:.2px}
+tr:nth-child(even) td{background:#fffdf9}
+tr:last-child td{border-bottom:none}
+td:last-child,th:last-child{border-right:none}
+.thai{font-family:var(--thai-font);font-size:15px;font-weight:500;color:#1e2d22}
+.thai-lg{font-family:var(--thai-font);font-size:18px;font-weight:800;color:#18301f}
+.rom{font-family:var(--mono);font-size:12.5px;color:#756f68}
+.eng{font-size:13px;color:#5f6c73}
+.tts{
+  border:1px solid rgba(130,90,45,.2);
+  background:linear-gradient(180deg,#fff 0%,#fff5eb 100%);
+  border-radius:999px;
+  padding:2px 7px;
+  margin-left:5px;
+  cursor:pointer;
+  font-size:12px;
+  color:#965315;
+  vertical-align:middle;
+  white-space:nowrap;
+}
+.tts:hover{background:#fff0df}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  border:1px solid rgba(80,120,80,.2);
+  background:#f7fff8;
+  color:#2d6d3d;
+  border-radius:13px;
+  padding:5px 8px;
+  margin:3px 3px 3px 0;
+  font-size:12px;
+  cursor:pointer;
+  font-weight:800;
+  line-height:1.45;
+  max-width:260px;
+}
+.pill:hover,.pill.playing{background:#eaffee;border-color:#b2dfbd;box-shadow:0 0 0 3px rgba(120,184,135,.16)}
+.vocab-search-card{
+  display:block;
+  margin:0 0 12px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.72);
+  box-shadow:var(--shadow);
+}
+.vocab-search-card label{font-size:12px;font-weight:900;color:#3b3128}
+.vocab-search-input{
+  width:100%;
+  margin-top:6px;
+  border:1px solid rgba(80,60,40,.18);
+  border-radius:999px;
+  padding:10px 14px;
+  background:rgba(255,255,255,.92);
+  font-size:14px;
+  outline:none;
+}
+.fav-btn,.remove-fav{
+  border:1px solid rgba(130,90,45,.2);
+  background:linear-gradient(180deg,#fff 0%,#fff5eb 100%);
+  color:#965315;
+  border-radius:999px;
+  padding:5px 10px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+.fav-btn.active{background:var(--orange-soft);border-color:#f2c18f;color:#9f5216}
+.remove-fav{border-color:#efb2ad;background:var(--red-soft);color:#a84038;margin-top:10px}
+.scene-label{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:900;
+  background:var(--orange-soft);
+  color:#9f5216;
+  border:1px solid #f2c18f;
+  margin-bottom:8px;
+}
+.sentence{padding:10px 0;border-bottom:1px dashed rgba(80,60,40,.14)}
+.sentence:last-child{border-bottom:none}
+.structure-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:5px solid var(--blue);
+  border-radius:16px;
+  padding:14px;
+  margin:12px 0;
+}
+.compare-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:14px;
+  margin:12px 0;
+  box-shadow:var(--shadow);
+}
+.dialogue-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0;box-shadow:var(--shadow)}
 .chat-thread{display:flex;flex-direction:column;gap:12px;margin-top:12px}
 .chat-row{display:flex;width:100%}
 .chat-row.left{justify-content:flex-start}
 .chat-row.right{justify-content:flex-end}
 .chat-bubble{
-  max-width:72%;border:1px solid var(--line);border-radius:20px;padding:12px 14px;
-  background:#fff;box-shadow:0 6px 16px rgba(74,45,18,.05);
+  max-width:72%;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:12px 14px;
+  background:#fff;
+  box-shadow:0 6px 16px rgba(74,45,18,.05);
 }
 .chat-row.left .chat-bubble{border-top-left-radius:8px;background:#f8fcff;border-left:5px solid var(--blue)}
 .chat-row.right .chat-bubble{border-top-right-radius:8px;background:#f7fff8;border-right:5px solid var(--green)}
+.speaker{
+  display:inline-flex;
+  font-size:11px;
+  font-weight:900;
+  border-radius:999px;
+  padding:2px 8px;
+  margin-bottom:6px;
+}
 .chat-row.left .speaker{background:var(--blue-soft);color:#276d9f}
 .chat-row.right .speaker{background:var(--green-soft);color:#2f7a45}
-
-/* Mistakes｜0528 final Wrong / Better / Why cards */
 .mistake-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;margin:14px 0;box-shadow:var(--shadow)}
 .wrong-box,.better-box,.why-box{border-radius:14px;padding:12px;margin:10px 0}
 .wrong-box{background:var(--red-soft);border:1px solid #efb2ad}
 .better-box{background:var(--green-soft);border:1px solid #b2dfbd}
 .why-box{background:#f8f5f1;border:1px solid #e3d8cd}
-.box-title{font-size:12px;font-weight:900;letter-spacing:.3px;text-transform:uppercase;margin-bottom:5px}
-
-/* Favorites｜0528 final flashcard look */
-.favorite-card{
-  position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;
-  box-shadow:0 10px 22px rgba(74,45,18,.07);
-}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:10px 0}
+summary{cursor:pointer;font-weight:900;color:#4b3828}
+.favorite-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 10px 22px rgba(74,45,18,.07)}
 .favorite-card .thai-lg{font-size:26px;margin-right:48px}
-.favorite-card .top-audio{position:absolute;right:14px;top:14px}
+.favorite-card .rom{font-size:13px}
 .example-box{background:#fffaf4;border:1px dashed rgba(80,60,40,.18);border-radius:14px;padding:10px;margin-top:12px}
-.remove-fav{margin-top:10px}
-@media(max-width:920px){.chat-bubble{max-width:92%}}
+.empty-state{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f;text-align:center}
+.tts-warning{display:none;background:var(--red-soft);color:#8d332c;border:1px solid #efb2ad;padding:10px 12px;border-radius:14px;margin-top:12px;font-size:13px}
+.note{font-size:13px;color:var(--muted)}
+@media(max-width:920px){
+  body{padding:24px 14px 14px}
+  h1{font-size:24px}
+  .tabs{position:static}
+  .grid,.grid3,.scene-grid{grid-template-columns:1fr}
+  .hero{padding:20px}
+  table{font-size:13px}
+  th,td{padding:8px}
+  .chat-bubble{max-width:92%}
+}
+
+
+
+/* 0525 compatibility layer｜make old 0525 markup follow 0529/0602 design */
+header{
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);
+  margin-bottom:18px;
+}
+header + .tabs{margin-top:18px}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.card.span-12,.span-12{grid-column:1 / -1}
+.span-6{grid-column:span 1}
+.span-4,.span-3,.span-5,.span-7,.span-8{grid-column:span 1}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.toc-note{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:12px;
+}
+.toc-note div{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:14px;
+  box-shadow:0 8px 18px rgba(74,45,18,.05);
+}
+.mini-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.mini-item{
+  background:rgba(255,255,255,.86);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:10px;
+}
+.section-title{
+  display:block;
+  margin-bottom:10px;
+}
+.section-title:before{
+  display:none;
+}
+.tip{
+  border-left:5px solid var(--blue);
+  background:var(--blue-soft);
+  padding:12px 14px;
+  border-radius:14px;
+  margin:10px 0;
+}
+.tip.green{border-left-color:var(--green);background:var(--green-soft)}
+.tip.orange{border-left-color:var(--orange);background:var(--orange-soft)}
+.tip.red{border-left-color:var(--red);background:var(--red-soft)}
+.tip.purple{border-left-color:var(--purple);background:var(--purple-soft)}
+.pattern{
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:5px solid var(--blue);
+  border-radius:16px;
+  padding:14px;
+  margin:12px 0;
+}
+.bubble{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:12px 14px;
+  margin:8px 0;
+  background:#fff;
+}
+.bubble.a{border-left:5px solid var(--blue)}
+.bubble.b{border-left:5px solid var(--green)}
+.bubble.c{border-left:5px solid var(--orange)}
+.speaker.a{background:var(--blue-soft);color:#276d9f}
+.speaker.b{background:var(--green-soft);color:#2f7a45}
+.speaker.c{background:var(--orange-soft);color:#9f5216}
+.warn{
+  display:none;
+  background:var(--red-soft);
+  color:#8d332c;
+  border:1px solid #efb2ad;
+  padding:10px 12px;
+  border-radius:14px;
+  margin-top:12px;
+  font-size:13px;
+}
+.vocab-search-count,.vocab-no-results,.small{font-size:12px;color:var(--muted)}
+.vocab-no-results{
+  display:none;
+  margin:12px 0 0;
+  padding:12px 14px;
+  border-radius:14px;
+  background:var(--orange-soft);
+  color:#9f5216;
+  border:1px solid #f2c18f;
+}
+.pill{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:1px;
+  font-weight:800;
+}
+.pill .thai{font-size:13px;line-height:1.2}
+.pill .rom{display:none}
+.pill .eng{font-size:11px;line-height:1.15;color:#52645a}
+.favorite-card .top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:8px;
+  margin-bottom:8px;
+}
+.favorite-card .category{margin:5px 0 8px}
+.favorites-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.empty-favs{
+  background:var(--blue-soft);
+  border:1px dashed #acd4ef;
+  border-radius:16px;
+  padding:16px;
+  color:#276f9f;
+}
+.kbd{
+  font-family:var(--mono);
+  background:#f4f1ed;
+  border:1px solid #e0d7cc;
+  padding:1px 5px;
+  border-radius:6px;
+  font-size:12px;
+}
+ul,ol{padding-left:20px}
+li{margin:5px 0}
+@media(max-width:920px){
+  .grid,.toc-note,.mini-list{grid-template-columns:1fr}
+  header{padding:20px}
+}
+
+
+/* 0525 tag color compatibility｜restore original category tag colors under 0529/0602 system */
+.b-local,
+.tag-local{
+  background:var(--green-soft) !important;
+  color:#2f7948 !important;
+  border-color:#b2dfbd !important;
+}
+
+.b-practice,
+.tag-practice{
+  background:var(--blue-soft) !important;
+  color:#276f9f !important;
+  border-color:#acd4ef !important;
+}
+
+.b-textbook,
+.tag-textbook{
+  background:var(--orange-soft) !important;
+  color:#9f5216 !important;
+  border-color:#f2c18f !important;
+}
+
+.b-supp,
+.tag-supp{
+  background:var(--purple-soft) !important;
+  color:#6a55a5 !important;
+  border-color:#d8ccff !important;
+}
+
+.b-review,
+.tag-review{
+  background:#f4f1ed !important;
+  color:#6a5f55 !important;
+  border-color:#ddd3c8 !important;
+}
+
+.b-mistake,
+.tag-mistake{
+  background:var(--red-soft) !important;
+  color:#a84038 !important;
+  border-color:#efb2ad !important;
+}
+
+
+/* 0525 targeted layout fix:
+   - tabs inside header like 0602/0603
+   - Vocabulary search as independent card while keeping JS IDs
+   - Overview core cards: four in one row on desktop
+   No content / function changes.
+*/
+header.hero .tabs{
+  margin:18px 0 0 !important;
+}
+
+#vocabulary > h2{
+  margin:0 0 12px !important;
+}
+
+#vocabulary > .vocab-search-card.card{
+  display:block !important;
+  margin:0 0 12px !important;
+  padding:12px 14px !important;
+  border:1px solid var(--line) !important;
+  border-radius:16px !important;
+  background:rgba(255,255,255,.72) !important;
+  box-shadow:var(--shadow) !important;
+}
+
+#vocabulary > .vocab-search-card.card label{
+  display:block !important;
+  margin:0 !important;
+}
+
+#vocabulary > .vocab-search-card.card .vocab-search-input{
+  width:100% !important;
+  margin-top:6px !important;
+}
+
+#vocabulary > .vocab-search-card.card .vocab-search-count{
+  display:block !important;
+  margin-top:6px !important;
+}
+
+#vocabulary > .card{
+  margin-top:0 !important;
+}
+
+#overview .toc-note{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:14px !important;
+}
+
+@media(max-width:920px){
+  #overview .toc-note{
+    grid-template-columns:1fr !important;
+  }
+}
 </style>
 </head>
 <body>
 <div class="page">
-<header>
+<header class="hero">
 <h1>Thai Daily Notes｜2026-05-25｜高頻口語小詞、生活語感與句型總整理</h1>
 <p class="subtitle">
       今日筆記整理「一輩子、透過、不同、等一下、剛剛才、當……時、依照、เกรงใจ、ถูกใจ、ต่อ、แบบ、บาง/บ้าง、ตรงกลาง、งั้น、เยอะ、ก็แล้วกัน」等高頻泰文。重點不是背中文翻譯，而是學會曼谷人真正怎麼說、什麼語氣自然、什麼地方容易直翻錯。
@@ -616,9 +540,7 @@
 <span class="badge b-review">Review</span>
 <span class="badge b-mistake">Common mistake</span>
 </div>
-<div class="warn" id="ttsWarning">此瀏覽器可能不支援泰文 TTS，建議使用 Chrome / Edge。</div>
-</header>
-<nav class="tabs">
+<div class="warn" id="ttsWarning">此瀏覽器可能不支援泰文 TTS，建議使用 Chrome / Edge。</div><nav class="tabs">
 <button class="tab-btn active" data-tab="overview">Overview</button>
 <button class="tab-btn" data-tab="vocabulary">Vocabulary</button>
 <button class="tab-btn" data-tab="usage">Usage Notes</button>
@@ -630,11 +552,13 @@
 <button class="tab-btn" data-tab="practice">Practice</button>
 <button class="tab-btn" data-tab="favorites">Favorites</button>
 </nav>
+</header>
+
 <main>
 <section class="tab-panel active" id="overview">
 <div class="grid">
 <div class="card span-12">
-<div class="section-title"><h2>Overview｜今日學習地圖</h2></div>
+<div class="section-title"><h2>Overview｜今日核心語感</h2></div>
 <p>
             今天的詞看起來很多，但其實可以分成四條主線：
             <b>時間與順序</b>、<b>方式與依據</b>、<b>生活語感詞</b>、<b>做決定與收尾口語</b>。
@@ -660,7 +584,7 @@
 <p><span class="thai">ต่าง</span><button class="tts" data-thai="ต่าง">🔊</button> / <span class="rom">dtàang</span> / <span class="eng">different</span></p>
 <p><span class="thai">เกรงใจ</span><button class="tts" data-thai="เกรงใจ">🔊</button> / <span class="rom">greeng-jai</span> / <span class="eng">feel bad to impose</span></p>
 <p><span class="thai">ถูกใจ</span><button class="tts" data-thai="ถูกใจ">🔊</button> / <span class="rom">thùuk-jai</span> / <span class="eng">be to one’s taste</span></p>
-<p><span class="thai">เยอะ</span><button class="tts" data-thai="เยอะ">🔊</button> / <span class="rom">yóe</span> / <span class="eng">a lot</span></p>
+<p><span class="thai">เยอะ</span><button class="tts" data-thai="เยอะ">🔊</button> / <span class="rom">yə́</span> / <span class="eng">a lot</span></p>
 </div>
 <div>
 <h4>4. 口語決定與收尾</h4>
@@ -674,7 +598,7 @@
 <div class="card span-6">
 <h2>Main Focus｜今日核心詞 / 句</h2>
 <div class="mini-list">
-<div class="mini-item"><span class="thai">ตลอดชีวิต</span><button class="tts" data-thai="ตลอดชีวิต">🔊</button><br/><span class="rom">dtà-lòt chii-wít</span><br/><span class="eng">throughout one’s life</span><br/><span class="tag tag-practice">Practical Usage</span></div>
+<div class="mini-item"><span class="thai">ตลอดชีวิต</span><button class="tts" data-thai="ตลอดชีวิต">🔊</button><br/><span class="rom">dtà-lɔ̀ɔt chii-wít</span><br/><span class="eng">throughout one’s life</span><br/><span class="tag tag-practice">Practical Usage</span></div>
 <div class="mini-item"><span class="thai">โดย</span><button class="tts" data-thai="โดย">🔊</button><br/><span class="rom">dooi</span><br/><span class="eng">by; via; by means of</span><br/><span class="tag tag-textbook">Textbook-based</span></div>
 <div class="mini-item"><span class="thai">ต่าง</span><button class="tts" data-thai="ต่าง">🔊</button><br/><span class="rom">dtàang</span><br/><span class="eng">different; separate</span><br/><span class="tag tag-practice">Practical Usage</span></div>
 <div class="mini-item"><span class="thai">เดี๋ยวก่อน</span><button class="tts" data-thai="เดี๋ยวก่อน">🔊</button><br/><span class="rom">dǐaw gɔ̀ɔn</span><br/><span class="eng">hold on; wait a moment</span><br/><span class="tag tag-local">Local usage</span></div>
@@ -703,16 +627,13 @@
 </div>
 </div>
 </section>
-<section class="tab-panel" id="vocabulary">
-<div class="card">
-<div class="section-title"><h2>Vocabulary｜今日核心生詞與搭配</h2></div>
-<div class="vocab-search-card">
+<section class="tab-panel" id="vocabulary"><h2>Vocabulary｜今日生詞表</h2>
+<div class="vocab-search-card card">
 <label for="vocabSearch">搜尋 Vocabulary</label>
-<input autocomplete="off" class="vocab-search-input" id="vocabSearch" placeholder="輸入 Thai / Romanization / English / 中文，例如 เยอะ、yóe、many、很多..." type="search"/>
+<input autocomplete="off" class="vocab-search-input" id="vocabSearch" placeholder="輸入 Thai / Romanization / English / 中文，例如 เยอะ、yə́、many、很多..." type="search"/>
 <span class="vocab-search-count" id="vocabSearchCount">顯示全部單字</span>
 </div>
-<div class="vocab-no-results" id="vocabNoResults">沒有找到相關單字。可以試試泰文、拼音、英文或中文關鍵字。</div>
-<table id="vocabTable">
+<div class="card"><div class="vocab-no-results" id="vocabNoResults">沒有找到相關單字。可以試試泰文、拼音、英文或中文關鍵字。</div><table id="vocabTable">
 <thead>
 <tr>
 <th>Thai</th>
@@ -727,7 +648,7 @@
 <tbody>
 <tr>
 <td><span class="thai">ตลอดชีวิต</span><button class="tts" data-thai="ตลอดชีวิต">🔊</button></td>
-<td><span class="rom">dtà-lòt chii-wít</span></td>
+<td><span class="rom">dtà-lɔ̀ɔt chii-wít</span></td>
 <td>throughout one’s life; for one’s whole life</td>
 <td><span class="tag tag-practice">Practical Usage</span></td>
 <td>語氣有重量，常用於人生經驗、承諾、深刻記憶。日常也常用 <span class="thai">ทั้งชีวิต</span> / <span class="rom">tháng chii-wít</span> / <span class="eng">one’s whole life</span>。</td>
@@ -736,8 +657,8 @@
 <button class="pill" data-thai="ไม่ลืมตลอดชีวิต"><span class="thai">ไม่ลืมตลอดชีวิต</span><span class="eng">never forget for life</span></button>
 <button class="pill" data-thai="เรียนรู้ตลอดชีวิต"><span class="thai">เรียนรู้ตลอดชีวิต</span><span class="eng">lifelong learning</span></button>
 </td>
-<td><span class="thai">ฉันจะไม่ลืมเรื่องนี้ตลอดชีวิต</span><button class="tts" data-thai="ฉันจะไม่ลืมเรื่องนี้ตลอดชีวิต">🔊</button><br/><span class="rom">chǎn jà mâi lʉʉm rʉ̂ang níi dtà-lòt chii-wít</span><br/><span class="eng">I will never forget this for the rest of my life.</span></td>
-<td><button class="fav-btn" data-fav-category="Practical Usage" data-fav-english="throughout one’s life; for one’s whole life" data-fav-example-eng="I will never forget this for the rest of my life." data-fav-example-rom="chǎn jà mâi lʉʉm rʉ̂ang níi dtà-lòt chii-wít" data-fav-example-thai="ฉันจะไม่ลืมเรื่องนี้ตลอดชีวิต" data-fav-romanization="dtà-lòt chii-wít" data-fav-thai="ตลอดชีวิต" type="button">♡ 收藏</button></td></tr>
+<td><span class="thai">ฉันจะไม่ลืมเรื่องนี้ตลอดชีวิต</span><button class="tts" data-thai="ฉันจะไม่ลืมเรื่องนี้ตลอดชีวิต">🔊</button><br/><span class="rom">chǎn jà mâi lʉʉm rʉ̂ang níi dtà-lɔ̀ɔt chii-wít</span><br/><span class="eng">I will never forget this for the rest of my life.</span></td>
+<td><button class="fav-btn" data-fav-category="Practical Usage" data-fav-english="throughout one’s life; for one’s whole life" data-fav-example-eng="I will never forget this for the rest of my life." data-fav-example-rom="chǎn jà mâi lʉʉm rʉ̂ang níi dtà-lɔ̀ɔt chii-wít" data-fav-example-thai="ฉันจะไม่ลืมเรื่องนี้ตลอดชีวิต" data-fav-romanization="dtà-lɔ̀ɔt chii-wít" data-fav-thai="ตลอดชีวิต" type="button">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">โดย</span><button class="tts" data-thai="โดย">🔊</button></td>
 <td><span class="rom">dooi</span></td>
@@ -936,7 +857,7 @@
 <td><button class="fav-btn" data-fav-category="Common mistake" data-fav-english="some; a bit; among others" data-fav-example-eng="I can speak some Thai." data-fav-example-rom="phûut Thai dâai bâang khâ" data-fav-example-thai="พูดไทยได้บ้างค่ะ" data-fav-romanization="bâang" data-fav-thai="บ้าง" type="button">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ตรงกลาง</span><button class="tts" data-thai="ตรงกลาง">🔊</button></td>
-<td><span class="rom">dtrong glaang</span></td>
+<td><span class="rom">dtrong-glaang</span></td>
 <td>in the middle; at the center</td>
 <td><span class="tag tag-practice">Practical Usage</span></td>
 <td>具體位置的正中間。若是 A 和 B 之間，用 <span class="thai">ระหว่าง</span> / <span class="rom">rá-wàang</span> / <span class="eng">between</span>。</td>
@@ -945,8 +866,8 @@
 <button class="pill" data-thai="นั่งตรงกลาง"><span class="thai">นั่งตรงกลาง</span><span class="eng">sit in the middle</span></button>
 <button class="pill" data-thai="ตรงกลางโต๊ะ"><span class="thai">ตรงกลางโต๊ะ</span><span class="eng">middle of the table</span></button>
 </td>
-<td><span class="thai">วางไว้ตรงกลางโต๊ะได้เลยค่ะ</span><button class="tts" data-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ">🔊</button><br/><span class="rom">waang wái dtrong glaang dtó dâai ləəy khâ</span><br/><span class="eng">You can put it in the middle of the table.</span></td>
-<td><button class="fav-btn" data-fav-category="Practical Usage" data-fav-english="in the middle; at the center" data-fav-example-eng="You can put it in the middle of the table." data-fav-example-rom="waang wái dtrong glaang dtó dâai ləəy khâ" data-fav-example-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ" data-fav-romanization="dtrong glaang" data-fav-thai="ตรงกลาง" type="button">♡ 收藏</button></td></tr>
+<td><span class="thai">วางไว้ตรงกลางโต๊ะได้เลยค่ะ</span><button class="tts" data-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ">🔊</button><br/><span class="rom">waang wái dtrong-glaang dtó dâai ləəy khâ</span><br/><span class="eng">You can put it in the middle of the table.</span></td>
+<td><button class="fav-btn" data-fav-category="Practical Usage" data-fav-english="in the middle; at the center" data-fav-example-eng="You can put it in the middle of the table." data-fav-example-rom="waang wái dtrong-glaang dtó dâai ləəy khâ" data-fav-example-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ" data-fav-romanization="dtrong-glaang" data-fav-thai="ตรงกลาง" type="button">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">งั้น</span><button class="tts" data-thai="งั้น">🔊</button></td>
 <td><span class="rom">ngán</span></td>
@@ -962,7 +883,7 @@
 <td><button class="fav-btn" data-fav-category="Local usage" data-fav-english="then; in that case" data-fav-example-eng="Then rest first. We can talk later." data-fav-example-rom="ngán phák gɔ̀ɔn ná, wái khɔ̂i khui gan" data-fav-example-thai="งั้นพักก่อนนะ ไว้ค่อยคุยกัน" data-fav-romanization="ngán" data-fav-thai="งั้น" type="button">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เยอะ</span><button class="tts" data-thai="เยอะ">🔊</button></td>
-<td><span class="rom">yóe</span></td>
+<td><span class="rom">yə́</span></td>
 <td>a lot; many; much</td>
 <td><span class="tag tag-local">Local usage</span></td>
 <td>口語高頻「很多」。偏數量多，不是所有「很」都能用。<span class="thai">คิดเยอะ</span> 是「想太多」。</td>
@@ -972,8 +893,8 @@
 <button class="pill" data-thai="คิดเยอะ"><span class="thai">คิดเยอะ</span><span class="eng">overthink</span></button>
 <button class="pill" data-thai="เยอะแยะ"><span class="thai">เยอะแยะ</span><span class="eng">tons; so many</span></button>
 </td>
-<td><span class="thai">วันนี้คนเยอะมาก</span><button class="tts" data-thai="วันนี้คนเยอะมาก">🔊</button><br/><span class="rom">wan-níi khon yóe mâak</span><br/><span class="eng">There are so many people today.</span></td>
-<td><button class="fav-btn" data-fav-category="Local usage" data-fav-english="a lot; many; much" data-fav-example-eng="There are so many people today." data-fav-example-rom="wan-níi khon yóe mâak" data-fav-example-thai="วันนี้คนเยอะมาก" data-fav-romanization="yóe" data-fav-thai="เยอะ" type="button">♡ 收藏</button></td></tr>
+<td><span class="thai">วันนี้คนเยอะมาก</span><button class="tts" data-thai="วันนี้คนเยอะมาก">🔊</button><br/><span class="rom">wan-níi khon yə́ mâak</span><br/><span class="eng">There are so many people today.</span></td>
+<td><button class="fav-btn" data-fav-category="Local usage" data-fav-english="a lot; many; much" data-fav-example-eng="There are so many people today." data-fav-example-rom="wan-níi khon yə́ mâak" data-fav-example-thai="วันนี้คนเยอะมาก" data-fav-romanization="yə́" data-fav-thai="เยอะ" type="button">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ก็แล้วกัน</span><button class="tts" data-thai="ก็แล้วกัน">🔊</button></td>
 <td><span class="rom">gɔ̂ɔ lɛ́ɛw gan</span></td>
@@ -988,11 +909,9 @@
 <td><span class="thai">งั้นเอาอันนี้ก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอาอันนี้ก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao an níi gɔ̂ɔ lɛ́ɛw gan khâ</span><br/><span class="eng">Then I’ll take this one.</span></td>
 <td><button class="fav-btn" data-fav-category="Local usage" data-fav-english="then; let’s settle on that; I guess... then" data-fav-example-eng="Then I’ll take this one." data-fav-example-rom="ngán ao an níi gɔ̂ɔ lɛ́ɛw gan khâ" data-fav-example-thai="งั้นเอาอันนี้ก็แล้วกันค่ะ" data-fav-romanization="gɔ̂ɔ lɛ́ɛw gan" data-fav-thai="ก็แล้วกัน" type="button">♡ 收藏</button></td></tr>
 </tbody>
-</table>
-</div>
+</table></div>
 </section>
 <section class="tab-panel" id="usage">
-
 <div class="compare-card">
 <h2>1. โดย / ผ่าน / ทาง / ด้วย / ใช้ / จาก｜by / through / via 怎麼自然說？</h2>
 <div class="tip orange">
@@ -1140,7 +1059,7 @@
 <tr>
 <td><span class="thai">ประทับใจ</span><br/><span class="rom">bprà-tháp-jai</span><br/><span class="eng">impressed</span></td>
 <td>印象深刻、被打動</td>
-<td><span class="thai">ฉันประทับใจบริการของร้านนี้มาก</span><button class="tts" data-thai="ฉันประทับใจบริการของร้านนี้มาก">🔊</button><br/><span class="rom">chǎn bprà-tháp-jai baw-rí-gaan khɔ̌ɔng ráan níi mâak</span><br/><span class="eng">I’m very impressed by this restaurant’s service.</span></td>
+<td><span class="thai">ฉันประทับใจบริการของร้านนี้มาก</span><button class="tts" data-thai="ฉันประทับใจบริการของร้านนี้มาก">🔊</button><br/><span class="rom">chǎn bprà-tháp-jai bɔɔ-rí-gaan khɔ̌ɔng ráan níi mâak</span><br/><span class="eng">I’m very impressed by this restaurant’s service.</span></td>
 </tr>
 </tbody>
 </table>
@@ -1172,9 +1091,9 @@
 <thead><tr><th>Thai</th><th>核心語感</th><th>Example</th></tr></thead>
 <tbody>
 <tr>
-<td><span class="thai">เยอะ</span><br/><span class="rom">yóe</span><br/><span class="eng">a lot</span></td>
+<td><span class="thai">เยอะ</span><br/><span class="rom">yə́</span><br/><span class="eng">a lot</span></td>
 <td>數量很多、口語</td>
-<td><span class="thai">ข้อความเยอะมาก อ่านไม่ทัน</span><button class="tts" data-thai="ข้อความเยอะมาก อ่านไม่ทัน">🔊</button><br/><span class="rom">khɔ̂ɔ-khwaam yóe mâak, àan mâi than</span><br/><span class="eng">There are so many messages; I can’t keep up reading them.</span></td>
+<td><span class="thai">ข้อความเยอะมาก อ่านไม่ทัน</span><button class="tts" data-thai="ข้อความเยอะมาก อ่านไม่ทัน">🔊</button><br/><span class="rom">khɔ̂ɔ-khwaam yə́ mâak, àan mâi than</span><br/><span class="eng">There are so many messages; I can’t keep up reading them.</span></td>
 </tr>
 <tr>
 <td><span class="thai">มาก</span><br/><span class="rom">mâak</span><br/><span class="eng">very; much</span></td>
@@ -1221,11 +1140,10 @@
 </div>
 </section>
 <section class="tab-panel" id="sentence">
-
 <div class="scene-grid">
 <div class="sentence-group">
 <div class="scene-label">Café / Restaurant｜點餐猶豫 / 人很多 / 推薦</div>
-<div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ráan níi khon yóe mâak, ngán bpai ráan ùuen mái</span><br/><span class="eng">This place is really crowded. Then should we go to another place?</span></div>
+<div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ráan níi khon yə́ mâak, ngán bpai ráan ùuen mái</span><br/><span class="eng">This place is really crowded. Then should we go to another place?</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐaw gɔ̀ɔn ná khá, khɔ̌ɔ khít bpɛ́p nʉ̀ng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">งั้นเอาชาไทยก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอาชาไทยก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao chaa Thai gɔ̂ɔ lɛ́ɛw gan khâ</span><br/><span class="eng">Then I’ll take Thai tea.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">มีอะไรแนะนำบ้างคะ</span><button class="tts" data-thai="มีอะไรแนะนำบ้างคะ">🔊</button><br/><span class="rom">mii à-rai náe-nam bâang khá</span><br/><span class="eng">What do you recommend?</span></div>
@@ -1241,7 +1159,7 @@
 <div class="scene-label">BTS / MRT｜轉乘 / 地點 / 路線</div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง</span><button class="tts" data-thai="จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง">🔊</button><br/><span class="rom">jàak thîi-nîi dtɔ̂ng dtɔ̀ɔ BTS ìik sǎai nʉ̀ng</span><br/><span class="eng">From here, you need to transfer to another BTS line.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">เดินตาม Google Maps ไปได้เลย</span><button class="tts" data-thai="เดินตาม Google Maps ไปได้เลย">🔊</button><br/><span class="rom">dəən dtaam Google Maps bpai dâai ləəy</span><br/><span class="eng">Just follow Google Maps.</span></div>
-<div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT</span><button class="tts" data-thai="ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT">🔊</button><br/><span class="rom">ráan yùu dtrong glaang rá-wàang BTS gàp MRT</span><br/><span class="eng">The shop is right in the middle between the BTS and MRT.</span></div>
+<div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT</span><button class="tts" data-thai="ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT">🔊</button><br/><span class="rom">ráan yùu dtrong-glaang rá-wàang BTS gàp MRT</span><br/><span class="eng">The shop is right in the middle between the BTS and MRT.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">เวลาฝนตก กรุงเทพฯ รถติดมาก</span><button class="tts" data-thai="เวลาฝนตก กรุงเทพฯ รถติดมาก">🔊</button><br/><span class="rom">wee-laa fǒn dtòk, grung-thêep rót-dtìt mâak</span><br/><span class="eng">When it rains, Bangkok traffic is terrible.</span></div>
 </div>
 <div class="sentence-group">
@@ -1254,7 +1172,7 @@
 <div class="sentence-group">
 <div class="scene-label">Friends / Chat｜回覆 / 想太多 / 收尾</div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">เพิ่งเห็นข้อความค่ะ ขอโทษที่ตอบช้า</span><button class="tts" data-thai="เพิ่งเห็นข้อความค่ะ ขอโทษที่ตอบช้า">🔊</button><br/><span class="rom">phə̂ng hěn khɔ̂ɔ-khwaam khâ, khɔ̌ɔ-thôot thîi dtɔ̀ɔp cháa</span><br/><span class="eng">I just saw the message. Sorry for replying late.</span></div>
-<div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yóe ná, phák gɔ̀ɔn gɔ̂ɔ dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></div>
+<div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yə́ ná, phák gɔ̀ɔn gɔ̂ɔ dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></div>
 <div class="sentence"><span class="tag tag-practice">Practical Usage</span><br/><span class="thai">บางทีเขาอาจจะเหนื่อย</span><button class="tts" data-thai="บางทีเขาอาจจะเหนื่อย">🔊</button><br/><span class="rom">baang thii khǎo àat-jà nʉ̀ai</span><br/><span class="eng">Maybe he/she is tired.</span></div>
 <div class="sentence"><span class="tag tag-local">Local usage</span><br/><span class="thai">งั้นพักก่อนนะ ไว้ค่อยคุยกัน</span><button class="tts" data-thai="งั้นพักก่อนนะ ไว้ค่อยคุยกัน">🔊</button><br/><span class="rom">ngán phák gɔ̀ɔn ná, wái khɔ̂i khui gan</span><br/><span class="eng">Then rest first. We can talk later.</span></div>
 </div>
@@ -1270,7 +1188,7 @@
 <div class="scene-label">Group 1｜เดี๋ยว / เดี๋ยวก่อน / เดี๋ยวค่อย...：等一下、晚點再</div>
 <div class="sentence"><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐaw gɔ̀ɔn ná khá, khɔ̌ɔ khít bpɛ́p nʉ̀ng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div>
 <div class="sentence"><span class="thai">เดี๋ยวค่อยกินก็ได้ ตอนนี้ยังไม่หิว</span><button class="tts" data-thai="เดี๋ยวค่อยกินก็ได้ ตอนนี้ยังไม่หิว">🔊</button><br/><span class="rom">dǐaw khɔ̂i gin gɔ̂ɔ dâai, dtɔɔn-níi yang mâi hǐw</span><br/><span class="eng">We can eat later. I’m not hungry yet.</span></div>
-<div class="sentence"><span class="thai">เดี๋ยวค่อยดูไฟล์นะ ตอนนี้งานเยอะมาก</span><button class="tts" data-thai="เดี๋ยวค่อยดูไฟล์นะ ตอนนี้งานเยอะมาก">🔊</button><br/><span class="rom">dǐaw khɔ̂i duu fai ná, dtɔɔn-níi ngaan yóe mâak</span><br/><span class="eng">I’ll look at the file later. I have a lot of work right now.</span></div>
+<div class="sentence"><span class="thai">เดี๋ยวค่อยดูไฟล์นะ ตอนนี้งานเยอะมาก</span><button class="tts" data-thai="เดี๋ยวค่อยดูไฟล์นะ ตอนนี้งานเยอะมาก">🔊</button><br/><span class="rom">dǐaw khɔ̂i duu fai ná, dtɔɔn-níi ngaan yə́ mâak</span><br/><span class="eng">I’ll look at the file later. I have a lot of work right now.</span></div>
 <div class="sentence"><span class="thai">เดี๋ยวว่างแล้วค่อยคุยกันนะ</span><button class="tts" data-thai="เดี๋ยวว่างแล้วค่อยคุยกันนะ">🔊</button><br/><span class="rom">dǐaw wâang lɛ́ɛw khɔ̂i khui gan ná</span><br/><span class="eng">When I’m free, let’s talk later, okay?</span></div>
 <div class="sentence"><span class="thai">อย่าเพิ่งรีบ เดี๋ยวก่อน</span><button class="tts" data-thai="อย่าเพิ่งรีบ เดี๋ยวก่อน">🔊</button><br/><span class="rom">yàa phə̂ng rîip, dǐaw gɔ̀ɔn</span><br/><span class="eng">Don’t rush yet. Hold on.</span></div>
 </div>
@@ -1312,7 +1230,7 @@
 <div class="sentence"><span class="thai">ต้องต่อรถไหมคะ</span><button class="tts" data-thai="ต้องต่อรถไหมคะ">🔊</button><br/><span class="rom">dtɔ̂ng dtɔ̀ɔ rót mái khá</span><br/><span class="eng">Do I need to transfer?</span></div>
 <div class="sentence"><span class="thai">ลองทำตามที่ครูบอกก่อน</span><button class="tts" data-thai="ลองทำตามที่ครูบอกก่อน">🔊</button><br/><span class="rom">lɔɔng tham dtaam thîi khruu bɔ̀ɔk gɔ̀ɔn</span><br/><span class="eng">Try doing it as the teacher said first.</span></div>
 <div class="sentence"><span class="thai">ตามมานะ ร้านอยู่ชั้นสอง</span><button class="tts" data-thai="ตามมานะ ร้านอยู่ชั้นสอง">🔊</button><br/><span class="rom">dtaam maa ná, ráan yùu chán sɔ̌ɔng</span><br/><span class="eng">Follow me. The shop is on the second floor.</span></div>
-<div class="sentence"><span class="thai">วางไว้ตรงกลางโต๊ะได้เลยค่ะ</span><button class="tts" data-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ">🔊</button><br/><span class="rom">waang wái dtrong glaang dtó dâai ləəy khâ</span><br/><span class="eng">You can put it in the middle of the table.</span></div>
+<div class="sentence"><span class="thai">วางไว้ตรงกลางโต๊ะได้เลยค่ะ</span><button class="tts" data-thai="วางไว้ตรงกลางโต๊ะได้เลยค่ะ">🔊</button><br/><span class="rom">waang wái dtrong-glaang dtó dâai ləəy khâ</span><br/><span class="eng">You can put it in the middle of the table.</span></div>
 </div>
 <div class="sentence-group">
 <div class="scene-label">Group 7｜งั้น / ถ้างั้น / ก็แล้วกัน：那就……、收尾決定</div>
@@ -1324,10 +1242,10 @@
 </div>
 <div class="sentence-group">
 <div class="scene-label">Group 8｜เยอะ / มาก / หลาย：很多、很、好幾個</div>
-<div class="sentence"><span class="thai">ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ráan níi khon yóe mâak, ngán bpai ráan ùuen mái</span><br/><span class="eng">This restaurant is really crowded. Then should we go to another place?</span></div>
-<div class="sentence"><span class="thai">ช่วงนี้งานเยอะมาก ยังทำไม่เสร็จเลย</span><button class="tts" data-thai="ช่วงนี้งานเยอะมาก ยังทำไม่เสร็จเลย">🔊</button><br/><span class="rom">chûang níi ngaan yóe mâak, yang tham mâi sèt ləəy</span><br/><span class="eng">I have a lot of work these days; I still haven’t finished.</span></div>
-<div class="sentence"><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yóe ná, phák gɔ̀ɔn gɔ̂ɔ dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></div>
-<div class="sentence"><span class="thai">อันนี้ดีกว่าเยอะ</span><button class="tts" data-thai="อันนี้ดีกว่าเยอะ">🔊</button><br/><span class="rom">an níi dii gwàa yóe</span><br/><span class="eng">This one is much better.</span></div>
+<div class="sentence"><span class="thai">ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ráan níi khon yə́ mâak, ngán bpai ráan ùuen mái</span><br/><span class="eng">This restaurant is really crowded. Then should we go to another place?</span></div>
+<div class="sentence"><span class="thai">ช่วงนี้งานเยอะมาก ยังทำไม่เสร็จเลย</span><button class="tts" data-thai="ช่วงนี้งานเยอะมาก ยังทำไม่เสร็จเลย">🔊</button><br/><span class="rom">chûang níi ngaan yə́ mâak, yang tham mâi sèt ləəy</span><br/><span class="eng">I have a lot of work these days; I still haven’t finished.</span></div>
+<div class="sentence"><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yə́ ná, phák gɔ̀ɔn gɔ̂ɔ dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></div>
+<div class="sentence"><span class="thai">อันนี้ดีกว่าเยอะ</span><button class="tts" data-thai="อันนี้ดีกว่าเยอะ">🔊</button><br/><span class="rom">an níi dii gwàa yə́</span><br/><span class="eng">This one is much better.</span></div>
 <div class="sentence"><span class="thai">ที่นี่มีหลายแบบให้เลือก</span><button class="tts" data-thai="ที่นี่มีหลายแบบให้เลือก">🔊</button><br/><span class="rom">thîi-nîi mii lǎai bɛ̀ɛp hâi lʉ̂ak</span><br/><span class="eng">There are many styles to choose from here.</span></div>
 </div>
 </section>
@@ -1397,7 +1315,7 @@
 </div>
 <div class="sentence-group">
 <div class="scene-label">Restaurant｜人很多、換地方</div>
-<p><span class="thai">ร้านนี้คนเยอะมาก</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก">🔊</button><br/><span class="rom">ráan níi khon yóe mâak</span><br/><span class="eng">This place is really crowded.</span></p>
+<p><span class="thai">ร้านนี้คนเยอะมาก</span><button class="tts" data-thai="ร้านนี้คนเยอะมาก">🔊</button><br/><span class="rom">ráan níi khon yə́ mâak</span><br/><span class="eng">This place is really crowded.</span></p>
 <p><span class="thai">งั้นไปร้านอื่นไหม</span><button class="tts" data-thai="งั้นไปร้านอื่นไหม">🔊</button><br/><span class="rom">ngán bpai ráan ùuen mái</span><br/><span class="eng">Then should we go to another restaurant?</span></p>
 <p><span class="small">語氣：朋友間自然，比「我們是否應該更換餐廳」自然很多。</span></p>
 </div>
@@ -1410,12 +1328,12 @@
 <div class="sentence-group">
 <div class="scene-label">BTS / MRT｜轉乘與位置</div>
 <p><span class="thai">จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง</span><button class="tts" data-thai="จากที่นี่ต้องต่อบีทีเอสอีกสายหนึ่ง">🔊</button><br/><span class="rom">jàak thîi-nîi dtɔ̂ng dtɔ̀ɔ BTS ìik sǎai nʉ̀ng</span><br/><span class="eng">From here, you need to transfer to another BTS line.</span></p>
-<p><span class="thai">ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT</span><button class="tts" data-thai="ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT">🔊</button><br/><span class="rom">ráan yùu dtrong glaang rá-wàang BTS gàp MRT</span><br/><span class="eng">The shop is right in the middle between the BTS and MRT.</span></p>
+<p><span class="thai">ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT</span><button class="tts" data-thai="ร้านอยู่ตรงกลางระหว่าง BTS กับ MRT">🔊</button><br/><span class="rom">ráan yùu dtrong-glaang rá-wàang BTS gàp MRT</span><br/><span class="eng">The shop is right in the middle between the BTS and MRT.</span></p>
 </div>
 <div class="sentence-group">
 <div class="scene-label">Condo｜房型與中意</div>
 <p><span class="thai">ห้องนี้ถูกใจฉันมาก</span><button class="tts" data-thai="ห้องนี้ถูกใจฉันมาก">🔊</button><br/><span class="rom">hɔ̂ng níi thùuk-jai chǎn mâak</span><br/><span class="eng">This room is really to my taste.</span></p>
-<p><span class="thai">ถ้าวางโซฟาตรงกลาง ห้องจะดูแคบไหมคะ</span><button class="tts" data-thai="ถ้าวางโซฟาตรงกลาง ห้องจะดูแคบไหมคะ">🔊</button><br/><span class="rom">thâa waang soo-faa dtrong glaang, hɔ̂ng jà duu khɛ̂ɛp mái khá</span><br/><span class="eng">If we put the sofa in the middle, will the room look narrow?</span></p>
+<p><span class="thai">ถ้าวางโซฟาตรงกลาง ห้องจะดูแคบไหมคะ</span><button class="tts" data-thai="ถ้าวางโซฟาตรงกลาง ห้องจะดูแคบไหมคะ">🔊</button><br/><span class="rom">thâa waang soo-faa dtrong-glaang, hɔ̂ng jà duu khɛ̂ɛp mái khá</span><br/><span class="eng">If we put the sofa in the middle, will the room look narrow?</span></p>
 </div>
 <div class="sentence-group">
 <div class="scene-label">Work / School｜禮貌麻煩與收尾</div>
@@ -1425,7 +1343,7 @@
 <div class="sentence-group">
 <div class="scene-label">Friends / Chat｜安慰與延後</div>
 <p><span class="thai">บางทีเขาอาจจะเหนื่อย</span><button class="tts" data-thai="บางทีเขาอาจจะเหนื่อย">🔊</button><br/><span class="rom">baang thii khǎo àat-jà nʉ̀ai</span><br/><span class="eng">Maybe he/she is tired.</span></p>
-<p><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yóe ná, phák gɔ̀ɔn gɔ̂ɔ dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></p>
+<p><span class="thai">อย่าคิดเยอะนะ พักก่อนก็ได้</span><button class="tts" data-thai="อย่าคิดเยอะนะ พักก่อนก็ได้">🔊</button><br/><span class="rom">yàa khít yə́ ná, phák gɔ̀ɔn gɔ̂ɔ dâai</span><br/><span class="eng">Don’t overthink, okay? You can rest first.</span></p>
 <p><span class="thai">งั้นไว้คุยกันทีหลังนะ</span><button class="tts" data-thai="งั้นไว้คุยกันทีหลังนะ">🔊</button><br/><span class="rom">ngán wái khui gan thii-lǎng ná</span><br/><span class="eng">Then let’s talk later, okay?</span></p>
 </div>
 <div class="sentence-group">
@@ -1440,33 +1358,20 @@
 <div class="grid">
 <div class="card span-6">
 <h2>Dialogue 1｜Café / Restaurant</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">Staff</span><br/><span class="thai">รับอะไรดีคะ</span><button class="tts" data-thai="รับอะไรดีคะ">🔊</button><br/><span class="rom">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">Customer</span><br/><span class="thai">เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง</span><button class="tts" data-thai="เดี๋ยวก่อนนะคะ ขอคิดแป๊บนึง">🔊</button><br/><span class="rom">dǐaw gɔ̀ɔn ná khá, khɔ̌ɔ khít bpɛ́p nʉ̀ng</span><br/><span class="eng">One moment, please. Let me think for a second.</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">Customer</span><br/><span class="thai">งั้นเอากาแฟเย็นก็แล้วกันค่ะ</span><button class="tts" data-thai="งั้นเอากาแฟเย็นก็แล้วกันค่ะ">🔊</button><br/><span class="rom">ngán ao gaa-fɛɛ yen gɔ̂ɔ lɛ́ɛw gan khâ</span><br/><span class="eng">Then I’ll take iced coffee.</span></div></div></div>
-
-
-
 </div>
 <div class="card span-6">
 <h2>Dialogue 2｜Street Stall / Shopping</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">Customer</span><br/><span class="thai">แบบนี้มีสีอื่นไหมคะ</span><button class="tts" data-thai="แบบนี้มีสีอื่นไหมคะ">🔊</button><br/><span class="rom">bɛ̀ɛp níi mii sǐi ùuen mái khá</span><br/><span class="eng">Does this style come in another color?</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">Seller</span><br/><span class="thai">มีสีขาวกับสีน้ำตาลค่ะ</span><button class="tts" data-thai="มีสีขาวกับสีน้ำตาลค่ะ">🔊</button><br/><span class="rom">mii sǐi khǎaw gàp sǐi náam-dtaan khâ</span><br/><span class="eng">We have white and brown.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">Customer</span><br/><span class="thai">งั้นเอาสีน้ำตาลก็แล้วกันค่ะ ถูกใจมาก</span><button class="tts" data-thai="งั้นเอาสีน้ำตาลก็แล้วกันค่ะ ถูกใจมาก">🔊</button><br/><span class="rom">ngán ao sǐi náam-dtaan gɔ̂ɔ lɛ́ɛw gan khâ, thùuk-jai mâak</span><br/><span class="eng">Then I’ll take brown. I really like it.</span></div></div></div>
-
-
-
 </div>
 <div class="card span-6">
 <h2>Dialogue 3｜BTS / MRT</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">จากตรงนี้ไปสยามต้องต่อรถไหม</span><button class="tts" data-thai="จากตรงนี้ไปสยามต้องต่อรถไหม">🔊</button><br/><span class="rom">jàak dtrong níi bpai Sà-yǎam dtɔ̂ng dtɔ̀ɔ rót mái</span><br/><span class="eng">From here to Siam, do we need to transfer?</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">B</span><br/><span class="thai">ไม่ต้อง นั่งบีทีเอสไปตรง ๆ ได้เลย</span><button class="tts" data-thai="ไม่ต้อง นั่งบีทีเอสไปตรง ๆ ได้เลย">🔊</button><br/><span class="rom">mâi dtɔ̂ng, nâng BTS bpai dtrong-dtrong dâai ləəy</span><br/><span class="eng">No need. You can take the BTS straight there.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">โอเค งั้นเดินตาม Google Maps ไปก่อนนะ</span><button class="tts" data-thai="โอเค งั้นเดินตาม Google Maps ไปก่อนนะ">🔊</button><br/><span class="rom">oo-khee, ngán dəən dtaam Google Maps bpai gɔ̀ɔn ná</span><br/><span class="eng">Okay, then let’s follow Google Maps first.</span></div></div></div>
-
-
-
 </div>
 <div class="card span-6">
-<h2>Dialogue 4｜Friends / Chat</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้</span><button class="tts" data-thai="วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้">🔊</button><br/><span class="rom">wan-níi chǎn ngaan yóe mâak, àat-jà bpai mâi dâai</span><br/><span class="eng">I have a lot of work today. I may not be able to go.</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">B</span><br/><span class="thai">ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ</span><button class="tts" data-thai="ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ">🔊</button><br/><span class="rom">thâa ngán wái wan lǎng gɔ̂ɔ dâai, mâi dtɔ̂ng greeng-jai ná</span><br/><span class="eng">Then another day is fine. Don’t feel bad.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">ขอบคุณนะ เกรงใจมากเลย</span><button class="tts" data-thai="ขอบคุณนะ เกรงใจมากเลย">🔊</button><br/><span class="rom">khɔ̀ɔp-khun ná, greeng-jai mâak ləəy</span><br/><span class="eng">Thank you. I really feel bad.</span></div></div></div>
-
-
-
+<h2>Dialogue 4｜Friends / Chat</h2><div class="chat-thread"><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้</span><button class="tts" data-thai="วันนี้ฉันงานเยอะมาก อาจจะไปไม่ได้">🔊</button><br/><span class="rom">wan-níi chǎn ngaan yə́ mâak, àat-jà bpai mâi dâai</span><br/><span class="eng">I have a lot of work today. I may not be able to go.</span></div></div><div class="chat-row right"><div class="chat-bubble"><span class="speaker b">B</span><br/><span class="thai">ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ</span><button class="tts" data-thai="ถ้างั้นไว้วันหลังก็ได้ ไม่ต้องเกรงใจนะ">🔊</button><br/><span class="rom">thâa ngán wái wan lǎng gɔ̂ɔ dâai, mâi dtɔ̂ng greeng-jai ná</span><br/><span class="eng">Then another day is fine. Don’t feel bad.</span></div></div><div class="chat-row left"><div class="chat-bubble"><span class="speaker a">A</span><br/><span class="thai">ขอบคุณนะ เกรงใจมากเลย</span><button class="tts" data-thai="ขอบคุณนะ เกรงใจมากเลย">🔊</button><br/><span class="rom">khɔ̀ɔp-khun ná, greeng-jai mâak ləəy</span><br/><span class="eng">Thank you. I really feel bad.</span></div></div></div>
 </div>
 </div>
 </section>
 <section class="tab-panel" id="mistakes">
-
-<div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">คุยโดยไลน์</span><button class="tts" data-thai="คุยโดยไลน์">🔊</button><br/><span class="rom">khui dooi LINE</span><br/><span class="eng">talk by LINE</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">คุยผ่านไลน์</span><button class="tts" data-thai="คุยผ่านไลน์">🔊</button><br/><span class="rom">khui phàan LINE</span><br/><span class="eng">talk via LINE</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">โดย</span> / <span class="rom">dooi</span> / <span class="eng">by</span> 偏正式；平台、管道日常更自然用 <span class="thai">ผ่าน</span> / <span class="rom">phàan</span> / <span class="eng">through; via</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันใช้เครื่องบินมา</span><button class="tts" data-thai="ฉันใช้เครื่องบินมา">🔊</button><br/><span class="rom">chǎn chái khrʉ̂ang-bin maa</span><br/><span class="eng">I used an airplane to come.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันนั่งเครื่องบินมา</span><button class="tts" data-thai="ฉันนั่งเครื่องบินมา">🔊</button><br/><span class="rom">chǎn nâng khrʉ̂ang-bin maa</span><br/><span class="eng">I came by plane.</span></div><div class="why-box"><div class="box-title">Why</div>交通工具日常用 <span class="thai">นั่ง + vehicle + มา/ไป</span> / <span class="rom">nâng + vehicle + maa/bpai</span> / <span class="eng">come/go by vehicle</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">เดี๋ยวก่อนกิน</span><button class="tts" data-thai="เดี๋ยวก่อนกิน">🔊</button><br/><span class="rom">dǐaw gɔ̀ɔn gin</span><br/><span class="eng">wait first eat</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">เดี๋ยวค่อยกิน</span><button class="tts" data-thai="เดี๋ยวค่อยกิน">🔊</button><br/><span class="rom">dǐaw khɔ̂i gin</span><br/><span class="eng">I’ll eat later.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เดี๋ยวก่อน</span> 是叫人先等；「等一下再吃」要用 <span class="thai">เดี๋ยวค่อยกิน</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันกินเพิ่ง</span><button class="tts" data-thai="ฉันกินเพิ่ง">🔊</button><br/><span class="rom">chǎn gin phə̂ng</span><br/><span class="eng">I ate just</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันเพิ่งกิน</span><button class="tts" data-thai="ฉันเพิ่งกิน">🔊</button><br/><span class="rom">chǎn phə̂ng gin</span><br/><span class="eng">I just ate.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เพิ่ง</span> / <span class="rom">phə̂ng</span> / <span class="eng">just recently</span> 通常放在動詞前。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">บ้างคน</span><button class="tts" data-thai="บ้างคน">🔊</button><br/><span class="rom">bâang khon</span><br/><span class="eng">some people</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">บางคน</span><button class="tts" data-thai="บางคน">🔊</button><br/><span class="rom">baang khon</span><br/><span class="eng">some people</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">บาง</span> 放名詞前；<span class="thai">บ้าง</span> 常放句尾或動詞後。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">พูดไทยได้บาง</span><button class="tts" data-thai="พูดไทยได้บาง">🔊</button><br/><span class="rom">phûut Thai dâai baang</span><br/><span class="eng">can speak some Thai</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">พูดไทยได้บ้าง</span><button class="tts" data-thai="พูดไทยได้บ้าง">🔊</button><br/><span class="rom">phûut Thai dâai bâang</span><br/><span class="eng">can speak some Thai</span></div><div class="why-box"><div class="box-title">Why</div>「會一些」用句尾 <span class="thai">บ้าง</span> / <span class="rom">bâang</span> / <span class="eng">some; a bit</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันเหนื่อยเยอะ</span><button class="tts" data-thai="ฉันเหนื่อยเยอะ">🔊</button><br/><span class="rom">chǎn nʉ̀ai yóe</span><br/><span class="eng">I’m tired a lot.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันเหนื่อยมาก</span><button class="tts" data-thai="ฉันเหนื่อยมาก">🔊</button><br/><span class="rom">chǎn nʉ̀ai mâak</span><br/><span class="eng">I’m very tired.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เยอะ</span> 是數量多；情緒或狀態程度用 <span class="thai">มาก</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันเกรงใจหมา</span><button class="tts" data-thai="ฉันเกรงใจหมา">🔊</button><br/><span class="rom">chǎn greeng-jai mǎa</span><br/><span class="eng">I feel bad imposing on dogs.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันกลัวหมา</span><button class="tts" data-thai="ฉันกลัวหมา">🔊</button><br/><span class="rom">chǎn glua mǎa</span><br/><span class="eng">I’m afraid of dogs.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เกรงใจ</span> 是怕麻煩別人；害怕用 <span class="thai">กลัว</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">งั้นก็แล้วกัน</span><button class="tts" data-thai="งั้นก็แล้วกัน">🔊</button><br/><span class="rom">ngán gɔ̂ɔ lɛ́ɛw gan</span><br/><span class="eng">Then so be it.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">งั้นไว้ค่อยคุยกันนะ</span><button class="tts" data-thai="งั้นไว้ค่อยคุยกันนะ">🔊</button><br/><span class="rom">ngán wái khɔ̂i khui gan ná</span><br/><span class="eng">Then let’s talk later, okay?</span></div><div class="why-box"><div class="box-title">Why</div>單獨說 <span class="thai">งั้นก็แล้วกัน</span> 可能偏冷，像「那就這樣吧」。想柔和收尾要補具體動作。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">สมัยที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="สมัยที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">sà-mǎi thîi chǎn gin khâaw, thoo-rá-sàp dang</span><br/><span class="eng">Back when I was eating, the phone rang.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ตอนที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="ตอนที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">dtɔɔn thîi chǎn gin khâaw, thoo-rá-sàp dang</span><br/><span class="eng">When I was eating, the phone rang.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">สมัยที่</span> 用於一段時期，不適合短暫動作。</div></div></section>
+<div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">คุยโดยไลน์</span><button class="tts" data-thai="คุยโดยไลน์">🔊</button><br/><span class="rom">khui dooi LINE</span><br/><span class="eng">talk by LINE</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">คุยผ่านไลน์</span><button class="tts" data-thai="คุยผ่านไลน์">🔊</button><br/><span class="rom">khui phàan LINE</span><br/><span class="eng">talk via LINE</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">โดย</span> / <span class="rom">dooi</span> / <span class="eng">by</span> 偏正式；平台、管道日常更自然用 <span class="thai">ผ่าน</span> / <span class="rom">phàan</span> / <span class="eng">through; via</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันใช้เครื่องบินมา</span><button class="tts" data-thai="ฉันใช้เครื่องบินมา">🔊</button><br/><span class="rom">chǎn chái khrʉ̂ang-bin maa</span><br/><span class="eng">I used an airplane to come.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันนั่งเครื่องบินมา</span><button class="tts" data-thai="ฉันนั่งเครื่องบินมา">🔊</button><br/><span class="rom">chǎn nâng khrʉ̂ang-bin maa</span><br/><span class="eng">I came by plane.</span></div><div class="why-box"><div class="box-title">Why</div>交通工具日常用 <span class="thai">นั่ง + vehicle + มา/ไป</span> / <span class="rom">nâng + vehicle + maa/bpai</span> / <span class="eng">come/go by vehicle</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">เดี๋ยวก่อนกิน</span><button class="tts" data-thai="เดี๋ยวก่อนกิน">🔊</button><br/><span class="rom">dǐaw gɔ̀ɔn gin</span><br/><span class="eng">wait first eat</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">เดี๋ยวค่อยกิน</span><button class="tts" data-thai="เดี๋ยวค่อยกิน">🔊</button><br/><span class="rom">dǐaw khɔ̂i gin</span><br/><span class="eng">I’ll eat later.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เดี๋ยวก่อน</span> 是叫人先等；「等一下再吃」要用 <span class="thai">เดี๋ยวค่อยกิน</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันกินเพิ่ง</span><button class="tts" data-thai="ฉันกินเพิ่ง">🔊</button><br/><span class="rom">chǎn gin phə̂ng</span><br/><span class="eng">I ate just</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันเพิ่งกิน</span><button class="tts" data-thai="ฉันเพิ่งกิน">🔊</button><br/><span class="rom">chǎn phə̂ng gin</span><br/><span class="eng">I just ate.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เพิ่ง</span> / <span class="rom">phə̂ng</span> / <span class="eng">just recently</span> 通常放在動詞前。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">บ้างคน</span><button class="tts" data-thai="บ้างคน">🔊</button><br/><span class="rom">bâang khon</span><br/><span class="eng">some people</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">บางคน</span><button class="tts" data-thai="บางคน">🔊</button><br/><span class="rom">baang khon</span><br/><span class="eng">some people</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">บาง</span> 放名詞前；<span class="thai">บ้าง</span> 常放句尾或動詞後。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">พูดไทยได้บาง</span><button class="tts" data-thai="พูดไทยได้บาง">🔊</button><br/><span class="rom">phûut Thai dâai baang</span><br/><span class="eng">can speak some Thai</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">พูดไทยได้บ้าง</span><button class="tts" data-thai="พูดไทยได้บ้าง">🔊</button><br/><span class="rom">phûut Thai dâai bâang</span><br/><span class="eng">can speak some Thai</span></div><div class="why-box"><div class="box-title">Why</div>「會一些」用句尾 <span class="thai">บ้าง</span> / <span class="rom">bâang</span> / <span class="eng">some; a bit</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันเหนื่อยเยอะ</span><button class="tts" data-thai="ฉันเหนื่อยเยอะ">🔊</button><br/><span class="rom">chǎn nʉ̀ai yə́</span><br/><span class="eng">I’m tired a lot.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันเหนื่อยมาก</span><button class="tts" data-thai="ฉันเหนื่อยมาก">🔊</button><br/><span class="rom">chǎn nʉ̀ai mâak</span><br/><span class="eng">I’m very tired.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เยอะ</span> 是數量多；情緒或狀態程度用 <span class="thai">มาก</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">ฉันเกรงใจหมา</span><button class="tts" data-thai="ฉันเกรงใจหมา">🔊</button><br/><span class="rom">chǎn greeng-jai mǎa</span><br/><span class="eng">I feel bad imposing on dogs.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ฉันกลัวหมา</span><button class="tts" data-thai="ฉันกลัวหมา">🔊</button><br/><span class="rom">chǎn glua mǎa</span><br/><span class="eng">I’m afraid of dogs.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">เกรงใจ</span> 是怕麻煩別人；害怕用 <span class="thai">กลัว</span>。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">งั้นก็แล้วกัน</span><button class="tts" data-thai="งั้นก็แล้วกัน">🔊</button><br/><span class="rom">ngán gɔ̂ɔ lɛ́ɛw gan</span><br/><span class="eng">Then so be it.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">งั้นไว้ค่อยคุยกันนะ</span><button class="tts" data-thai="งั้นไว้ค่อยคุยกันนะ">🔊</button><br/><span class="rom">ngán wái khɔ̂i khui gan ná</span><br/><span class="eng">Then let’s talk later, okay?</span></div><div class="why-box"><div class="box-title">Why</div>單獨說 <span class="thai">งั้นก็แล้วกัน</span> 可能偏冷，像「那就這樣吧」。想柔和收尾要補具體動作。</div></div><div class="mistake-card"><div class="wrong-box"><div class="box-title">Wrong</div><span class="thai">สมัยที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="สมัยที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">sà-mǎi thîi chǎn gin khâaw, thoo-rá-sàp dang</span><br/><span class="eng">Back when I was eating, the phone rang.</span></div><div class="better-box"><div class="box-title">Better</div><span class="thai">ตอนที่ฉันกินข้าว โทรศัพท์ดัง</span><button class="tts" data-thai="ตอนที่ฉันกินข้าว โทรศัพท์ดัง">🔊</button><br/><span class="rom">dtɔɔn thîi chǎn gin khâaw, thoo-rá-sàp dang</span><br/><span class="eng">When I was eating, the phone rang.</span></div><div class="why-box"><div class="box-title">Why</div><span class="thai">สมัยที่</span> 用於一段時期，不適合短暫動作。</div></div></section>
 <section class="tab-panel" id="practice">
 <div class="grid">
 <div class="card span-6">
@@ -1483,7 +1388,7 @@
 <summary>Answer</summary>
 <ol>
 <li><span class="thai">เพิ่งเห็นข้อความ</span><button class="tts" data-thai="เพิ่งเห็นข้อความ">🔊</button> / <span class="rom">phə̂ng hěn khɔ̂ɔ-khwaam</span> / <span class="eng">just saw the message</span></li>
-<li><span class="thai">คนเยอะ</span><button class="tts" data-thai="คนเยอะ">🔊</button> / <span class="rom">khon yóe</span> / <span class="eng">many people; crowded</span></li>
+<li><span class="thai">คนเยอะ</span><button class="tts" data-thai="คนเยอะ">🔊</button> / <span class="rom">khon yə́</span> / <span class="eng">many people; crowded</span></li>
 <li><span class="thai">พูดไทยได้บ้างค่ะ</span><button class="tts" data-thai="พูดไทยได้บ้างค่ะ">🔊</button> / <span class="rom">phûut Thai dâai bâang khâ</span> / <span class="eng">I can speak some Thai.</span></li>
 <li><span class="thai">เอาอันนี้ก็แล้วกัน</span><button class="tts" data-thai="เอาอันนี้ก็แล้วกัน">🔊</button> / <span class="rom">ao an níi gɔ̂ɔ lɛ́ɛw gan</span> / <span class="eng">I’ll take this one then.</span></li>
 <li><span class="thai">ไม่ต้องเกรงใจ</span><button class="tts" data-thai="ไม่ต้องเกรงใจ">🔊</button> / <span class="rom">mâi dtɔ̂ng greeng-jai</span> / <span class="eng">No need to feel bad.</span></li>
@@ -1560,7 +1465,6 @@
 <section class="tab-panel" id="favorites">
 <div class="card">
 <div class="section-title"><h2>Favorites｜收藏字卡</h2></div>
-
 <div class="empty-favs" id="favoritesEmpty">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>
 <div class="favorites-grid" id="favoritesGrid"></div>
 </div>
