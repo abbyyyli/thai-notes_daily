@@ -214,6 +214,9 @@
   .fav-btn.active{background:var(--orange-soft);border-color:#f2c18f;color:#9f5216}
   .favorites-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
   .favorite-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 8px 18px rgba(74,45,18,.06)}
+  .tag{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;font-weight:800;border:1px solid transparent;white-space:nowrap}
+  .tag.blue{background:var(--blue-soft);color:#276f9f;border-color:#acd4ef}
+  .empty-state{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f;text-align:center}
   .favorite-card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:8px}
   .remove-fav{border:1px solid #efb2ad;background:var(--red-soft);color:#a84038;border-radius:999px;padding:3px 8px;cursor:pointer;font-size:12px;font-weight:800}
   .empty-favs{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f}
@@ -456,7 +459,7 @@ th{font-size:12px;}
 <td>口語自然的「只是、只有、而已」。</td>
 <td><button class="pill" data-thai="แค่นี้"><span class="thai">แค่นี้</span><span class="eng">that’s all; just this</span></button> <button class="pill" data-thai="ก็แค่"><span class="thai">ก็แค่</span><span class="eng">it’s just...</span></button> <button class="pill" data-thai="แค่อยาก"><span class="thai">แค่อยาก...</span><span class="eng">just want to...</span></button> </td>
 <td><span class="thai">ฉันมีเวลาแค่สิบนาที <button class="tts" data-say="ฉันมีเวลาแค่สิบนาที">🔊</button></span><br/><span class="roman">chǎn mii wee-laa khɛ̂ɛ sìp naa-thii</span><br/><span class="eng">I only have ten minutes.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="just / only" data-example-eng="I only have ten minutes." data-example-rom="chǎn mii wee-laa khɛ̂ɛ sìp naa-thii" data-example-thai="ฉันมีเวลาแค่สิบนาที" data-romanization="khɛ̂ɛ" data-thai="แค่" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="แค่" data-rom="khɛ̂ɛ" data-eng="just / only" data-cat="Local usage" data-example="ฉันมีเวลาแค่สิบนาที|chǎn mii wee-laa khɛ̂ɛ sìp naa-thii|I only have ten minutes.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เท่านั้น <button class="tts" data-say="เท่านั้น">🔊</button></span></td>
 <td><span class="roman">thâo-nán</span></td>
@@ -465,7 +468,7 @@ th{font-size:12px;}
 <td>正式或強調限制，像「僅此而已」。</td>
 <td><button class="pill" data-thai="เพียง เท่านั้น"><span class="thai">เพียง...เท่านั้น</span><span class="eng">only; merely</span></button> <button class="pill" data-thai="ถึง เท่านั้น"><span class="thai">ถึง...เท่านั้น</span><span class="eng">only until...</span></button> </td>
 <td><span class="thai">วันนี้เปิดถึงห้าโมงเท่านั้น <button class="tts" data-say="วันนี้เปิดถึงห้าโมงเท่านั้น">🔊</button></span><br/><span class="roman">wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán</span><br/><span class="eng">Open only until 5 today.</span></td>
-<td><button class="fav-btn" data-category="Textbook-based" data-english="only / merely" data-example-eng="Open only until 5 today." data-example-rom="wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán" data-example-thai="วันนี้เปิดถึงห้าโมงเท่านั้น" data-romanization="thâo-nán" data-thai="เท่านั้น" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="เท่านั้น" data-rom="thâo-nán" data-eng="only / merely" data-cat="Textbook-based" data-example="วันนี้เปิดถึงห้าโมงเท่านั้น|wan-níi bpə̀ət thʉ̌ng hâa moong thâo-nán|Open only until 5 today.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ต้องการ <button class="tts" data-say="ต้องการ">🔊</button></span></td>
 <td><span class="roman">dtɔ̂ng-gaan</span></td>
@@ -474,7 +477,7 @@ th{font-size:12px;}
 <td>比 อยาก 正式，較理性或書面。</td>
 <td><button class="pill" data-thai="ต้องการความช่วยเหลือ"><span class="thai">ต้องการความช่วยเหลือ</span><span class="eng">need help</span></button> <button class="pill" data-thai="ต้องการพูดคุย"><span class="thai">ต้องการพูดคุย</span><span class="eng">need/want to talk</span></button> </td>
 <td><span class="thai">ฉันแค่ต้องการพูดคุยกับเขา <button class="tts" data-say="ฉันแค่ต้องการพูดคุยกับเขา">🔊</button></span><br/><span class="roman">chǎn khɛ̂ɛ dtɔ̂ng-gaan phûut-khui gàp khǎo</span><br/><span class="eng">I just want to talk with him.</span></td>
-<td><button class="fav-btn" data-category="Textbook-based" data-english="need / want" data-example-eng="I just want to talk with him." data-example-rom="chǎn khɛ̂ɛ dtɔ̂ng-gaan phûut-khui gàp khǎo" data-example-thai="ฉันแค่ต้องการพูดคุยกับเขา" data-romanization="dtɔ̂ng-gaan" data-thai="ต้องการ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ต้องการ" data-rom="dtɔ̂ng-gaan" data-eng="need / want" data-cat="Textbook-based" data-example="ฉันแค่ต้องการพูดคุยกับเขา|chǎn khɛ̂ɛ dtɔ̂ng-gaan phûut-khui gàp khǎo|I just want to talk with him.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">พูดคุย / คุย <button class="tts" data-say="พูดคุย คุย">🔊</button></span></td>
 <td><span class="roman">phûut-khui / khui</span></td>
@@ -483,7 +486,7 @@ th{font-size:12px;}
 <td>พูดคุย 較完整正式；คุย 更日常。</td>
 <td><button class="pill" data-thai="คุยกับ"><span class="thai">คุยกับ...</span><span class="eng">talk with...</span></button> <button class="pill" data-thai="คุยกัน"><span class="thai">คุยกัน</span><span class="eng">talk together</span></button> <button class="pill" data-thai="มีเรื่องจะคุย"><span class="thai">มีเรื่องจะคุย</span><span class="eng">have something to discuss</span></button> </td>
 <td><span class="thai">ฉันแค่อยากคุยกับเขา <button class="tts" data-say="ฉันแค่อยากคุยกับเขา">🔊</button></span><br/><span class="roman">chǎn khɛ̂ɛ yàak khui gàp khǎo</span><br/><span class="eng">I just want to chat with him.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="talk / chat" data-example-eng="I just want to chat with him." data-example-rom="chǎn khɛ̂ɛ yàak khui gàp khǎo" data-example-thai="ฉันแค่อยากคุยกับเขา" data-romanization="phûut-khui / khui" data-thai="พูดคุย / คุย" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="พูดคุย / คุย" data-rom="phûut-khui / khui" data-eng="talk / chat" data-cat="Local usage" data-example="ฉันแค่อยากคุยกับเขา|chǎn khɛ̂ɛ yàak khui gàp khǎo|I just want to chat with him.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">หัวเราะ <button class="tts" data-say="หัวเราะ">🔊</button></span></td>
 <td><span class="roman">hǔa-rɔ́</span></td>
@@ -492,7 +495,7 @@ th{font-size:12px;}
 <td>笑出聲；和 ยิ้ม「微笑」不同。</td>
 <td><button class="pill" data-thai="หัวเราะเฉยๆ"><span class="thai">หัวเราะเฉยๆ</span><span class="eng">just laugh it off</span></button> <button class="pill" data-thai="หัวเราะดัง"><span class="thai">หัวเราะดัง</span><span class="eng">laugh loudly</span></button> </td>
 <td><span class="thai">เขาแค่หัวเราะเฉยๆ <button class="tts" data-say="เขาแค่หัวเราะเฉยๆ">🔊</button></span><br/><span class="roman">khǎo khɛ̂ɛ hǔa-rɔ́ chə̌əy-chə̌əy</span><br/><span class="eng">He just laughed it off.</span></td>
-<td><button class="fav-btn" data-category="Daily" data-english="laugh" data-example-eng="He just laughed it off." data-example-rom="khǎo khɛ̂ɛ hǔa-rɔ́ chə̌əy-chə̌əy" data-example-thai="เขาแค่หัวเราะเฉยๆ" data-romanization="hǔa-rɔ́" data-thai="หัวเราะ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="หัวเราะ" data-rom="hǔa-rɔ́" data-eng="laugh" data-cat="Daily" data-example="เขาแค่หัวเราะเฉยๆ|khǎo khɛ̂ɛ hǔa-rɔ́ chə̌əy-chə̌əy|He just laughed it off.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เฉยๆ <button class="tts" data-say="เฉยๆ">🔊</button></span></td>
 <td><span class="roman">chə̌əy-chə̌əy</span></td>
@@ -501,7 +504,7 @@ th{font-size:12px;}
 <td>不是 boring，而是「就那樣、沒特別」。</td>
 <td><button class="pill" data-thai="รู้สึกเฉยๆ"><span class="thai">รู้สึกเฉยๆ</span><span class="eng">feel neutral</span></button> <button class="pill" data-thai="ยิ้มเฉยๆ"><span class="thai">ยิ้มเฉยๆ</span><span class="eng">just smile</span></button> </td>
 <td><span class="thai">ฉันรู้สึกเฉยๆ <button class="tts" data-say="ฉันรู้สึกเฉยๆ">🔊</button></span><br/><span class="roman">chǎn rúu-sʉ̀k chə̌əy-chə̌əy</span><br/><span class="eng">I feel neutral / meh.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="just / neutral / nothing special" data-example-eng="I feel neutral / meh." data-example-rom="chǎn rúu-sʉ̀k chə̌əy-chə̌əy" data-example-thai="ฉันรู้สึกเฉยๆ" data-romanization="chə̌əy-chə̌əy" data-thai="เฉยๆ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="เฉยๆ" data-rom="chə̌əy-chə̌əy" data-eng="just / neutral / nothing special" data-cat="Local usage" data-example="ฉันรู้สึกเฉยๆ|chǎn rúu-sʉ̀k chə̌əy-chə̌əy|I feel neutral / meh.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">รับ <button class="tts" data-say="รับ">🔊</button></span></td>
 <td><span class="roman">ráp</span></td>
@@ -510,7 +513,7 @@ th{font-size:12px;}
 <td>服務業中常表示「點、要、拿」。</td>
 <td><button class="pill" data-thai="รับอะไรดี"><span class="thai">รับอะไรดี</span><span class="eng">what would you like?</span></button> <button class="pill" data-thai="รับเพิ่มไหม"><span class="thai">รับเพิ่มไหม</span><span class="eng">would you like more?</span></button> <button class="pill" data-thai="รับกลับบ้านไหม"><span class="thai">รับกลับบ้านไหม</span><span class="eng">take away?</span></button> </td>
 <td><span class="thai">รับอะไรดีคะ <button class="tts" data-say="รับอะไรดีคะ">🔊</button></span><br/><span class="roman">ráp à-rai dii khá</span><br/><span class="eng">What would you like?</span></td>
-<td><button class="fav-btn" data-category="Service Thai" data-english="receive / take / order" data-example-eng="What would you like?" data-example-rom="ráp à-rai dii khá" data-example-thai="รับอะไรดีคะ" data-romanization="ráp" data-thai="รับ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="รับ" data-rom="ráp" data-eng="receive / take / order" data-cat="Service Thai" data-example="รับอะไรดีคะ|ráp à-rai dii khá|What would you like?">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">อย่างอื่น <button class="tts" data-say="อย่างอื่น">🔊</button></span></td>
 <td><span class="roman">yàang ʉ̀ʉn</span></td>
@@ -519,7 +522,7 @@ th{font-size:12px;}
 <td>อย่าง = kind/thing；อื่น = other。</td>
 <td><button class="pill" data-thai="เอาอย่างอื่นไหม"><span class="thai">เอาอย่างอื่นไหม</span><span class="eng">anything else?</span></button> <button class="pill" data-thai="มีอย่างอื่นไหม"><span class="thai">มีอย่างอื่นไหม</span><span class="eng">is there anything else?</span></button> </td>
 <td><span class="thai">เอาอย่างอื่นไหมคะ <button class="tts" data-say="เอาอย่างอื่นไหมคะ">🔊</button></span><br/><span class="roman">ao yàang ʉ̀ʉn mái khá</span><br/><span class="eng">Would you like anything else?</span></td>
-<td><button class="fav-btn" data-category="Practical" data-english="something else" data-example-eng="Would you like anything else?" data-example-rom="ao yàang ʉ̀ʉn mái khá" data-example-thai="เอาอย่างอื่นไหมคะ" data-romanization="yàang ʉ̀ʉn" data-thai="อย่างอื่น" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="อย่างอื่น" data-rom="yàang ʉ̀ʉn" data-eng="something else" data-cat="Practical" data-example="เอาอย่างอื่นไหมคะ|ao yàang ʉ̀ʉn mái khá|Would you like anything else?">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ยิ่ง...ก็ยิ่ง... <button class="tts" data-say="ยิ่ง ก็ยิ่ง">🔊</button></span></td>
 <td><span class="roman">yîng... gɔ̂ɔ yîng...</span></td>
@@ -528,7 +531,7 @@ th{font-size:12px;}
 <td>越……越……；歌詞與日常都常見。</td>
 <td><button class="pill" data-thai="ยิ่งคิดก็ยิ่งเครียด"><span class="thai">ยิ่งคิดก็ยิ่งเครียด</span><span class="eng">the more I think, the more stressed</span></button> </td>
 <td><span class="thai">ยิ่งคิดก็ยิ่งเครียด <button class="tts" data-say="ยิ่งคิดก็ยิ่งเครียด">🔊</button></span><br/><span class="roman">yîng khít gɔ̂ɔ yîng khrîat</span><br/><span class="eng">The more I think, the more stressed I get.</span></td>
-<td><button class="fav-btn" data-category="Structure" data-english="the more..., the more..." data-example-eng="The more I think, the more stressed I get." data-example-rom="yîng khít gɔ̂ɔ yîng khrîat" data-example-thai="ยิ่งคิดก็ยิ่งเครียด" data-romanization="yîng... gɔ̂ɔ yîng..." data-thai="ยิ่ง...ก็ยิ่ง..." type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ยิ่ง...ก็ยิ่ง..." data-rom="yîng... gɔ̂ɔ yîng..." data-eng="the more..., the more..." data-cat="Structure" data-example="ยิ่งคิดก็ยิ่งเครียด|yîng khít gɔ̂ɔ yîng khrîat|The more I think, the more stressed I get.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">คิด / คิดถึง <button class="tts" data-say="คิด คิดถึง">🔊</button></span></td>
 <td><span class="roman">khít / khít-thʉ̌ng</span></td>
@@ -537,7 +540,7 @@ th{font-size:12px;}
 <td>คิดถึง 幾乎是「想念」，不是單純 think about。</td>
 <td><button class="pill" data-thai="คิดว่า"><span class="thai">คิดว่า</span><span class="eng">think that</span></button> <button class="pill" data-thai="คิดถึงเธอ"><span class="thai">คิดถึงเธอ</span><span class="eng">miss you</span></button> </td>
 <td><span class="thai">ฉันคิดถึงเธอ <button class="tts" data-say="ฉันคิดถึงเธอ">🔊</button></span><br/><span class="roman">chǎn khít-thʉ̌ng thəə</span><br/><span class="eng">I miss you.</span></td>
-<td><button class="fav-btn" data-category="Common mistake" data-english="think / miss" data-example-eng="I miss you." data-example-rom="chǎn khít-thʉ̌ng thəə" data-example-thai="ฉันคิดถึงเธอ" data-romanization="khít / khít-thʉ̌ng" data-thai="คิด / คิดถึง" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="คิด / คิดถึง" data-rom="khít / khít-thʉ̌ng" data-eng="think / miss" data-cat="Common mistake" data-example="ฉันคิดถึงเธอ|chǎn khít-thʉ̌ng thəə|I miss you.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ยิ้ม <button class="tts" data-say="ยิ้ม">🔊</button></span></td>
 <td><span class="roman">yím</span></td>
@@ -546,7 +549,7 @@ th{font-size:12px;}
 <td>微笑；和 หัวเราะ「笑出聲」不同。</td>
 <td><button class="pill" data-thai="เธอยิ้ม"><span class="thai">เธอยิ้ม</span><span class="eng">you smile</span></button> <button class="pill" data-thai="ยิ้มให้"><span class="thai">ยิ้มให้</span><span class="eng">smile at/for</span></button> <button class="pill" data-thai="ยิ้มตาม"><span class="thai">ยิ้มตาม</span><span class="eng">smile along</span></button> </td>
 <td><span class="thai">แค่เธอยิ้ม ฉันก็ยิ้ม <button class="tts" data-say="แค่เธอยิ้ม ฉันก็ยิ้ม">🔊</button></span><br/><span class="roman">khɛ̂ɛ thəə yím, chǎn gɔ̂ɔ yím</span><br/><span class="eng">Just seeing you smile makes me smile too.</span></td>
-<td><button class="fav-btn" data-category="Emotion" data-english="smile" data-example-eng="Just seeing you smile makes me smile too." data-example-rom="khɛ̂ɛ thəə yím, chǎn gɔ̂ɔ yím" data-example-thai="แค่เธอยิ้ม ฉันก็ยิ้ม" data-romanization="yím" data-thai="ยิ้ม" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ยิ้ม" data-rom="yím" data-eng="smile" data-cat="Emotion" data-example="แค่เธอยิ้ม ฉันก็ยิ้ม|khɛ̂ɛ thəə yím, chǎn gɔ̂ɔ yím|Just seeing you smile makes me smile too.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ก็ดีนะ <button class="tts" data-say="ก็ดีนะ">🔊</button></span></td>
 <td><span class="roman">gɔ̂ɔ dii ná</span></td>
@@ -555,7 +558,7 @@ th{font-size:12px;}
 <td>柔和的「也不錯啊」，有時略帶保留。</td>
 <td><button class="pill" data-thai="ก็ดีนะ ไปกัน"><span class="thai">ก็ดีนะ ไปกัน</span><span class="eng">sounds good, let’s go</span></button> <button class="pill" data-thai="ได้เลย ก็ดีนะ"><span class="thai">ได้เลย ก็ดีนะ</span><span class="eng">sure, sounds good</span></button> </td>
 <td><span class="thai">ไปกินชาบูกันไหม — ก็ดีนะ <button class="tts" data-say="ไปกินชาบูกันไหม ก็ดีนะ">🔊</button></span><br/><span class="roman">bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná</span><br/><span class="eng">Want shabu? — Sounds good.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="sounds good / pretty good" data-example-eng="Want shabu? — Sounds good." data-example-rom="bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná" data-example-thai="ไปกินชาบูกันไหม — ก็ดีนะ" data-romanization="gɔ̂ɔ dii ná" data-thai="ก็ดีนะ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ก็ดีนะ" data-rom="gɔ̂ɔ dii ná" data-eng="sounds good / pretty good" data-cat="Local usage" data-example="ไปกินชาบูกันไหม — ก็ดีนะ|bpai gin chaa-buu gan mái — gɔ̂ɔ dii ná|Want shabu? — Sounds good.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">สบาย ๆ <button class="tts" data-say="สบาย ๆ">🔊</button></span></td>
 <td><span class="roman">sà-baai sà-baai</span></td>
@@ -564,7 +567,7 @@ th{font-size:12px;}
 <td>輕鬆、隨性、no pressure，不是 lazy。</td>
 <td><button class="pill" data-thai="ทำสบาย ๆ"><span class="thai">ทำสบาย ๆ</span><span class="eng">do it casually</span></button> <button class="pill" data-thai="คุยกันสบาย ๆ"><span class="thai">คุยกันสบาย ๆ</span><span class="eng">talk casually</span></button> </td>
 <td><span class="thai">ไม่ต้องเครียด ทำสบาย ๆ <button class="tts" data-say="ไม่ต้องเครียด ทำสบาย ๆ">🔊</button></span><br/><span class="roman">mâi dtɔ̂ng khrîat, tham sà-baai sà-baai</span><br/><span class="eng">Don’t stress. Take it easy.</span></td>
-<td><button class="fav-btn" data-category="Thai culture" data-english="relaxed / chill / casual" data-example-eng="Don’t stress. Take it easy." data-example-rom="mâi dtɔ̂ng khrîat, tham sà-baai sà-baai" data-example-thai="ไม่ต้องเครียด ทำสบาย ๆ" data-romanization="sà-baai sà-baai" data-thai="สบาย ๆ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="สบาย ๆ" data-rom="sà-baai sà-baai" data-eng="relaxed / chill / casual" data-cat="Thai culture" data-example="ไม่ต้องเครียด ทำสบาย ๆ|mâi dtɔ̂ng khrîat, tham sà-baai sà-baai|Don’t stress. Take it easy.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ใจ <button class="tts" data-say="ใจ">🔊</button></span></td>
 <td><span class="roman">jai</span></td>
@@ -573,7 +576,7 @@ th{font-size:12px;}
 <td>泰文情緒詞核心，表示內心狀態。</td>
 <td><button class="pill" data-thai="เข้าใจ"><span class="thai">เข้าใจ</span><span class="eng">understand</span></button> <button class="pill" data-thai="เสียใจ"><span class="thai">เสียใจ</span><span class="eng">be sad; sorry</span></button> <button class="pill" data-thai="น้อยใจ"><span class="thai">น้อยใจ</span><span class="eng">feel hurt; neglected</span></button> <button class="pill" data-thai="สบายใจ"><span class="thai">สบายใจ</span><span class="eng">feel at ease</span></button> </td>
 <td><span class="thai">ฉันเข้าใจเธอ <button class="tts" data-say="ฉันเข้าใจเธอ">🔊</button></span><br/><span class="roman">chǎn khâo jai thəə</span><br/><span class="eng">I understand you.</span></td>
-<td><button class="fav-btn" data-category="Emotion" data-english="heart / mind / feelings" data-example-eng="I understand you." data-example-rom="chǎn khâo jai thəə" data-example-thai="ฉันเข้าใจเธอ" data-romanization="jai" data-thai="ใจ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ใจ" data-rom="jai" data-eng="heart / mind / feelings" data-cat="Emotion" data-example="ฉันเข้าใจเธอ|chǎn khâo jai thəə|I understand you.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">คิดตังค์ <button class="tts" data-say="คิดตังค์">🔊</button></span></td>
 <td><span class="roman">khít dtang</span></td>
@@ -582,7 +585,7 @@ th{font-size:12px;}
 <td>คิด = calculate；ตังค์ = 口語「錢」。</td>
 <td><button class="pill" data-thai="คิดตังค์ด้วย"><span class="thai">คิดตังค์ด้วย</span><span class="eng">bill, please</span></button> <button class="pill" data-thai="คิดเงินด้วย"><span class="thai">คิดเงินด้วย</span><span class="eng">bill, please</span></button> </td>
 <td><span class="thai">พี่ คิดตังค์ด้วยค่ะ <button class="tts" data-say="พี่ คิดตังค์ด้วยค่ะ">🔊</button></span><br/><span class="roman">phîi khít dtang dûai khâ</span><br/><span class="eng">Excuse me, bill please.</span></td>
-<td><button class="fav-btn" data-category="Restaurant" data-english="calculate the bill" data-example-eng="Excuse me, bill please." data-example-rom="phîi khít dtang dûai khâ" data-example-thai="พี่ คิดตังค์ด้วยค่ะ" data-romanization="khít dtang" data-thai="คิดตังค์" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="คิดตังค์" data-rom="khít dtang" data-eng="calculate the bill" data-cat="Restaurant" data-example="พี่ คิดตังค์ด้วยค่ะ|phîi khít dtang dûai khâ|Excuse me, bill please.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ข้างใน <button class="tts" data-say="ข้างใน">🔊</button></span></td>
 <td><span class="roman">khâang nai</span></td>
@@ -591,7 +594,7 @@ th{font-size:12px;}
 <td>比 ใน 更有「裡面那邊」的空間感。</td>
 <td><button class="pill" data-thai="นั่งข้างใน"><span class="thai">นั่งข้างใน</span><span class="eng">sit inside</span></button> <button class="pill" data-thai="ข้างในเต็ม"><span class="thai">ข้างในเต็ม</span><span class="eng">inside is full</span></button> <button class="pill" data-thai="เข้าไปข้างใน"><span class="thai">เข้าไปข้างใน</span><span class="eng">go inside</span></button> </td>
 <td><span class="thai">ฉันรออยู่ข้างใน <button class="tts" data-say="ฉันรออยู่ข้างใน">🔊</button></span><br/><span class="roman">chǎn rɔɔ yùu khâang nai</span><br/><span class="eng">I’m waiting inside.</span></td>
-<td><button class="fav-btn" data-category="Place" data-english="inside" data-example-eng="I’m waiting inside." data-example-rom="chǎn rɔɔ yùu khâang nai" data-example-thai="ฉันรออยู่ข้างใน" data-romanization="khâang nai" data-thai="ข้างใน" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ข้างใน" data-rom="khâang nai" data-eng="inside" data-cat="Place" data-example="ฉันรออยู่ข้างใน|chǎn rɔɔ yùu khâang nai|I’m waiting inside.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ทั้ง <button class="tts" data-say="ทั้ง">🔊</button></span></td>
 <td><span class="roman">tháng</span></td>
@@ -600,7 +603,7 @@ th{font-size:12px;}
 <td>表示全部包含進去。</td>
 <td><button class="pill" data-thai="ทั้งสอง"><span class="thai">ทั้งสอง</span><span class="eng">both</span></button> <button class="pill" data-thai="ทั้งหมด"><span class="thai">ทั้งหมด</span><span class="eng">all</span></button> <button class="pill" data-thai="ทั้งวัน"><span class="thai">ทั้งวัน</span><span class="eng">all day</span></button> </td>
 <td><span class="thai">เอาทั้งสองอันค่ะ <button class="tts" data-say="เอาทั้งสองอันค่ะ">🔊</button></span><br/><span class="roman">ao tháng sɔ̌ɔng an khâ</span><br/><span class="eng">I’ll take both.</span></td>
-<td><button class="fav-btn" data-category="Classifier" data-english="both / all / entire" data-example-eng="I’ll take both." data-example-rom="ao tháng sɔ̌ɔng an khâ" data-example-thai="เอาทั้งสองอันค่ะ" data-romanization="tháng" data-thai="ทั้ง" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ทั้ง" data-rom="tháng" data-eng="both / all / entire" data-cat="Classifier" data-example="เอาทั้งสองอันค่ะ|ao tháng sɔ̌ɔng an khâ|I’ll take both.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เหมือนกัน <button class="tts" data-say="เหมือนกัน">🔊</button></span></td>
 <td><span class="roman">mʉ̌an gan</span></td>
@@ -609,7 +612,7 @@ th{font-size:12px;}
 <td>聊天裡表共感，像「我也是耶」。</td>
 <td><button class="pill" data-thai="ชอบเหมือนกัน"><span class="thai">ชอบเหมือนกัน</span><span class="eng">like it too</span></button> <button class="pill" data-thai="คิดเหมือนกัน"><span class="thai">คิดเหมือนกัน</span><span class="eng">think the same</span></button> </td>
 <td><span class="thai">ฉันก็ชอบเหมือนกัน <button class="tts" data-say="ฉันก็ชอบเหมือนกัน">🔊</button></span><br/><span class="roman">chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan</span><br/><span class="eng">I like it too.</span></td>
-<td><button class="fav-btn" data-category="Chat" data-english="same / too / likewise" data-example-eng="I like it too." data-example-rom="chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan" data-example-thai="ฉันก็ชอบเหมือนกัน" data-romanization="mʉ̌an gan" data-thai="เหมือนกัน" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="เหมือนกัน" data-rom="mʉ̌an gan" data-eng="same / too / likewise" data-cat="Chat" data-example="ฉันก็ชอบเหมือนกัน|chǎn gɔ̂ɔ chɔ̂ɔp mʉ̌an gan|I like it too.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เรื่อง <button class="tts" data-say="เรื่อง">🔊</button></span></td>
 <td><span class="roman">rʉ̂ang</span></td>
@@ -618,7 +621,7 @@ th{font-size:12px;}
 <td>不只 story，也可指事情、話題、狀況。</td>
 <td><button class="pill" data-thai="เรื่องนี้"><span class="thai">เรื่องนี้</span><span class="eng">this matter</span></button> <button class="pill" data-thai="มีเรื่อง"><span class="thai">มีเรื่อง</span><span class="eng">have something; have an issue</span></button> <button class="pill" data-thai="เรื่องงาน"><span class="thai">เรื่องงาน</span><span class="eng">work matter</span></button> </td>
 <td><span class="thai">เรื่องนี้สำคัญมาก <button class="tts" data-say="เรื่องนี้สำคัญมาก">🔊</button></span><br/><span class="roman">rʉ̂ang níi sǎm-khan mâak</span><br/><span class="eng">This matter is very important.</span></td>
-<td><button class="fav-btn" data-category="Core noun" data-english="matter / story / topic" data-example-eng="This matter is very important." data-example-rom="rʉ̂ang níi sǎm-khan mâak" data-example-thai="เรื่องนี้สำคัญมาก" data-romanization="rʉ̂ang" data-thai="เรื่อง" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="เรื่อง" data-rom="rʉ̂ang" data-eng="matter / story / topic" data-cat="Core noun" data-example="เรื่องนี้สำคัญมาก|rʉ̂ang níi sǎm-khan mâak|This matter is very important.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ความ <button class="tts" data-say="ความ">🔊</button></span></td>
 <td><span class="roman">khwaam</span></td>
@@ -627,7 +630,7 @@ th{font-size:12px;}
 <td>把後面的詞變成抽象概念。</td>
 <td><button class="pill" data-thai="ความรัก"><span class="thai">ความรัก</span><span class="eng">love</span></button> <button class="pill" data-thai="ความสุข"><span class="thai">ความสุข</span><span class="eng">happiness</span></button> <button class="pill" data-thai="ความรู้สึก"><span class="thai">ความรู้สึก</span><span class="eng">feeling</span></button> </td>
 <td><span class="thai">ความรักไม่ง่ายเลย <button class="tts" data-say="ความรักไม่ง่ายเลย">🔊</button></span><br/><span class="roman">khwaam-rák mâi ngâai ləəy</span><br/><span class="eng">Love is not easy at all.</span></td>
-<td><button class="fav-btn" data-category="Grammar" data-english="abstract noun marker" data-example-eng="Love is not easy at all." data-example-rom="khwaam-rák mâi ngâai ləəy" data-example-thai="ความรักไม่ง่ายเลย" data-romanization="khwaam" data-thai="ความ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ความ" data-rom="khwaam" data-eng="abstract noun marker" data-cat="Grammar" data-example="ความรักไม่ง่ายเลย|khwaam-rák mâi ngâai ləəy|Love is not easy at all.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ไว้ <button class="tts" data-say="ไว้">🔊</button></span></td>
 <td><span class="roman">wái</span></td>
@@ -636,7 +639,7 @@ th{font-size:12px;}
 <td>保留某動作結果到之後。</td>
 <td><button class="pill" data-thai="เก็บไว้"><span class="thai">เก็บไว้</span><span class="eng">keep it</span></button> <button class="pill" data-thai="ซื้อไว้"><span class="thai">ซื้อไว้</span><span class="eng">buy in advance</span></button> <button class="pill" data-thai="ไว้ก่อน"><span class="thai">ไว้ก่อน</span><span class="eng">leave it for now</span></button> <button class="pill" data-thai="ไว้เจอกัน"><span class="thai">ไว้เจอกัน</span><span class="eng">see you later</span></button> </td>
 <td><span class="thai">เก็บไว้ก่อนค่ะ <button class="tts" data-say="เก็บไว้ก่อนค่ะ">🔊</button></span><br/><span class="roman">gèp wái gɔ̀ɔn khâ</span><br/><span class="eng">Keep it for now.</span></td>
-<td><button class="fav-btn" data-category="Local usage" data-english="keep / save / leave for later" data-example-eng="Keep it for now." data-example-rom="gèp wái gɔ̀ɔn khâ" data-example-thai="เก็บไว้ก่อนค่ะ" data-romanization="wái" data-thai="ไว้" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ไว้" data-rom="wái" data-eng="keep / save / leave for later" data-cat="Local usage" data-example="เก็บไว้ก่อนค่ะ|gèp wái gɔ̀ɔn khâ|Keep it for now.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เห็น <button class="tts" data-say="เห็น">🔊</button></span></td>
 <td><span class="roman">hěn</span></td>
@@ -645,7 +648,7 @@ th{font-size:12px;}
 <td>不只看到，也可表示察覺、認同、同理。</td>
 <td><button class="pill" data-thai="เห็นด้วย"><span class="thai">เห็นด้วย</span><span class="eng">agree</span></button> <button class="pill" data-thai="เห็นใจ"><span class="thai">เห็นใจ</span><span class="eng">sympathize</span></button> <button class="pill" data-thai="เห็นแล้ว"><span class="thai">เห็นแล้ว</span><span class="eng">saw it already</span></button> <button class="pill" data-thai="ไม่เห็น"><span class="thai">ไม่เห็น...</span><span class="eng">not at all...</span></button> </td>
 <td><span class="thai">ฉันเห็นด้วย <button class="tts" data-say="ฉันเห็นด้วย">🔊</button></span><br/><span class="roman">chǎn hěn dûai</span><br/><span class="eng">I agree.</span></td>
-<td><button class="fav-btn" data-category="Core verb" data-english="see / notice / realize" data-example-eng="I agree." data-example-rom="chǎn hěn dûai" data-example-thai="ฉันเห็นด้วย" data-romanization="hěn" data-thai="เห็น" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="เห็น" data-rom="hěn" data-eng="see / notice / realize" data-cat="Core verb" data-example="ฉันเห็นด้วย|chǎn hěn dûai|I agree.">♡ 收藏</button></td></tr>
 </tbody>
 </table>
 </div>
@@ -1113,13 +1116,12 @@ th{font-size:12px;}
 </details>
 </div>
 </section>
-<section class="tab" id="favorites"><h2>Favorites｜收藏字卡</h2><div class="favorites-grid" id="favoritesList"></div></section></main>
+<section class="tab" id="favorites"><h2>Favorites｜收藏字卡</h2><div class="grid" id="favoritesList"></div></section></main>
 </div>
 <script>
   const buttons = document.querySelectorAll('.tab-btn');
   const tabs = document.querySelectorAll('.tab');
   const warning = document.getElementById('ttsWarning');
-  const FAVORITES_KEY = 'thaiDailyNotes_2026_05_21_favorites';
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1168,113 +1170,91 @@ th{font-size:12px;}
     });
   }
 
+  const FAVORITE_KEY = "thaiDailyFavorites_2026_05_21";
+
   function getFavorites(){
-    try { return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || []; }
-    catch { return []; }
+    try{return JSON.parse(localStorage.getItem(FAVORITE_KEY) || "[]");}
+    catch(e){return [];}
   }
-
   function saveFavorites(items){
-    localStorage.setItem(FAVORITES_KEY, JSON.stringify(items));
+    localStorage.setItem(FAVORITE_KEY, JSON.stringify(items));
   }
-
   function favoriteId(item){
-    return (item.thai || '').trim() + '|' + (item.romanization || '').trim();
+    return item.thai + "|" + item.rom;
   }
-
-  function isFavorite(item){
-    const id = favoriteId(item);
-    return getFavorites().some(f => favoriteId(f) === id);
-  }
-
-  function updateFavoriteButtons(){
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-      const item = buttonToItem(btn);
-      const active = isFavorite(item);
-      btn.classList.toggle('active', active);
-      btn.textContent = active ? '★ 已收藏' : '♡ 收藏';
+  function syncFavoriteButtons(){
+    const ids = new Set(getFavorites().map(favoriteId));
+    document.querySelectorAll(".fav-btn").forEach(btn=>{
+      const id = btn.dataset.thai + "|" + btn.dataset.rom;
+      if(ids.has(id)){
+        btn.classList.add("active");
+        btn.textContent = "★ 已收藏";
+      }else{
+        btn.classList.remove("active");
+        btn.textContent = "♡ 收藏";
+      }
     });
   }
-
-  function buttonToItem(btn){
-    return {
-      thai: btn.dataset.thai || '',
-      romanization: btn.dataset.romanization || '',
-      english: btn.dataset.english || '',
-      category: btn.dataset.category || '',
-      exampleThai: btn.dataset.exampleThai || '',
-      exampleRom: btn.dataset.exampleRom || '',
-      exampleEng: btn.dataset.exampleEng || ''
-    };
-  }
-
-  function toggleFavorite(btn){
-    const item = buttonToItem(btn);
-    const id = favoriteId(item);
-    let favorites = getFavorites();
-    const exists = favorites.some(f => favoriteId(f) === id);
-    if (exists) {
-      favorites = favorites.filter(f => favoriteId(f) !== id);
-    } else {
-      favorites.push(item);
-    }
-    saveFavorites(favorites);
-    updateFavoriteButtons();
-    renderFavorites();
-  }
-
-  function renderFavorites(){
-    const container = document.getElementById('favoritesList');
-    if (!container) return;
-    const favorites = getFavorites();
-    if (!favorites.length) {
-      container.innerHTML = '<div class="empty-favs">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>';
+  const catClass={'Textbook-based':'textbook','Grammar Core':'textbook','Local usage':'local','Practical Usage':'practice','Common mistake':'mistake','Emotional usage':'emotion','Review':'review'};
+function renderFavorites(){
+    const wrap = document.getElementById("favoritesList");
+    if (!wrap) return;
+    const items = getFavorites();
+    if(items.length === 0){
+      wrap.innerHTML = '<div class="empty-state">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>';
       return;
     }
-    container.innerHTML = favorites.map((item, index) => `
-      <div class="favorite-card">
-        <div class="top">
-          <div>
-            <div><span class="thai big">${escapeHtml(item.thai)}</span><button class="tts" data-say="${escapeAttr(item.thai)}">🔊</button></div>
-            <div class="roman">${escapeHtml(item.romanization)}</div>
-            <div class="eng">${escapeHtml(item.english)}</div>
+    wrap.innerHTML = items.map((item, idx)=>{
+      const parts = (item.example || "").split("|");
+      const exThai = parts[0] || "";
+      const exRom = parts[1] || "";
+      const exEng = parts[2] || "";
+      return `
+        <div class="favorite-card">
+          <div class="thai-lg">${item.thai} <button class="tts" data-say="${item.thai}">🔊</button></div>
+          <div class="rom">${item.rom}</div>
+          <div class="eng">${item.eng}</div>
+          <div style="margin-top:8px"><span class="label ${catClass[item.cat]||'practice'}">${item.cat}</span></div>
+          <div class="example-box">
+            <div class="thai">${exThai} ${exThai ? `<button class="tts" data-say="${exThai}">🔊</button>` : ""}</div>
+            <div class="rom">${exRom}</div>
+            <div class="eng">${exEng}</div>
           </div>
-          <button class="remove-fav" type="button" data-index="${index}">移除</button>
+          <button class="remove-fav" data-index="${idx}" style="margin-top:10px">移除收藏</button>
         </div>
-        <div><span class="label local">${escapeHtml(item.category || 'Favorite')}</span></div>
-        <div class="example-box">
-          <span class="thai">${escapeHtml(item.exampleThai)}</span>${item.exampleThai ? `<button class="tts" data-say="${escapeAttr(item.exampleThai)}">🔊</button>` : ''}<br/>
-          <span class="roman">${escapeHtml(item.exampleRom)}</span><br/>
-          <span class="eng">${escapeHtml(item.exampleEng)}</span>
-        </div>
-      </div>
-    `).join('');
-
-    container.querySelectorAll('.remove-fav').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const i = Number(btn.dataset.index);
-        const next = getFavorites();
-        next.splice(i, 1);
-        saveFavorites(next);
-        updateFavoriteButtons();
-        renderFavorites();
-      });
-    });
+      `;
+    }).join("");
     bindAudioButtons();
   }
-
-  function escapeHtml(str){
-    return String(str || '').replace(/[&<>"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
-  }
-
-  function escapeAttr(str){
-    return escapeHtml(str).replace(/'/g, '&#39;');
-  }
-
-  document.querySelectorAll('.fav-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleFavorite(btn);
-    });
+  document.addEventListener("click", (e)=>{
+    const fav = e.target.closest(".fav-btn");
+    if(fav){
+      const item = {
+        thai:fav.dataset.thai,
+        rom:fav.dataset.rom,
+        eng:fav.dataset.eng,
+        cat:fav.dataset.cat,
+        example:fav.dataset.example
+      };
+      let items = getFavorites();
+      const id = favoriteId(item);
+      if(items.some(x=>favoriteId(x)===id)){
+        items = items.filter(x=>favoriteId(x)!==id);
+      }else{
+        items.push(item);
+      }
+      saveFavorites(items);
+      syncFavoriteButtons();
+      renderFavorites();
+    }
+    const remove = e.target.closest(".remove-fav");
+    if(remove){
+      let items = getFavorites();
+      items.splice(Number(remove.dataset.index), 1);
+      saveFavorites(items);
+      syncFavoriteButtons();
+      renderFavorites();
+    }
   });
 
 
@@ -1319,7 +1299,7 @@ th{font-size:12px;}
   initVocabSearch();
 
   bindAudioButtons();
-  updateFavoriteButtons();
+  syncFavoriteButtons();
   renderFavorites();
 
   if ('speechSynthesis' in window) {

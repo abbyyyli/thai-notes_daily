@@ -214,6 +214,9 @@
   .fav-btn.active{background:var(--orange-soft);border-color:#f2c18f;color:#9f5216}
   .favorites-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
   .favorite-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 8px 18px rgba(74,45,18,.06)}
+  .tag{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;font-weight:800;border:1px solid transparent;white-space:nowrap}
+  .tag.blue{background:var(--blue-soft);color:#276f9f;border-color:#acd4ef}
+  .empty-state{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f;text-align:center}
   .favorite-card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:8px}
   .remove-fav{border:1px solid #efb2ad;background:var(--red-soft);color:#a84038;border-radius:999px;padding:3px 8px;cursor:pointer;font-size:12px;font-weight:800}
   .empty-favs{background:var(--blue-soft);border:1px dashed #acd4ef;border-radius:16px;padding:16px;color:#276f9f}
@@ -415,7 +418,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">khɔ̌ɔ àap náam gɔ̀ɔn khâ</span><br/>
 <span class="eng">Let me shower first.</span>
 </td>
-<td><button class="fav-btn" data-category="Time" data-english="before / first" data-example-eng="Let me shower first." data-example-rom="khɔ̌ɔ àap náam gɔ̀ɔn khâ" data-example-thai="ขออาบน้ำก่อนค่ะ" data-romanization="gɔ̀ɔn" data-thai="ก่อน" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ก่อน" data-rom="gɔ̀ɔn" data-eng="before / first" data-cat="Time" data-example="ขออาบน้ำก่อนค่ะ|khɔ̌ɔ àap náam gɔ̀ɔn khâ|Let me shower first.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">แล้ว <button class="tts" data-say="แล้ว">🔊</button></span></td>
 <td><span class="roman">lɛ́ɛw</span></td>
@@ -431,7 +434,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">dtʉ̀ʉn lɛ́ɛw láang nâa khâ</span><br/>
 <span class="eng">I wake up and then wash my face.</span>
 </td>
-<td><button class="fav-btn" data-category="Structure" data-english="already / then" data-example-eng="I wake up and then wash my face." data-example-rom="dtʉ̀ʉn lɛ́ɛw láang nâa khâ" data-example-thai="ตื่นแล้วล้างหน้าค่ะ" data-romanization="lɛ́ɛw" data-thai="แล้ว" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="แล้ว" data-rom="lɛ́ɛw" data-eng="already / then" data-cat="Structure" data-example="ตื่นแล้วล้างหน้าค่ะ|dtʉ̀ʉn lɛ́ɛw láang nâa khâ|I wake up and then wash my face.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ปากซอย <button class="tts" data-say="ปากซอย">🔊</button></span></td>
 <td><span class="roman">bpàak sɔɔi</span></td>
@@ -447,7 +450,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">jəə gan thîi bpàak sɔɔi ná</span><br/>
 <span class="eng">Let’s meet at the alley entrance.</span>
 </td>
-<td><button class="fav-btn" data-category="Local usage" data-english="alley entrance" data-example-eng="Let’s meet at the alley entrance." data-example-rom="jəə gan thîi bpàak sɔɔi ná" data-example-thai="เจอกันที่ปากซอยนะ" data-romanization="bpàak sɔɔi" data-thai="ปากซอย" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ปากซอย" data-rom="bpàak sɔɔi" data-eng="alley entrance" data-cat="Local usage" data-example="เจอกันที่ปากซอยนะ|jəə gan thîi bpàak sɔɔi ná|Let’s meet at the alley entrance.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ประมาณ <button class="tts" data-say="ประมาณ">🔊</button></span></td>
 <td><span class="roman">bprà-maan</span></td>
@@ -463,7 +466,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">thʉ̌ng bprà-maan gâo moong khâ</span><br/>
 <span class="eng">I’ll arrive around 9.</span>
 </td>
-<td><button class="fav-btn" data-category="Practical" data-english="around / about" data-example-eng="I’ll arrive around 9." data-example-rom="thʉ̌ng bprà-maan gâo moong khâ" data-example-thai="ถึงประมาณเก้าโมงค่ะ" data-romanization="bprà-maan" data-thai="ประมาณ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ประมาณ" data-rom="bprà-maan" data-eng="around / about" data-cat="Practical" data-example="ถึงประมาณเก้าโมงค่ะ|thʉ̌ng bprà-maan gâo moong khâ|I’ll arrive around 9.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ใช้ <button class="tts" data-say="ใช้">🔊</button></span></td>
 <td><span class="roman">chái</span></td>
@@ -479,7 +482,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">chái wee-laa bprà-maan sìp naa-thii khâ</span><br/>
 <span class="eng">It takes around ten minutes.</span>
 </td>
-<td><button class="fav-btn" data-category="Review" data-english="use / spend" data-example-eng="It takes around ten minutes." data-example-rom="chái wee-laa bprà-maan sìp naa-thii khâ" data-example-thai="ใช้เวลาประมาณสิบนาทีค่ะ" data-romanization="chái" data-thai="ใช้" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ใช้" data-rom="chái" data-eng="use / spend" data-cat="Review" data-example="ใช้เวลาประมาณสิบนาทีค่ะ|chái wee-laa bprà-maan sìp naa-thii khâ|It takes around ten minutes.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">หน้าร้าน <button class="tts" data-say="หน้าร้าน">🔊</button></span></td>
 <td><span class="roman">nâa ráan</span></td>
@@ -495,7 +498,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">rɔɔ yùu nâa ráan ná khá</span><br/>
 <span class="eng">I’ll wait in front of the shop.</span>
 </td>
-<td><button class="fav-btn" data-category="Local usage" data-english="in front of the shop" data-example-eng="I’ll wait in front of the shop." data-example-rom="rɔɔ yùu nâa ráan ná khá" data-example-thai="รออยู่หน้าร้านนะคะ" data-romanization="nâa ráan" data-thai="หน้าร้าน" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="หน้าร้าน" data-rom="nâa ráan" data-eng="in front of the shop" data-cat="Local usage" data-example="รออยู่หน้าร้านนะคะ|rɔɔ yùu nâa ráan ná khá|I’ll wait in front of the shop.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ไกล / ใกล้ <button class="tts" data-say="ไกล ใกล้">🔊</button></span></td>
 <td><span class="roman">glai / glâi</span></td>
@@ -511,7 +514,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">mâi khɔ̂i glai khâ</span><br/>
 <span class="eng">It’s not too far.</span>
 </td>
-<td><button class="fav-btn" data-category="Common mistake" data-english="far / near" data-example-eng="It’s not too far." data-example-rom="mâi khɔ̂i glai khâ" data-example-thai="ไม่ค่อยไกลค่ะ" data-romanization="glai / glâi" data-thai="ไกล / ใกล้" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ไกล / ใกล้" data-rom="glai / glâi" data-eng="far / near" data-cat="Common mistake" data-example="ไม่ค่อยไกลค่ะ|mâi khɔ̂i glai khâ|It’s not too far.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ปกติ <button class="tts" data-say="ปกติ">🔊</button></span></td>
 <td><span class="roman">bpòk-gà-dtì</span></td>
@@ -527,7 +530,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">bpòk-gà-dtì thəə dtʉ̀ʉn gìi moong</span><br/>
 <span class="eng">What time do you usually wake up?</span>
 </td>
-<td><button class="fav-btn" data-category="Daily" data-english="usually / normal" data-example-eng="What time do you usually wake up?" data-example-rom="bpòk-gà-dtì thəə dtʉ̀ʉn gìi moong" data-example-thai="ปกติเธอตื่นกี่โมง" data-romanization="bpòk-gà-dtì" data-thai="ปกติ" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ปกติ" data-rom="bpòk-gà-dtì" data-eng="usually / normal" data-cat="Daily" data-example="ปกติเธอตื่นกี่โมง|bpòk-gà-dtì thəə dtʉ̀ʉn gìi moong|What time do you usually wake up?">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">ด้วย <button class="tts" data-say="ด้วย">🔊</button></span></td>
 <td><span class="roman">dûai</span></td>
@@ -543,7 +546,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">sài khài-daaw nʉ̀ng fɔɔng dûai khâ</span><br/>
 <span class="eng">Please add one fried egg too.</span>
 </td>
-<td><button class="fav-btn" data-category="Local usage" data-english="too / as well" data-example-eng="Please add one fried egg too." data-example-rom="sài khài-daaw nʉ̀ng fɔɔng dûai khâ" data-example-thai="ใส่ไข่ดาวหนึ่งฟองด้วยค่ะ" data-romanization="dûai" data-thai="ด้วย" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="ด้วย" data-rom="dûai" data-eng="too / as well" data-cat="Local usage" data-example="ใส่ไข่ดาวหนึ่งฟองด้วยค่ะ|sài khài-daaw nʉ̀ng fɔɔng dûai khâ|Please add one fried egg too.">♡ 收藏</button></td></tr>
 <tr>
 <td><span class="thai">เล่า <button class="tts" data-say="เล่า">🔊</button></span></td>
 <td><span class="roman">lâo</span></td>
@@ -558,7 +561,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <span class="roman">yen-níi gin à-rai dii lâo</span><br/>
 <span class="eng">What should we eat tonight?</span>
 </td>
-<td><button class="fav-btn" data-category="Local usage" data-english="emotional particle / tell" data-example-eng="What should we eat tonight?" data-example-rom="yen-níi gin à-rai dii lâo" data-example-thai="เย็นนี้กินอะไรดีเล่า" data-romanization="lâo" data-thai="เล่า" type="button">♡ 收藏</button></td></tr>
+<td><button class="fav-btn" data-thai="เล่า" data-rom="lâo" data-eng="emotional particle / tell" data-cat="Local usage" data-example="เย็นนี้กินอะไรดีเล่า|yen-níi gin à-rai dii lâo|What should we eat tonight?">♡ 收藏</button></td></tr>
 </tbody>
 </table>
 </div>
@@ -914,8 +917,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
 <h2>Favorites｜收藏字卡</h2>
 <div class="card">
 
-<div class="empty-favs" id="favoritesEmpty">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>
-<div class="favorites-grid" id="favoritesGrid"></div>
+<div class="grid" id="favoritesList"></div>
 </div>
 </section></main>
 </div>
@@ -976,17 +978,6 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
     window.speechSynthesis.onvoiceschanged = () => {};
   }
 
-  const FAVORITES_KEY = 'thaiDailyNotesFavorites_2026_05_20';
-
-  function getFavorites(){
-    try { return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || []; }
-    catch { return []; }
-  }
-
-  function saveFavorites(favorites){
-    localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
-  }
-
   function normalizeSearchText(text){
     return (text || '')
       .toString()
@@ -1007,83 +998,96 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
       .trim();
   }
 
-  function updateFavoriteButtons(){
-    const favorites = getFavorites();
-    const keys = new Set(favorites.map(item => item.thai));
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-      const active = keys.has(btn.dataset.thai);
-      btn.classList.toggle('active', active);
-      btn.textContent = active ? '★ 已收藏' : '♡ 收藏';
+  const FAVORITE_KEY = "thaiDailyFavorites_2026_05_20";
+
+  function getFavorites(){
+    try{return JSON.parse(localStorage.getItem(FAVORITE_KEY) || "[]");}
+    catch(e){return [];}
+  }
+  function saveFavorites(items){
+    localStorage.setItem(FAVORITE_KEY, JSON.stringify(items));
+  }
+  function favoriteId(item){
+    return item.thai + "|" + item.rom;
+  }
+  function syncFavoriteButtons(){
+    const ids = new Set(getFavorites().map(favoriteId));
+    document.querySelectorAll(".fav-btn").forEach(btn=>{
+      const id = btn.dataset.thai + "|" + btn.dataset.rom;
+      if(ids.has(id)){
+        btn.classList.add("active");
+        btn.textContent = "★ 已收藏";
+      }else{
+        btn.classList.remove("active");
+        btn.textContent = "♡ 收藏";
+      }
     });
   }
-
-  function toggleFavorite(btn){
-    const item = {
-      thai: btn.dataset.thai,
-      romanization: btn.dataset.romanization,
-      english: btn.dataset.english,
-      category: btn.dataset.category,
-      exampleThai: btn.dataset.exampleThai,
-      exampleRom: btn.dataset.exampleRom,
-      exampleEng: btn.dataset.exampleEng
-    };
-    let favorites = getFavorites();
-    const exists = favorites.some(f => f.thai === item.thai);
-    if (exists) {
-      favorites = favorites.filter(f => f.thai !== item.thai);
-    } else {
-      favorites.push(item);
+  const catClass={'Textbook-based':'textbook','Grammar Core':'textbook','Local usage':'local','Practical Usage':'practice','Common mistake':'mistake','Emotional usage':'emotion','Review':'review'};
+function renderFavorites(){
+    const wrap = document.getElementById("favoritesList");
+    if (!wrap) return;
+    const items = getFavorites();
+    if(items.length === 0){
+      wrap.innerHTML = '<div class="empty-state">目前還沒有收藏字卡，點 Vocabulary 裡的 ♡ 收藏來加入。</div>';
+      return;
     }
-    saveFavorites(favorites);
-    renderFavorites();
-    updateFavoriteButtons();
-  }
-
-  function removeFavorite(thai){
-    const favorites = getFavorites().filter(f => f.thai !== thai);
-    saveFavorites(favorites);
-    renderFavorites();
-    updateFavoriteButtons();
-  }
-
-  function renderFavorites(){
-    const grid = document.getElementById('favoritesGrid');
-    const empty = document.getElementById('favoritesEmpty');
-    if (!grid || !empty) return;
-    const favorites = getFavorites();
-    grid.innerHTML = '';
-    empty.style.display = favorites.length ? 'none' : 'block';
-
-    favorites.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'favorite-card';
-      card.innerHTML = `
-        <button class="tts top-audio" data-say="${item.thai}">🔊</button>
-        <div class="thai big">${item.thai}</div>
-        <div class="roman">${item.romanization || ''}</div>
-        <div class="eng">${item.english || ''}</div>
-        <div style="margin-top:8px;"><span class="label practice">${item.category || 'Favorite'}</span></div>
-        <div class="example-box">
-          <span class="thai">${item.exampleThai || ''}</span>
-          ${item.exampleThai ? `<button class="tts" data-say="${item.exampleThai}">🔊</button>` : ''}<br>
-          <span class="roman">${item.exampleRom || ''}</span><br>
-          <span class="eng">${item.exampleEng || ''}</span>
+    wrap.innerHTML = items.map((item, idx)=>{
+      const parts = (item.example || "").split("|");
+      const exThai = parts[0] || "";
+      const exRom = parts[1] || "";
+      const exEng = parts[2] || "";
+      return `
+        <div class="favorite-card">
+          <div class="thai-lg">${item.thai} <button class="tts" data-say="${item.thai}">🔊</button></div>
+          <div class="rom">${item.rom}</div>
+          <div class="eng">${item.eng}</div>
+          <div style="margin-top:8px"><span class="label ${catClass[item.cat]||'practice'}">${item.cat}</span></div>
+          <div class="example-box">
+            <div class="thai">${exThai} ${exThai ? `<button class="tts" data-say="${exThai}">🔊</button>` : ""}</div>
+            <div class="rom">${exRom}</div>
+            <div class="eng">${exEng}</div>
+          </div>
+          <button class="remove-fav" data-index="${idx}" style="margin-top:10px">移除收藏</button>
         </div>
-        <button class="remove-fav" type="button">移除收藏</button>
       `;
-      card.querySelector('.remove-fav').addEventListener('click', () => removeFavorite(item.thai));
-      card.querySelectorAll('.tts').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          speakThai(btn.dataset.say);
-        });
+    }).join("");
+    wrap.querySelectorAll(".tts").forEach(btn=>{
+      btn.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        speakThai(btn.dataset.say);
       });
-      grid.appendChild(card);
     });
   }
-
-  document.querySelectorAll('.fav-btn').forEach(btn => {
-    btn.addEventListener('click', () => toggleFavorite(btn));
+  document.addEventListener("click", (e)=>{
+    const fav = e.target.closest(".fav-btn");
+    if(fav){
+      const item = {
+        thai:fav.dataset.thai,
+        rom:fav.dataset.rom,
+        eng:fav.dataset.eng,
+        cat:fav.dataset.cat,
+        example:fav.dataset.example
+      };
+      let items = getFavorites();
+      const id = favoriteId(item);
+      if(items.some(x=>favoriteId(x)===id)){
+        items = items.filter(x=>favoriteId(x)!==id);
+      }else{
+        items.push(item);
+      }
+      saveFavorites(items);
+      syncFavoriteButtons();
+      renderFavorites();
+    }
+    const remove = e.target.closest(".remove-fav");
+    if(remove){
+      let items = getFavorites();
+      items.splice(Number(remove.dataset.index), 1);
+      saveFavorites(items);
+      syncFavoriteButtons();
+      renderFavorites();
+    }
   });
 
   const searchInput = document.getElementById('vocabSearch');
@@ -1114,7 +1118,7 @@ table{font-size:14px;}th{font-size:12px;}.thai{font-size:15px;}.thai.big,.thai-l
     filterVocabulary();
   }
 
+  syncFavoriteButtons();
   renderFavorites();
-  updateFavoriteButtons();
 </script></body>
 </html>
